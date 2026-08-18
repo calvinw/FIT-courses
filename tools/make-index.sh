@@ -53,6 +53,12 @@ for course in */; do
       [ -e "$base.pdf" ]  && printf '<a href="%s.pdf">PDF</a>' "$base"
       printf '<a href="%s.md">Markdown</a></li>\n' "$base"
     done
+    for qmd in "$course/$sem"/lectures/*.qmd; do
+      [ -e "$qmd" ] || continue
+      base=${qmd%.qmd}
+      printf '  <li>%s (slides): ' "$(basename "$base")"
+      printf '<a href="%s.html">HTML</a></li>\n' "$base"
+    done
     echo "</ul>"
   done
 done

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Calvin Williamson, Science and Math">
+
+<title>Large Language Models and Applications</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="slide_files/libs/clipboard/clipboard.min.js"></script>
+<script src="slide_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="slide_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="slide_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="slide_files/libs/quarto-html/popper.min.js"></script>
+<script src="slide_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="slide_files/libs/quarto-html/anchor.min.js"></script>
+<link href="slide_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="slide_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="slide_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="slide_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="slide_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="slide_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="slide_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="slide_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slide.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Large Language Models and Applications</h1>
+<p class="subtitle lead">Fall 26</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Calvin Williamson, Science and Math </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="large-language-models-llm" class="level2">
+<h2 class="anchored" data-anchor-id="large-language-models-llm">Large Language Models (LLM)</h2>
+<ul>
+<li>AI Models You Send a Prompt and They Give a Response</li>
+<li>ChatGPT, Claude, Gemini, DeepSeek, Many Others</li>
+<li>Prompts can include Text, Images, Audio, Video</li>
+<li>Responses can include Text, Images, Audio, Video</li>
+</ul>
+</section>
+<section id="text-based-llms" class="level2">
+<h2 class="anchored" data-anchor-id="text-based-llms">Text Based LLMs</h2>
+<p>To prompt an LLM with text you type your question and submit it</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant User
+    participant LLM
+    User-&gt;&gt;LLM: Prompt: What is the capital of France?
+    LLM-&gt;&gt;User: Response: The capital of France is Paris.
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The model responds with some text.</p>
+<p><strong>Example</strong>: ChatGPT 3.5 (Nov 22)</p>
+</section>
+<section id="multimodal-llms" class="level2">
+<h2 class="anchored" data-anchor-id="multimodal-llms">MultiModal LLMs</h2>
+<p>Prompts can include</p>
+<ul>
+<li>Text</li>
+<li>Image (eg. uploaded image file)</li>
+<li>Audio (eg. from microphone, or uploaded audio file)</li>
+<li>Video (eg Webcam)</li>
+<li>Screen sharing (eg show your computer screen)</li>
+</ul>
+<p>Responses can include: Text, Image, Audio, Video</p>
+<p><strong>Example</strong>: Gemini 2.0 Flash (Dec 24)</p>
+</section>
+<section id="how-to-prompt-a-multimodal-llm-using-audio" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-prompt-a-multimodal-llm-using-audio">How To Prompt a MultiModal LLM using Audio</h2>
+<p>To prompt the LLM you speak into a microphone on your computer</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant User
+    participant LLM
+    User-&gt;&gt;LLM: Audio Prompt 🔊: Can you hear me? 
+    LLM-&gt;&gt;User: Audio Response 🔊: Yes! I hear you? How can I help you today?
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The model responds in audio and/or text that you can hear and see immediately</p>
+</section>
+<section id="how-to-prompt-a-multimodal-llm-using-video-and-audio" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-prompt-a-multimodal-llm-using-video-and-audio">How To Prompt a MultiModal LLM using Video and Audio</h2>
+<p>Using a webcam you speak and show the model what you want</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant User
+    participant LLM
+    User-&gt;&gt;LLM: Webcam Prompt 📹+🔊: Can you see and hear me? 
+    LLM-&gt;&gt;User: Audio Response 🔊: Yes! I can both see and hear you. How can I help you today?
+    
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The model responds in audio and/or text</p>
+</section>
+<section id="large-language-model-deep-seek" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="large-language-model-deep-seek">Large Language Model: Deep Seek</h2>
+<p>In Spring 25 a new model called Deep Seek caused Wall Street to panic and lose Billions of dollars. The reason is the Deep Seek was released as an open source model that anyone could download and run on their own, thus challenging the idea that only companies with proprietary models would dominate the AI space. The models from OpenAI, Anthropic, Google all are proprietary models:</p>
+<ul>
+<li>ChatGPT (OpenAI)</li>
+<li>Claude (Anthropic)</li>
+<li>Gemini (Google)</li>
+</ul>
+<p>These models cannot be run by anyone the way Deep Seek can.</p>
+</section>
+<section id="examples-of-reasoning-models-deep-seek" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="examples-of-reasoning-models-deep-seek">Examples of Reasoning Models: Deep Seek</h2>
+<ol type="1">
+<li><a href="BarbieDeepThink.html">Barbie Deep Think</a></li>
+<li><a href="DeepSeekSession.html">Making a Todo App with DeepSeek</a> | <a href="DeepSeek1.html">Version 1</a> | <a href="DeepSeek2.html">Version 2</a></li>
+</ol>
+<p>Deep Seeks models are competive with the state of the art closed source models but are created at a fraction of the cost.</p>
+<p>Notice the difference when posting prompts to the standard V3 models versus the “reasoning model” (Button “DeepThink”). The reasoning model shows you its thinking process.</p>
+</section>
+<section id="large-language-models-as-software-developers" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="large-language-models-as-software-developers">Large Language Models as Software Developers</h2>
+<ul>
+<li>Language models excel at writing software</li>
+<li><em>Vibe Coding</em>: Prompting models to write code without reading source
+<ul>
+<li>GPT 5.2 (OpenAI)</li>
+<li>Claude Sonnet 4.5 and Opus 4.5 (Anthropic)</li>
+<li>Gemini 3 Pro (Google)</li>
+<li>Qwen3-Coder</li>
+<li>Kimi K2</li>
+<li>Glm 4.7</li>
+</ul></li>
+</ul>
+</section>
+<section id="prompting-large-language-models" class="level2">
+<h2 class="anchored" data-anchor-id="prompting-large-language-models">Prompting Large Language Models</h2>
+<p>Some examples of prompting and their costs using openrouter:</p>
+<p><a href="https://bxxs92zhls3zuyedgtcbnd.streamlit.app/">Prompt Editor</a></p>
+</section>
+<section id="llms-and-tools" class="level2">
+<h2 class="anchored" data-anchor-id="llms-and-tools">LLMs and Tools</h2>
+<p>LLMs can call <em>Tools</em> (external programs)</p>
+<p>This ability is sometimes called agentic.</p>
+<p>Examples (Tools):</p>
+<ul>
+<li>Websearch</li>
+<li>Calculator</li>
+<li>Wikipedia access</li>
+<li>Financial Data APIs (Yahoo Finance)</li>
+</ul>
+<p><a href="https://calvinw.github.io/llm-chat/">Example LLM with a simple tool</a></p>
+</section>
+<section id="a-music-composition-language" class="level2">
+<h2 class="anchored" data-anchor-id="a-music-composition-language">A Music Composition Language</h2>
+<p><a href="https://strudel.cc/">Strudel.cc</a> is a musical language for live coding and DJing It is based on a language called Tidal Cycles which is written in a programming language called Haskell. It is compact, technical, and mathematical language.</p>
+<p>It is amazing in capability.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ZCcpWzhekEY">DJ Dave</a></li>
+<li><a href="https://strudel.cc/workshop/getting-started/">Coastline <span class="citation" data-cites="by">@by</span> eddyflux</a></li>
+<li><a href="https://www.youtube.com/shorts/aOikFek0zy0">Char Stiles</a></li>
+<li><a href="https://youtu.be/dcmwqqzJubA?si=XctJy_oPuceXYPDl&amp;t=598">Switch Angel</a></li>
+</ul>
+</section>
+<section id="learning-strudel" class="level2">
+<h2 class="anchored" data-anchor-id="learning-strudel">Learning Strudel</h2>
+<ul>
+<li><a href="https://strudel.cc/#c291bmQoImJkIGhoIHNkIG9oIik%3D">Strudel Repl Drums Example</a></li>
+<li><a href="https://strudel.cc/workshop/getting-started/">Strudel Docs Getting Started Page</a></li>
+<li><a href="https://www.youtube.com/watch?v=oqyAJ4WeKoU&amp;t=236s">Video - Making Music With Code - Dan Gorelick/Viola He</a></li>
+<li><a href="https://youtu.be/QRJ0xrjLj6A?si=K3Y5R03casMQVS_D">Video - Lucy Cheesman - Learning how to make music through live coding</a></li>
+</ul>
+</section>
+<section id="large-language-models-working-with-strudel" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="large-language-models-working-with-strudel">Large Language Models Working With Strudel</h2>
+<p>Examples:</p>
+<ul>
+<li><p><a href="https://strudel.cc/#Cgpjb25zdCBkcnVtcyA9IHMoIjxiZCBbaGggaGhdIHNkIFtoaCB%2BXSBbYmQgYmRdIFt%2BIGhoXSBbc2QgcmltXSBoaCBiZCBbaGggc2RdIFt%2BIGJkXSBoaD48W2JkIGJkXSBoaCBbfiBzZF0gW2hoIGhoXSBiZCBbaGggfl0gW3NkIHJpbV0gW34gaGhdIGJkIGhoIHNkIFtoaCB%2BXSBiZD4iKQoKY29uc3Qgc3RhY2sxID0gc3RhY2soCiAgbm90ZSgiPGMzIGUzIGczIGM0IH4gfiB%2BIH4gZDMgW2YyIGYyXSBbfiBhM10gZDQgfiB%2BIH4gfiBbZjIgZjIgfl0gWyBhMyB%2BXSBjNCBbIGYyIGYyIH5dIH4gfiB%2BIH4%2BPGUzIH4gZzMgW2U0IGM0XSB%2BIGMzIH4gfiBbZjIgfiBmMl0gZDMgW2EzIH5dIGQzIH4gfiB%2BIH4gW2YyIGYyXSB%2BIGEzIFtlNCBjNF0gW2YyIGYyXSB%2BIH4gfiB%2BPiIpCiAgICAucygiZ21fcGFkX3dhcm0iKSwKCiAgbm90ZSgiPH4gfiB%2BIH4gZzMgYmIzIFtkNCB%2BXSBmMyB%2BIH4gfiB%2BIGEzIFtjNCBlNF0gZzQgWyBjNSB%2BXSB%2BIH4gfiB%2BIGYzIGEzIFtjNCBlNF0gZjM%2BPH4gfiBnMyBiYjMgfiBkNCBmMyB%2BIH4gfiBhMyBbYzQgZTRdIH4gZzQgYzUgfiB%2BIH4gZjMgfiB%2BIFtjNCBlNF0gZjQgfj4iKQogICAgLnMoInBpYW5vIiksCiAgCiAgbm90ZSgiPH4gfiB%2BIH4gZzMgYmIzIGQ0IFtmMiBmMl0gfiB%2BIH4gfiBhMyBbZTQgYzRdIGc0IGM1IH4gfiB%2BIH4gYTMgW2M0IGU0XSBnNCBmMyAgPjx%2BIH4gZzMgYmIzIH4gZDQgZjIgfiB%2BIH4gYTMgW2M0IGU0XSB%2BIGc0IGM1IH4gfiB%2BIFtmMiBmMl0gfiBbYzQgZTRdIH4gZjIgfj4iKQogICAgLnMoImdtX2ZsdXRlIiksCgogIGRydW1zLAopLmZhc3QoNCk7Cgpjb25zdCBzdGFjazIgPSBzdGFjaygKCiAgbm90ZSgiPGMzIGUzIGczIGM0IH4gfiB%2BIH4gWyB%2BIGQzXSBmMiBbfiBhM10gZDQgfiB%2BIH4gfmYyIFthMyB%2BXSBjNCBmMiB%2BIH4gfiB%2BPjxnMyBiYjMgfiBkNCBmMiAgfiB%2BIFsgZjIgfiBdIGQzIFthMyB%2BXSBkNCB%2BIH4gfiB%2BIFtmMiBmMl0gfiBhMyBjNCBmMiB%2BIH4gfiB%2BPiIpCiAgICAucygic3VwZXJzYXciKS5yZXYoKSwKIAogIG5vdGUoIjx%2BIH4gfiB%2BIGczIGJiMyBkNCBmMyB%2BIH4gfiB%2BIGEzIFtjNCBlNF0gZzQgYzUgfiB%2BIH4gfiBhMyBbYzQgZTRdIGc0IGM1ID48fiB%2BIGczIGJiMyB%2BIGQ0IGY0IH4gfiB%2BIGEzIFtjNCBlNF0gfiBnNCBjNSB%2BIH4gfiBmMyB%2BIFtjNCBlNF0gfiBmMiB%2BPiIpCiAgICAucygicGlhbm8iKS5yZXYoKSwKCiAgbm90ZSgiPH4gfiB%2BIH4gZzMgYmIzIGQ0IGYyIH4gfiB%2BIH4gZjIgYTMgYzQgW2YyIGYyXSB%2BIH4gfiB%2BIFtmMiB%2BXSBhMyBbYzQgZTRdIGYyPjx%2BIH4gZzMgYmIzIH4gZDQgZjIgfiB%2BIH4gYTMgW2M0IGU0XSB%2BIGc0IGM1IH4gfiB%2BIGYzIH4gW2U0IGM0XSBmNCB%2BPiIpCiAgICAucygiZ21fb2JvZSIpLnJldigpLAoKICAgIG5vdGUoIjx%2BIH4gfiB%2BIGczIGJiMyBkNCBbZjIgZjJdIH4gfiB%2BIH4gYTMgW2M0IGU0XSBnNCBjNSB%2BIH4gfiB%2BIGEzIFtjNCBlNF0gZzQgZjMgID48fiB%2BIGczIGJiMyB%2BIGQ0IGYyIH4gfiB%2BIGEzIFtjNCBlNF0gfiBnNCBjNSB%2BIH4gfiBbZjIgZjJdIH4gYTMgW2U0IGM0XSBmMiB%2BPiIpCiAgICAucygiZ21fZmx1dGUiKS5yZXYoKSwKICAgCiAgZHJ1bXMsCikuZmFzdCg0KTsKCmFycmFuZ2UoCiAgWzEyLCBzdGFjazFdLAogIFs2LCBzdGFjazJdLAogIFs2LCBzdGFjazFdLAogIFsxMiwgc3RhY2syXSwKKQ%3D%3D">Call and Response</a></p></li>
+<li><p><a href="https://strudel.cc/#Ly8gVGhpcyBzaG93cyBob3cgQ2xhdWRlIGFuZCBJIGNyZWF0ZWQgdGhpcyBjb21wb3NpdGlvbiAKCi8vRmlyc3QgSSBhc2sgaXQgdG8gc3RhcnQgd2l0aCBzb21lIHNpbXBsZSBjaG9yZCBwcm9ncmVzc2lvbnMgaW4gRTptaW5vcgoKLy9IZXJlcyB0aGUgcHJvbXB0IEkgdXNlOgoKLyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqCk1ha2UgYSBzdGFjayB3aXRoIDQgcGlhbm9zIGluIHRoZSBrZXkgZGVzaXJlZC4KClRoZSAxc3QgYW5kIDJuZCBpbnN0cnVtZW50cyBzaG91bGQgaGF2ZSA0IHN0ZXBzIGFuZCBoYXZlIG5vdGVzIGluIGVhY2ggc3RlcCBmcm9tIHRoZSBzY2FsZSBjaG9zZW4uIApUaGVzZSB0d28gaW5zdHJ1bWVudHMgc2hvdWxkIGhhdmUgbm90ZXMgdGhhdCBjb21lIGZyb20gY2hvcmRzIGZvciB0aGF0IGtleSBhbmQgc28gdGhleSBoYXJtb25pemUuCgpUaGUgM3JkIGFuZCA0dGggaW5zdHJ1bWVudHMgd2lsbCBoYXJtb25pemUgd2l0aCBpbnN0cnVtZW50cyAxIGFuZCAyIG9uIGV2ZXJ5IDNyZCBzdGVwIG9mIHRoZWlyIDEyIHN0ZXBzLiAKU28gZmlyc3Qgc3RlcCAxIHdpbGwgaGFybW9uaXplIHdpdGggdGhlIGZpcnN0IHN0ZXAgaW4gaW5zdHJ1bWVudHMgMSBhbmQgdGhlbiB0aGUgNHRoIHN0ZXAgd2lsbCBoYXJtb25pemUgCndpdGggc3RlcCAyIG9mIHBpYW5vIDEgYW5kIDIuIAoKUmVtZW1iZXIgd2hlbiBpbnN0cnVtZW50cyBoYXZlIGEgbnVtYmVyIG9mIHN0ZXBzIHRoZXkgYWxsIGZpdCBpbnRvIHRoZSBzYW1lIGN5Y2xlIHNvIHRoZSBpbnN0cnVtZW50cyAzIGFuZCA0IAphcmUgcGxheWluZyB0aHJlZSB0aW1lcyBhcyBmYXN0IGFzIGluc3RydW1lbnQgMSBhbmQgMi4gCgpGaXJzdCBjcmVhdGUgYSB2ZXJzaW9uIHRoYXQgaGFzIHRoZXNlICJhbmNob3IiIG5vdGVzIG1hdGNoaW5nIGZvciBhbGwgNCBpbnN0cnVtZW50cyBhbmQgdGhlbiBmaWxsIGluIHRoZSAKcmVzdCBvZiB0aGUgbm90ZXMgaW4gaW5zdHJ1bWVudCAzIGFuZCA0IHdpdGggcmVzdHMgZm9yIG5vdy4gCioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiovCgovL0ltIHN1cmUgdGhpcyBpcyBhbGwgc3RhbmRhcmQgTXVzaWMgQ29tcCAxMDEsIGJ1dCBJIGRvbnQga25vdyBpdCB0aGF0IHdlbGwKLy8gYW5kIGl0cyBmdW4gdG8gbGVhcm4gZnJvbSBDbGF1ZGUsIGl0IHVuZGVyc3RhbmRzIGFsbCB0aGUgY2hvcmRzIGFuZCBzY2FsZXMsIGV0YwovLyBBbmQgdGhlIG1lbG9kaWVzIGFuZCBsaXR0bGUgZWRpdHMgYXJlIHN1cGVyIGVhc3kgdG8gZ2V0IENsYXVkZSB0byBkbyB3aXRoIHlvdS4KLy8gSnVzdCBhc2sgaXQgdG8gcmVkbyBpdCBmb3IgeW91IGlmIGl0IGRvZXNudCB0dXJuIG91dCBzb3VuZGluZyBkZWNlbnQuCgoKY29uc3QgZ19zY2FsZSA9ICJFOm1pbm9yIgoKLy9TdGVwIDA6IENsYXVkZSBwcm9kdWNlZCB0aGlzIHNldCBvZiBwaWFubyBjaG9yZHMgZm9yIEU6bWlub3IKLy8gSSB0aGluayB3ZSBsb29rZWQgYWJvdXQgYSBkb3plbiBkaWZmZXJlbnQgZXhhbXBsZXMgb2Yga2V5cyBhbmQgdGhlc2UgcHJvZ3Jlc3Npb25zIAovLyBiZWZvcmUgSSBmb3VuZCBvbmUgSSBsaWtlZC4KY29uc3QgZW1fc3RlcDAgPSBzdGFjaygKICAgIC8vIEluc3RydW1lbnQgMTogNC1zdGVwIGNob3JkIHByb2dyZXNzaW9uIChtaWQtcmFuZ2UpCiAgICBuKCIwIDIgMSAzIikuc2NhbGUoZ19zY2FsZSkuc291bmQoInBpYW5vIikuZ2FpbiguNiksCgogICAgLy8gSW5zdHJ1bWVudCAyOiA0LXN0ZXAgaGFybW9uaXppbmcgYmFzcyAobW9kZXJhdGUgbG93IHJhbmdlKQogICAgbigiLTcgLTUgLTYgLTQiKS5zY2FsZShnX3NjYWxlKS5zb3VuZCgicGlhbm8iKS5nYWluKC42KSwKCiAgICAvLyBJbnN0cnVtZW50IDM6IDEyLXN0ZXAgKGFuY2hvciBvbiBzdGVwcyAxLDQsNywxMCkgCiAgICBuKCItMiB%2BIH4gNCB%2BIH4gMyB%2BIH4gNSB%2BIH4iKS5zY2FsZShnX3NjYWxlKS5zb3VuZCgicGlhbm8iKS5nYWluKC42KSwKCiAgICAvLyBJbnN0cnVtZW50IDQ6IDEyLXN0ZXAgKGFuY2hvciBvbiBzdGVwcyAxLDQsNywxMCkKICAgIG4oIjcgfiB%2BIDcgfiB%2BIDUgfiB%2BIDMgfiB%2BIikuc2NhbGUoZ19zY2FsZSkuc291bmQoInBpYW5vIikuZ2FpbiguOCkKKTsKCi8vU3RlcCAxOiBJIHBpY2tlZCBzb21lIGluc3RydW1lbnRzIChjbGF1ZGVzIG5vdCBnb29kIGF0IHRoaXMpCmNvbnN0IGVtX3N0ZXAxID0gc3RhY2soCiAgICAvLyBJbnN0cnVtZW50IDE6IDQtc3RlcCBjaG9yZCBwcm9ncmVzc2lvbiAobWlkLXJhbmdlKQogICAgbigiMCAyIDEgMyIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJnbV9wYWRfc3dlZXAiKS5nYWluKC42KSwKCiAgICAvLyBJbnN0cnVtZW50IDI6IDQtc3RlcCBoYXJtb25pemluZyBiYXNzIChtb2RlcmF0ZSBsb3cgcmFuZ2UpCiAgICBuKCItNyAtNSAtNiAtNCIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJnbV9wYWRfd2FybSIpLmdhaW4oLjYpLAoKICAgIC8vIEluc3RydW1lbnQgMzogMTItc3RlcCAoYW5jaG9yIG9uIHN0ZXBzIDEsNCw3LDEwKSAKICAgIG4oIi0yIH4gfiA0IH4gfiAzIH4gfiA1IH4gfiIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJnbV9zeW50aF9iYXNzXzEiKS5nYWluKC42KSwKCiAgICAvLyBJbnN0cnVtZW50IDQ6IDEyLXN0ZXAgKGFuY2hvciBvbiBzdGVwcyAxLDQsNywxMCkKICAgIG4oIjcgfiB%2BIDcgfiB%2BIDUgfiB%2BIDMgfiB%2BIikuc2NhbGUoZ19zY2FsZSkuc291bmQoInN1cGVyc2F3IikuZ2FpbiguOCkKKTsKCi8vU3RlcCAyOiBDbGF1ZGUgYnVpbHRzIGEgbWVsb2R5IGZvciBJbnN0cnVtZW50IDMsIGtlZXBpbmcgaGFybW9ueSB3aXRoICBJbnN0cnVtZW50IDQsIAovLyBJIHByb2JhYmx5IGFza2VkIGl0IGZvciBhIGZldyBvZiB0aGVzZSBiZWZvcmUgd2UgZ290IG9uZSBJIGxpa2VkLgpjb25zdCBlbV9zdGVwMiA9IHN0YWNrKAoKICAgIG4oIjAgMiAxIDMiKS5zY2FsZShnX3NjYWxlKS5zb3VuZCgiZ21fcGFkX3N3ZWVwIikuZ2FpbiguNiksCgogICAgbigiLTcgLTUgLTYgLTQiKS5zY2FsZShnX3NjYWxlKS5zb3VuZCgiZ21fcGFkX3dhcm0iKS5nYWluKC42KSwKCiAgICBuKCItMiAtMSAwIDQgMyAyIDMgNCA1IDUgNCAzIikuc2NhbGUoZ19zY2FsZSkuc291bmQoImdtX3N5bnRoX2Jhc3NfMSIpLmdhaW4oLjYpLAoKICAgIG4oIjcgfiAgfiAgNyB%2BIH4gNSB%2BIH4gMyB%2BIH4iKS5zY2FsZShnX3NjYWxlKS5zb3VuZCgic3VwZXJzYXciKS5nYWluKC44KSwKICAKKTsKCi8vU3RlcCAzOiBDbGF1ZGUgYWRkcyBzb21lIHNpbXBsZSBzeW5jb3BhdGlvbiAocmFuZG9tbHkpIGtlZXBpbmcgaGFybW9ueSB3aXRoIEluc3RydW1lbnQgNAovLyBUaGlzIGNvbWVzIGZyb20gYSBsaXR0bGUgc2V0IG9mIGVkaXRzIEkgdGVsbCBjbGF1ZGUgaXQgY2FuIG1ha2UuIFRoaXMgY291bGQgYmUgbW9yZSBjb21wbGV4LCBidXQgaGVyZSB3ZSBzdGF5IHNpbXBsZS4KLy8gSSB0ZWxsIGl0IHRvIHBpY2sgcmFuZG9tbHkgYSBjb3VwbGUgb2YgdGhlc2UgdG8gYXBwbHkuCi8vICAgIG5vdGUgLT4gIFt%2BIG5vdGVdCi8vICAgIG5vdGUgLT4gIFtub3RlIH5dCi8vICAgIG5vdGUgLT4gIFtub3RlQDIgfl0KLy8gICAgbm90ZSAtPiAgW34gbm90ZUAyXQoKCmNvbnN0IGVtX3N0ZXAzID0gc3RhY2soCgogICAgbigiMCAyIDEgMyIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJnbV9wYWRfc3dlZXAiKS5nYWluKC42KSwKCiAgICBuKCItNyAtNSAtNiAtNCIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJnbV9wYWRfd2FybSIpLmdhaW4oLjYpLAoKICAgIG4oIi0yIFstMSB%2BXSAwIDQgMyBbfiAyQDJdIDMgNCBbNSB%2BXSA1IDQgMyIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJnbV9zeW50aF9iYXNzXzEiKS5nYWluKC42KSwKCiAgICBuKCI3IH4gfiA3IH4gfiA1IH4gfiAzIH4gfiIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJzdXBlcnNhdyIpLmdhaW4oLjgpLAogIAopOwoKLy9TdGVwIDQ6IENsYXVkZSBhZGRzIGEgZmV3IG5vdGVzIHRvIEluc3RydW1lbnQgNCBhbmQgYWxzbyBzb21lIHN5bmNvcGF0aW9uLCAKLy8gYW5kIGhhcm1vbml6ZXMgYW55IG5vbi1hbmNob3Igc3RlcHMgd2l0aCBJbnN0cnVtZW50IDMKY29uc3QgZW1fc3RlcDQgPSBzdGFjaygKCiAgICBuKCIwIDIgMSAzIikuc2NhbGUoZ19zY2FsZSkuc291bmQoImdtX3BhZF9zd2VlcCIpLmdhaW4oLjYpLAoKICAgIG4oIi03IC01IC02IC00Iikuc2NhbGUoZ19zY2FsZSkuc291bmQoImdtX3BhZF93YXJtIikuZ2FpbiguNiksCgogICAgbigiLTIgWy0xIH5dIDAgNCAzIFt%2BIDJAMl0gMyA0IFs1IH5dIDUgNCAzIikuc2NhbGUoZ19zY2FsZSkuc291bmQoImdtX3N5bnRoX2Jhc3NfMSIpLmdhaW4oLjYpLAoKICAgIG4oIjcgfiBbfiA3QDJdIH4gNSB%2BIH4gNCB%2BIDMgMiAtMiIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJzdXBlcnNhdyIpLmdhaW4oLjgpLAogIAopOwoKLy9TdGVwIDU6IENsYXVkZSAgYWRkcyBzb21lIHNpbXBsZSBzeW5jb3BhdGlvbiBmb3IgSW5zdHJ1bWVudHMgMSBhbmQgMgpjb25zdCBlbV9zdGVwNSA9IHN0YWNrKAoKICAgIG4oIjAgWzJAMiB%2BXSAxIDMiKS5zY2FsZShnX3NjYWxlKS5zb3VuZCgiZ21fcGFkX3N3ZWVwIikuZ2FpbiguNiksCgogICAgbigiLTcgLTUgW34gLTZdIC00Iikuc2NhbGUoZ19zY2FsZSkuc291bmQoImdtX3BhZF93YXJtIikuZ2FpbiguNiksCgogICAgbigiLTIgWy0xIH5dIDAgNCAzIFt%2BIDJAMl0gMyA0IFs1IH5dIDUgNCAzIikuc2NhbGUoZ19zY2FsZSkuc291bmQoImdtX3N5bnRoX2Jhc3NfMSIpLmdhaW4oLjYpLAoKICAgIG4oIjcgfiBbfiA3QDJdIH4gNSB%2BIH4gNCB%2BIDMgMiAtMiIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJzdXBlcnNhdyIpLmdhaW4oLjgpLAogIAopOwoKLy9TdGVwIDU6IEkgYWRkZWQgcmV2ZXJiIHVzaW5nIHJvb20gdGhlbiBzaGFwZSgpIHRvIHNoYXJwZW4gdGhlIHNvdW5kCmNvbnN0IGVtX3N0ZXA2ID0gc3RhY2soCgogICAgbigiMCBbMkAyIH5dIDEgMyIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJnbV9wYWRfc3dlZXAiKS5nYWluKC42KS5yb29tKDIpLnNoYXBlKC4xKSwKCiAgICBuKCItNyAtNSBbfiAtNl0gLTQiKS5zY2FsZShnX3NjYWxlKS5zb3VuZCgiZ21fcGFkX3dhcm0iKS5nYWluKC42KS5yb29tKDIpLnNoYXBlKC4xKSwKCiAgICBuKCItMiBbLTEgfl0gMCA0IDMgW34gMkAyXSAzIDQgWzUgfl0gNSA0IDMiKS5zY2FsZShnX3NjYWxlKS5zb3VuZCgiZ21fc3ludGhfYmFzc18xIikuZ2FpbiguNikucm9vbSgyKS5zaGFwZSguMSksCgogICAgbigiNyB%2BIFt%2BIDdAMl0gfiA1IH4gfiA0IH4gMyAyIC0yIikuc2NhbGUoZ19zY2FsZSkuc291bmQoInN1cGVyc2F3IikuZ2FpbiguOCkuc2hhcGUoLjEpLAopOwoKLy9TdGVwIDU6IEFkZCBzb21lIGRydW1zIApjb25zdCBlbV9zdGVwNyA9IHN0YWNrKAoKICAgIG4oIjAgWzJAMiB%2BXSAxIDMiKS5zY2FsZShnX3NjYWxlKS5zb3VuZCgiZ21fcGFkX3N3ZWVwIikuZ2FpbiguNikucm9vbSgyKS5zaGFwZSguMSksCgogICAgbigiLTcgLTUgW34gLTZdIC00Iikuc2NhbGUoZ19zY2FsZSkuc291bmQoImdtX3BhZF93YXJtIikuZ2FpbiguNikucm9vbSgyKS5zaGFwZSguMSksCgogICAgbigiLTIgWy0xIH5dIDAgNCAzIFt%2BIDJAMl0gMyA0IFs1IH5dIDUgNCAzIikuc2NhbGUoZ19zY2FsZSkuc291bmQoImdtX3N5bnRoX2Jhc3NfMSIpLmdhaW4oLjYpLnJvb20oMikuc2hhcGUoLjEpLAoKICAgIG4oIjcgfiBbfiA3QDJdIH4gNSB%2BIH4gNCB%2BIDMgMiAtMiIpLnNjYWxlKGdfc2NhbGUpLnNvdW5kKCJzdXBlcnNhdyIpLmdhaW4oLjgpLnNoYXBlKC4xKSwKCiAgICBzKCJbYmQgYmRdIDxoaCBvaCBoaD4gW2hoIGhoP10gPGJkIHNkPiBoaD8gPGhoIG9oPiBbYmQgYmRdIFtzZCBoaD9dIFs8aGggb2g%2BPyBiZF0gW3NkIDxzZCBjcD5dIGhoIDxoaCBvaD4iKS5nYWluKHJhbmQucmFuZ2UoMSwgMS42KSkKKTsKCgphcnJhbmdlKAogIFsyLCBlbV9zdGVwMF0sCiAgWzIsIGVtX3N0ZXAxXSwKICBbMiwgZW1fc3RlcDJdLAogIFsyLCBlbV9zdGVwM10sCiAgWzIsIGVtX3N0ZXA0XSwKICBbMiwgZW1fc3RlcDVdLAogIFsyLCBlbV9zdGVwNl0sCiAgWzEwLCBlbV9zdGVwN10sCiAgCikuc2xvdygxLjYp">Claude and E Minor</a></p></li>
+<li><p><a href="https://strudel.cc/#Ci8vIFBhdHRlcm4gd2l0aCAzIG9yZGVyaW5nczogb3JpZ2luYWwgMngsIGZpcnN0IHJlb3JkZXIgMngsIGZpbmFsIHJlb3JkZXIgMngKc3RhY2soCiAgIjw8YSoyIGcqMiBmKDMsOCkgYygzLDgsMik%2BIDxmKDMsOCkgYygzLDgsMikgYSoyIGcqMj4gPGcqMiBhKjIgYygzLDgsMikgZigzLDgpPj4iCiAgICAub2ZmKDEvOCwgYWRkKDcpKQogICAgLm9mZigxLzIsIGFkZCgxMikpCiAgICAubm90ZSgpLnBpYW5vKCkuZmFzdCgxKS5vY3RhdmUoMiksCiAiPDxhMiBnMiBmKDMsOCkgYygzLDgsMik%2BITIgPGYoMyw4KSBjKDMsOCwyKSBhMiBnMj4hMiA8ZzIgYTIgYygzLDgsMikgZigzLDgpPiEyPiIKICAgIC5vZmYoMS8xNiwgYWRkKDcpKQogICAgLm9mZigxLzQsIGFkZCgxMikpCiAgICAubm90ZSgpLnBpYW5vKCkuc2xvdygxKS5vY3RhdmUoMSksCiAgIjw8YSoyIGcqMiBmKDMsOCkgYygzLDgsMik%2BITIgPGYoMyw4KSBjKDMsOCwyKSBhKjIgZyoyPiEyIDxnKjIgYSoyIGMoMyw4LDIpIGYoMyw4KT4hMj4iCiAgICAub2ZmKDEvNCwgYWRkKDcpKQogICAgLm9mZigxLzgsIGFkZCgxMikpCiAgICAubm90ZSgpLnMoImdtX3N0cmluZ19lbnNlbWJsZV8xIikKICAgIC5nYWluKHNpbmUucmFuZ2UoMC4wLCAxLjApLnNsb3coNCkuZWFybHkoMikpLmxwZigxNTAwKS5zbG93KDEpLAopLnNsb3coMS42KQ%3D%3D">Claude and Euclidean Rhythm</a></p></li>
+<li><p><a href="https://strudel.cc/#c2V0Y3BtKDExMC8yMCkKCi8vQ2xhdWRlIHdyb3RlIHRoZSBvcmlnaW5hbCBoYXJtb25pemluZyBwYXJ0IGZpcnN0LCB0aGVuIHRoZSBtZWxvZGllcyBmb3IgMiBhbmQgMyB3ZXJlIAovL2NyZWF0ZWQgd2l0aCB0d2Vha2luZyBmcm9tIHRoYXQgb3JpZ2luYWwuIFRoZSBvcmlnaW5hbCB3YXMgbW9zdGx5IG9uZSBzaG90LCBidXQgdGhlIG90aGVycwovL3dlcmUgd3JpdHRlbiB0b2dldGhlciB3aXRoIENsYXVkZSwgd2l0aCBhYm91dCBhbiBob3VyIG9yIHR3byBvZiB0d2Vha2luZy4gSW0gbm90IGEgbXVzaWNpYW4KLy9zbyBJIGhhdmUgbm8gaWRlYSB3aGF0IEkgZGlkIHJlYWxseS4KCmNvbnN0IG9yaWdpbmFsID0gc3RhY2soCiAgICBub3RlKGBnNCBiNCBkNSBjNSBnNCBlNCBkNSBlNGApCiAgICAgIC5zb3VuZCgiZ21fcGFkX3dhcm0iKS5nYWluKC40KS5yb29tKC41KSwKICAgIG5vdGUoYGIzIGQ0IGc0IGU0IGc0IGM1IGQ0IGZzNCBhNCBlNCBnNCBjNSBiMyBkNCBnNCBhMyBjNCBlNCBiMyBkNCBnNCBhMyBjNCBlNGApCiAgICAgIC5zb3VuZCgiZ21fc3RyaW5nX2Vuc2VtYmxlXzE6MSIpLmdhaW4oLjYpLnJvb20oMyksCiAgICBub3RlKGBkNCBmczQgYjQgZzQgYjQgZTUgZnM0IGE0IGM1IGc0IGI0IGU1IGQ0IGZzNCBiNCBjNCBlNCBnNCBkNCBmczQgYjQgYzQgZTQgZzRgKQogICAgICAuc291bmQoImdtX3N5bnRoX2JyYXNzXzE6MSIpLmdhaW4oMC42KS5yb29tKDMpLAogICAgbm90ZShgZDIgZzIgYjIgZzIgZDIgYzIgZzIgYzJgKQogICAgICAuc291bmQoImdtX3N5bnRoX2Jhc3NfMToxIikuZ2FpbiguNCkucm9vbSguNSkubHBmKDQwMCkKKTsKCmNvbnN0IHNlY29uZFZlcnNpb24gPSBzdGFjaygKICAgIG5vdGUoYGc0IFtiNCB%2BXSBkNSBjNSBnNCBbZTQgfl0gZDUgZTRgKQogICAgICAuc291bmQoImdtX3BhZF93YXJtIikuZ2FpbiguNCkucm9vbSguNSksCiAgICBub3RlKGBiMyBkNCBnNCBlNCBnNCBjNSBbIH4gZDRdIGZzNCBhNCBlNEAyIGM1IFt%2BIGIzXSBkNEAyIFt%2BIGEzXSBjNUAyIGIzIGQ0IGc0IFt%2BIGM0XSBjNUAyYCkKICAgICAgLnNvdW5kKCJnbV9zeW50aF9zdHJpbmdzXzE6MyIpLmdhaW4oLjYpLnJvb20oMykuZGV0dW5lKC0yKS5kZWxheSguMiksCiAgICBub3RlKGBkNCBmczQgYjQgW34gZzRdIGI0IFtlNSB%2BXSBmczQgYTQgW2M1IH5dIFt%2BIGc0XSBiNCBlNSBbZDQgfl0gZnM0QDIgYzQgZTRAMiBkNCBmczQgYjQgW34gYzRdIGU0QDJgKQogICAgICAuc291bmQoImdtX3N0cmluZ19lbnNlbWJsZV8xOjEiKS5nYWluKC42KS5yb29tKDMpLmRldHVuZSgyKS5kZWxheSguMSksCiAgICBub3RlKGBkMiBnMiBiMiBbZzIgfl0gZDIgW34gYzJdIGcyIGMyYCkKICAgICAgLnNvdW5kKCJnbV9zeW50aF9iYXNzXzE6MiIpLmdhaW4oLjQpLnJvb20oLjUpLmxwZig0MDApCik7Cgpjb25zdCB0aGlyZFZlcnNpb24gPSBzdGFjaygKICAgIG5vdGUoYGc0IFtiNCB%2BXSBkNSBjNSBnNCBbZTQgfl0gZDUgZTRgKQogICAgICAuc291bmQoImdtX3BhZF93YXJtIikuZ2FpbiguNCkucm9vbSguNSksCiAgICBub3RlKGBjNSBlNCBhMyBkNCBiM0AyIGc0IGZzNCBjNSBkNEAyIGM1QDIgZTRAMiBjM0AzIGc0QDIgZTMgYTMgZzQgZDUgYzVAMiBnNWApCiAgICAgIC5zb3VuZCgiZ21fc3ludGhfc3RyaW5nc18xOjMiKS5nYWluKC42KS5yb29tKDMpLmRldHVuZSgtMikuZGVsYXkoLjEpLAogICAgbm90ZShgZTUgZzQgYzMgZnM0QDMgYjQgYTQgZTVAMiBmczRAMiBlMyBkM0AyIGczQDMgZTVAMiBiMyBmczNAMiBnMyBkMyBjNCBiNSBmczVAMiBlNSBiNWApCiAgICAgIC5zb3VuZCgiZ21fc3RyaW5nX2Vuc2VtYmxlXzE6MSIpLmdhaW4oLjYpLnJvb20oMykuZGV0dW5lKDIpLmRlbGF5KC4xKSwKICAgIG5vdGUoYGQyIGcyIGIyIFtnMiB%2BXSBkMiBbfiBjMl0gZzIgYzJgKQogICAgICAuc291bmQoImdtX3N5bnRoX2Jhc3NfMSIpLmdhaW4oLjQpLnJvb20oLjUpLmxwZig0MDApCik7CgphcnJhbmdlKAogIFsyLCBvcmlnaW5hbF0sCiAgWzIsIHNlY29uZFZlcnNpb25dLAogIFsyLCB0aGlyZFZlcnNpb25dCik%3D">Claude and Strings</a></p></li>
+<li><p><a href="https://strudel.cc/#Cgpjb25zdCBnX3NjYWxlID0gIkc6bWlub3IiCgovLyBjb25zdCBpbnN0cjEgPSAicGlhbm8iCi8vIGNvbnN0IGluc3RyMiA9ICJwaWFubyIKLy8gY29uc3QgaW5zdHIzID0gInBpYW5vIgovLyBjb25zdCBpbnN0cjQgPSAicGlhbm8iCgovL2NvbnN0IGluc3RyNCA9ICJwaWFubyI7Cgpjb25zdCBpbnN0cjEgPSAiZ21fcGFkX3dhcm0iOwpjb25zdCBpbnN0cjIgPSAiZ21fbGVhZF83X2ZpZnRocyI7CmNvbnN0IGluc3RyMyA9ICJnbV9zeW50aF9zdHJpbmdzXzIiOwpjb25zdCBpbnN0cjQgPSAicGlhbm8iOwoKY29uc3QgaW5zdHIxR2FpbiA9IHNsaWRlcigwLjMsIDAsIDIsIDAuMSk7CmNvbnN0IGluc3RyMkdhaW4gPSBzbGlkZXIoMC41LCAwLCAyLCAwLjEpOwpjb25zdCBpbnN0cjNHYWluID0gc2xpZGVyKDAuNiwgMCwgMiwgMC4xKTsKY29uc3QgaW5zdHI0R2FpbiA9IHNsaWRlcigwLjcsIDAsIDIsIDAuMSk7CgoKCi8vIFN0ZXAgMDogQmFzaWMgcGlhbm8gZnJhbWV3b3JrIHdpdGggYW5jaG9ycwovLyBHIE1pbm9yIHByb2dyZXNzaW9uOiBHbSAtIENtIC0gQmIgLSBEbQpjb25zdCBnbV9zdGVwMCA9IHN0YWNrKAogICAgLy8gSW5zdHJ1bWVudCAxOiA0LXN0ZXAgY2hvcmQgcHJvZ3Jlc3Npb24gKG1pZC1yYW5nZSkgLSBzeW5jb3BhdGlvbiBhdCBwb3NpdGlvbiAyCiAgICBuKCIwIDMgMiA1Iikuc291bmQoInBpYW5vIikuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjFHYWluKSwKCiAgICAvLyBJbnN0cnVtZW50IDI6IDQtc3RlcCBoYXJtb25pemluZyAobWlkLWxvdyByYW5nZSkgLSBzeW5jb3BhdGlvbiBhdCBwb3NpdGlvbiAzCiAgICBuKCItNSAtMiAtMyAwIikuc291bmQoInBpYW5vIikuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjJHYWluKS5yb29tKDEpLAoKICAgIC8vIEluc3RydW1lbnQgMzogMTItc3RlcCAoYW5jaG9yIG9uIHN0ZXBzIDEsNCw3LDEwKQogICAgbigiMiB%2BIH4gNSB%2BIH4gMiB%2BIH4gMyB%2BIH4iKS5zb3VuZCgicGlhbm8iKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyM0dhaW4pLAoKICAgIC8vIEluc3RydW1lbnQgNDogMTItc3RlcCBiYXNzCiAgICBuKCJ%2BIH4gfiB%2BIH4gfiB%2BIH4gfiB%2BIH4gfiIpLnNvdW5kKCJwaWFubyIpLnNjYWxlKGdfc2NhbGUpLmdhaW4oaW5zdHI0R2FpbikKKTsKCmNvbnN0IGdtX3N0ZXAxID0gc3RhY2soCiAgICAvLyBJbnN0cnVtZW50IDE6IHNtb290aGVyIHZvaWNlIGxlYWRpbmcKICAgIG4oIjIgWzMgfl0gNCA1Iikuc291bmQoaW5zdHIxKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMUdhaW4pLnJvb20oMSkubHBmKDI1MDApLAoKICAgIC8vIEluc3RydW1lbnQgMjogaGFybW9uaXppbmcgd2l0aCBzbWFsbCBpbnRlcnZhbHMKICAgIG4oIjAgMSBbfiAyXSAzIikuc291bmQoaW5zdHIyKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMkdhaW4pLnJvb20oMSkubHBmKDI1MDApLAoKICAgIC8vIEluc3RydW1lbnQgMzogQW5jaG9ycyAoMiw1LDQsNykgLSB0aGlyZHMgYW5kIGZpZnRocwogICAgbigiMiAzIDQgNSA2IDUgNCAzIDIgNyA0IDMiKS5zb3VuZChpbnN0cjMpLnNjYWxlKGdfc2NhbGUpLmdhaW4oaW5zdHIzR2Fpbikucm9vbSgyKSwKCiAgICAvLyBJbnN0cnVtZW50IDQ6IFN5bmNvcGF0aW9uIGF0IHBvc2l0aW9ucyAyLCA2LCAxMQogICAgbigiNCBbfiB%2BXSAxIDggfiBbMiB%2BXSA2IH4gLTEgMTAgW35AMiB%2BXSAwIikuc291bmQoaW5zdHI0KS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyNEdhaW4pCik7CgoKLy8gU3RlcCAyOiBBbm90aGVyIG1lbG9keSB2YXJpYXRpb24gZm9yIEluc3RydW1lbnQgMyB3aXRoIHNwYXJzZSBJbnN0cnVtZW50IDQKY29uc3QgZ21fc3RlcDIgPSBzdGFjaygKICAgIC8vIEluc3RydW1lbnQgMTogc21vb3RoZXIgcHJvZ3Jlc3Npb24KICAgIG4oIjAgWzEgfl0gMiAzIikuc291bmQoaW5zdHIxKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMUdhaW4pLmxwZigyNTAwKSwKCiAgICAvLyBJbnN0cnVtZW50IDI6IGhhcm1vbml6aW5nIHdpdGggc3RlcHdpc2UgbW90aW9uCiAgICBuKCItMiAtMSBbfiAwXSAxIikuc291bmQoaW5zdHIyKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMkdhaW4pLmxwZigyNTAwKSwKCiAgICAvLyBJbnN0cnVtZW50IDM6IEFuY2hvcnMgKC0yLDYsMCwzKSAtIHdpZGVyIHJhbmdlCiAgICBuKCItMiAxIDIgNiA0IDUgMCAzIDQgMyAyIDMiKS5zb3VuZChpbnN0cjMpLnNjYWxlKGdfc2NhbGUpLmdhaW4oaW5zdHIzR2Fpbikucm9vbSgyKSwKCiAgICAvLyBJbnN0cnVtZW50IDQ6IFN5bmNvcGF0aW9uIGF0IHBvc2l0aW9ucyAyLCA2LCAxMQogICAgbigiMCBbfiAtMl0gfiAxIDEgW34gfl0gLTMgMCB%2BIDUgWy0xQDIgfl0gfiIpLnNvdW5kKGluc3RyNCkuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjRHYWluKQopOwoKLy8gU3RlcCAzOiBBbm90aGVyIG1lbG9keSB2YXJpYXRpb24gZm9yIEluc3RydW1lbnQgMyB3aXRoIHNwYXJzZSBJbnN0cnVtZW50IDQKY29uc3QgZ21fc3RlcDMgPSBzdGFjaygKICAgIC8vIEluc3RydW1lbnQgMTogc21vb3RoIHN0ZXB3aXNlCiAgICBuKCIzIFsyIH5dIDQgNSIpLnNvdW5kKGluc3RyMSkuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjFHYWluKS5yb29tKDEpLmxwZigyNTAwKSwKCiAgICAvLyBJbnN0cnVtZW50IDI6IGhhcm1vbml6aW5nCiAgICBuKCIxIDAgW34gMl0gMyIpLnNvdW5kKGluc3RyMikuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjJHYWluKS5yb29tKDEpLmxwZigyNTAwKSwKCiAgICAvLyBJbnN0cnVtZW50IDM6IEFuY2hvcnMgKDQsMSw2LDgpIC0gaGlnaGVyIHZvaWNpbmcKICAgIG4oIjQgMyAyIDEgNiA0IDYgMSAyIDggMyAzIikuc291bmQoaW5zdHIzKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyM0dhaW4pLnJvb20oMiksCgogICAgLy8gSW5zdHJ1bWVudCA0OiBTeW5jb3BhdGlvbiBhdCBwb3NpdGlvbnMgMiwgNiwgMTEKICAgIG4oIi0zIFt%2BIDZdIH4gNSB%2BIFstNCB%2BXSAtMSB%2BIC01IDIgW35AMiB%2BXSB%2BIikuc291bmQoaW5zdHI0KS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyNEdhaW4pCik7CgovLyBTdGVwIDQ6IExhcmdlIGxlYXBzIG1lbG9keSB2YXJpYXRpb24gZm9yIEluc3RydW1lbnQgMwpjb25zdCBnbV9zdGVwNCA9IHN0YWNrKAogICAgLy8gSW5zdHJ1bWVudCAxOiBjb250YWluZWQgcmFuZ2UKICAgIG4oIjUgWzQgfl0gMyA1Iikuc291bmQoaW5zdHIxKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMUdhaW4pLnJvb20oMSkubHBmKDI1MDApLAoKICAgIC8vIEluc3RydW1lbnQgMjogaGFybW9uaXppbmcKICAgIG4oIjMgMiBbfiAxXSAzIikuc291bmQoaW5zdHIyKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMkdhaW4pLnJvb20oMSkubHBmKDI1MDApLAoKICAgIC8vIEluc3RydW1lbnQgMzogQW5jaG9ycyAoNywzLDIsMTApIC0gZHJhbWF0aWMgaGlnaCBub3RlcwogICAgbigiNyA2IDAgMyAxIDYgMiAtMSA0IDEwIDcgMyIpLnNvdW5kKGluc3RyMykuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjNHYWluKS5yb29tKDIpLAoKICAgIC8vIEluc3RydW1lbnQgNDogU3luY29wYXRpb24gYXQgcG9zaXRpb25zIDIsIDYsIDExCiAgICBuKCIyIFt%2BIH5dIC0zIDYgLTUgW34gfl0gNCAtNCB%2BIDMgW35AMiB%2BXSA2Iikuc291bmQoaW5zdHI0KS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyNEdhaW4pCik7CgovLyBTdGVwIDU6IEFub3RoZXIgbGFyZ2UgbGVhcHMgbWVsb2R5IHZhcmlhdGlvbgpjb25zdCBnbV9zdGVwNSA9IHN0YWNrKAogICAgLy8gSW5zdHJ1bWVudCAxOiBncmFkdWFsIG1vdmVtZW50CiAgICBuKCIxIFsyIH5dIDMgNCIpLnNvdW5kKGluc3RyMSkuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjFHYWluKS5yb29tKDEpLmxwZigyNTAwKSwKCiAgICAvLyBJbnN0cnVtZW50IDI6IGhhcm1vbml6aW5nCiAgICBuKCItMSAwIFt%2BIDFdIDIiKS5zb3VuZChpbnN0cjIpLnNjYWxlKGdfc2NhbGUpLmdhaW4oaW5zdHIyR2Fpbikucm9vbSgxKS5scGYoMjUwMCksCgogICAgLy8gSW5zdHJ1bWVudCAzOiBBbmNob3JzICgtMyw4LDQsNykgLSBtaXhlZCBoaWdoL2xvdwogICAgbigiLTMgLTEgNCA4IDcgMiA0IDUgLTIgNyA2IDEiKS5zb3VuZChpbnN0cjMpLnNjYWxlKGdfc2NhbGUpLmdhaW4oaW5zdHIzR2Fpbikucm9vbSgyKSwKCiAgICAvLyBJbnN0cnVtZW50IDQ6IFN5bmNvcGF0aW9uIGF0IHBvc2l0aW9ucyAyLCA2LCAxMQogICAgbigiMiBbfiAtNF0gNyAzIH4gWzQgfl0gLTEgfiB%2BIDEwIFszQDIgfl0gfiIpLnNvdW5kKGluc3RyNCkuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjRHYWluKQopOwoKLy8gU3RlcCA2OiBWZXJ5IGxhcmdlIGxlYXBzIG1lbG9keSB2YXJpYXRpb24KY29uc3QgZ21fc3RlcDYgPSBzdGFjaygKICAgIC8vIEluc3RydW1lbnQgMTogc3RlcHdpc2Ugd2l0aCBuYXJyb3cgcmFuZ2UKICAgIG4oIjQgWzUgfl0gNSA0Iikuc291bmQoaW5zdHIxKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMUdhaW4pLnJvb20oMSkubHBmKDI1MDApLAoKICAgIC8vIEluc3RydW1lbnQgMjogaGFybW9uaXppbmcKICAgIG4oIjIgMyBbfiAzXSAyIikuc291bmQoaW5zdHIyKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMkdhaW4pLnJvb20oMSkubHBmKDI1MDApLAoKICAgIC8vIEluc3RydW1lbnQgMzogQW5jaG9ycyAoNCwxMCw3LDMpIC0gYXNjZW5kaW5nIGxpbmUKICAgIG4oIjQgLTIgNiAxMCAwIDcgNyA2IC0xIDMgLTMgNSIpLnNvdW5kKGluc3RyMykuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjNHYWluKS5yb29tKDIpLAoKICAgIC8vIEluc3RydW1lbnQgNDogU3luY29wYXRpb24gYXQgcG9zaXRpb25zIDIsIDYsIDExCiAgICBuKCItNSBbfiB%2BXSB%2BIDUgLTUgWzQgfl0gMCB%2BIC00IDggW35AMiB%2BXSAyIikuc291bmQoaW5zdHI0KS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyNEdhaW4pCik7CgovLyBTdGVwIDc6IERyYW1hdGljIG9jdGF2ZS1zcGFubmluZyBsZWFwcwpjb25zdCBnbV9zdGVwNyA9IHN0YWNrKAogICAgLy8gSW5zdHJ1bWVudCAxOiBzbW9vdGggY29udG91cgogICAgbigiMiBbMyB%2BXSA0IDUiKS5zb3VuZChpbnN0cjEpLnNjYWxlKGdfc2NhbGUpLmdhaW4oaW5zdHIxR2Fpbikucm9vbSgxKS5scGYoMjUwMCksCgogICAgLy8gSW5zdHJ1bWVudCAyOiBoYXJtb25pemluZwogICAgbigiMCAxIFt%2BIDJdIDMiKS5zb3VuZChpbnN0cjIpLnNjYWxlKGdfc2NhbGUpLmdhaW4oaW5zdHIyR2Fpbikucm9vbSgxKS5scGYoMjUwMCksCgogICAgLy8gSW5zdHJ1bWVudCAzOiBBbmNob3JzICgtMiw2LDQsNykgLSBkZXNjZW5kaW5nIGNvbnRvdXIKICAgIG4oIi0yIDcgLTMgNiAtMSA2IDQgNyAwIDcgNiAwIikuc291bmQoaW5zdHIzKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyM0dhaW4pLnJvb20oMiksCgogICAgLy8gSW5zdHJ1bWVudCA0OiBTeW5jb3BhdGlvbiBhdCBwb3NpdGlvbnMgMiwgNiwgMTEKICAgIG4oIjcgW34gNF0gMCA4IH4gW34gfl0gMiA0IH4gMTIgWzNAMiB%2BXSB%2BIikuc291bmQoaW5zdHI0KS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyNEdhaW4pCik7CgovLyBTdGVwIDg6IEV4dHJlbWUgd2lkZS1yYW5naW5nIGxlYXBzCmNvbnN0IGdtX3N0ZXA4ID0gc3RhY2soCiAgICAvLyBJbnN0cnVtZW50IDE6IHN0ZXB3aXNlIHJlc29sdXRpb24KICAgIG4oIjIgWzIgfl0gMyAyIikuc291bmQoaW5zdHIxKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMUdhaW4pLnJvb20oMSkubHBmKDI1MDApLAoKICAgIC8vIEluc3RydW1lbnQgMjogaGFybW9uaXppbmcKICAgIG4oIjAgMCBbfiAxXSAwIikuc291bmQoaW5zdHIyKS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyMkdhaW4pLnJvb20oMSkubHBmKDI1MDApLAoKICAgIC8vIEluc3RydW1lbnQgMzogQW5jaG9ycyAoMiwxLDYsLTEpIC0gY29udmVyZ2luZyBsaW5lcwogICAgbigiMiA3IC0yIDEgLTQgNyA2IDYgLTMgLTEgNyAtMSIpLnNvdW5kKGluc3RyMykuc2NhbGUoZ19zY2FsZSkuZ2FpbihpbnN0cjNHYWluKS5yb29tKDIpLAoKICAgIC8vIEluc3RydW1lbnQgNDogU3luY29wYXRpb24gYXQgcG9zaXRpb25zIDIsIDYsIDExCiAgICBuKCItMyBbfiB%2BXSAtNSA1IH4gWzQgfl0gMCAzIDAgMTAgW35AMiB%2BXSB%2BIikuc291bmQoaW5zdHI0KS5zY2FsZShnX3NjYWxlKS5nYWluKGluc3RyNEdhaW4pCik7CgphcnJhbmdlKAogIFsxLCBnbV9zdGVwMF0sCiAgWzMsIGdtX3N0ZXAxXSwKICBbMywgZ21fc3RlcDJdLAogIFszLCBnbV9zdGVwM10sCiAgWzMsIGdtX3N0ZXA0XSwKICBbMywgZ21fc3RlcDVdLAogIFszLCBnbV9zdGVwNl0sCiAgWzMsIGdtX3N0ZXA3XSwKICBbMywgZ21fc3RlcDhdCikuc2xvdygxLjUp">Claude GMinor</a></p></li>
+</ul>
+</section>
+<section id="large-language-models-working-with-daws" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="large-language-models-working-with-daws">Large Language Models Working With DAWs</h2>
+<p>Examples:</p>
+<ul>
+<li><a href="https://youtu.be/yBg6InLc1zg?si=2fkFm7Eb_9eFM6Xm">Claude working with Patterns/Channels</a></li>
+<li><a href="https://youtu.be/qbCdSiP-b2g?si=cjWem6aJLtLZ3Kt2&amp;t=308">Signal Midi Editor and Web based Claude</a></li>
+<li><a href="https://youtu.be/6k78wwMOJcU?si=ZajzR4O4A5MbALb_&amp;t=137">Codex CLI gpt-5.1-codex max and FL Studio Piano Roll</a></li>
+</ul>
+</section>
+<section id="examples-of-what-the-llm-knows" class="level2">
+<h2 class="anchored" data-anchor-id="examples-of-what-the-llm-knows">Examples of what the LLM knows</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="callAndResponse.png" class="img-fluid figure-img"></p>
+<figcaption>Call and Response</figcaption>
+</figure>
+</div>
+</section>
+<section id="examples-of-what-the-llm-knows-1" class="level2">
+<h2 class="anchored" data-anchor-id="examples-of-what-the-llm-knows-1">Examples of what the LLM knows</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://calvinw.github.io/FIT-syllabuses/lectures/ChordsAndMelody.svg" class="img-fluid figure-img"></p>
+<figcaption>Chords And Melodies</figcaption>
+</figure>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

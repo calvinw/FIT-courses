@@ -1,13 +1,18 @@
 # Sources are the .md files under <Course>/<Semester>/ and shared/.
-MD_FILES := $(shell find . -name '*.md' -not -name 'README.md')
+MD_FILES  := $(shell find . -name '*.md' -not -name 'README.md')
+# Lecture slide decks (revealjs) render to HTML only
+QMD_FILES := $(shell find . -name '*.qmd')
 
-HTML_TARGETS := $(MD_FILES:.md=.html)
+HTML_TARGETS := $(MD_FILES:.md=.html) $(QMD_FILES:.qmd=.html)
 PDF_TARGETS  := $(MD_FILES:.md=.pdf)
 
 # Default: build HTML + PDF for everything, then refresh the index page
 all: $(HTML_TARGETS) $(PDF_TARGETS) index
 
 %.html: %.md
+	quarto render $< --to html
+
+%.html: %.qmd
 	quarto render $< --to html
 
 %.pdf: %.md
