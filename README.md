@@ -27,6 +27,17 @@ make index      # regenerate index.html only
 make clean      # remove generated .html, .pdf, and *_files
 ```
 
+## Course sites
+
+`course-sites.txt` maps a syllabus name to its Google Site, one per line:
+
+```
+CS211-301-Fall26   https://sites.google.com/fitnyc.edu/cs211-801-fall26
+```
+
+Any syllabus listed there gets a "Course Site" link in `index.html`; the rest
+just show HTML/PDF/Markdown. Add a line and run `make index`.
+
 ## Adding a semester
 
 Copy the most recent syllabus for that course and rename it, e.g.

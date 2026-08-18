@@ -1,0 +1,6 @@
+# Courses shown on index.html, in this order.
+# Format: <syllabus name> [Google Site URL]
+# Anything not listed here stays in the repo but is left off the index.
+CS211-301-Fall26    https://sites.google.com/fitnyc.edu/cs211-801-fall26
+Ma322-802-Fall26    https://sites.google.com/fitnyc.edu/ma322-802-fall26
+Ma321-85B-Fall26
