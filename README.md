@@ -1,16 +1,18 @@
 # FIT Courses
 
-Course syllabuses (and other course material) organized by course, then semester:
+Course syllabuses (and other course material) organized by course, with the
+semester in the filename:
 
 ```
 CS211/
-  Fall26/    CS211-301-Fall26.md -> .html, .pdf
-  Spring26/
+  CS211-301-Fall26.md -> .html, .pdf
+  CS211-301-Spring26.md
+  lectures/    slide.qmd -> slide.html
 Ma153/
-Ma321/
+Ma321/         Ma321-85B-Fall26.md, Ma321-OL1-Fall26.md, ...
 Ma322/
-shared/      InstitutionalPoliciesAndResources.md
-tools/       make-index.sh
+shared/        InstitutionalPoliciesAndResources.md
+tools/         make-index.sh
 ```
 
 `.md` files are the sources; Quarto renders `.html` and `.pdf` next to each source,
@@ -27,12 +29,15 @@ make clean      # remove generated .html, .pdf, and *_files
 
 ## Adding a semester
 
-Copy the most recent semester folder for that course and rename the files, e.g.
+Copy the most recent syllabus for that course and rename it, e.g.
 
 ```
-cp -r CS211/Spring26 CS211/Fall26
-# rename the .md, update the title/dates inside, then: make
+cp CS211/CS211-301-Spring26.md CS211/CS211-301-Fall26.md
+# update the title, meeting time, and room inside, then: make
 ```
+
+Lecture decks are `.qmd` files under a course's `lectures/` folder; they render
+to revealjs HTML only (no PDF).
 
 ## History
 
