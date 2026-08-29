@@ -6,11 +6,10 @@ semester in the filename:
 ```
 CS211/
   CS211-301-Fall26.md -> .html, .pdf
-  CS211-301-Spring26.md
+  CS211-302-Fall26.md -> .html, .pdf
   lectures/    slide.qmd -> slide.html
-Ma153/
-Ma321/         Ma321-85B-Fall26.md, Ma321-OL1-Fall26.md, ...
-Ma322/
+Ma321/         Ma321-85B-Fall26.md -> .html, .pdf
+Ma322/         Ma322-802-Fall26.md -> .html, .pdf
 shared/        InstitutionalPoliciesAndResources.md
 tools/         make-index.sh
 ```
@@ -27,24 +26,27 @@ make index      # regenerate index.html only
 make clean      # remove generated .html, .pdf, and *_files
 ```
 
-## Course sites
+## Course list
 
-`course-sites.txt` maps a syllabus name to its Google Site, one per line:
+`courses.txt` decides which syllabuses appear on `index.html`, in that order.
+Each line is a syllabus name and an optional Google Site URL:
 
 ```
 CS211-301-Fall26   https://sites.google.com/fitnyc.edu/cs211-801-fall26
+CS211-302-Fall26
 ```
 
-Any syllabus listed there gets a "Course Site" link in `index.html`; the rest
-just show HTML/PDF/Markdown. Add a line and run `make index`.
+A syllabus with a URL gets a "Course Site" link; one without just shows
+HTML/PDF/Markdown. Anything not listed stays in the repo but is left off the
+page entirely. Add or remove a line and run `make index`.
 
 ## Adding a semester
 
 Copy the most recent syllabus for that course and rename it, e.g.
 
 ```
-cp CS211/CS211-301-Spring26.md CS211/CS211-301-Fall26.md
-# update the title, meeting time, and room inside, then: make
+cp CS211/CS211-301-Fall26.md CS211/CS211-301-Spring27.md
+# update the title, meeting time, and room inside, add it to courses.txt, then: make
 ```
 
 Lecture decks are `.qmd` files under a course's `lectures/` folder; they render
