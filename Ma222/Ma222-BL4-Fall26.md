@@ -76,8 +76,9 @@ We will be using Google Spreadsheets or other free software for all work in this
 
 Your grade will come from these parts:
 
-- Quizzes  (88%)
-- In Class/Online Work Credits (12%)
+- Quizzes  (80%)
+- In Class Work Credits (10%)
+- Online Work Credits (10%)
 
 Each of these parts is described in more detail below
 
@@ -85,17 +86,23 @@ Each of these parts is described in more detail below
 
 Your quiz grade will come from 4 quizzes, roughly covering 2 meetings of material each. The quizzes are 30 minutes each and are usually 5 or 6 questions each. These quizzes are with no notes, no internet, no phone, no software, no AI tools. Pen and paper and calculator only. They are some multiple choice, some short answer, some true false.
 
-### In Class/Online Work Credits (1-3 per class)
+### In Class Work Credits (1-3 per class)
 
-These are credits you obtain for demonstrating you have completed assigned problems. There is no homework in this course.
+These are credits you obtain for demonstrating you have completed assigned problems during our in person meetings.
 
-Some of these will come from in class assignments that are done during our in person meetings and you show as you complete them. The rest come from the online work assigned for the weeks between meetings. You will earn a single credit for each successful assignment completion. I decide if the work is complete enough to receive credit for.
+These assignments are done during class and you show them to me as you complete them. You will earn a single credit for each successful assignment completion. I decide if the work is complete enough to receive credit for.
 
-The in class work can only be turned in by showing it to me during a meeting. There is not a way to turn that work in by emailing it to me or submitting it in Brightspace. You show it to me and I mark it as complete when you are in class. You must be in attendance to earn those credits.
+The in class work can only be turned in by showing it to me during a meeting. There is not a way to turn that work in by emailing it to me or submitting it in Brightspace. You show it to me and I mark it as complete when you are in class. You must be in attendance to earn these credits.
+
+You may miss up to 1 meeting and still show me the in class work from that meeting at the next meeting. But you may not do this more than once.
+
+### Online Work Credits
+
+These are credits you obtain for the work assigned for the weeks between our in person meetings. There is no homework in this course beyond this online work.
+
+You will earn a single credit for each successful assignment completion. I decide if the work is complete enough to receive credit for.
 
 The online work is turned in online by the date it is due.
-
-You may miss up to 1 meeting and still show me the in class work from that meeting at the next meeting. But you may not do this more than once.  
 
 ## Midterm, Final Exam
 
