@@ -98,13 +98,13 @@ You may miss up to 1 meeting and still show me the in class work from that meeti
 
 ### Online Work Credits (10%)
 
-These are credits you obtain for the work assigned for the weeks between our in person meetings. There is no homework in this course beyond this online work.
+These are credits you obtain for the work assigned for the weeks between our in person meetings.
 
-The online work is a combination of Online Assignments and Spreadsheet Assignments. During the weeks we are online only you need to do both.
+The online work is a combination of **Online Assignments** and **Spreadsheet Assignments**. During the weeks we are online only you need to do both.
 
-All of these assignments are done through Google Docs. You turn them in by sharing them with me. I decide if the work is complete enough to receive credit for.
+All of these assignments are done through Google Docs. You turn them in by sharing them with me.
 
-The online work is turned in online by the date it is due.
+All assignments must be submitted by 11:59 PM EST on the day they are due. Work turned in 1 or 2 days late receives 50% credit. Work more than 2 days late receives no credit.
 
 ## Midterm, Final Exam
 
