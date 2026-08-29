@@ -2,9 +2,6 @@
 
 # Institutional Policies and Resources
 
-### COVID-19 Updates
-While wearing masks is not mandatory, it is always available as an option for those who wish to wear one. To stay updated on current protocols, please bookmark [this page](https://www.fitnyc.edu/campus-return/current-status.php).
-
 ### Academic Honor Code
 FIT's Academic Honor Code is enforced in this course. Students who copy another person's idea or written work and claim it as original would be in violation of academic integrity. See [Academic Honor Code Policy](https://www.fitnyc.edu/about/policies/academic-affairs/academic-honor-code.php) for further details.
 
@@ -15,6 +12,12 @@ To officially withdraw from a course, students must submit a Course Withdrawal F
 
 See [Course Withdrawal Procedures](https://www.fitnyc.edu/academics/courses-and-registration/registrar/course-withdrawal.php)
 
+### Grade Appeals
+A student who believes a final grade is incorrect should first discuss it with the instructor. If the matter is unresolved, the formal process is described in [Grade Appeal](https://www.fitnyc.edu/academics/courses-and-registration/registrar/grades/appeal.php).
+
+### Academic Calendar
+Term start and end dates, holidays, and registration and withdrawal deadlines are published in the [Academic Calendar](https://www.fitnyc.edu/academics/courses-and-registration/academic-calendar/).
+
 ### Emergency Preparedness
 FIT is committed to ensuring the safety and security of the FIT community and campus. The College's Emergency Management Plan provides direction for how to respond to major events and provides information about how to anticipate, prevent, and mitigate injury and damage.
 
@@ -24,6 +27,9 @@ Register for SUNY's Emergency Alert Notification System by login into the My FIT
 
 ### Student Conduct
 FIT encourages student development of independence, maturity, and ethical sensitivity. Students are expected to refrain from conduct that threatens or endangers the health, safety, and welfare of the FIT community. See the [Code of Student Conduct Policy](https://www.fitnyc.edu/documents/policies/em003-code-of-student-conduct.pdf) for further details.
+
+### Basic Needs
+If you need assistance with basic needs such as food, housing, medical or mental health services, please contact the Dean of Students at dean_of_students@fitnyc.edu.
 
 ## Academic and Student Support Resources
 
@@ -36,7 +42,7 @@ FIT encourages student development of independence, maturity, and ethical sensit
 - **The Writing and Speaking Studio**: Feldman Center, Room C612. Call (212) 217-3060 or visit [FIT Writing & Speaking Studio](https://www.fitnyc.edu/academics/academic-support/writing-speaking/index.php)
 
 ## Technical Support
-- **Brightspace**: Call 1-844-673-6786 or visit their help page.
+- **Brightspace**: Call 1-844-673-6786 or visit [Technical Support for Brightspace with SUNY Online](https://online.suny.edu/help/).
 - **Informational Technology at FIT**: Call 1.212.217.HELP or email techhelp@fitnyc.edu. Visit [IT web pages](http://it.fitnyc.edu/) for important notifications.
 
 ## FIT Policies
@@ -47,12 +53,13 @@ All FIT policies apply both inside and outside of the classroom. Some specific p
 - [Children on Campus](https://www.fitnyc.edu/about/policies/college/children-on-campus.php)
 - [Intellectual Property](https://www.fitnyc.edu/about/policies/research/intellectual-property.php)
 - [Nondiscrimination and Anti-Harassment](https://www.fitnyc.edu/about/policies/college/nondiscrimination.php)
-- [Preferred Name](https://www.fitnyc.edu/about/policies/enrollment-management/preferred-name.php)
+- [Preferred Name](https://www.fitnyc.edu/about/policies/enrollment-management/chosen-name.php)
 - [Religious Accommodations](https://www.fitnyc.edu/about/policies/enrollment-management/religious-accommodations.php)
 - [(Title IX): Sexual Misconduct Response](https://www.fitnyc.edu/about/policies/safety-security/sexual-misconduct-response.php)
 - [Grading](https://www.fitnyc.edu/about/policies/academic-affairs/grading.php)
 - [Code of Student Conduct](https://www.fitnyc.edu/about/policies/enrollment-management/code-of-conduct.php)
 - [Syllabi, Textbooks, and Required Course Materials](https://www.fitnyc.edu/about/policies/academic-affairs/syllabi.php)
+- [Student Rights and Responsibilities](https://www.fitnyc.edu/life-at-fit/rights-and-responsibilities/index.php)
 - [All-Gender Restrooms](https://www.fitnyc.edu/about/policies/finance/all-gender-restrooms.php)
 
 These policies, and all other college policies, are published in the [College Policy Library, Policies A to Z](https://www.fitnyc.edu/about/policies/a-z.php), for your review.
