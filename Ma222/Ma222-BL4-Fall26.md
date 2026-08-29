@@ -102,7 +102,7 @@ These are credits you obtain for the work assigned for the weeks between our in 
 
 The online work is a combination of Online Assignments and Spreadsheet Assignments. During the weeks we are online only you need to do both.
 
-You will earn a single credit for each successful assignment completion. I decide if the work is complete enough to receive credit for.
+All of these assignments are done through Google Docs. You turn them in by sharing them with me. I decide if the work is complete enough to receive credit for.
 
 The online work is turned in online by the date it is due.
 
