@@ -100,6 +100,8 @@ You may miss up to 1 meeting and still show me the in class work from that meeti
 
 These are credits you obtain for the work assigned for the weeks between our in person meetings. There is no homework in this course beyond this online work.
 
+The online work is a combination of Online Assignments and Spreadsheet Assignments. During the weeks we are online only you need to do both.
+
 You will earn a single credit for each successful assignment completion. I decide if the work is complete enough to receive credit for.
 
 The online work is turned in online by the date it is due.
