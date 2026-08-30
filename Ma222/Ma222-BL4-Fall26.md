@@ -77,7 +77,7 @@ We will be using Google Spreadsheets or other free software for all work in this
 Your grade will come from these parts:
 
 - Quizzes - 82%
-- InClass Assignments - 12% (submitted in class only)
+- In Class Assignments - 12% (submitted in class only)
 - Online Assignments - 6% (submitted online only)
 
 Each of these parts is described in more detail below
@@ -86,11 +86,11 @@ Each of these parts is described in more detail below
 
 Your quiz grade will come from 4 quizzes, roughly covering 2 meetings of material each. The quizzes are 30 minutes each and are usually 5 or 6 questions each. These quizzes are with no notes, no internet, no phone, no software, no AI tools. Pen and paper and calculator only. They are some multiple choice, some short answer, some true false.
 
-### InClass Assignments (12%) (submitted in class only)
+### In Class Assignments (12%) (submitted in class only)
 
 These are credits you obtain for demonstrating you have completed assigned problems during our in person meetings.
 
-These **InClass Assignments** are done during class and you show them to me as you complete them. You will earn a single credit for each successful assignment completion. I decide if the work is complete enough to receive credit for.
+These **In Class Assignments** are done during class and you show them to me as you complete them. You will earn a single credit for each successful assignment completion. I decide if the work is complete enough to receive credit for.
 
 The in class work can only be turned in by showing it to me during a meeting. There is not a way to turn that work in by emailing it to me or submitting it in Brightspace. You show it to me and I mark it as complete when you are in class. You must be in attendance to earn these credits.
 
@@ -119,7 +119,7 @@ the content from the textbook, [Intro Statistics](https://mathplosion.gitlab.io/
 to explain a passage, work through an example, or check your understanding of a topic
 we are covering.
 
-Every other use of AI is not allowed. That includes the InClass Assignments and the Online
+Every other use of AI is not allowed. That includes the In Class Assignments and the Online
 Assignments, which are your own work. The quizzes are
 pen and paper with no notes, no internet, no phone, no software, and no AI tools.
 
