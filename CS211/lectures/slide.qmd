@@ -96,12 +96,13 @@ Notice the difference when posting prompts to the standard V3 models versus the 
 
 - Language models excel at writing software
 - *Vibe Coding*: Prompting models to write code without reading source
-  - GPT 5.2 (OpenAI)
-  - Claude Sonnet 4.5 and Opus 4.5 (Anthropic)
-  - Gemini 3 Pro (Google)
-  - Qwen3-Coder
-  - Kimi K2
-  - Glm 4.7
+  - GPT-5.6 Sol (OpenAI)
+  - Claude Opus 5 and Sonnet 5 (Anthropic)
+  - Gemini 3.1 Pro (Google)
+  - Qwen3-Coder-Next (Alibaba)
+  - Kimi K3 (Moonshot)
+  - GLM-5.2 (Z.ai)
+  - DeepSeek V4 (DeepSeek)
 
 ## Prompting Large Language Models
 
@@ -131,10 +132,7 @@ It is based on a language called Tidal Cycles which is written in a programming 
 
 It is amazing in capability.
 
-- [DJ Dave](https://www.youtube.com/watch?v=ZCcpWzhekEY)
 - [Coastline @by eddyflux](https://strudel.cc/workshop/getting-started/)
-- [Char Stiles](https://www.youtube.com/shorts/aOikFek0zy0)
-- [Switch Angel](https://youtu.be/dcmwqqzJubA?si=XctJy_oPuceXYPDl&t=598)
 
 ## Learning Strudel
 
@@ -157,11 +155,14 @@ Examples:
 
 ## Large Language Models Working With DAWs {.smaller}
 
-Examples:
+Claude working with Patterns/Channels:
 
-- [Claude working with Patterns/Channels](https://youtu.be/yBg6InLc1zg?si=2fkFm7Eb_9eFM6Xm)
-- [Signal Midi Editor and Web based Claude](https://youtu.be/qbCdSiP-b2g?si=cjWem6aJLtLZ3Kt2&t=308)
-- [Codex CLI gpt-5.1-codex max and FL Studio Piano Roll](https://youtu.be/6k78wwMOJcU?si=ZajzR4O4A5MbALb_&t=137)
+<iframe class="r-stretch"
+        data-src="https://www.youtube-nocookie.com/embed/yBg6InLc1zg?rel=0"
+        title="Claude working with Patterns/Channels"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
 
 ## Examples of what the LLM knows
 
