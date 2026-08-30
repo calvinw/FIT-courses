@@ -76,17 +76,17 @@ We will be using Google Spreadsheets or other free software for all work in this
 
 Your grade will come from these parts:
 
-- Quizzes  (88%)
-- In Class Work Credits (6%)
-- Online Work Credits (6%)
+- Quizzes  (84%)
+- In Class Work Credits (8%)
+- Online Work Credits (8%)
 
 Each of these parts is described in more detail below
 
-### Quizzes (88%)
+### Quizzes (84%)
 
 Your quiz grade will come from 4 quizzes, roughly covering 2 meetings of material each. The quizzes are 30 minutes each and are usually 5 or 6 questions each. These quizzes are with no notes, no internet, no phone, no software, no AI tools. Pen and paper and calculator only. They are some multiple choice, some short answer, some true false.
 
-### In Class Work Credits (6%) (1 or 2 per class)
+### In Class Work Credits (8%) (1 or 2 per class)
 
 These are credits you obtain for demonstrating you have completed assigned problems during our in person meetings.
 
@@ -96,7 +96,7 @@ The in class work can only be turned in by showing it to me during a meeting. Th
 
 You may miss up to 1 meeting and still show me the in class work from that meeting at the next meeting. But you may not do this more than once.
 
-### Online Work Credits (6%)
+### Online Work Credits (8%)
 
 These are credits you obtain for the work assigned for the weeks between our in person meetings.
 
