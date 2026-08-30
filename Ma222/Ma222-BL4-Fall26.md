@@ -76,11 +76,10 @@ We will be using Google Spreadsheets or other free software for all work in this
 
 Your grade will come from these parts:
 
-- Quizzes  (82%)
-- In Class Work Credits (12%)
-- Online Work Credits (6%)
-    - Online Assignments (3%)
-    - Spreadsheet Assignments (3%)
+- Quizzes - 82%
+- InClass Assignments - 12% (in person only)
+- Online Assignments - 3% (online only)
+- Spreadsheet Assignments - 3% (online only)
 
 Each of these parts is described in more detail below
 
