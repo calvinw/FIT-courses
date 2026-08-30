@@ -87,7 +87,7 @@ Each of these parts is described in more detail below
 
 Your quiz grade will come from 4 quizzes, roughly covering 2 meetings of material each. The quizzes are 30 minutes each and are usually 5 or 6 questions each. These quizzes are with no notes, no internet, no phone, no software, no AI tools. Pen and paper and calculator only. They are some multiple choice, some short answer, some true false.
 
-### In Class Work Credits (12%) (1 or 2 per class)
+### InClass Assignments (12%) (1 or 2 per class)
 
 These are credits you obtain for demonstrating you have completed assigned problems during our in person meetings.
 
@@ -97,15 +97,19 @@ The in class work can only be turned in by showing it to me during a meeting. Th
 
 You may miss up to 1 meeting and still show me the in class work from that meeting at the next meeting. But you may not do this more than once.
 
-### Online Work Credits (6%)
+### Online Assignments (3%)
 
 These are credits you obtain for the work assigned for the weeks between our in person meetings.
 
-The online work is a combination of **Online Assignments** (3%) and **Spreadsheet Assignments** (3%). During the weeks we are online only you need to do both.
-
-All of these assignments are done through Google Docs. You turn them in by sharing them with me.
+These assignments are done through Google Docs. You turn them in by sharing them with me.
 
 All assignments must be submitted by 11:59 PM EST on the day they are due. Work turned in 1 or 2 days late receives 50% credit. Work more than 2 days late receives no credit.
+
+### Spreadsheet Assignments (3%)
+
+These are credits you obtain for the spreadsheet work assigned for the weeks between our in person meetings. During the weeks we are online only you need to do both these and the **Online Assignments**.
+
+These are also done through Google Docs and turned in by sharing them with me, and the same late work policy applies.
 
 ## Midterm, Final Exam
 
