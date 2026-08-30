@@ -40,13 +40,13 @@ meetings is done online.
 
 1. Mon, Aug 31
 2. Mon, Sep 14
-3. Mon, Sep 28
+3. Mon, Sep 28 - Quiz 1
 4. Mon, Oct 12
-5. Mon, Oct 26
+5. Mon, Oct 26 - Quiz 2
 6. Mon, Nov 9
-7. Mon, Nov 23
+7. Mon, Nov 23 - Quiz 3
 8. Mon, Dec 7
-9. Mon, Dec 14
+9. Mon, Dec 14 - Quiz 4
 
 ## Course Materials
 
