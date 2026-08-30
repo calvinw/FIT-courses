@@ -124,11 +124,3 @@ problems for you.
 Every other use of AI is not allowed. That includes the In Class Assignments and the
 Online Assignments, which are your own work. The quizzes are pen and paper with no
 notes, no internet, no phone, no software, and no AI tools.
-
-## Institutional Policies and Resources
-
-The academic honor code, withdrawal procedures, emergency preparedness,
-student conduct policy, and academic and technical support resources all
-apply to this course:
-
-[Institutional Policies and Resources](https://calvinw.github.io/FIT-courses/shared/InstitutionalPoliciesAndResources.html)
