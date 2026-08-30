@@ -103,13 +103,19 @@ These are credits you obtain for the work assigned for the weeks between our in 
 
 These assignments are done through Google Docs. You turn them in by sharing them with me.
 
+#### Late Work Policy
+
 All assignments must be submitted by 11:59 PM EST on the day they are due. Work turned in 1 or 2 days late receives 50% credit. Work more than 2 days late receives no credit.
 
 ### Spreadsheet Assignments (3%) (submitted online only)
 
 These are credits you obtain for the spreadsheet work assigned for the weeks between our in person meetings. During the weeks we are online only you need to do both these and the **Online Assignments**.
 
-These are also done through Google Docs and turned in by sharing them with me, and the same late work policy applies.
+These are also done through Google Docs. You turn them in by sharing them with me.
+
+#### Late Work Policy
+
+All assignments must be submitted by 11:59 PM EST on the day they are due. Work turned in 1 or 2 days late receives 50% credit. Work more than 2 days late receives no credit.
 
 ## Midterm, Final Exam
 
