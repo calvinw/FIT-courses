@@ -77,9 +77,9 @@ We will be using Google Spreadsheets or other free software for all work in this
 Your grade will come from these parts:
 
 - Quizzes - 82%
-- InClass Assignments - 12% (submitted in class)
-- Online Assignments - 3% (submitted online)
-- Spreadsheet Assignments - 3% (submitted online)
+- InClass Assignments - 12% (submitted in class only)
+- Online Assignments - 3% (submitted online only)
+- Spreadsheet Assignments - 3% (submitted online only)
 
 Each of these parts is described in more detail below
 
@@ -87,7 +87,7 @@ Each of these parts is described in more detail below
 
 Your quiz grade will come from 4 quizzes, roughly covering 2 meetings of material each. The quizzes are 30 minutes each and are usually 5 or 6 questions each. These quizzes are with no notes, no internet, no phone, no software, no AI tools. Pen and paper and calculator only. They are some multiple choice, some short answer, some true false.
 
-### InClass Assignments (12%) (submitted in class)
+### InClass Assignments (12%) (submitted in class only)
 
 These are credits you obtain for demonstrating you have completed assigned problems during our in person meetings.
 
@@ -97,7 +97,7 @@ The in class work can only be turned in by showing it to me during a meeting. Th
 
 You may miss up to 1 meeting and still show me the in class work from that meeting at the next meeting. But you may not do this more than once.
 
-### Online Assignments (3%) (submitted online)
+### Online Assignments (3%) (submitted online only)
 
 These are credits you obtain for the work assigned for the weeks between our in person meetings.
 
@@ -105,7 +105,7 @@ These assignments are done through Google Docs. You turn them in by sharing them
 
 All assignments must be submitted by 11:59 PM EST on the day they are due. Work turned in 1 or 2 days late receives 50% credit. Work more than 2 days late receives no credit.
 
-### Spreadsheet Assignments (3%) (submitted online)
+### Spreadsheet Assignments (3%) (submitted online only)
 
 These are credits you obtain for the spreadsheet work assigned for the weeks between our in person meetings. During the weeks we are online only you need to do both these and the **Online Assignments**.
 
