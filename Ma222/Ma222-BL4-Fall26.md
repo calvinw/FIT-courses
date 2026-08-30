@@ -87,7 +87,7 @@ Each of these parts is described in more detail below
 
 Your quiz grade will come from 4 quizzes, roughly covering 2 meetings of material each. The quizzes are 30 minutes each and are usually 5 or 6 questions each. These quizzes are with no notes, no internet, no phone, no software, no AI tools. Pen and paper and calculator only. They are some multiple choice, some short answer, some true false.
 
-### InClass Assignments (12%) (submitted in class, 1 or 2 per class)
+### InClass Assignments (12%) (submitted in class)
 
 These are credits you obtain for demonstrating you have completed assigned problems during our in person meetings.
 
