@@ -79,6 +79,8 @@ Your grade will come from these parts:
 - Quizzes  (82%)
 - In Class Work Credits (12%)
 - Online Work Credits (6%)
+    - Online Assignments (3%)
+    - Spreadsheet Assignments (3%)
 
 Each of these parts is described in more detail below
 
@@ -100,7 +102,7 @@ You may miss up to 1 meeting and still show me the in class work from that meeti
 
 These are credits you obtain for the work assigned for the weeks between our in person meetings.
 
-The online work is a combination of **Online Assignments** and **Spreadsheet Assignments**. During the weeks we are online only you need to do both.
+The online work is a combination of **Online Assignments** (3%) and **Spreadsheet Assignments** (3%). During the weeks we are online only you need to do both.
 
 All of these assignments are done through Google Docs. You turn them in by sharing them with me.
 
