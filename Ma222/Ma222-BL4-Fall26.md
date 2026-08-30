@@ -90,7 +90,7 @@ Your quiz grade will come from 4 quizzes, roughly covering 2 meetings of materia
 
 These are credits you obtain for demonstrating you have completed assigned problems during our in person meetings.
 
-These assignments are done during class and you show them to me as you complete them. You will earn a single credit for each successful assignment completion. I decide if the work is complete enough to receive credit for.
+These InClass Assignments are done during class and you show them to me as you complete them. You will earn a single credit for each successful assignment completion. I decide if the work is complete enough to receive credit for.
 
 The in class work can only be turned in by showing it to me during a meeting. There is not a way to turn that work in by emailing it to me or submitting it in Brightspace. You show it to me and I mark it as complete when you are in class. You must be in attendance to earn these credits.
 
