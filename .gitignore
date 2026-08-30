@@ -1,1 +1,8 @@
 .DS_Store
+
+# LaTeX intermediates from quarto render --to pdf
+*.aux
+*.log
+*.tex
+*.out
+*.toc

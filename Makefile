@@ -7,6 +7,9 @@ QMD_FILES := $(shell find . -name '*.qmd')
 HTML_TARGETS := $(MD_FILES:.md=.html) $(QMD_FILES:.qmd=.html)
 PDF_TARGETS  := $(MD_FILES:.md=.pdf)
 
+# Keeps \% robust so headings with a percent sign survive the .aux round trip
+PDF_HEADER := $(CURDIR)/shared/latex-percent-fix.tex
+
 # Default: build HTML + PDF for everything, then refresh the index page
 all: $(HTML_TARGETS) $(PDF_TARGETS) index
 
@@ -16,8 +19,8 @@ all: $(HTML_TARGETS) $(PDF_TARGETS) index
 %.html: %.qmd
 	quarto render $<
 
-%.pdf: %.md
-	quarto render $< --to pdf
+%.pdf: %.md $(PDF_HEADER)
+	quarto render $< --to pdf --include-in-header=$(PDF_HEADER)
 
 # Regenerate index.html from whatever is currently on disk
 index:
