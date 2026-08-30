@@ -102,7 +102,7 @@ You may miss up to 1 meeting and still show me the in class work from that meeti
 
 These are credits you obtain for the work assigned for the weeks between our in person meetings.
 
-These assignments are done through Google Docs. You turn them in by sharing them with me.
+These assignments are done through Google Docs. You turn them in by sharing them with me in Google Docs. There are no dropboxes for this work, it is just sharing.
 
 #### Late Work Policy {style="font-size: 1.1rem;"}
 
