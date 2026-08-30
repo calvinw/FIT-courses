@@ -78,8 +78,7 @@ Your grade will come from these parts:
 
 - Quizzes - 82%
 - InClass Assignments - 12% (submitted in class only)
-- Online Assignments - 3% (submitted online only)
-- Spreadsheet Assignments - 3% (submitted online only)
+- Online Assignments - 6% (submitted online only)
 
 Each of these parts is described in more detail below
 
@@ -95,27 +94,19 @@ These **InClass Assignments** are done during class and you show them to me as y
 
 The in class work can only be turned in by showing it to me during a meeting. There is not a way to turn that work in by emailing it to me or submitting it in Brightspace. You show it to me and I mark it as complete when you are in class. You must be in attendance to earn these credits.
 
+#### Late Work Policy {style="font-size: 1.1rem;"}
+
 You may miss up to 1 meeting and still show me the in class work from that meeting at the next meeting. But you may not do this more than once.
 
-### Online Assignments (3%) (submitted online only)
+### Online Assignments (6%) (submitted online only)
 
 These are credits you obtain for the work assigned for the weeks between our in person meetings.
 
 These assignments are done through Google Docs. You turn them in by sharing them with me.
 
-#### Late Work Policy
+#### Late Work Policy {style="font-size: 1.1rem;"}
 
-All assignments must be submitted by 11:59 PM EST on the day they are due. Work turned in 1 or 2 days late receives 50% credit. Work more than 2 days late receives no credit.
-
-### Spreadsheet Assignments (3%) (submitted online only)
-
-These are credits you obtain for the spreadsheet work assigned for the weeks between our in person meetings. During the weeks we are online only you need to do both these and the **Online Assignments**.
-
-These are also done through Google Docs. You turn them in by sharing them with me.
-
-#### Late Work Policy
-
-All assignments must be submitted by 11:59 PM EST on the day they are due. Work turned in 1 or 2 days late receives 50% credit. Work more than 2 days late receives no credit.
+All assignments must be submitted by 11:59 PM EST on the day they are due. There is no credit for late assignments.
 
 ## Midterm, Final Exam
 
@@ -128,8 +119,8 @@ the content from the textbook, [Intro Statistics](https://mathplosion.gitlab.io/
 to explain a passage, work through an example, or check your understanding of a topic
 we are covering.
 
-Every other use of AI is not allowed. That includes the InClass Assignments, the Online
-Assignments, and the Spreadsheet Assignments, which are your own work. The quizzes are
+Every other use of AI is not allowed. That includes the InClass Assignments and the Online
+Assignments, which are your own work. The quizzes are
 pen and paper with no notes, no internet, no phone, no software, and no AI tools.
 
 ## Institutional Policies and Resources
