@@ -114,14 +114,16 @@ There is NO MIDTERM and NO FINAL EXAM in this course.
 
 ## AI Policy
 
-Use of AI in this course is forbidden, with one exception. You may use AI to work with
+Use of AI in this course is forbidden, with one exception. You may use AI to understand
 the content from the textbook, [Intro Statistics](https://mathplosion.gitlab.io/intro-statistics-bookdown/):
-to explain a passage, work through an example, or check your understanding of a topic
-we are covering.
+to explain a passage or to check your understanding of a topic we are covering.
 
-Every other use of AI is not allowed. That includes the In Class Assignments and the Online
-Assignments, which are your own work. The quizzes are
-pen and paper with no notes, no internet, no phone, no software, and no AI tools.
+You may use AI to understand a topic, but you may not ask the AI to do particular
+problems for you.
+
+Every other use of AI is not allowed. That includes the In Class Assignments and the
+Online Assignments, which are your own work. The quizzes are pen and paper with no
+notes, no internet, no phone, no software, and no AI tools.
 
 ## Institutional Policies and Resources
 
