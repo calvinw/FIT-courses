@@ -77,9 +77,9 @@ We will be using Google Spreadsheets or other free software for all work in this
 Your grade will come from these parts:
 
 - Quizzes - 82%
-- InClass Assignments - 12% (in person only)
-- Online Assignments - 3% (online only)
-- Spreadsheet Assignments - 3% (online only)
+- InClass Assignments - 12% (submitted in class)
+- Online Assignments - 3% (submitted online)
+- Spreadsheet Assignments - 3% (submitted online)
 
 Each of these parts is described in more detail below
 
