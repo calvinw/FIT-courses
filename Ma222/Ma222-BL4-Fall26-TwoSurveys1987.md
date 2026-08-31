@@ -1,3 +1,12 @@
+---
+format:
+  html: default
+  pdf:
+    geometry:
+      - margin=0.7in
+    fontsize: 10pt
+---
+
 # Two Surveys from 1987
 
 ## Shere Hite Survey
