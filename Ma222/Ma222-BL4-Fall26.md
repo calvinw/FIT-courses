@@ -33,20 +33,9 @@ Upon completion of this course, students will be able to:
 9. Apply analysis of variance (ANOVA). 
 10. Use the computer to store, manipulate, and analyze data. 
 
-## Meeting Dates
+## Meetings
 
-This section meets in person every other Monday. The work in the weeks between
-meetings is done online.
-
-1. Mon, Aug 31
-2. Mon, Sep 14
-3. Mon, Sep 28 - Quiz 1
-4. Mon, Oct 12
-5. Mon, Oct 26 - Quiz 2
-6. Mon, Nov 9
-7. Mon, Nov 23 - Quiz 3
-8. Mon, Dec 7
-9. Mon, Dec 14 - Quiz 4
+This section meets in person every Monday.
 
 ## Course Materials
 
@@ -84,7 +73,7 @@ Each of these parts is described in more detail below
 
 ### Quizzes (82%)
 
-Your quiz grade will come from 4 quizzes, roughly covering 2 meetings of material each. The quizzes are 30 minutes each and are usually 5 or 6 questions each. These quizzes are with no notes, no internet, no phone, no software, no AI tools. Pen and paper and calculator only. They are some multiple choice, some short answer, some true false.
+Your quiz grade will come from 5 quizzes, roughly covering 3 meetings of material each. The quizzes are 30 minutes each and are usually 5 or 6 questions each. These quizzes are with no notes, no internet, no phone, no software, no AI tools. Pen and paper and calculator only. They are some multiple choice, some short answer, some true false.
 
 ### In Class Assignments (12%) (submitted in class only)
 
@@ -100,7 +89,7 @@ You may miss up to 1 meeting and still show me the in class work from that meeti
 
 ### Online Assignments (6%) (submitted online only)
 
-These are credits you obtain for the work assigned for the weeks between our in person meetings.
+These are credits you obtain for the work assigned between our weekly meetings.
 
 These assignments are done through Google Docs. You turn them in by sharing them with me in Google Docs. There are no dropboxes for this work, it is just sharing.
 
