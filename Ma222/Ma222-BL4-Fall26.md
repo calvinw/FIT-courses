@@ -35,7 +35,7 @@ Upon completion of this course, students will be able to:
 
 ## Meetings
 
-This section meets in person every Monday.
+The class meets every Monday 11-1 and then there is online work later in the week.
 
 ## Course Materials
 
