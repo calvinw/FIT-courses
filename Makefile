@@ -13,14 +13,16 @@ PDF_HEADER := $(CURDIR)/shared/latex-percent-fix.tex
 # Default: build HTML + PDF for everything, then refresh the index page
 all: $(HTML_TARGETS) $(PDF_TARGETS) index
 
+# Rendered from the file's own directory so Quarto writes the "Other Formats"
+# link relative to the document rather than to the repo root
 %.html: %.md
-	quarto render $< --to html
+	cd $(dir $<) && quarto render $(notdir $<) --to html
 
 %.html: %.qmd
-	quarto render $<
+	cd $(dir $<) && quarto render $(notdir $<)
 
 %.pdf: %.md $(PDF_HEADER)
-	quarto render $< --to pdf --include-in-header=$(PDF_HEADER)
+	cd $(dir $<) && quarto render $(notdir $<) --to pdf --include-in-header=$(PDF_HEADER)
 
 # Regenerate index.html from whatever is currently on disk
 index:
