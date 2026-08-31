@@ -1,0 +1,91 @@
+---
+title: "Population and Sample Proportions"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    theme: default
+    html-math-method: katex
+---
+
+```{=html}
+<style>
+.reveal table mjx-container,
+.reveal table .math { font-size: 0.8em; }
+</style>
+```
+
+## 1. Online Returns
+
+A retailer wants to know what fraction of its online customers return items. It surveys 450 of its online customers, and 171 of them say they returned at least one item last year.
+
+## 1. Online Returns
+
+A retailer wants to know what fraction of its online customers return items. It surveys 450 of its online customers, and 171 of them say they returned at least one item last year.
+
+|  | Size | Proportion |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | 450 | $\frac{171}{450} = 0.38$ (or 38%) |
+
+The population proportion $p$ is unknown, but the sample proportion is $\hat{p} = 38\%$.
+
+## 2. Left-Handed Students
+
+A researcher wants to know what fraction of the 8,568 students at FIT are left-handed. She checks 200 FIT students and finds that 26 of them are left-handed.
+
+## 2. Left-Handed Students
+
+A researcher wants to know what fraction of the 8,568 students at FIT are left-handed. She checks 200 FIT students and finds that 26 of them are left-handed.
+
+|  | Size | Proportion |
+|:--|:--|:--|
+| Population | 8,568 | ? |
+| Sample | 200 | $\frac{26}{200} = 0.13$ (or 13%) |
+
+The population proportion $p$ is unknown, but the sample proportion is $\hat{p} = 13\%$.
+
+## 3. Defective Zippers
+
+A factory wants to know what fraction of the zippers in a production run are defective. An inspector examines 320 zippers from the run and finds 8 defective ones.
+
+## 3. Defective Zippers
+
+A factory wants to know what fraction of the zippers in a production run are defective. An inspector examines 320 zippers from the run and finds 8 defective ones.
+
+|  | Size | Proportion |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | 320 | $\frac{8}{320} = 0.025$ (or 2.5%) |
+
+The population proportion $p$ is unknown, but the sample proportion is $\hat{p} = 2.5\%$.
+
+## 4. Mobile App Payments
+
+A store chain wants to know what fraction of its shoppers pay with the store's mobile app. Researchers watch 1,200 shoppers check out, and 642 of them pay with the app.
+
+## 4. Mobile App Payments
+
+A store chain wants to know what fraction of its shoppers pay with the store's mobile app. Researchers watch 1,200 shoppers check out, and 642 of them pay with the app.
+
+|  | Size | Proportion |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | 1,200 | $\frac{642}{1200} = 0.535$ (or 53.5%) |
+
+The population proportion $p$ is unknown, but the sample proportion is $\hat{p} = 53.5\%$.
+
+## 5. Sustainable Clothing
+
+A market research firm wants to know what fraction of adult shoppers in the United States buy clothing labeled sustainable. The firm interviews 500 adult shoppers, and 315 of them say they bought such an item in the past year.
+
+## 5. Sustainable Clothing
+
+A market research firm wants to know what fraction of adult shoppers in the United States buy clothing labeled sustainable. The firm interviews 500 adult shoppers, and 315 of them say they bought such an item in the past year.
+
+|  | Size | Proportion |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | 500 | $\frac{315}{500} = 0.63$ (or 63%) |
+
+The population proportion $p$ is unknown, but the sample proportion is $\hat{p} = 63\%$.
