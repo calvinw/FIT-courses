@@ -1,0 +1,156 @@
+---
+title: "Population and Sample Means"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    theme: default
+    html-math-method: katex
+---
+
+```{=html}
+<style>
+.reveal table mjx-container,
+.reveal table .math { font-size: 0.8em; }
+</style>
+```
+
+## 1. Online Order Amounts
+
+A retailer wants to know the average amount its online customers spend per order. It looks at 450 orders, and the average of those orders was \$85.37.
+
+## 1. Online Order Amounts
+
+A retailer wants to know the average amount its online customers spend per order. It looks at 450 orders, and the average of those orders was \$85.37.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | ? | ? |
+
+What is the sample size?
+
+What is the sample mean?
+
+## 1. Online Order Amounts
+
+A retailer wants to know the average amount its online customers spend per order. It looks at 450 orders, and the average of those orders was \$85.37.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | 450 | \$85.37 |
+
+The population mean $\mu$ is unknown, but the sample mean is $\bar{x} = \$85.37$.
+
+## 2. Study Hours at FIT
+
+A researcher wants to know the average number of hours the 8,568 students at FIT study each week. She asks 200 FIT students, and the average study time in the sample was 13.5 hours per week.
+
+## 2. Study Hours at FIT
+
+A researcher wants to know the average number of hours the 8,568 students at FIT study each week. She asks 200 FIT students, and the average study time in the sample was 13.5 hours per week.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | ? | ? |
+
+What is the sample size?
+
+What is the sample mean?
+
+## 2. Study Hours at FIT
+
+A researcher wants to know the average number of hours the 8,568 students at FIT study each week. She asks 200 FIT students, and the average study time in the sample was 13.5 hours per week.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | 8,568 | ? |
+| Sample | 200 | 13.5 hours |
+
+The population mean $\mu$ is unknown, but the sample mean is $\bar{x} = 13.5$ hours.
+
+## 3. Sewing Times
+
+A factory wants to know the average time it takes to sew a jacket. A supervisor times 320 jackets, and the average was 42.3 minutes.
+
+## 3. Sewing Times
+
+A factory wants to know the average time it takes to sew a jacket. A supervisor times 320 jackets, and the average was 42.3 minutes.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | ? | ? |
+
+What is the sample size?
+
+What is the sample mean?
+
+## 3. Sewing Times
+
+A factory wants to know the average time it takes to sew a jacket. A supervisor times 320 jackets, and the average was 42.3 minutes.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | 320 | 42.3 minutes |
+
+The population mean $\mu$ is unknown, but the sample mean is $\bar{x} = 42.3$ minutes.
+
+## 4. Checkout Times
+
+A store chain wants to know the average time its shoppers spend at checkout. Researchers time 1,200 shoppers, and the average was 4.5 minutes.
+
+## 4. Checkout Times
+
+A store chain wants to know the average time its shoppers spend at checkout. Researchers time 1,200 shoppers, and the average was 4.5 minutes.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | ? | ? |
+
+What is the sample size?
+
+What is the sample mean?
+
+## 4. Checkout Times
+
+A store chain wants to know the average time its shoppers spend at checkout. Researchers time 1,200 shoppers, and the average was 4.5 minutes.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | 1,200 | 4.5 minutes |
+
+The population mean $\mu$ is unknown, but the sample mean is $\bar{x} = 4.5$ minutes.
+
+## 5. Sustainable Clothing Spending
+
+A market research firm wants to know the average amount adult shoppers in the United States spend on sustainable clothing each year. The firm interviews 500 adult shoppers, and the average reported spending was \$122.64.
+
+## 5. Sustainable Clothing Spending
+
+A market research firm wants to know the average amount adult shoppers in the United States spend on sustainable clothing each year. The firm interviews 500 adult shoppers, and the average reported spending was \$122.64.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | ? | ? |
+
+What is the sample size?
+
+What is the sample mean?
+
+## 5. Sustainable Clothing Spending
+
+A market research firm wants to know the average amount adult shoppers in the United States spend on sustainable clothing each year. The firm interviews 500 adult shoppers, and the average reported spending was \$122.64.
+
+|  | Size | Mean |
+|:--|:--|:--|
+| Population | ? | ? |
+| Sample | 500 | \$122.64 |
+
+The population mean $\mu$ is unknown, but the sample mean is $\bar{x} = \$122.64$.

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="PopulationSampleProportion_files/libs/clipboard/clipboard.min.js"></script>
-<script src="PopulationSampleProportion_files/libs/quarto-html/tabby.min.js"></script>
-<script src="PopulationSampleProportion_files/libs/quarto-html/popper.min.js"></script>
-<script src="PopulationSampleProportion_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="PopulationSampleProportion_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="PopulationSampleProportion_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="PopulationSampleProportion_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="PopulationSampleMean_files/libs/clipboard/clipboard.min.js"></script>
+<script src="PopulationSampleMean_files/libs/quarto-html/tabby.min.js"></script>
+<script src="PopulationSampleMean_files/libs/quarto-html/popper.min.js"></script>
+<script src="PopulationSampleMean_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="PopulationSampleMean_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="PopulationSampleMean_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="PopulationSampleMean_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Calvin Williamson, Science and Math">
-  <title>Population and Sample Proportions</title>
+  <title>Population and Sample Means</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="PopulationSampleProportion_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="PopulationSampleProportion_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="PopulationSampleMean_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="PopulationSampleMean_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="PopulationSampleProportion_files/libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="PopulationSampleMean_files/libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
@@ -46,10 +46,10 @@
 }}});
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-  <link href="PopulationSampleProportion_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="PopulationSampleProportion_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="PopulationSampleProportion_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="PopulationSampleProportion_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link href="PopulationSampleMean_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="PopulationSampleMean_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="PopulationSampleMean_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="PopulationSampleMean_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -143,7 +143,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Population and Sample Proportions</h1>
+  <h1 class="title">Population and Sample Means</h1>
   <p class="subtitle">Fall 26</p>
 
 <div class="quarto-title-authors">
@@ -162,19 +162,19 @@ Calvin Williamson, Science and Math
 .reveal table .math { font-size: 0.8em; }
 </style>
 </section>
-<section id="online-returns" class="slide level2">
-<h2>1. Online Returns</h2>
-<p>A retailer wants to know what fraction of its online customers return items. It surveys 450 of its online customers, and 171 of them say they returned at least one item last year.</p>
+<section id="online-order-amounts" class="slide level2">
+<h2>1. Online Order Amounts</h2>
+<p>A retailer wants to know the average amount its online customers spend per order. It looks at 450 orders, and the average of those orders was $85.37.</p>
 </section>
-<section id="online-returns-1" class="slide level2">
-<h2>1. Online Returns</h2>
-<p>A retailer wants to know what fraction of its online customers return items. It surveys 450 of its online customers, and 171 of them say they returned at least one item last year.</p>
+<section id="online-order-amounts-1" class="slide level2">
+<h2>1. Online Order Amounts</h2>
+<p>A retailer wants to know the average amount its online customers spend per order. It looks at 450 orders, and the average of those orders was $85.37.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -191,17 +191,17 @@ Calvin Williamson, Science and Math
 </tbody>
 </table>
 <p>What is the sample size?</p>
-<p>What is the sample proportion?</p>
+<p>What is the sample mean?</p>
 </section>
-<section id="online-returns-2" class="slide level2">
-<h2>1. Online Returns</h2>
-<p>A retailer wants to know what fraction of its online customers return items. It surveys 450 of its online customers, and 171 of them say they returned at least one item last year.</p>
+<section id="online-order-amounts-2" class="slide level2">
+<h2>1. Online Order Amounts</h2>
+<p>A retailer wants to know the average amount its online customers spend per order. It looks at 450 orders, and the average of those orders was $85.37.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -213,25 +213,25 @@ Calvin Williamson, Science and Math
 <tr class="even">
 <td style="text-align: left;">Sample</td>
 <td style="text-align: left;">450</td>
-<td style="text-align: left;"><span class="math inline">\frac{171}{450} = 0.38</span> (or 38%)</td>
+<td style="text-align: left;">$85.37</td>
 </tr>
 </tbody>
 </table>
-<p>The population proportion <span class="math inline">p</span> is unknown, but the sample proportion is <span class="math inline">\hat{p} = 38\%</span>.</p>
+<p>The population mean <span class="math inline">\mu</span> is unknown, but the sample mean is <span class="math inline">\bar{x} = \$85.37</span>.</p>
 </section>
-<section id="left-handed-students" class="slide level2">
-<h2>2. Left-Handed Students</h2>
-<p>A researcher wants to know what fraction of the 8,568 students at FIT are left-handed. She checks 200 FIT students and finds that 26 of them are left-handed.</p>
+<section id="study-hours-at-fit" class="slide level2">
+<h2>2. Study Hours at FIT</h2>
+<p>A researcher wants to know the average number of hours the 8,568 students at FIT study each week. She asks 200 FIT students, and the average study time in the sample was 13.5 hours per week.</p>
 </section>
-<section id="left-handed-students-1" class="slide level2">
-<h2>2. Left-Handed Students</h2>
-<p>A researcher wants to know what fraction of the 8,568 students at FIT are left-handed. She checks 200 FIT students and finds that 26 of them are left-handed.</p>
+<section id="study-hours-at-fit-1" class="slide level2">
+<h2>2. Study Hours at FIT</h2>
+<p>A researcher wants to know the average number of hours the 8,568 students at FIT study each week. She asks 200 FIT students, and the average study time in the sample was 13.5 hours per week.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -248,17 +248,17 @@ Calvin Williamson, Science and Math
 </tbody>
 </table>
 <p>What is the sample size?</p>
-<p>What is the sample proportion?</p>
+<p>What is the sample mean?</p>
 </section>
-<section id="left-handed-students-2" class="slide level2">
-<h2>2. Left-Handed Students</h2>
-<p>A researcher wants to know what fraction of the 8,568 students at FIT are left-handed. She checks 200 FIT students and finds that 26 of them are left-handed.</p>
+<section id="study-hours-at-fit-2" class="slide level2">
+<h2>2. Study Hours at FIT</h2>
+<p>A researcher wants to know the average number of hours the 8,568 students at FIT study each week. She asks 200 FIT students, and the average study time in the sample was 13.5 hours per week.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -270,25 +270,25 @@ Calvin Williamson, Science and Math
 <tr class="even">
 <td style="text-align: left;">Sample</td>
 <td style="text-align: left;">200</td>
-<td style="text-align: left;"><span class="math inline">\frac{26}{200} = 0.13</span> (or 13%)</td>
+<td style="text-align: left;">13.5 hours</td>
 </tr>
 </tbody>
 </table>
-<p>The population proportion <span class="math inline">p</span> is unknown, but the sample proportion is <span class="math inline">\hat{p} = 13\%</span>.</p>
+<p>The population mean <span class="math inline">\mu</span> is unknown, but the sample mean is <span class="math inline">\bar{x} = 13.5</span> hours.</p>
 </section>
-<section id="defective-zippers" class="slide level2">
-<h2>3. Defective Zippers</h2>
-<p>A factory wants to know what fraction of the zippers in a production run are defective. An inspector examines 320 zippers from the run and finds 8 defective ones.</p>
+<section id="sewing-times" class="slide level2">
+<h2>3. Sewing Times</h2>
+<p>A factory wants to know the average time it takes to sew a jacket. A supervisor times 320 jackets, and the average was 42.3 minutes.</p>
 </section>
-<section id="defective-zippers-1" class="slide level2">
-<h2>3. Defective Zippers</h2>
-<p>A factory wants to know what fraction of the zippers in a production run are defective. An inspector examines 320 zippers from the run and finds 8 defective ones.</p>
+<section id="sewing-times-1" class="slide level2">
+<h2>3. Sewing Times</h2>
+<p>A factory wants to know the average time it takes to sew a jacket. A supervisor times 320 jackets, and the average was 42.3 minutes.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -305,17 +305,17 @@ Calvin Williamson, Science and Math
 </tbody>
 </table>
 <p>What is the sample size?</p>
-<p>What is the sample proportion?</p>
+<p>What is the sample mean?</p>
 </section>
-<section id="defective-zippers-2" class="slide level2">
-<h2>3. Defective Zippers</h2>
-<p>A factory wants to know what fraction of the zippers in a production run are defective. An inspector examines 320 zippers from the run and finds 8 defective ones.</p>
+<section id="sewing-times-2" class="slide level2">
+<h2>3. Sewing Times</h2>
+<p>A factory wants to know the average time it takes to sew a jacket. A supervisor times 320 jackets, and the average was 42.3 minutes.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -327,25 +327,25 @@ Calvin Williamson, Science and Math
 <tr class="even">
 <td style="text-align: left;">Sample</td>
 <td style="text-align: left;">320</td>
-<td style="text-align: left;"><span class="math inline">\frac{8}{320} = 0.025</span> (or 2.5%)</td>
+<td style="text-align: left;">42.3 minutes</td>
 </tr>
 </tbody>
 </table>
-<p>The population proportion <span class="math inline">p</span> is unknown, but the sample proportion is <span class="math inline">\hat{p} = 2.5\%</span>.</p>
+<p>The population mean <span class="math inline">\mu</span> is unknown, but the sample mean is <span class="math inline">\bar{x} = 42.3</span> minutes.</p>
 </section>
-<section id="mobile-app-payments" class="slide level2">
-<h2>4. Mobile App Payments</h2>
-<p>A store chain wants to know what fraction of its shoppers pay with the store’s mobile app. Researchers watch 1,200 shoppers check out, and 642 of them pay with the app.</p>
+<section id="checkout-times" class="slide level2">
+<h2>4. Checkout Times</h2>
+<p>A store chain wants to know the average time its shoppers spend at checkout. Researchers time 1,200 shoppers, and the average was 4.5 minutes.</p>
 </section>
-<section id="mobile-app-payments-1" class="slide level2">
-<h2>4. Mobile App Payments</h2>
-<p>A store chain wants to know what fraction of its shoppers pay with the store’s mobile app. Researchers watch 1,200 shoppers check out, and 642 of them pay with the app.</p>
+<section id="checkout-times-1" class="slide level2">
+<h2>4. Checkout Times</h2>
+<p>A store chain wants to know the average time its shoppers spend at checkout. Researchers time 1,200 shoppers, and the average was 4.5 minutes.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -362,17 +362,17 @@ Calvin Williamson, Science and Math
 </tbody>
 </table>
 <p>What is the sample size?</p>
-<p>What is the sample proportion?</p>
+<p>What is the sample mean?</p>
 </section>
-<section id="mobile-app-payments-2" class="slide level2">
-<h2>4. Mobile App Payments</h2>
-<p>A store chain wants to know what fraction of its shoppers pay with the store’s mobile app. Researchers watch 1,200 shoppers check out, and 642 of them pay with the app.</p>
+<section id="checkout-times-2" class="slide level2">
+<h2>4. Checkout Times</h2>
+<p>A store chain wants to know the average time its shoppers spend at checkout. Researchers time 1,200 shoppers, and the average was 4.5 minutes.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -384,25 +384,25 @@ Calvin Williamson, Science and Math
 <tr class="even">
 <td style="text-align: left;">Sample</td>
 <td style="text-align: left;">1,200</td>
-<td style="text-align: left;"><span class="math inline">\frac{642}{1200} = 0.535</span> (or 53.5%)</td>
+<td style="text-align: left;">4.5 minutes</td>
 </tr>
 </tbody>
 </table>
-<p>The population proportion <span class="math inline">p</span> is unknown, but the sample proportion is <span class="math inline">\hat{p} = 53.5\%</span>.</p>
+<p>The population mean <span class="math inline">\mu</span> is unknown, but the sample mean is <span class="math inline">\bar{x} = 4.5</span> minutes.</p>
 </section>
-<section id="sustainable-clothing" class="slide level2">
-<h2>5. Sustainable Clothing</h2>
-<p>A market research firm wants to know what fraction of adult shoppers in the United States buy clothing labeled sustainable. The firm interviews 500 adult shoppers, and 315 of them say they bought such an item in the past year.</p>
+<section id="sustainable-clothing-spending" class="slide level2">
+<h2>5. Sustainable Clothing Spending</h2>
+<p>A market research firm wants to know the average amount adult shoppers in the United States spend on sustainable clothing each year. The firm interviews 500 adult shoppers, and the average reported spending was $122.64.</p>
 </section>
-<section id="sustainable-clothing-1" class="slide level2">
-<h2>5. Sustainable Clothing</h2>
-<p>A market research firm wants to know what fraction of adult shoppers in the United States buy clothing labeled sustainable. The firm interviews 500 adult shoppers, and 315 of them say they bought such an item in the past year.</p>
+<section id="sustainable-clothing-spending-1" class="slide level2">
+<h2>5. Sustainable Clothing Spending</h2>
+<p>A market research firm wants to know the average amount adult shoppers in the United States spend on sustainable clothing each year. The firm interviews 500 adult shoppers, and the average reported spending was $122.64.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -419,17 +419,17 @@ Calvin Williamson, Science and Math
 </tbody>
 </table>
 <p>What is the sample size?</p>
-<p>What is the sample proportion?</p>
+<p>What is the sample mean?</p>
 </section>
-<section id="sustainable-clothing-2" class="slide level2">
-<h2>5. Sustainable Clothing</h2>
-<p>A market research firm wants to know what fraction of adult shoppers in the United States buy clothing labeled sustainable. The firm interviews 500 adult shoppers, and 315 of them say they bought such an item in the past year.</p>
+<section id="sustainable-clothing-spending-2" class="slide level2">
+<h2>5. Sustainable Clothing Spending</h2>
+<p>A market research firm wants to know the average amount adult shoppers in the United States spend on sustainable clothing each year. The firm interviews 500 adult shoppers, and the average reported spending was $122.64.</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: left;">Size</th>
-<th style="text-align: left;">Proportion</th>
+<th style="text-align: left;">Mean</th>
 </tr>
 </thead>
 <tbody>
@@ -441,11 +441,11 @@ Calvin Williamson, Science and Math
 <tr class="even">
 <td style="text-align: left;">Sample</td>
 <td style="text-align: left;">500</td>
-<td style="text-align: left;"><span class="math inline">\frac{315}{500} = 0.63</span> (or 63%)</td>
+<td style="text-align: left;">$122.64</td>
 </tr>
 </tbody>
 </table>
-<p>The population proportion <span class="math inline">p</span> is unknown, but the sample proportion is <span class="math inline">\hat{p} = 63\%</span>.</p>
+<p>The population mean <span class="math inline">\mu</span> is unknown, but the sample mean is <span class="math inline">\bar{x} = \$122.64</span>.</p>
 
 </section>
     </div>
@@ -456,18 +456,18 @@ Calvin Williamson, Science and Math
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="PopulationSampleProportion_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="PopulationSampleMean_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="PopulationSampleProportion_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="PopulationSampleProportion_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="PopulationSampleProportion_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="PopulationSampleProportion_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="PopulationSampleProportion_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="PopulationSampleMean_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="PopulationSampleMean_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="PopulationSampleMean_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="PopulationSampleMean_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="PopulationSampleMean_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="PopulationSampleProportion_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="PopulationSampleProportion_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="PopulationSampleProportion_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="PopulationSampleMean_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="PopulationSampleMean_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="PopulationSampleMean_files/libs/revealjs/plugin/zoom/zoom.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
