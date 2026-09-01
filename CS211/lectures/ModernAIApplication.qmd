@@ -1,0 +1,38 @@
+---
+title: "A Modern AI Application"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## The Original App
+
+This is the original app. It collects financial data for retail companies and
+lets you compare one company against another, or against the segment it
+belongs to. There is no AI anywhere in this version.
+
+[FIT Retail Index (non-AI)](https://calvinw.github.io/BusMgmtBenchmarks/)
+
+Behind the companies is a **DoltHub database** holding all of that financial
+data, and the web app reads the companies and their numbers directly from it.
+
+[BusMgmtBenchmarks on DoltHub](https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks)
+
+## The Same App, With an LLM
+
+This is the same app with an **LLM Chat** added.
+
+[FIT Retail Index (AI version)](https://calvinw.github.io/llm-chat-bus-dev/)
+
+Two things are new:
+
+- The chat can reach **the same DoltHub database** the original app uses, so
+  the LLM can query the company data itself.
+- With some local tools, the AI can also see **the state of the menus** on the
+  company to company page.
+
+Together these let the AI **curate** examples for you: it picks companies worth
+comparing, sets the menus, and shows you the result.
