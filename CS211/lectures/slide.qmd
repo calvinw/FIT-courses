@@ -125,6 +125,35 @@ Examples (Tools):
 
 [Example LLM with a simple tool](https://calvinw.github.io/llm-chat/)
 
+## A Modern AI Application
+
+On the following slides we show a web application with no AI, and then show how
+it turns into a modern AI application.
+
+## The Original (non-AI) App
+
+This is the [FIT Retail Index (non-AI)](https://calvinw.github.io/BusMgmtBenchmarks/). 
+It uses financial data for retail companies and
+lets you compare one company against another, or against the segment it
+belongs to. There is no AI anywhere in this version.
+
+- This app is hosted freely on Github. It does not need a traditional server to host it.
+- The app contacts a [DoltHub database](https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks) 
+through an standard REST API that holds all of that financial data, and the web app reads the companies and their numbers directly from it.
+
+## The AI-version
+
+This is the [FIT Retail Index (AI version)](https://calvinw.github.io/llm-chat-bus-dev/) which now has **LLM Chat** added.
+
+Two things are new:
+
+- The chat can reach **the same DoltHub database** the original app uses, so
+  the LLM can query the company data itself.
+- With some tools, the AI can also see **the state of the menus** on the
+  company to company page. It can set those menus for you.
+
+The AI can drive the user interface and access the same data.
+
 ## A Music Composition Language 
 
 [Strudel.cc](https://strudel.cc/) is a musical language for live coding and DJing

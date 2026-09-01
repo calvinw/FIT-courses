@@ -139,23 +139,23 @@ Calvin Williamson, Science and Math
 </div>
 
 </section>
-<section id="the-original-app" class="slide level2">
-<h2>The Original App</h2>
-<p>This is the original app. It collects financial data for retail companies and lets you compare one company against another, or against the segment it belongs to. There is no AI anywhere in this version.</p>
-<p><a href="https://calvinw.github.io/BusMgmtBenchmarks/">FIT Retail Index (non-AI)</a></p>
-<p>Behind the companies is a <strong>DoltHub database</strong> holding all of that financial data, and the web app reads the companies and their numbers directly from it.</p>
-<p><a href="https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks">BusMgmtBenchmarks on DoltHub</a></p>
+<section id="the-original-non-ai-app" class="slide level2">
+<h2>The Original (non-AI) App</h2>
+<p>This is the <a href="https://calvinw.github.io/BusMgmtBenchmarks/">FIT Retail Index (non-AI)</a>. It uses financial data for retail companies and lets you compare one company against another, or against the segment it belongs to. There is no AI anywhere in this version.</p>
+<ul>
+<li>This app is hosted freely on Github. It does not need a traditional server to host it.</li>
+<li>The app contacts a <a href="https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks">DoltHub database</a> through an standard REST API that holds all of that financial data, and the web app reads the companies and their numbers directly from it.</li>
+</ul>
 </section>
-<section id="the-same-app-with-an-llm" class="slide level2">
-<h2>The Same App, With an LLM</h2>
-<p>This is the same app with an <strong>LLM Chat</strong> added.</p>
-<p><a href="https://calvinw.github.io/llm-chat-bus-dev/">FIT Retail Index (AI version)</a></p>
+<section id="the-ai-version" class="slide level2">
+<h2>The AI-version</h2>
+<p>This is the <a href="https://calvinw.github.io/llm-chat-bus-dev/">FIT Retail Index (AI version)</a> which now has <strong>LLM Chat</strong> added.</p>
 <p>Two things are new:</p>
 <ul>
 <li>The chat can reach <strong>the same DoltHub database</strong> the original app uses, so the LLM can query the company data itself.</li>
-<li>With some local tools, the AI can also see <strong>the state of the menus</strong> on the company to company page.</li>
+<li>With some tools, the AI can also see <strong>the state of the menus</strong> on the company to company page. It can set those menus for you.</li>
 </ul>
-<p>Together these let the AI <strong>curate</strong> examples for you: it picks companies worth comparing, sets the menus, and shows you the result.</p>
+<p>Together these let the AI show you examples from the database and drive the user interface for you: it picks companies worth comparing, sets the menus, and shows you the result and discusses it with you.</p>
 
 </section>
     </div>

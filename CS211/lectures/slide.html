@@ -283,6 +283,28 @@ Calvin Williamson, Science and Math
 </ul>
 <p><a href="https://calvinw.github.io/llm-chat/">Example LLM with a simple tool</a></p>
 </section>
+<section id="a-modern-ai-application" class="slide level2">
+<h2>A Modern AI Application</h2>
+<p>On the following slides we show a web application with no AI, and then show how it turns into a modern AI application.</p>
+</section>
+<section id="the-original-non-ai-app" class="slide level2">
+<h2>The Original (non-AI) App</h2>
+<p>This is the <a href="https://calvinw.github.io/BusMgmtBenchmarks/">FIT Retail Index (non-AI)</a>. It uses financial data for retail companies and lets you compare one company against another, or against the segment it belongs to. There is no AI anywhere in this version.</p>
+<ul>
+<li>This app is hosted freely on Github. It does not need a traditional server to host it.</li>
+<li>The app contacts a <a href="https://www.dolthub.com/repositories/calvinw/BusMgmtBenchmarks">DoltHub database</a> through an standard REST API that holds all of that financial data, and the web app reads the companies and their numbers directly from it.</li>
+</ul>
+</section>
+<section id="the-ai-version" class="slide level2">
+<h2>The AI-version</h2>
+<p>This is the <a href="https://calvinw.github.io/llm-chat-bus-dev/">FIT Retail Index (AI version)</a> which now has <strong>LLM Chat</strong> added.</p>
+<p>Two things are new:</p>
+<ul>
+<li>The chat can reach <strong>the same DoltHub database</strong> the original app uses, so the LLM can query the company data itself.</li>
+<li>With some tools, the AI can also see <strong>the state of the menus</strong> on the company to company page. It can set those menus for you.</li>
+</ul>
+<p>The AI can drive the user interface and access the same data.</p>
+</section>
 <section id="a-music-composition-language" class="slide level2">
 <h2>A Music Composition Language</h2>
 <p><a href="https://strudel.cc/">Strudel.cc</a> is a musical language for live coding and DJing It is based on a language called Tidal Cycles which is written in a programming language called Haskell. It is compact, technical, and mathematical language.</p>
