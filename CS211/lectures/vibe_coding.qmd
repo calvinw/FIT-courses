@@ -1,0 +1,75 @@
+---
+title: "Vibe Coding"
+author: "Calvin Williamson"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## Vibe Coding
+
+Coding with an LLM but letting the AI do all the work.
+
+- [Lovable](https://lovable.dev/)
+- [Bolt.New](https://bolt.new/)
+- [AIStudio (Gemini)](https://aistudio.google.com/apps)
+
+## Design and Vibe Coding
+
+These tools try to provide design information to a vibe coded application.
+Essentially you prompt the user interface using one LLM, then hand off to
+a backend LLM.
+
+- [Stitch](https://stitch.withgoogle.com/) - An AI design tool for apps and webpages
+- [Figma](https://www.figma.com/) - A full featured design tool
+  - [FigmaMake](https://www.figma.com/make/) - A vibe coding tool for design prototyping within Figma
+- [Claude Design](https://claude.ai/) - Anthropic's design tool for building and editing multi-artboard visual designs
+
+## Stitch
+
+- Can design apps or webapps
+- Can generate/export HTML prototypes for pages/screens
+- Can interatively prompt your designs with text
+- Can be combined with further vibe coding LLM for app assembly
+
+## Design + Vibe Coding Process
+
+- Design the pages of app with AI assistance
+- Generate a prototype (HTML, Figma frame, CSS info, UI spec)
+- Provide the prototype to an LLM that assembles your final (multi-page) app
+
+## Not Typically Included When Vibe Coding
+
+- **Authentication** - User identity verification and access control systems to secure applications
+- **Database** - Structured data storage and retrieval systems for persistent application data
+- **Publishing** - Deployment and hosting infrastructure to make applications accessible to users
+- **Version Tracking** - Source control and versioning systems to manage code changes over time
+
+## Planning Your Spec
+
+Before you start vibe coding, write a short spec of what the app should do.
+This is called a Plan document.
+
+**Requirements:**
+
+- One page, one counter
+- Increment or decrement by 1, 2, 5, or 10
+- Reset button
+- Buttons should be big
+
+## Example Prompt: Counter Webapp
+
+<div style="margin-left: 2em;">
+Build a single-page counter web app. It should show one counter, with
+big buttons to increment or decrement it by 1, 2, 5, or 10, and a reset
+button to set it back to 0.
+</div>
+
+## Let's Build It
+
+We will show this using 3 steps, using Stitch and Canvas on the Gemini website:
+
+1. Writing the spec
+2. Prompting and designing the user interface
+3. Handing off to a backend LLM to complete
