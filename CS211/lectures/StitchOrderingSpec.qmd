@@ -1,0 +1,65 @@
+# Restaurant Ordering App - Specification
+
+## Project Overview
+
+A small pizza restaurant wants a simple two-page ordering app. You will use
+an LLM (ChatGPT, Claude, or Gemini) to help you write the specification,
+then give that spec to [Google Stitch](https://stitch.withgoogle.com) and
+iterate until Stitch produces a design that matches it.
+
+**Make sure you create a WebApp, not a Mobile App.**
+
+Your finished Stitch design must show that a customer:
+
+- Can select the items on the menu, including more than one of each item
+- Can see what they have selected and how many of each, on Page 1
+- Can go to a Ready to Pay page that shows the totals and has a Submit Order button
+
+You do not need to build a clickable prototype. You need two well-designed
+pages and a consistent design system.
+
+## The Menu
+
+Use this menu exactly. Do not add, remove, or rename items, and do not
+change prices.
+
+**Pizzas**
+
+- Pepperoni Pizza - Large \$12.95, Medium \$10.00, Small \$7.00
+- Cheese Pizza - Large \$10.95, Medium \$9.25, Small \$6.50
+- Eggplant Pizza - Large \$11.95, Medium \$9.75, Small \$6.75
+
+**Sides**
+
+- Fries - Large \$4.50, Small \$3.50
+- Greek Salad - \$7.25
+
+**Drinks**
+
+- Coke - Large \$3.00, Medium \$2.00, Small \$1.00
+- Sprite - Large \$3.00, Medium \$2.00, Small \$1.00
+- Bottled Water - \$5.00
+
+## Minimum Requirements
+
+Your spec can add detail and design choices, but it must include everything
+below.
+
+### Page 1: Menu & Order
+
+**Required Elements:**
+
+- Restaurant name and logo/title area (invent a fictional restaurant)
+- All menu items, grouped by category, with correct prices
+- A way to choose a size for items that come in more than one size
+- A quantity control for each item (add, increase, decrease)
+- An order summary visible on Page 1 showing each selected item, its size, and its quantity
+- A button to go to Page 2 (for example, "Ready to Pay" or "Review Order")
+
+### Page 2: Ready to Pay
+
+**Required Elements:**
+
+- A list of every item in the order showing name, size, quantity, and line price (quantity × price)
+- Subtotal and Order Total (tax is optional - if you include it, state the tax rate in your spec)
+- A prominent Submit Order button
