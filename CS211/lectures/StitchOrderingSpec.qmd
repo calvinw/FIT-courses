@@ -4,14 +4,12 @@
 
 ## Project Overview
 
-A small pizza restaurant wants a simple two-page ordering app. You will use
-an LLM (ChatGPT, Claude, or Gemini) to help you write the specification,
-then give that spec to [Google Stitch](https://stitch.withgoogle.com) and
-iterate until Stitch produces a design that matches it.
+A small pizza restaurant wants a simple two-page ordering app, based on the
+specification below.
 
 **Make sure you create a WebApp, not a Mobile App.**
 
-Your finished Stitch design must show that a customer:
+Your finished design must show that a customer:
 
 - Can select the items on the menu, including more than one of each item
 - Can see what they have selected and how many of each, on Page 1
