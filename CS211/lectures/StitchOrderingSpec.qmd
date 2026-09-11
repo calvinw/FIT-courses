@@ -1,5 +1,7 @@
 # Restaurant Ordering App - Specification
 
+<p style="font-size: 1.6em; font-weight: bold;">This is to be designed only in Stitch. Do not export it yet, we will do together next week</p>
+
 ## Project Overview
 
 A small pizza restaurant wants a simple two-page ordering app. You will use
