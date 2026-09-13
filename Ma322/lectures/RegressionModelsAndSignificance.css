@@ -1,0 +1,13 @@
+.reveal .question-line {
+  font-size: 0.82em;
+  white-space: nowrap;
+}
+
+.reveal table {
+  font-size: 0.8em;
+}
+
+.reveal table td:last-child,
+.reveal table th:last-child {
+  white-space: nowrap;
+}

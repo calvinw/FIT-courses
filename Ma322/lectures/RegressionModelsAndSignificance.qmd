@@ -1,0 +1,173 @@
+---
+title: "Regression Models and Significance"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    theme: simple
+    transition: slide
+    slide-number: true
+    css: RegressionModelsAndSignificance.css
+execute:
+  echo: false
+  warning: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+relationships <- data.frame(
+  slope = c(1, -1, 0.5, -0.5, 0.2, -0.2),
+  intercept = c(0, 10, 2, 8, 4, 6),
+  noise = c(1, 1, 1, 2, 2, 2)
+)
+
+make_datasets <- function(seed, n) {
+  set.seed(seed)
+  order <- sample(seq_len(nrow(relationships)))
+  lapply(order, function(i) {
+    x <- seq(0, 10, length.out = n)
+    y <- relationships$slope[i] * x + relationships$intercept[i] +
+      rnorm(n, 0, relationships$noise[i])
+    if (n != 4) y <- pmin(pmax(y, 0), 10)
+    data.frame(x = x, y = y)
+  })
+}
+
+show_six <- function(datasets, title, point_size) {
+  old_par <- par(mfrow = c(2, 3), mar = c(2.8, 2.8, 2, 0.5), oma = c(0, 0, 0, 0))
+  on.exit(par(old_par))
+  for (i in seq_along(datasets)) {
+    d <- datasets[[i]]
+    plot(d$x, d$y, main = paste("Dataset", i), xlab = "X", ylab = "Y",
+      pch = 19, cex = point_size, col = "#2C7FB8")
+    grid(col = "#DDDDDD")
+  }
+  if (nzchar(title)) mtext(title, outer = TRUE, cex = 1.35, font = 2)
+}
+
+model_results <- function(datasets) {
+  rows <- lapply(seq_along(datasets), function(i) {
+    fit <- lm(y ~ x, data = datasets[[i]])
+    test <- summary(fit)$coefficients["x", ]
+    data.frame(
+      Dataset = i,
+      Slope = unname(coef(fit)["x"]),
+      Correlation = cor(datasets[[i]]$x, datasets[[i]]$y),
+      `P-value` = unname(test["Pr(>|t|)"]),
+      Significant = ifelse(test["Pr(>|t|)"] < .05, "Yes", "No"),
+      check.names = FALSE
+    )
+  })
+  results <- do.call(rbind, rows)
+  rownames(results) <- NULL
+  results
+}
+
+print_results <- function(results) {
+  shown <- results[c("Dataset", "P-value")]
+  decimal_p <- function(p) {
+    places <- max(10, ceiling(-log10(p)) + 3)
+    formatC(p, format = "f", digits = places)
+  }
+  shown$`P-value` <- vapply(shown$`P-value`, decimal_p, character(1))
+  knitr::kable(shown, align = c("l", "r"))
+}
+
+datasets_75 <- make_datasets(42, 75)
+datasets_10 <- make_datasets(34, 10)
+datasets_4 <- make_datasets(12, 4)
+results_75 <- model_results(datasets_75)
+results_10 <- model_results(datasets_10)
+results_4 <- model_results(datasets_4)
+```
+
+## Significant ($p < .05$)
+
+- There is a **significant** linear relationship between $y$ and $x$.
+- You **can use the regression equation** for predictions, provided the accuracy is good enough.
+- Graphically, there are enough data to be convinced about the trendline.
+
+We say: *The model is significant.*
+
+## Not Significant ($p \geq .05$)
+
+- There is **not a significant** linear relationship between $y$ and $x$.
+- You **cannot use the regression equation** for predictions.
+- There may be too little data or too much scatter to be convinced about the trendline.
+
+We say: *The model is not significant.*
+
+##
+
+::: {.question-line}
+**$n=75$** &nbsp;&nbsp; Which are significant? Smallest p-value? Largest p-value?
+:::
+
+```{r}
+#| fig-width: 15
+#| fig-height: 9.5
+#| out-width: 100%
+#| fig-align: center
+show_six(datasets_75, "", 0.75)
+```
+
+## Answers: 75 Observations
+
+```{r}
+print_results(results_75)
+```
+
+##
+
+::: {.question-line}
+**$n=10$** &nbsp;&nbsp; Which are significant? Smallest p-value? Largest p-value?
+:::
+
+```{r}
+#| fig-width: 15
+#| fig-height: 9.5
+#| out-width: 100%
+#| fig-align: center
+show_six(datasets_10, "", 1.25)
+```
+
+## Answers: 10 Observations
+
+```{r}
+print_results(results_10)
+```
+
+##
+
+::: {.question-line}
+**$n=4$** &nbsp;&nbsp; Which are significant? Smallest p-value? Largest p-value?
+:::
+
+```{r}
+#| fig-width: 15
+#| fig-height: 9.5
+#| out-width: 100%
+#| fig-align: center
+show_six(datasets_4, "", 1.8)
+```
+
+## Answers: 4 Observations
+
+```{r}
+print_results(results_4)
+```
+
+With very small samples, even an apparent trend may not provide enough evidence.
+
+## Sample Size and Significance
+
+The same general strength of relationship can lead to different conclusions when the sample size changes.
+
+- More observations give the test more information.
+- Fewer observations make the location of the trendline less certain.
+- The p-value combines the strength of the pattern with the amount of data.
+
+::: {.notes}
+Ported from RegressionModelsAndSignificance.qmd in calvinw/Ma322Notebooks. The answers use the standard two-sided t-test for the slope in simple linear regression.
+:::
