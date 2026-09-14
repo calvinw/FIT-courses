@@ -1,0 +1,187 @@
+---
+title: "Variables"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    theme: default
+    html-math-method: katex
+---
+
+```{=html}
+<style>
+.reveal .answer-slide table { font-size: 0.84em; }
+</style>
+```
+
+## Variables
+
+A **variable** is a characteristic of a person or thing that can be recorded as a number or a category.
+
+The people or things being observed are called **observational units**.
+
+A characteristic is a variable when its value can differ from one observational unit to another.
+
+::: {.notes}
+Examples adapted from https://mathplosion.gitlab.io/intro-statistics-bookdown/variables.html
+:::
+
+## 1. Hair Color
+
+For every student in a class, record the student's hair color.
+
+Some recorded values might be brown, black, purple, and brown.
+
+## 1. Hair Color
+
+For every student in a class, record the student's hair color.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | ? |
+| Characteristic recorded | ? |
+| Can the value differ from student to student? | ? |
+| Is it a variable? | ? |
+
+## 1. Hair Color {.answer-slide}
+
+For every student in a class, record the student's hair color.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | Students in the class |
+| Characteristic recorded | Hair color |
+| Can the value differ from student to student? | Yes |
+| Is it a variable? | **Yes** |
+
+Hair color is a variable because different students can have different hair colors.
+
+## 2. Instructor's Age
+
+For every student in a class, record the age of the instructor. The class has one instructor who is 33 years old.
+
+Every student would have the recorded value 33.
+
+## 2. Instructor's Age
+
+For every student in a class, record the age of the instructor.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | ? |
+| Characteristic recorded | ? |
+| Can the value differ from student to student? | ? |
+| Is it a variable? | ? |
+
+## 2. Instructor's Age {.answer-slide}
+
+For every student in a class, record the age of the instructor.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | Students in the class |
+| Characteristic recorded | Their instructor's age |
+| Can the value differ from student to student? | No |
+| Is it a variable? | **No** |
+
+The value does not vary because every student has the same instructor.
+
+## 3. Student Height
+
+For every student in a class, record the student's height in centimeters.
+
+Some recorded values might be 177, 162, 159, and 168 centimeters.
+
+## 3. Student Height
+
+For every student in a class, record the student's height in centimeters.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | ? |
+| Characteristic recorded | ? |
+| Can the value differ from student to student? | ? |
+| Is it a variable? | ? |
+
+## 3. Student Height {.answer-slide}
+
+For every student in a class, record the student's height in centimeters.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | Students in the class |
+| Characteristic recorded | Height in centimeters |
+| Can the value differ from student to student? | Yes |
+| Is it a variable? | **Yes** |
+
+Height is a variable because different students can have different heights.
+
+## 4. Height of the Shortest Student
+
+The shortest student in a class is 159 centimeters tall. For every student, record the height of the shortest student in the class.
+
+Every student would have the recorded value 159 centimeters.
+
+## 4. Height of the Shortest Student
+
+For every student, record the height of the shortest student in the class.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | ? |
+| Characteristic recorded | ? |
+| Can the value differ from student to student? | ? |
+| Is it a variable? | ? |
+
+## 4. Height of the Shortest Student {.answer-slide}
+
+For every student, record the height of the shortest student in the class.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | Students in the class |
+| Characteristic recorded | Height of the class's shortest student |
+| Can the value differ from student to student? | No |
+| Is it a variable? | **No** |
+
+This height summarizes the whole class. It does not vary from student to student.
+
+## 5. ZIP Code
+
+For every student in a class, record the ZIP code of the student's hometown.
+
+Some recorded values might be 10001, 08619, 90210, and 11211.
+
+## 5. ZIP Code
+
+For every student in a class, record the ZIP code of the student's hometown.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | ? |
+| Characteristic recorded | ? |
+| Can the value differ from student to student? | ? |
+| Is it a variable? | ? |
+
+## 5. ZIP Code {.answer-slide}
+
+For every student in a class, record the ZIP code of the student's hometown.
+
+| Question | Answer |
+|:--|:--|
+| Observational units | Students in the class |
+| Characteristic recorded | Hometown ZIP code |
+| Can the value differ from student to student? | Yes |
+| Is it a variable? | **Yes** |
+
+ZIP code is a variable. Although ZIP codes use digits, the digits identify categories rather than amounts.
+
+## Is It a Variable?
+
+First identify the **observational units**.
+
+Then identify the characteristic recorded for each observational unit.
+
+Ask whether the value can differ from one observational unit to another.
+
+If every observational unit must have the same value, the characteristic is not a variable for those units.

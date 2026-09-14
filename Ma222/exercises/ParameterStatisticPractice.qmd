@@ -1,0 +1,58 @@
+---
+format:
+  html: default
+  pdf:
+    geometry:
+      - margin=0.65in
+    fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist{nosep,leftmargin=*}
+        \setlength{\parskip}{3pt}
+        \setlength{\parindent}{0pt}
+---
+
+# Parameter and Statistic
+
+For each situation, identify the **population parameter** and the **sample statistic**. Give each value when it is known. If the parameter is unknown, write **unknown**.
+
+### 1. Online Orders
+
+A retailer wants to know the mean amount spent on all online orders placed last month. A sample of 380 orders had a mean of \$74.60.
+
+```{=latex}
+\vspace{0.55in}
+```
+
+### 2. Left-Handed Students
+
+A college wants to know the proportion of all its students who are left-handed. In a sample of 240 students, 29 were left-handed.
+
+```{=latex}
+\vspace{0.55in}
+```
+
+### 3. Jacket Production
+
+A factory made 1,200 jackets on Monday. Records for all 1,200 jackets show a mean sewing time of 41.8 minutes. A sample of 60 jackets had a mean sewing time of 43.1 minutes.
+
+```{=latex}
+\vspace{0.55in}
+```
+
+### 4. Mobile Payments
+
+A store chain wants to know the proportion of all customers who pay with its mobile app. Researchers observed 800 customers, and 436 paid with the app.
+
+```{=latex}
+\vspace{0.55in}
+```
+
+### 5. Defective Buttons
+
+A shipment contains 5,000 buttons. Inspectors checked every button and found that 125 were defective. They also selected a sample of 200 buttons, and 8 of those were defective.
+
+```{=latex}
+\vspace{0.55in}
+```

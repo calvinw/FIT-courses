@@ -1,0 +1,186 @@
+---
+title: "Parameter and Statistic"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    theme: default
+    html-math-method: katex
+---
+
+```{=html}
+<style>
+.reveal table mjx-container,
+.reveal table .math { font-size: 0.8em; }
+.reveal table .compact-math,
+.reveal table .compact-math .math {
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+</style>
+```
+
+## Parameter and Statistic
+
+A **parameter** is a numerical summary of a population.
+
+A **statistic** is a numerical summary of a sample.
+
+| Summary | Population parameter | Sample statistic |
+|:--|:--|:--|
+| Mean | $\mu$ | $\bar{x}$ |
+| Proportion | $p$ | $\hat{p}$ |
+
+Hopefully, $\bar{x}$ is close to $\mu$.
+
+Hopefully, $\hat{p}$ is close to $p$.
+
+## 1. Online Order Amounts
+
+A retailer wants to know the mean amount spent on all its online orders last month. A sample of 450 orders has a mean of \$85.37.
+
+## 1. Online Order Amounts
+
+A retailer wants to know the mean amount spent on all its online orders last month. A sample of 450 orders has a mean of \$85.37.
+
+| Summary | Description or value |
+|:--|:--|
+| Population parameter | ? |
+| Sample statistic | ? |
+
+What is the parameter? Do we know its value?
+
+What is the statistic? What is its value?
+
+## 1. Online Order Amounts
+
+A retailer wants to know the mean amount spent on all its online orders last month. A sample of 450 orders has a mean of \$85.37.
+
+| Summary | Value |
+|:--|:--|
+| Mean for all online orders last month ($\mu$) | Unknown |
+| Sample mean ($\bar{x}$) | \$85.37 |
+
+The \$85.37 is a **statistic** because it describes the 450 sampled orders.
+
+## 2. Left-Handed Students
+
+A researcher wants to know the proportion of all FIT students who are left-handed this semester. In a sample of 200 students, 26 are left-handed.
+
+## 2. Left-Handed Students
+
+A researcher wants to know the proportion of all FIT students who are left-handed this semester. In a sample of 200 students, 26 are left-handed.
+
+| Summary | Description or value |
+|:--|:--|
+| Population parameter | ? |
+| Sample statistic | ? |
+
+What is the parameter? Do we know its value?
+
+What is the statistic? What is its value?
+
+## 2. Left-Handed Students
+
+A researcher wants to know the proportion of all FIT students who are left-handed this semester. In a sample of 200 students, 26 are left-handed.
+
+| Summary | Value |
+|:--|:--|
+| Proportion of all FIT students who are left-handed ($p$) | Unknown |
+| Sample proportion ($\hat{p}$) | [$26/200 = 0.13\ (13\%)$]{.compact-math} |
+
+The 13% is a **statistic** because it describes the 200 sampled students.
+
+## 3. Sewing Times
+
+A factory made 1,000 jackets yesterday. Records for all 1,000 show a mean sewing time of 42 minutes. A sample of 50 of these jackets has a mean of 44 minutes.
+
+## 3. Sewing Times
+
+A factory made 1,000 jackets yesterday. Records for all 1,000 show a mean sewing time of 42 minutes. A sample of 50 of these jackets has a mean of 44 minutes.
+
+| Summary | Description or value |
+|:--|:--|
+| Population parameter | ? |
+| Sample statistic | ? |
+
+What is the parameter? Do we know its value?
+
+What is the statistic? What is its value?
+
+## 3. Sewing Times
+
+A factory made 1,000 jackets yesterday. Records for all 1,000 show a mean sewing time of 42 minutes. A sample of 50 of these jackets has a mean of 44 minutes.
+
+| Summary | Value |
+|:--|:--|
+| Mean for all 1,000 jackets ($\mu$) | 42 minutes |
+| Mean for the 50 sampled jackets ($\bar{x}$) | 44 minutes |
+
+The 42 minutes is a **parameter**. The 44 minutes is a **statistic**.
+
+## 4. Defective Zippers
+
+A production run contains 2,000 zippers. An inspection of every zipper finds 60 defective ones. A sample of 100 zippers from the run contains 4 defective ones.
+
+## 4. Defective Zippers
+
+A production run contains 2,000 zippers. An inspection of every zipper finds 60 defective ones. A sample of 100 zippers from the run contains 4 defective ones.
+
+| Summary | Description or value |
+|:--|:--|
+| Population parameter | ? |
+| Sample statistic | ? |
+
+What is the parameter? Do we know its value?
+
+What is the statistic? What is its value?
+
+## 4. Defective Zippers
+
+A production run contains 2,000 zippers. An inspection of every zipper finds 60 defective ones. A sample of 100 zippers from the run contains 4 defective ones.
+
+| Summary | Value |
+|:--|:--|
+| Defective proportion in the entire run ($p$) | [$60/2000 = 0.03\ (3\%)$]{.compact-math} |
+| Defective proportion in the sample ($\hat{p}$) | [$4/100 = 0.04\ (4\%)$]{.compact-math} |
+
+The $3\%$ is a **parameter**. The $4\%$ is a **statistic**.
+
+## 5. Study Hours at FIT
+
+A researcher wants to know the mean weekly study time of all FIT students this semester. One sample of 200 students has a mean of 13.5 hours. Another sample of 200 has a mean of 14.2 hours.
+
+## 5. Study Hours at FIT
+
+A researcher wants to know the mean weekly study time of all FIT students this semester. One sample of 200 students has a mean of 13.5 hours. Another sample of 200 has a mean of 14.2 hours.
+
+| Summary | Description or value |
+|:--|:--|
+| Population parameter | ? |
+| Sample statistic | ? |
+
+What is the parameter? Do we know its value?
+
+What is the statistic? What is its value?
+
+## 5. Study Hours at FIT
+
+A researcher wants to know the mean weekly study time of all FIT students this semester. One sample of 200 students has a mean of 13.5 hours. Another sample of 200 has a mean of 14.2 hours.
+
+| Summary | Value |
+|:--|:--|
+| Mean for all FIT students ($\mu$) | Unknown |
+| Two sample means ($\bar{x}$) | 13.5 and 14.2 hours |
+
+Both sample means are **statistics**. Different samples can give different values.
+
+## Parameter or Statistic?
+
+A **parameter** describes the entire population of interest.
+
+A **statistic** describes a sample from that population.
+
+For a fixed population, a parameter has a fixed value, even when we do not know it. A statistic can vary from sample to sample.
+
+We use a sample statistic to estimate an unknown population parameter.

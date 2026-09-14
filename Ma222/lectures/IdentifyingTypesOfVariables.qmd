@@ -1,0 +1,213 @@
+---
+title: "Identifying Types of Variables"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    theme: default
+    html-math-method: katex
+---
+
+```{=html}
+<style>
+.reveal .answer-slide table { font-size: 0.84em; }
+</style>
+```
+
+## Types of Variables
+
+A **quantitative variable** records a number from a measurement or numerical scale.
+
+A **categorical variable** records one choice from a set of categories.
+
+A **binary variable** is a categorical variable with exactly two possible categories.
+
+::: {.notes}
+Definitions and examples adapted from https://mathplosion.gitlab.io/intro-statistics-bookdown/types-of-variables.html
+:::
+
+## Numbers Can Be Labels
+
+A variable is not automatically quantitative just because its values use digits.
+
+ZIP codes, raffle ticket numbers, and SKUs use numbers as labels.
+
+Ask whether the number measures an amount. If it only identifies a category, the variable is categorical.
+
+## 1. Student Height
+
+For every student in a class, record the student's height in centimeters.
+
+**Example values:** 177 cm, 162 cm, 159 cm, 168 cm, 174 cm, ...
+
+## 1. Student Height
+
+How should we classify student height?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | ? |
+| What type of variable is it? | ? |
+| Is it binary? | ? |
+
+## 1. Student Height {.answer-slide}
+
+How should we classify student height?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | Numerical measurement |
+| What type of variable is it? | **Quantitative** |
+| Is it binary? | No |
+
+Height comes from a numerical scale. Larger values represent taller students.
+
+## 2. Sleeping Before Midnight
+
+For every student in a class, record whether the student went to sleep before midnight last night.
+
+**Example values:** Yes, No, No, Yes, No, ...
+
+## 2. Sleeping Before Midnight
+
+How should we classify whether a student went to sleep before midnight?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | ? |
+| What type of variable is it? | ? |
+| Is it binary? | ? |
+
+## 2. Sleeping Before Midnight {.answer-slide}
+
+How should we classify whether a student went to sleep before midnight?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | Category |
+| What type of variable is it? | **Categorical** |
+| Is it binary? | **Yes** |
+
+The variable is binary because it has exactly two possible categories.
+
+## 3. Birth Month
+
+For every student in a class, record the month in which the student was born.
+
+**Example values:** January, April, August, January, November, ...
+
+## 3. Birth Month
+
+How should we classify birth month?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | ? |
+| What type of variable is it? | ? |
+| Is it binary? | ? |
+
+## 3. Birth Month {.answer-slide}
+
+How should we classify birth month?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | Category |
+| What type of variable is it? | **Categorical** |
+| Is it binary? | No |
+
+Birth month has twelve possible categories, so it is not binary.
+
+## 4. Midterm Exam Score
+
+For every student in a class, record the student's numerical score on a midterm exam.
+
+**Example values:** 72 points, 85 points, 91 points, 96 points, 78 points, ...
+
+## 4. Midterm Exam Score
+
+How should we classify numerical exam score?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | ? |
+| What type of variable is it? | ? |
+| Is it binary? | ? |
+
+## 4. Midterm Exam Score {.answer-slide}
+
+How should we classify numerical exam score?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | Numerical measurement |
+| What type of variable is it? | **Quantitative** |
+| Is it binary? | No |
+
+The score measures the number of points earned.
+
+## 5. Scoring at Least 85
+
+For every student in a class, record whether the student's midterm score was at least 85.
+
+**Example values:** No, Yes, Yes, No, Yes, ...
+
+## 5. Scoring at Least 85
+
+How should we classify whether a student scored at least 85?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | ? |
+| What type of variable is it? | ? |
+| Is it binary? | ? |
+
+## 5. Scoring at Least 85 {.answer-slide}
+
+How should we classify whether a student scored at least 85?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | Category |
+| What type of variable is it? | **Categorical** |
+| Is it binary? | **Yes** |
+
+The cutoff uses a number, but the recorded value is one of two categories.
+
+## 6. ZIP Code
+
+For every student in a class, record the ZIP code of the student's hometown.
+
+**Example values:** 10001, 08619, 90210, 11211, 07030, ...
+
+## 6. ZIP Code
+
+How should we classify hometown ZIP code?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | ? |
+| What type of variable is it? | ? |
+| Is it binary? | ? |
+
+## 6. ZIP Code {.answer-slide}
+
+How should we classify hometown ZIP code?
+
+| Question | Answer |
+|:--|:--|
+| Does it record a numerical measurement or a category? | Category |
+| What type of variable is it? | **Categorical** |
+| Is it binary? | No |
+
+ZIP codes identify postal areas. Arithmetic with ZIP codes has no useful meaning.
+
+## Identifying the Type
+
+Does the value measure an amount on a numerical scale?
+
+If yes, the variable is **quantitative**.
+
+If the value selects a category, the variable is **categorical**.
+
+If there are exactly two possible categories, it is also **binary**.

@@ -1,0 +1,54 @@
+---
+format:
+  html: default
+  pdf:
+    geometry:
+      - margin=0.55in
+    fontsize: 9pt
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist{nosep,leftmargin=*}
+        \setlength{\parskip}{4pt}
+        \setlength{\parindent}{0pt}
+---
+
+# Variables - Answers
+
+## Problem 1: Variables of States
+
+The observational units are the fifty states.
+
+**a) Not a variable.** This is one total for the entire group of states, so it does not have a different value for each state.
+
+**b) Variable.** The percentage of residents over age 65 can differ from state to state.
+
+**c) Variable.** The highest speed limit can differ from state to state.
+
+**d) Variable.** Each state has a Yes or No value, so this is also a binary categorical variable.
+
+**e) Variable.** The average income of adult residents can differ from state to state.
+
+**f) Variable.** The 1999 birth rate is fixed for each state, but it can differ from one state to another.
+
+**g) Not a variable.** This is one total for the entire group of states, rather than a value recorded separately for each state.
+
+**h) Not a variable.** The nationwide average number of representatives per state is one summary value for all states.
+
+**i) Variable.** The number of Congressional representatives can differ from state to state.
+
+## Problem 2: Types of Variables
+
+The observational units are the 22 Broadway productions.
+
+**a) Production: Categorical.** The production name identifies a show.
+
+**b) Type: Categorical and binary.** The dataset contains two categories: Musical and Play.
+
+**c) Gross: Quantitative.** Gross measures an amount of money.
+
+**d) Attendance: Quantitative.** Attendance counts the number of people who attended.
+
+**e) Capacity: Quantitative.** Capacity records the number of available seats.
+
+**f) Top price: Quantitative.** Top price measures an amount of money.

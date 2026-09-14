@@ -1,0 +1,56 @@
+---
+format:
+  html: default
+  pdf:
+    geometry:
+      - margin=0.65in
+    fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist{nosep,leftmargin=*}
+        \setlength{\parskip}{14pt}
+        \setlength{\parindent}{0pt}
+---
+
+# Variables
+
+## Problem 1: Variables of States
+
+Suppose that the fifty states are the observational units. For each item, write **yes, it is a variable** or **no, it is not a variable**.
+
+For each variable, report or make a reasonable guess for its value in your home state. For each item that is not a variable, briefly explain why.
+
+**a)** The number of states that have a female governor
+
+**b)** The percentage of the state's residents who are over 65 years of age
+
+**c)** The highest speed limit in the state
+
+**d)** Whether the state's name consists of one word
+
+**e)** The average income of an adult resident of the state
+
+**f)** The number of births per 1,000 residents of the state in 1999
+
+**g)** The number of states that were settled before 1865
+
+**h)** The average number of Congressional representatives per state
+
+**i)** The number of Congressional representatives from the state
+
+## Problem 2: Types of Variables
+
+The observational units are 22 Broadway productions. Classify each variable from the supplied dataset as **quantitative** or **categorical**. If a categorical variable has exactly two possible values, also identify it as **binary**.
+
+**a)** Production
+
+**b)** Type
+
+**c)** Gross
+
+**d)** Attendance
+
+**e)** Capacity
+
+**f)** Top price
