@@ -1,0 +1,64 @@
+---
+title: "GitHub"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## What is GitHub
+
+- A website for hosting code and tracking versions over time
+- Built on Git - version tracking for your files
+- Lets you publish web apps for free, with no traditional server
+- Used for collaboration, portfolios, and class projects
+- [github.com](https://github.com/)
+
+## Repositories and Collaborators
+
+- A Repository is a project folder stored on GitHub, with full history
+- Each repository has an owner - a user or organization account
+- Collaborators are other GitHub users invited to work on the repository
+- Collaborators can edit code, fix bugs, and add features together
+- Example: [FIT Retail Index (non-AI)](https://calvinw.github.io/BusMgmtBenchmarks/)
+
+## Public Repositories and Private Repositories
+
+- Public Repositories - anyone on the internet can see the code
+  - Good for open source, portfolios, and free web hosting
+  - Example: class demos and published apps
+- Private Repositories - only you and your collaborators can see it
+  - Good for homework, drafts, and work in progress
+  - You control who is invited as a collaborator
+
+## Open Source Example: BusMgmtBenchmarks
+
+- [calvinw/BusMgmtBenchmarks](https://github.com/calvinw/BusMgmtBenchmarks) - a public, open source repo
+- MIT License - anyone can use, copy, and build on the code
+- README describes the project, data, and live web app
+- 247 commits show the full history of changes over time
+- Live site published for free: [FIT Retail Index](https://calvinw.github.io/BusMgmtBenchmarks/)
+
+## Version Control
+
+- Version control tracks every change to your files over time
+- Each saved checkpoint is called a commit, with a message describing it
+- You can see history, compare versions, and undo mistakes
+- Multiple people can work on the same files without losing work
+
+## Branches on GitHub
+
+- A branch is a separate copy of your code for working on something new
+- The main branch is the official, working version of the project
+- Create a branch to fix a bug or try a feature without breaking main
+- When done, merge the branch back into main
+
+## GitHub Pages
+
+- GitHub Pages publishes your repository as a free website
+- No traditional server needed - just HTML, CSS, and JavaScript files
+- Repo: [calvinw/BusMgmtBenchmarks](https://github.com/calvinw/BusMgmtBenchmarks)
+- Live Pages site: [FIT Retail Index](https://calvinw.github.io/BusMgmtBenchmarks/)
+- Address is username.github.io/repository-name
