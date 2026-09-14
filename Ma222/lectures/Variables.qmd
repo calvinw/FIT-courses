@@ -30,14 +30,13 @@ Examples adapted from https://mathplosion.gitlab.io/intro-statistics-bookdown/va
 
 For every student in a class, record the student's hair color.
 
-|  | Hair color |
+| Observation | Hair color |
 |:--|:--|
 | Student 1 | Brown |
 | Student 2 | Red |
 | Student 3 | Green |
 | Student 4 | Brown |
-
-etc.
+| etc. |  |
 
 ## 1. Hair Color
 
@@ -67,14 +66,13 @@ Hair color is a variable because different students can have different hair colo
 
 For every student in a class, record the age of the instructor. The class has one instructor who is 33 years old.
 
-|  | Instructor's age |
+| Observation | Instructor's age |
 |:--|:--|
 | Student 1 | 33 |
 | Student 2 | 33 |
 | Student 3 | 33 |
 | Student 4 | 33 |
-
-etc.
+| etc. |  |
 
 ## 2. Instructor's Age
 
@@ -104,14 +102,13 @@ The value does not vary because every student has the same instructor.
 
 For every student in a class, record the student's height in centimeters.
 
-|  | Height (cm) |
+| Observation | Height (cm) |
 |:--|:--|
 | Student 1 | 177 |
 | Student 2 | 162 |
 | Student 3 | 159 |
 | Student 4 | 168 |
-
-etc.
+| etc. |  |
 
 ## 3. Student Height
 
@@ -141,14 +138,13 @@ Height is a variable because different students can have different heights.
 
 The shortest student in a class is 159 centimeters tall. For every student, record the height of the shortest student in the class.
 
-|  | Height of shortest student (cm) |
+| Observation | Height of shortest student (cm) |
 |:--|:--|
 | Student 1 | 159 |
 | Student 2 | 159 |
 | Student 3 | 159 |
 | Student 4 | 159 |
-
-etc.
+| etc. |  |
 
 ## 4. Height of the Shortest Student
 
@@ -178,14 +174,13 @@ This height summarizes the whole class. It does not vary from student to student
 
 For every student in a class, record the ZIP code of the student's hometown.
 
-|  | ZIP code |
+| Observation | ZIP code |
 |:--|:--|
 | Student 1 | 10001 |
 | Student 2 | 08619 |
 | Student 3 | 90210 |
 | Student 4 | 11211 |
-
-etc.
+| etc. |  |
 
 ## 5. ZIP Code
 
