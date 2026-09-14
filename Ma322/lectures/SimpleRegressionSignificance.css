@@ -1,0 +1,20 @@
+.reveal .small {
+  font-size: 0.78em;
+}
+
+.reveal .decision {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-top: 1.1em;
+  text-align: center;
+}
+
+.reveal svg {
+  display: block;
+  margin: 0 auto;
+  max-height: 430px;
+}
+
+.reveal .muted {
+  color: #555;
+}

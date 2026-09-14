@@ -62,3 +62,10 @@ format:
 - Repo: [calvinw/BusMgmtBenchmarks](https://github.com/calvinw/BusMgmtBenchmarks)
 - Live Pages site: [FIT Retail Index](https://calvinw.github.io/BusMgmtBenchmarks/)
 - Address is username.github.io/repository-name
+
+## Creating a Repo from a Template
+
+- Starts your own new repo as a copy of a template repo
+- Copies the files, folders, and setup - without the old history
+- Lets every student start from the same working project
+- Your copy is yours - make it private, add collaborators, and edit freely

@@ -1,0 +1,145 @@
+---
+title: "Is This a Significant Linear Relationship?"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    theme: default
+    html-math-method: katex
+    css: SimpleRegressionSignificance.css
+---
+
+## When Should We Use a Regression Line?
+
+A scatterplot may appear to have a linear trend even when:
+
+- the data set is too small, or
+- the relationship is too weak.
+
+We need a way to decide whether the observed linear relationship is convincing.
+
+## Ice Cream Sales: Only Three Days
+
+Suppose an ice cream vendor records temperature and gallons sold.
+
+| Temperature | Gallons sold |
+|--:|--:|
+| 73 | 110 |
+| 75 | 97 |
+| 77 | 105 |
+
+Three points are not much evidence for a reliable model.
+
+## The First Regression Line
+
+```{=html}
+<svg viewBox="0 0 700 430" role="img" aria-label="Three ice cream sales observations and a downward regression line">
+  <line x1="85" y1="350" x2="650" y2="350" stroke="#222" stroke-width="3"/>
+  <line x1="85" y1="350" x2="85" y2="35" stroke="#222" stroke-width="3"/>
+  <line x1="120" y1="125" x2="610" y2="250" stroke="#c0392b" stroke-width="5"/>
+  <circle cx="250" cy="160" r="10" fill="#1f77b4"/>
+  <circle cx="335" cy="245" r="10" fill="#1f77b4"/>
+  <circle cx="420" cy="195" r="10" fill="#1f77b4"/>
+  <text x="360" y="410" text-anchor="middle" font-size="26">Temperature</text>
+  <text x="26" y="205" text-anchor="middle" font-size="26" transform="rotate(-90 26 205)">Gallons sold</text>
+</svg>
+```
+
+The fitted line slopes downward. Does warmer weather really reduce ice cream sales?
+
+## Looking at More Data
+
+| Temperature | 73 | 75 | 77 | 65 | 81 | 90 | 82 | 93 | 86 | 79 |
+|:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| Gallons | 110 | 97 | 105 | 95 | 135 | 160 | 120 | 175 | 140 | 121 |
+
+The larger data set gives a much clearer picture of the relationship.
+
+## The Regression Line Changes
+
+```{=html}
+<svg viewBox="0 0 700 430" role="img" aria-label="Ten ice cream sales observations and an upward regression line">
+  <line x1="85" y1="350" x2="650" y2="350" stroke="#222" stroke-width="3"/>
+  <line x1="85" y1="350" x2="85" y2="35" stroke="#222" stroke-width="3"/>
+  <line x1="120" y1="315" x2="620" y2="75" stroke="#2c7fb8" stroke-width="5"/>
+  <circle cx="250" cy="265" r="9" fill="#c0392b"/><circle cx="285" cy="305" r="9" fill="#c0392b"/><circle cx="320" cy="280" r="9" fill="#c0392b"/>
+  <circle cx="110" cy="315" r="9" fill="#222"/><circle cx="390" cy="190" r="9" fill="#222"/><circle cx="555" cy="90" r="9" fill="#222"/>
+  <circle cx="410" cy="235" r="9" fill="#222"/><circle cx="610" cy="45" r="9" fill="#222"/><circle cx="485" cy="170" r="9" fill="#222"/><circle cx="355" cy="230" r="9" fill="#222"/>
+  <text x="360" y="410" text-anchor="middle" font-size="26">Temperature</text>
+  <text x="26" y="205" text-anchor="middle" font-size="26" transform="rotate(-90 26 205)">Gallons sold</text>
+</svg>
+```
+
+The first three observations are red. By themselves, they did not show the full pattern.
+
+## Overall Significance Test
+
+The **overall significance test** uses a p-value to test whether the linear relationship is statistically significant.
+
+For simple linear regression:
+
+$$H_0: \beta_1 = 0$$
+
+$$H_a: \beta_1 \ne 0$$
+
+The null hypothesis says that the population regression slope is zero.
+
+## What Does the P-Value Mean?
+
+The p-value measures how unusual our sample evidence would be if there were no linear relationship in the population.
+
+- A **small p-value** is evidence against $H_0$.
+- A **large p-value** means the data do not give enough evidence against $H_0$.
+
+The p-value does not measure the strength or accuracy of the model.
+
+## Decision at the 5% Level
+
+If $p < .05$:
+
+::: {.decision}
+Reject $H_0$. There is a significant linear relationship.
+:::
+
+If $p \ge .05$:
+
+::: {.decision}
+Fail to reject $H_0$. There is not enough evidence of a significant linear relationship.
+:::
+
+## Can We Use the Regression Equation?
+
+A significant result says there is evidence of a linear relationship.
+
+Before using the equation for prediction, also check:
+
+- the scatterplot and residuals,
+- $R^2$ and the standard error,
+- whether the prediction is within the observed range, and
+- whether the data are relevant to the question.
+
+Significance alone does not guarantee useful predictions.
+
+## Practice
+
+A regression output reports $p = .032$ for the overall significance test.
+
+1. Compare the p-value with $\alpha=.05$.
+2. State the decision about $H_0$.
+3. State the conclusion in context.
+
+## Practice Answer
+
+Because
+
+$$.032 < .05,$$
+
+we **reject $H_0$**.
+
+There is evidence of a statistically significant linear relationship between the explanatory and response variables.
+
+We would still check model accuracy and assumptions before making predictions.
+
+::: {.notes}
+Adapted from the “Is This a Significant Linear Relationship?” lesson in the intro-statistics-quarto project.
+:::

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="github_files/libs/clipboard/clipboard.min.js"></script>
-<script src="github_files/libs/quarto-html/tabby.min.js"></script>
-<script src="github_files/libs/quarto-html/popper.min.js"></script>
-<script src="github_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="github_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="github_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="github_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="SimpleRegressionSignificance_files/libs/clipboard/clipboard.min.js"></script>
+<script src="SimpleRegressionSignificance_files/libs/quarto-html/tabby.min.js"></script>
+<script src="SimpleRegressionSignificance_files/libs/quarto-html/popper.min.js"></script>
+<script src="SimpleRegressionSignificance_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="SimpleRegressionSignificance_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="SimpleRegressionSignificance_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="SimpleRegressionSignificance_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Calvin Williamson, Science and Math">
-  <title>GitHub</title>
+  <title>Is This a Significant Linear Relationship?</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="github_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="github_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="SimpleRegressionSignificance_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="SimpleRegressionSignificance_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,11 +29,28 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="github_files/libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
-  <link href="github_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="github_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="github_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="github_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="SimpleRegressionSignificance_files/libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link rel="stylesheet" href="SimpleRegressionSignificance.css">
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+  <link href="SimpleRegressionSignificance_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="SimpleRegressionSignificance_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="SimpleRegressionSignificance_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="SimpleRegressionSignificance_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -127,7 +144,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">GitHub</h1>
+  <h1 class="title">Is This a Significant Linear Relationship?</h1>
   <p class="subtitle">Fall 26</p>
 
 <div class="quarto-title-authors">
@@ -139,87 +156,175 @@ Calvin Williamson, Science and Math
 </div>
 
 </section>
-<section id="what-is-github" class="slide level2">
-<h2>What is GitHub</h2>
+<section id="when-should-we-use-a-regression-line" class="slide level2">
+<h2>When Should We Use a Regression Line?</h2>
+<p>A scatterplot may appear to have a linear trend even when:</p>
 <ul>
-<li>A website for hosting code and tracking versions over time</li>
-<li>Built on Git - version tracking for your files</li>
-<li>Lets you publish web apps for free, with no traditional server</li>
-<li>Used for collaboration, portfolios, and class projects</li>
-<li><a href="https://github.com/">github.com</a></li>
+<li>the data set is too small, or</li>
+<li>the relationship is too weak.</li>
 </ul>
+<p>We need a way to decide whether the observed linear relationship is convincing.</p>
 </section>
-<section id="repositories-and-collaborators" class="slide level2">
-<h2>Repositories and Collaborators</h2>
-<ul>
-<li>A Repository is a project folder stored on GitHub, with full history</li>
-<li>Each repository has an owner - a user or organization account</li>
-<li>Collaborators are other GitHub users invited to work on the repository</li>
-<li>Collaborators can edit code, fix bugs, and add features together</li>
-<li>Example: <a href="https://calvinw.github.io/BusMgmtBenchmarks/">FIT Retail Index (non-AI)</a></li>
-</ul>
+<section id="ice-cream-sales-only-three-days" class="slide level2">
+<h2>Ice Cream Sales: Only Three Days</h2>
+<p>Suppose an ice cream vendor records temperature and gallons sold.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Temperature</th>
+<th style="text-align: right;">Gallons sold</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">110</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">105</td>
+</tr>
+</tbody>
+</table>
+<p>Three points are not much evidence for a reliable model.</p>
 </section>
-<section id="public-repositories-and-private-repositories" class="slide level2">
-<h2>Public Repositories and Private Repositories</h2>
-<ul>
-<li>Public Repositories - anyone on the internet can see the code
-<ul>
-<li>Good for open source, portfolios, and free web hosting</li>
-<li>Example: class demos and published apps</li>
-</ul></li>
-<li>Private Repositories - only you and your collaborators can see it
-<ul>
-<li>Good for homework, drafts, and work in progress</li>
-<li>You control who is invited as a collaborator</li>
-</ul></li>
-</ul>
+<section id="the-first-regression-line" class="slide level2">
+<h2>The First Regression Line</h2>
+<svg viewbox="0 0 700 430" role="img" aria-label="Three ice cream sales observations and a downward regression line">
+  <line x1="85" y1="350" x2="650" y2="350" stroke="#222" stroke-width="3"></line>
+  <line x1="85" y1="350" x2="85" y2="35" stroke="#222" stroke-width="3"></line>
+  <line x1="120" y1="125" x2="610" y2="250" stroke="#c0392b" stroke-width="5"></line>
+  <circle cx="250" cy="160" r="10" fill="#1f77b4"></circle>
+  <circle cx="335" cy="245" r="10" fill="#1f77b4"></circle>
+  <circle cx="420" cy="195" r="10" fill="#1f77b4"></circle>
+  <text x="360" y="410" text-anchor="middle" font-size="26">Temperature</text>
+  <text x="26" y="205" text-anchor="middle" font-size="26" transform="rotate(-90 26 205)">Gallons sold</text>
+</svg>
+<p>The fitted line slopes downward. Does warmer weather really reduce ice cream sales?</p>
 </section>
-<section id="open-source-example-busmgmtbenchmarks" class="slide level2">
-<h2>Open Source Example: BusMgmtBenchmarks</h2>
-<ul>
-<li><a href="https://github.com/calvinw/BusMgmtBenchmarks">calvinw/BusMgmtBenchmarks</a> - a public, open source repo</li>
-<li>MIT License - anyone can use, copy, and build on the code</li>
-<li>README describes the project, data, and live web app</li>
-<li>247 commits show the full history of changes over time</li>
-<li>Live site published for free: <a href="https://calvinw.github.io/BusMgmtBenchmarks/">FIT Retail Index</a></li>
-</ul>
+<section id="looking-at-more-data" class="slide level2">
+<h2>Looking at More Data</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Temperature</th>
+<th style="text-align: right;">73</th>
+<th style="text-align: right;">75</th>
+<th style="text-align: right;">77</th>
+<th style="text-align: right;">65</th>
+<th style="text-align: right;">81</th>
+<th style="text-align: right;">90</th>
+<th style="text-align: right;">82</th>
+<th style="text-align: right;">93</th>
+<th style="text-align: right;">86</th>
+<th style="text-align: right;">79</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Gallons</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">175</td>
+<td style="text-align: right;">140</td>
+<td style="text-align: right;">121</td>
+</tr>
+</tbody>
+</table>
+<p>The larger data set gives a much clearer picture of the relationship.</p>
 </section>
-<section id="version-control" class="slide level2">
-<h2>Version Control</h2>
-<ul>
-<li>Version control tracks every change to your files over time</li>
-<li>Each saved checkpoint is called a commit, with a message describing it</li>
-<li>You can see history, compare versions, and undo mistakes</li>
-<li>Multiple people can work on the same files without losing work</li>
-</ul>
+<section id="the-regression-line-changes" class="slide level2">
+<h2>The Regression Line Changes</h2>
+<svg viewbox="0 0 700 430" role="img" aria-label="Ten ice cream sales observations and an upward regression line">
+  <line x1="85" y1="350" x2="650" y2="350" stroke="#222" stroke-width="3"></line>
+  <line x1="85" y1="350" x2="85" y2="35" stroke="#222" stroke-width="3"></line>
+  <line x1="120" y1="315" x2="620" y2="75" stroke="#2c7fb8" stroke-width="5"></line>
+  <circle cx="250" cy="265" r="9" fill="#c0392b"></circle><circle cx="285" cy="305" r="9" fill="#c0392b"></circle><circle cx="320" cy="280" r="9" fill="#c0392b"></circle>
+  <circle cx="110" cy="315" r="9" fill="#222"></circle><circle cx="390" cy="190" r="9" fill="#222"></circle><circle cx="555" cy="90" r="9" fill="#222"></circle>
+  <circle cx="410" cy="235" r="9" fill="#222"></circle><circle cx="610" cy="45" r="9" fill="#222"></circle><circle cx="485" cy="170" r="9" fill="#222"></circle><circle cx="355" cy="230" r="9" fill="#222"></circle>
+  <text x="360" y="410" text-anchor="middle" font-size="26">Temperature</text>
+  <text x="26" y="205" text-anchor="middle" font-size="26" transform="rotate(-90 26 205)">Gallons sold</text>
+</svg>
+<p>The first three observations are red. By themselves, they did not show the full pattern.</p>
 </section>
-<section id="branches-on-github" class="slide level2">
-<h2>Branches on GitHub</h2>
-<ul>
-<li>A branch is a separate copy of your code for working on something new</li>
-<li>The main branch is the official, working version of the project</li>
-<li>Create a branch to fix a bug or try a feature without breaking main</li>
-<li>When done, merge the branch back into main</li>
-</ul>
+<section id="overall-significance-test" class="slide level2">
+<h2>Overall Significance Test</h2>
+<p>The <strong>overall significance test</strong> uses a p-value to test whether the linear relationship is statistically significant.</p>
+<p>For simple linear regression:</p>
+<p><span class="math display">H_0: \beta_1 = 0</span></p>
+<p><span class="math display">H_a: \beta_1 \ne 0</span></p>
+<p>The null hypothesis says that the population regression slope is zero.</p>
 </section>
-<section id="github-pages" class="slide level2">
-<h2>GitHub Pages</h2>
+<section id="what-does-the-p-value-mean" class="slide level2">
+<h2>What Does the P-Value Mean?</h2>
+<p>The p-value measures how unusual our sample evidence would be if there were no linear relationship in the population.</p>
 <ul>
-<li>GitHub Pages publishes your repository as a free website</li>
-<li>No traditional server needed - just HTML, CSS, and JavaScript files</li>
-<li>Repo: <a href="https://github.com/calvinw/BusMgmtBenchmarks">calvinw/BusMgmtBenchmarks</a></li>
-<li>Live Pages site: <a href="https://calvinw.github.io/BusMgmtBenchmarks/">FIT Retail Index</a></li>
-<li>Address is username.github.io/repository-name</li>
+<li>A <strong>small p-value</strong> is evidence against <span class="math inline">H_0</span>.</li>
+<li>A <strong>large p-value</strong> means the data do not give enough evidence against <span class="math inline">H_0</span>.</li>
 </ul>
+<p>The p-value does not measure the strength or accuracy of the model.</p>
 </section>
-<section id="creating-a-repo-from-a-template" class="slide level2">
-<h2>Creating a Repo from a Template</h2>
+<section id="decision-at-the-5-level" class="slide level2">
+<h2>Decision at the 5% Level</h2>
+<p>If <span class="math inline">p &lt; .05</span>:</p>
+<div class="decision">
+<p>Reject <span class="math inline">H_0</span>. There is a significant linear relationship.</p>
+</div>
+<p>If <span class="math inline">p \ge .05</span>:</p>
+<div class="decision">
+<p>Fail to reject <span class="math inline">H_0</span>. There is not enough evidence of a significant linear relationship.</p>
+</div>
+</section>
+<section id="can-we-use-the-regression-equation" class="slide level2">
+<h2>Can We Use the Regression Equation?</h2>
+<p>A significant result says there is evidence of a linear relationship.</p>
+<p>Before using the equation for prediction, also check:</p>
 <ul>
-<li>Starts your own new repo as a copy of a template repo</li>
-<li>Copies the files, folders, and setup - without the old history</li>
-<li>Lets every student start from the same working project</li>
-<li>Your copy is yours - make it private, add collaborators, and edit freely</li>
+<li>the scatterplot and residuals,</li>
+<li><span class="math inline">R^2</span> and the standard error,</li>
+<li>whether the prediction is within the observed range, and</li>
+<li>whether the data are relevant to the question.</li>
 </ul>
+<p>Significance alone does not guarantee useful predictions.</p>
+</section>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
+<p>A regression output reports <span class="math inline">p = .032</span> for the overall significance test.</p>
+<ol type="1">
+<li>Compare the p-value with <span class="math inline">\alpha=.05</span>.</li>
+<li>State the decision about <span class="math inline">H_0</span>.</li>
+<li>State the conclusion in context.</li>
+</ol>
+</section>
+<section id="practice-answer" class="slide level2">
+<h2>Practice Answer</h2>
+<p>Because</p>
+<p><span class="math display">.032 &lt; .05,</span></p>
+<p>we <strong>reject <span class="math inline">H_0</span></strong>.</p>
+<p>There is evidence of a statistically significant linear relationship between the explanatory and response variables.</p>
+<p>We would still check model accuracy and assumptions before making predictions.</p>
+<aside class="notes">
+<p>Adapted from the “Is This a Significant Linear Relationship?” lesson in the intro-statistics-quarto project.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 
 </section>
     </div>
@@ -230,19 +335,18 @@ Calvin Williamson, Science and Math
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="github_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="SimpleRegressionSignificance_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="github_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="github_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="github_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="github_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="github_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="SimpleRegressionSignificance_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="SimpleRegressionSignificance_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="SimpleRegressionSignificance_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="SimpleRegressionSignificance_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="SimpleRegressionSignificance_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="github_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="github_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="github_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="github_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="SimpleRegressionSignificance_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="SimpleRegressionSignificance_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="SimpleRegressionSignificance_files/libs/revealjs/plugin/zoom/zoom.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -410,27 +514,9 @@ Calvin Williamson, Science and Math
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
 
-        math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
-          RevealMath,
           RevealNotes,
           RevealSearch,
           RevealZoom
