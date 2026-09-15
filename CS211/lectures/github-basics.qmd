@@ -75,10 +75,20 @@ The repository starts with a `README.md` file on the `main` branch.
 
 Git remembers the deleted file in the repository's history.
 
-## Commit History
+## Show All Commits
 
-- On the repository's **Code** page, look above the file list
-- Find **History** next to the latest commit
-- Click the link showing the number of commits, such as **5 Commits**
-- Open a commit to see which lines were added, changed, or deleted
+1. Open the repository's **Code** page
+2. Click the **Commits** label above the list of files
+3. View all the commits in the repository
+4. Open a commit to see which files and lines changed
 
+This shows the commit history for the entire repository.
+
+## Show Commits for One File
+
+1. Open a file, such as `README.md`
+2. Click **History** on the far right above the file
+3. View only the commits that changed that file
+4. Open a commit to see what changed in the file
+
+This shows the commit history for one file instead of the entire repository.
