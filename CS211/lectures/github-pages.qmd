@@ -1,0 +1,55 @@
+---
+title: "GitHub Pages"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## What is GitHub Pages
+
+- GitHub Pages publishes a repository as a free website
+- No traditional server is needed
+- The website can use HTML, CSS, and JavaScript files
+- The address is `username.github.io/repository-name`
+
+## GitHub Pages Example
+
+- Repository: [BusMgmtBenchmarks](https://github.com/calvinw/BusMgmtBenchmarks)
+- Published website: [FIT Retail Index](https://calvinw.github.io/BusMgmtBenchmarks/)
+- The repository contains the files
+- GitHub Pages turns the files into a website
+
+## The `index.html` File
+
+- `index.html` is the main page of the website
+- GitHub Pages looks for this file when the website opens
+- Editing `index.html` changes the published page
+- Changes appear after they are committed to the publishing branch
+
+## Set Up GitHub Pages
+
+1. Open the repository and select **Settings**
+2. Select **Pages** under **Code and automation**
+3. Under **Build and deployment**, choose **Deploy from a branch**
+4. Select the `main` branch and the `/ (root)` folder
+5. Click **Save**
+
+## Watch the Deployment Progress
+
+- Open the repository's **Actions** tab
+- Watch the GitHub Pages deployment progress
+- A yellow circle means the deployment is still running
+- A green check mark means the deployment is complete
+- Open the deployment to see more details
+
+## Add the Website to the Repository
+
+1. Open the repository's main page
+2. Select the gear icon next to **About**
+3. Enter the GitHub Pages address in the **Website** field
+4. Save the changes
+
+The website link now appears on the repository's main page.

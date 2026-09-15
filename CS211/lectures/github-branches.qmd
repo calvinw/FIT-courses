@@ -1,0 +1,39 @@
+---
+title: "GitHub Branches"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## What is a Branch
+
+- A branch is a separate version of the repository
+- The `main` branch is the official, working version
+- A new branch lets you make changes without changing `main`
+- When the work is ready, you can merge the branch into `main`
+
+## Create a Branch
+
+1. Open the branch menu, which currently says `main`
+2. Type a new branch name
+3. Select **Create branch**
+4. Confirm that the branch menu shows the new branch
+
+## Work on a Branch
+
+1. Confirm that the new branch is selected
+2. Create or edit a file
+3. Click **Commit changes**
+4. Commit the change to the new branch
+
+The change is on the new branch, but not yet on `main`.
+
+## Merge a Branch into `main`
+
+1. Merge the new branch into `main`
+2. Return to the `main` branch
+3. Verify that the new file is now on `main`
+4. Delete the merged branch

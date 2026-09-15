@@ -10,7 +10,8 @@ format:
 
 ## What is GitHub
 
-- A website for hosting code and tracking versions over time
+- A website for hosting files and tracking versions over time
+- Example: [FIT Retail Index](https://github.com/calvinw/BusMgmtBenchmarks)
 - Built on Git - version tracking for your files
 - Lets you publish web apps for free, with no traditional server
 - Used for collaboration, portfolios, and class projects
@@ -22,7 +23,7 @@ format:
 - Each repository has an owner - a user or organization account
 - Collaborators are other GitHub users invited to work on the repository
 - Collaborators can edit code, fix bugs, and add features together
-- Example: [FIT Retail Index (non-AI)](https://calvinw.github.io/BusMgmtBenchmarks/)
+- Example: [FIT Retail Index](https://github.com/calvinw/BusMgmtBenchmarks)
 
 ## Public Repositories and Private Repositories
 
@@ -32,6 +33,62 @@ format:
 - Private Repositories - only you and your collaborators can see it
   - Good for homework, drafts, and work in progress
   - You control who is invited as a collaborator
+
+## Create a Repository from Scratch
+
+1. Sign in to GitHub and click **New repository**
+2. Give the repository a short, descriptive name
+3. Choose **Public** or **Private**
+4. Select **Add a README file**
+5. Click **Create repository**
+
+The new repository starts with a `README.md` file on the `main` branch.
+
+## Add a Collaborator
+
+1. Open the repository and select **Settings**
+2. Select **Collaborators** under **Access**
+3. Click **Add people** and enter their GitHub username
+4. Send the invitation
+5. Ask the collaborator to accept the invitation
+6. Return to **Collaborators** and confirm that the invitation was accepted
+
+An invitation does not grant access until the collaborator accepts it.
+
+## Edit an Existing File
+
+1. Open `README.md`
+2. Click the pencil icon to edit the file
+3. Add a description of the project
+4. Click **Commit changes**
+5. Enter a short commit message
+6. Select **Commit directly to the `main` branch**
+
+## Create a New File
+
+1. Select **Add file** > **Create new file**
+2. Enter a filename, such as `notes.md`
+3. Add some content to the file
+4. Click **Commit changes**
+5. Describe the change and commit it directly to `main`
+
+## Delete a File
+
+1. Open the file you want to remove
+2. Open the file menu and select **Delete file**
+3. Click **Commit changes**
+4. Describe why the file is being removed
+5. Commit the deletion directly to `main`
+
+Git remembers the deleted file in the repository's history.
+
+## Check Your Work on `main`
+
+- Confirm that the correct files appear in the repository
+- Open `README.md` and check the latest edits
+- Select **Commits** to see the history
+- Open a commit to see which lines were added, changed, or deleted
+- Notice that every file operation becomes part of the project history
 
 ## Open Source Example: BusMgmtBenchmarks
 
@@ -54,6 +111,28 @@ format:
 - The main branch is the official, working version of the project
 - Create a branch to fix a bug or try a feature without breaking main
 - When done, merge the branch back into main
+
+## Create and Work on a Branch
+
+1. Open the branch menu, which currently says `main`
+2. Type a new branch name, such as `add-about-file`
+3. Select **Create branch**
+4. Confirm that the branch menu shows the new branch
+5. Create a file named `about.md`
+6. Commit the new file to the branch
+
+The file is now on the new branch, but not yet on `main`.
+
+## Merge the Branch into `main`
+
+1. Open a **Pull Request** from the new branch into `main`
+2. Review the **Files changed** tab
+3. Click **Merge pull request**
+4. Confirm the merge
+5. Return to `main` and confirm that `about.md` is there
+6. Delete the merged branch
+
+The commits remain in the history even after the branch is deleted.
 
 ## GitHub Pages
 

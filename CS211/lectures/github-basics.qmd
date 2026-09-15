@@ -1,0 +1,84 @@
+---
+title: "GitHub Basics"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## What is GitHub
+
+- A website for hosting files and tracking versions over time
+- Built on Git - version tracking for your files
+- Used for collaboration, portfolios, and class projects
+- [github.com](https://github.com/)
+
+## Repositories and Collaborators
+
+- A repository is a project folder stored on GitHub, with full history
+- Each repository has an owner - a user or organization account
+- Collaborators are other GitHub users invited to work on the repository
+- Collaborators can edit files and add features together
+- Example: [FIT Retail Index](https://github.com/calvinw/BusMgmtBenchmarks)
+
+## Public and Private Repositories
+
+- Public repositories - anyone on the internet can see the files
+  - Good for open source, portfolios, and free web hosting
+- Private repositories - only you and your collaborators can see the files
+  - Good for homework, drafts, and work in progress
+
+## Create a Repository from Scratch
+
+1. Sign in to GitHub and click **New repository**
+2. Give the repository a short, descriptive name
+3. Choose **Public** or **Private**
+4. Select **Add a README file**
+5. Click **Create repository**
+
+The repository starts with a `README.md` file on the `main` branch.
+
+## Add a Collaborator
+
+1. Open the repository and select **Settings**
+2. Select **Collaborators** under **Access**
+3. Click **Add people** and enter their GitHub username
+4. Send the invitation
+5. Ask the collaborator to accept the invitation
+6. Confirm that the invitation was accepted
+
+## Edit an Existing File
+
+1. Open `README.md`
+2. Click the pencil icon
+3. Edit the file
+4. Click **Commit changes**
+5. Enter a short commit message
+6. Select **Commit directly to the `main` branch**
+
+## Create a New File
+
+1. Select **Add file** > **Create new file**
+2. Enter a filename
+3. Add content to the file
+4. Click **Commit changes**
+5. Commit the file directly to `main`
+
+## Delete a File
+
+1. Open the file you want to remove
+2. Open the file menu and select **Delete file**
+3. Click **Commit changes**
+4. Commit the deletion directly to `main`
+
+Git remembers the deleted file in the repository's history.
+
+## Commit History
+
+- On the repository's **Code** page, look above the file list
+- Find **History** next to the latest commit
+- Click the link showing the number of commits, such as **5 Commits**
+- Open a commit to see which lines were added, changed, or deleted
+

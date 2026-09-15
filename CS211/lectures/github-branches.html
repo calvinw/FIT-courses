@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="github_files/libs/clipboard/clipboard.min.js"></script>
-<script src="github_files/libs/quarto-html/tabby.min.js"></script>
-<script src="github_files/libs/quarto-html/popper.min.js"></script>
-<script src="github_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="github_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="github_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="github_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="github-branches_files/libs/clipboard/clipboard.min.js"></script>
+<script src="github-branches_files/libs/quarto-html/tabby.min.js"></script>
+<script src="github-branches_files/libs/quarto-html/popper.min.js"></script>
+<script src="github-branches_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="github-branches_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="github-branches_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="github-branches_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Calvin Williamson, Science and Math">
-  <title>GitHub</title>
+  <title>GitHub Branches</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="github_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="github_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="github-branches_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="github-branches_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,11 +29,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="github_files/libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
-  <link href="github_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="github_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="github_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="github_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="github-branches_files/libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
+  <link href="github-branches_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="github-branches_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="github-branches_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="github-branches_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -127,7 +127,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">GitHub</h1>
+  <h1 class="title">GitHub Branches</h1>
   <p class="subtitle">Fall 26</p>
 
 <div class="quarto-title-authors">
@@ -139,177 +139,42 @@ Calvin Williamson, Science and Math
 </div>
 
 </section>
-<section id="what-is-github" class="slide level2">
-<h2>What is GitHub</h2>
+<section id="what-is-a-branch" class="slide level2">
+<h2>What is a Branch</h2>
 <ul>
-<li>A website for hosting files and tracking versions over time</li>
-<li>Example: <a href="https://github.com/calvinw/BusMgmtBenchmarks">FIT Retail Index</a></li>
-<li>Built on Git - version tracking for your files</li>
-<li>Lets you publish web apps for free, with no traditional server</li>
-<li>Used for collaboration, portfolios, and class projects</li>
-<li><a href="https://github.com/">github.com</a></li>
+<li>A branch is a separate version of the repository</li>
+<li>The <code>main</code> branch is the official, working version</li>
+<li>A new branch lets you make changes without changing <code>main</code></li>
+<li>When the work is ready, you can merge the branch into <code>main</code></li>
 </ul>
 </section>
-<section id="repositories-and-collaborators" class="slide level2">
-<h2>Repositories and Collaborators</h2>
-<ul>
-<li>A Repository is a project folder stored on GitHub, with full history</li>
-<li>Each repository has an owner - a user or organization account</li>
-<li>Collaborators are other GitHub users invited to work on the repository</li>
-<li>Collaborators can edit code, fix bugs, and add features together</li>
-<li>Example: <a href="https://github.com/calvinw/BusMgmtBenchmarks">FIT Retail Index</a></li>
-</ul>
-</section>
-<section id="public-repositories-and-private-repositories" class="slide level2">
-<h2>Public Repositories and Private Repositories</h2>
-<ul>
-<li>Public Repositories - anyone on the internet can see the code
-<ul>
-<li>Good for open source, portfolios, and free web hosting</li>
-<li>Example: class demos and published apps</li>
-</ul></li>
-<li>Private Repositories - only you and your collaborators can see it
-<ul>
-<li>Good for homework, drafts, and work in progress</li>
-<li>You control who is invited as a collaborator</li>
-</ul></li>
-</ul>
-</section>
-<section id="create-a-repository-from-scratch" class="slide level2">
-<h2>Create a Repository from Scratch</h2>
-<ol type="1">
-<li>Sign in to GitHub and click <strong>New repository</strong></li>
-<li>Give the repository a short, descriptive name</li>
-<li>Choose <strong>Public</strong> or <strong>Private</strong></li>
-<li>Select <strong>Add a README file</strong></li>
-<li>Click <strong>Create repository</strong></li>
-</ol>
-<p>The new repository starts with a <code>README.md</code> file on the <code>main</code> branch.</p>
-</section>
-<section id="add-a-collaborator" class="slide level2">
-<h2>Add a Collaborator</h2>
-<ol type="1">
-<li>Open the repository and select <strong>Settings</strong></li>
-<li>Select <strong>Collaborators</strong> under <strong>Access</strong></li>
-<li>Click <strong>Add people</strong> and enter their GitHub username</li>
-<li>Send the invitation</li>
-<li>Ask the collaborator to accept the invitation</li>
-<li>Return to <strong>Collaborators</strong> and confirm that the invitation was accepted</li>
-</ol>
-<p>An invitation does not grant access until the collaborator accepts it.</p>
-</section>
-<section id="edit-an-existing-file" class="slide level2">
-<h2>Edit an Existing File</h2>
-<ol type="1">
-<li>Open <code>README.md</code></li>
-<li>Click the pencil icon to edit the file</li>
-<li>Add a description of the project</li>
-<li>Click <strong>Commit changes</strong></li>
-<li>Enter a short commit message</li>
-<li>Select <strong>Commit directly to the <code>main</code> branch</strong></li>
-</ol>
-</section>
-<section id="create-a-new-file" class="slide level2">
-<h2>Create a New File</h2>
-<ol type="1">
-<li>Select <strong>Add file</strong> &gt; <strong>Create new file</strong></li>
-<li>Enter a filename, such as <code>notes.md</code></li>
-<li>Add some content to the file</li>
-<li>Click <strong>Commit changes</strong></li>
-<li>Describe the change and commit it directly to <code>main</code></li>
-</ol>
-</section>
-<section id="delete-a-file" class="slide level2">
-<h2>Delete a File</h2>
-<ol type="1">
-<li>Open the file you want to remove</li>
-<li>Open the file menu and select <strong>Delete file</strong></li>
-<li>Click <strong>Commit changes</strong></li>
-<li>Describe why the file is being removed</li>
-<li>Commit the deletion directly to <code>main</code></li>
-</ol>
-<p>Git remembers the deleted file in the repository’s history.</p>
-</section>
-<section id="check-your-work-on-main" class="slide level2">
-<h2>Check Your Work on <code>main</code></h2>
-<ul>
-<li>Confirm that the correct files appear in the repository</li>
-<li>Open <code>README.md</code> and check the latest edits</li>
-<li>Select <strong>Commits</strong> to see the history</li>
-<li>Open a commit to see which lines were added, changed, or deleted</li>
-<li>Notice that every file operation becomes part of the project history</li>
-</ul>
-</section>
-<section id="open-source-example-busmgmtbenchmarks" class="slide level2">
-<h2>Open Source Example: BusMgmtBenchmarks</h2>
-<ul>
-<li><a href="https://github.com/calvinw/BusMgmtBenchmarks">calvinw/BusMgmtBenchmarks</a> - a public, open source repo</li>
-<li>MIT License - anyone can use, copy, and build on the code</li>
-<li>README describes the project, data, and live web app</li>
-<li>247 commits show the full history of changes over time</li>
-<li>Live site published for free: <a href="https://calvinw.github.io/BusMgmtBenchmarks/">FIT Retail Index</a></li>
-</ul>
-</section>
-<section id="version-control" class="slide level2">
-<h2>Version Control</h2>
-<ul>
-<li>Version control tracks every change to your files over time</li>
-<li>Each saved checkpoint is called a commit, with a message describing it</li>
-<li>You can see history, compare versions, and undo mistakes</li>
-<li>Multiple people can work on the same files without losing work</li>
-</ul>
-</section>
-<section id="branches-on-github" class="slide level2">
-<h2>Branches on GitHub</h2>
-<ul>
-<li>A branch is a separate copy of your code for working on something new</li>
-<li>The main branch is the official, working version of the project</li>
-<li>Create a branch to fix a bug or try a feature without breaking main</li>
-<li>When done, merge the branch back into main</li>
-</ul>
-</section>
-<section id="create-and-work-on-a-branch" class="slide level2">
-<h2>Create and Work on a Branch</h2>
+<section id="create-a-branch" class="slide level2">
+<h2>Create a Branch</h2>
 <ol type="1">
 <li>Open the branch menu, which currently says <code>main</code></li>
-<li>Type a new branch name, such as <code>add-about-file</code></li>
+<li>Type a new branch name</li>
 <li>Select <strong>Create branch</strong></li>
 <li>Confirm that the branch menu shows the new branch</li>
-<li>Create a file named <code>about.md</code></li>
-<li>Commit the new file to the branch</li>
 </ol>
-<p>The file is now on the new branch, but not yet on <code>main</code>.</p>
 </section>
-<section id="merge-the-branch-into-main" class="slide level2">
-<h2>Merge the Branch into <code>main</code></h2>
+<section id="work-on-a-branch" class="slide level2">
+<h2>Work on a Branch</h2>
 <ol type="1">
-<li>Open a <strong>Pull Request</strong> from the new branch into <code>main</code></li>
-<li>Review the <strong>Files changed</strong> tab</li>
-<li>Click <strong>Merge pull request</strong></li>
-<li>Confirm the merge</li>
-<li>Return to <code>main</code> and confirm that <code>about.md</code> is there</li>
+<li>Confirm that the new branch is selected</li>
+<li>Create or edit a file</li>
+<li>Click <strong>Commit changes</strong></li>
+<li>Commit the change to the new branch</li>
+</ol>
+<p>The change is on the new branch, but not yet on <code>main</code>.</p>
+</section>
+<section id="merge-a-branch-into-main" class="slide level2">
+<h2>Merge a Branch into <code>main</code></h2>
+<ol type="1">
+<li>Merge the new branch into <code>main</code></li>
+<li>Return to the <code>main</code> branch</li>
+<li>Verify that the new file is now on <code>main</code></li>
 <li>Delete the merged branch</li>
 </ol>
-<p>The commits remain in the history even after the branch is deleted.</p>
-</section>
-<section id="github-pages" class="slide level2">
-<h2>GitHub Pages</h2>
-<ul>
-<li>GitHub Pages publishes your repository as a free website</li>
-<li>No traditional server needed - just HTML, CSS, and JavaScript files</li>
-<li>Repo: <a href="https://github.com/calvinw/BusMgmtBenchmarks">calvinw/BusMgmtBenchmarks</a></li>
-<li>Live Pages site: <a href="https://calvinw.github.io/BusMgmtBenchmarks/">FIT Retail Index</a></li>
-<li>Address is username.github.io/repository-name</li>
-</ul>
-</section>
-<section id="creating-a-repo-from-a-template" class="slide level2">
-<h2>Creating a Repo from a Template</h2>
-<ul>
-<li>Starts your own new repo as a copy of a template repo</li>
-<li>Copies the files, folders, and setup - without the old history</li>
-<li>Lets every student start from the same working project</li>
-<li>Your copy is yours - make it private, add collaborators, and edit freely</li>
-</ul>
 
 </section>
     </div>
@@ -320,19 +185,19 @@ Calvin Williamson, Science and Math
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="github_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="github-branches_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="github_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="github_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="github_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="github_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="github_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="github-branches_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="github-branches_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="github-branches_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="github-branches_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="github-branches_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="github_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="github_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="github_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="github_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="github-branches_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="github-branches_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="github-branches_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="github-branches_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
