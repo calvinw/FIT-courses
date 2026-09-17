@@ -1,5 +1,5 @@
 ---
-title: "InClass GitHub Basics"
+title: "Hw GitHub Basics"
 format:
   html:
     embed-resources: true
