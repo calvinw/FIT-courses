@@ -21,9 +21,8 @@ Create a public repository with Markdown examples in `README.md` and a simple we
    - A numbered list.
    - Some *italic text*.
    - Some **bold text**.
-3. Use your own words for the examples. You may write about your interests, classes, or favorite things.
-4. Preview the README to check that the lists, italic text, and bold text display correctly.
-5. Commit the changes **directly to `main`** with a short message, such as `Add Markdown examples`.
+3. Preview the README to check that the lists, italic text, and bold text display correctly.
+4. Commit the changes **directly to `main`** with a short message, such as `Add Markdown examples`.
 
 ## Download and upload a webpage
 
