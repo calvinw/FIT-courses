@@ -79,6 +79,24 @@ if [ -n "$decks" ]; then
   echo "</ul>"
 fi
 
+exercises=""
+for dir in $(echo "$listed_dirs" | tr ' ' '\n' | sort -u); do
+  [ -n "$dir" ] || continue
+  for qmd in "$dir"/exercises/*.qmd; do
+    [ -e "$qmd" ] || continue
+    exercises="$exercises ${qmd%.qmd}"
+  done
+done
+if [ -n "$exercises" ]; then
+  echo "<h2>Exercises</h2>"
+  echo "<ul>"
+  for base in $exercises; do
+    [ -e "$base.html" ] || continue
+    printf '  <li>%s: <a href="%s.html">HTML</a></li>\n' "$(basename "$base")" "$base"
+  done
+  echo "</ul>"
+fi
+
 if [ -d shared ]; then
   echo "<h2>Shared</h2>"
   echo "<ul>"

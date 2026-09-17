@@ -1,0 +1,35 @@
+---
+title: "InClass GitHub Basics"
+format:
+  html:
+    embed-resources: true
+---
+
+Create a public repository with Markdown examples in `README.md` and a simple webpage in `index.html`.
+
+## Create your repository
+
+1. Sign in to GitHub and create a new **public** repository named `my-simple-webpage`.
+2. Select **Add a README file**, then create the repository.
+3. Confirm that you are on the `main` branch.
+
+## Add Markdown examples
+
+1. Search the web for **"markdown examples"**.
+2. Use examples you find to learn the Markdown syntax, then edit `README.md` and include each of the following:
+   - A bullet list.
+   - A numbered list.
+   - Some *italic text*.
+   - Some **bold text**.
+3. Use your own words for the examples. You may write about your interests, classes, or favorite things.
+4. Preview the README to check that the lists, italic text, and bold text display correctly.
+5. Commit the changes **directly to `main`** with a short message, such as `Add Markdown examples`.
+
+## Download and upload a webpage
+
+1. <a href="downloads/github-basics/index.html" download="index.html">Download index.html</a> and save it on your computer. If the link opens a webpage instead, right-click the link and choose **Save Link As**. Keep the filename `index.html`.
+2. Return to the main file list of your `my-simple-webpage` repository on GitHub.
+3. Select **Add file → Upload files** and choose the downloaded `index.html` file.
+4. Commit the upload **directly to `main`** with a short message, such as `Upload index.html`.
+
+For help with uploading, see [GitHub's upload instructions](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
