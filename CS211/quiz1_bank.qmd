@@ -1,0 +1,430 @@
+---
+title: "CS211 Quiz 1 Bank"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    embed-resources: true
+---
+
+Name: ______________________________
+
+Choose the best answer for each question.
+
+**1.** In the Bash shell, you are in `/Users/calvinw`, which contains the files `notes.txt` and `todo.txt` and a directory named `projects`. The `projects` directory contains `index.html`, `about.html`, and `style.css`. You type `cd projects`, then `ls`. What does `ls` print?
+
+A) `notes.txt  projects  todo.txt`
+B) `about.html  index.html  style.css`
+C) `/Users/calvinw/projects`
+D) Nothing
+
+**2.** Which company makes the LLM ChatGPT?
+
+A) Anthropic
+B) Google
+C) DeepSeek
+D) OpenAI
+
+**3.** In the Bash command line, what does `pwd` stand for?
+
+A) print web directory
+B) print working directory
+C) previous working directory
+D) path with directories
+
+**4.** In GitHub, why would you create a new branch?
+
+A) To make the repository public
+B) To invite a collaborator
+C) To publish a website
+D) To make changes without changing `main`
+
+**5.** In GitHub, what is a repository?
+
+A) A project folder stored on GitHub, with full history
+B) A single file that holds a website
+C) A person invited to work on a project
+D) A list of commands typed in a terminal
+
+**6.** In GitHub, how do you add a collaborator to a repository?
+
+A) Open the Actions tab and select Pages
+B) Click the Commits label above the list of files
+C) Click the pencil icon on `README.md`
+D) Open Settings, then select Collaborators under Access
+
+**7.** Which of these is an example of a tool (an external program) that an LLM (large language model) can call?
+
+A) A branch
+B) A commit message
+C) A calculator
+D) A README
+
+**8.** In the Bash command line, does the `ls` command change any files?
+
+A) Yes, it deletes old files
+B) Yes, it sorts the files on disk
+C) Yes, it renames files
+D) No, it only shows what is there
+
+**9.** In the Bash command line, what does the `cd` command do?
+
+A) Lists the files in the current folder
+B) Prints the working directory
+C) Changes directory - it moves the shell into another folder
+D) Deletes a folder
+
+**10.** What is the first step in creating a new repository on GitHub?
+
+A) Select Add a README file
+B) Sign in to GitHub and click New repository
+C) Open the Actions tab
+D) Create a branch named main
+
+**11.** Which of these is a vibe coding tool for building apps with an LLM?
+
+A) Lovable
+B) Bash
+C) GitHub Pages
+D) Markdown
+
+**12.** In vibe coding, what can Stitch generate or export for pages and screens?
+
+A) A Git repository
+B) HTML prototypes
+C) A DoltHub database
+D) A terminal session
+
+**13.** Where does the work in a GitHub codespace happen?
+
+A) Only on your own computer
+B) On the lab computer
+C) On your collaborator's computer
+D) On GitHub's computer
+
+**14.** In GitHub, you select a new branch, create a file, and commit it. Where is the file?
+
+A) On `main` only
+B) On both `main` and the new branch right away
+C) On the new branch, but not yet on `main`
+D) Nowhere until you delete the branch
+
+**15.** In GitHub, what is a collaborator?
+
+A) A backup copy of the repository
+B) A file inside the repository
+C) The name of a branch
+D) Another GitHub user invited to work on the repository
+
+**16.** In GitHub, when the work on a branch is ready, what do you do to bring it into the official version?
+
+A) Delete `main`
+B) Merge the branch into `main`
+C) Make the repository private
+D) Create a codespace
+
+**17.** What is one advantage of using a GitHub codespace?
+
+A) It makes the repository public
+B) You do not need to install anything on your own machine
+C) It deletes the `main` branch
+D) It removes the need for a repository
+
+**18.** What does GitHub Pages let you avoid?
+
+A) Needing a traditional server to host the website
+B) Writing HTML
+C) Using a repository
+D) Committing changes
+
+**19.** What made DeepSeek different from ChatGPT, Claude, and Gemini?
+
+A) It is the only model that accepts images
+B) It was released as an open source model that anyone can download and run
+C) It cannot write code
+D) It is made by Anthropic
+
+**20.** In the Bash command line used in this lesson, the prompt is `#`. What does the prompt mean?
+
+A) An error occurred
+B) The command was deleted
+C) The shell is waiting for a command
+D) The file is a comment
+
+**21.** When designing apps for vibe coding, which of these is a full featured design tool?
+
+A) Figma
+B) Bolt.New
+C) AI Studio
+D) Lovable
+
+**22.** In software development with AI, what is vibe coding?
+
+A) Writing every line of code by hand
+B) Publishing a website with GitHub Pages
+C) Coding with an LLM but letting the AI do all the work
+D) Typing commands into a terminal
+
+**23.** In the Bash shell, you are in `/Users/calvinw`. Which command moves you into the `projects` directory?
+
+A) `ls projects`
+B) `pwd projects`
+C) `cd projects`
+D) `projects cd`
+
+**24.** How do you prompt a multimodal LLM (large language model) using audio?
+
+A) Type the prompt into the terminal
+B) Commit an audio file to `main`
+C) Speak into a microphone on your computer
+D) Press Enter in Bash
+
+**25.** In the Bash command line, which command prints the folder the shell is currently in?
+
+A) `ls`
+B) `cd`
+C) `bash`
+D) `pwd`
+
+**26.** In GitHub, after a branch has been merged into `main`, what should you do with the merged branch?
+
+A) Merge it a second time
+B) Turn it into a new repository
+C) Rename it `main`
+D) Delete it
+
+**27.** Which item that vibe coding usually leaves out is about user identity verification and access control?
+
+A) Publishing
+B) Version tracking
+C) Database
+D) Authentication
+
+**28.** Why did DeepSeek cause Wall Street to panic in Spring 25?
+
+A) It deleted financial data
+B) It stopped all AI models from working
+C) It challenged the idea that only companies with proprietary models would dominate AI
+D) It cost more than every other model
+
+**29.** What makes an LLM (large language model) multimodal?
+
+A) Its prompts and responses can include text, images, audio, and video
+B) It can only respond with text
+C) It runs on several branches at once
+D) It is open source
+
+**30.** Which of these AI models was released as open source so anyone can download and run it?
+
+A) DeepSeek
+B) ChatGPT
+C) Claude
+D) Gemini
+
+**31.** According to the lecture, what are large language models (LLMs) especially good at?
+
+A) Replacing GitHub
+B) Writing software
+C) Hosting websites
+D) Repairing computers
+
+**32.** In GitHub, after merging a branch into `main`, how can you verify that the merge worked?
+
+A) Delete the `main` branch
+B) Open the Actions tab
+C) Return to the `main` branch and check that the new file is there
+D) Create a codespace from the merged branch
+
+**33.** In GitHub, a codespace is created from what?
+
+A) Your whole GitHub account
+B) A collaborator
+C) One branch of the repository
+D) A GitHub Pages site
+
+**34.** In the Bash command line, which command lists the files and directories in the current folder?
+
+A) `ls`
+B) `pwd`
+C) `cd`
+D) `bash`
+
+**35.** What does GitHub Pages do?
+
+A) Tracks the commit history of a file
+B) Lets collaborators chat with each other
+C) Publishes a repository as a free website
+D) Creates a codespace for you
+
+**36.** In GitHub, what is a codespace?
+
+A) A development computer that GitHub runs for you, opened in the browser
+B) A private repository
+C) A kind of branch
+D) A file that holds a website
+
+**37.** In GitHub, you delete a file and commit the deletion. What does Git do with the deleted file?
+
+A) Erases it permanently with no record of it
+B) Remembers it in the repository's history
+C) Moves it to the `main` branch
+D) Restores it automatically the next day
+
+**38.** What is GitHub?
+
+A) A programming language used to build websites
+B) A website for hosting files and tracking versions over time
+C) A text editor that only works without internet
+D) A web browser for viewing repositories
+
+**39.** In app design and vibe coding, what is Stitch?
+
+A) A version tracking tool
+B) A shell for typing commands
+C) A hosting service for websites
+D) An AI design tool for apps and webpages
+
+**40.** In the Bash shell, you run `cd projects` from `/Users/calvinw` and then run `pwd`. What does `pwd` print?
+
+A) `/Users/calvinw`
+B) `/Users/calvinw/projects`
+C) `about.html  index.html  style.css`
+D) Nothing
+
+**41.** GitHub is built on which version-tracking tool?
+
+A) Bash
+B) Pages
+C) Markdown
+D) Git
+
+**42.** Where do you set up GitHub Pages for a repository?
+
+A) The Actions tab
+B) The green Code button
+C) Settings, then Pages
+D) The gear icon next to About
+
+**43.** In GitHub, after you send a collaborator an invitation, what must happen before they can work on the repository?
+
+A) They accept the invitation
+B) You merge a branch
+C) They create a codespace
+D) You delete the README
+
+**44.** In GitHub, how can you confirm which branch you are working on?
+
+A) The branch menu shows the current branch
+B) The title of the README
+C) The Collaborators page
+D) The Actions tab
+
+**45.** In the Bash shell, you are in `/Users/calvinw`. You type `cd projects` and press Enter. What does the shell print?
+
+A) `/Users/calvinw/projects`
+B) `about.html  index.html  style.css`
+C) An error message
+D) Nothing - `cd` prints nothing when it works
+
+**46.** When do changes to `index.html` appear on the published GitHub Pages website?
+
+A) After they are committed to the publishing branch
+B) As soon as you type them
+C) Only after you delete the repository
+D) Only after you create a codespace
+
+**47.** In AI, what is an LLM (large language model)?
+
+A) A program that only stores files
+B) A shell used to run commands
+C) A website for hosting repositories
+D) An AI model you send a prompt to, and it gives you a response
+
+**48.** When building an app with AI, what is the design plus vibe coding process?
+
+A) Design the pages with AI assistance, generate a prototype, then give it to an LLM that assembles the final app
+B) Publish the app, design the pages, then write the prototype
+C) Assemble the app, write a spec, then design the pages
+D) Generate a prototype, publish it, then design the pages
+
+**49.** Which AI model and company pairing is correct?
+
+A) Claude - Anthropic
+B) Gemini - OpenAI
+C) ChatGPT - Google
+D) DeepSeek - Anthropic
+
+**50.** Which of these is an LLM (large language model)?
+
+A) Git
+B) DeepSeek
+C) Bash
+D) Codespaces
+
+**51.** In GitHub, what is a branch?
+
+A) A permanent copy of the repository on your laptop
+B) A type of file
+C) A separate version of the repository
+D) A person who works on the repository
+
+**52.** In a GitHub Pages website, what is the `index.html` file?
+
+A) The README for the repository
+B) The main page of the website
+C) A branch of the repository
+D) A setting in the Pages menu
+
+**53.** Who can see the files in a public GitHub repository?
+
+A) Only the owner and collaborators
+B) Anyone on the internet
+C) Only people who have a codespace
+D) Only people who accepted an invitation
+
+**54.** How do you create a new branch on GitHub?
+
+A) Open the branch menu, type a new branch name, and select Create branch
+B) Click Commits and choose New
+C) Open Settings, then Branches, then Delete
+D) Click the pencil icon on `README.md`
+
+**55.** In the Bash shell, you are in `/Users/calvinw`, which contains this:
+
+```
+/Users/calvinw
+├── notes.txt
+├── todo.txt
+└── projects
+    ├── index.html
+    ├── about.html
+    └── style.css
+```
+
+What does the `ls` command print?
+
+A) `notes.txt  projects  todo.txt`
+B) `about.html  index.html  style.css`
+C) `/Users/calvinw`
+D) Nothing
+
+**56.** What is it sometimes called when an LLM (large language model) can call tools, which are external programs?
+
+A) Agentic
+B) Multimodal
+C) Open source
+D) Proprietary
+
+**57.** In an AI chat, what does the reasoning model, the DeepThink button, show you?
+
+A) A list of collaborators
+B) The repository's commit history
+C) Only the final answer
+D) Its thinking process
+
+**58.** In GitHub, what is the `main` branch?
+
+A) A temporary experiment
+B) The official, working version
+C) A branch only collaborators can see
+D) A branch that is deleted after every commit

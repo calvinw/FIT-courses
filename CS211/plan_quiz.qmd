@@ -1,0 +1,89 @@
+---
+title: "CS211 Quiz Plan"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    embed-resources: true
+    toc: true
+---
+
+Topics for a multiple choice quiz, grouped by deck. Each topic notes what a question could test.
+
+## GitHub Basics
+
+- **What GitHub is:** hosting files and tracking versions, built on Git
+- **Repository:** a project folder with full history, and who owns it
+- **Collaborators:** what they can do, and how to add one (Settings → Collaborators → Add people)
+- **Public vs private:** who can see the files, and when to use each
+- **Creating a repository:** the steps, and that it starts with `README.md` on `main`
+- **Editing, creating and deleting files:** the pencil icon, **Commit changes**, and that a deleted file stays in history
+- **Commit history:** the whole repository (**Commits**) vs one file (**History**)
+
+## GitHub Branches
+
+- **What a branch is** and what `main` means
+- **Creating a branch** from the branch menu
+- **Where a commit lands:** on the branch, not on `main`
+- **Merging** the branch into `main`, then deleting the merged branch
+
+## GitHub Pages
+
+- **What Pages does:** publishes a repository as a free website with no server
+- **The address format:** `username.github.io/repository-name`
+- **`index.html`:** the main page, and what editing it changes
+- **Setup:** Settings → Pages → Deploy from a branch → `main` and `/ (root)`
+- **Deployment:** the Actions tab, and a yellow circle vs a green check
+- **Website link:** adding the site to the repository's **About** box
+
+## GitHub Codespaces
+
+- **What a codespace is:** a computer GitHub runs for you, opened in the browser
+- **Why use one:** no install, and the same setup on any computer
+- **Branch:** a codespace is created from one branch, and commits go back to it
+- **Creating one:** Code button → Codespaces tab → Create codespace on *branch*
+- **Editor:** the codespace runs Visual Studio Code in the browser, already signed in to GitHub
+
+## The Command Line
+
+- **Terminal vs shell:** the window vs the program that reads your commands
+- **Bash:** where it is the default, including Codespaces
+- **The prompt:** what `#` means
+- **`pwd`:** print working directory, and reading its output
+- **`ls`:** list, and reading its output
+- **`cd`:** it prints nothing when it works, and `pwd` afterwards shows the new location
+- **Sequence questions:** "you run `cd projects`, then `ls`, what do you see?"
+
+## Vibe Coding
+
+- **Definition:** coding with an LLM and letting the AI do the work
+- **Tools:** Lovable, Bolt.New and AI Studio
+- **Design tools:** Stitch, Figma, FigmaMake and Claude Design
+- **The process:** design → prototype → an LLM assembles the app
+- **What vibe coding usually leaves out:** authentication, database, publishing, version tracking
+- **Plan document:** what a spec is, and why write one first
+- **Stitch:** what it can and can't do
+
+## Large Language Models
+
+- **LLM basics:** prompt in, response out, and example models
+- **Text vs multimodal:** which inputs a multimodal model accepts (text, image, audio, video, screen sharing)
+- **DeepSeek:** open source vs proprietary, and why it worried Wall Street
+- **Reasoning models:** what the DeepThink button shows
+- **LLMs as developers:** vibe coding, and which models are named
+- **Tools and "agentic":** what an LLM tool is, with examples like web search and a calculator
+
+## A Modern AI Application
+
+- **The non-AI FIT Retail Index:** hosted free on GitHub, reads a DoltHub database through a REST API
+- **The AI version:** the two new abilities, querying the database and reading and setting the menus
+
+## Assignments
+
+- **Hw GitHub Basics:** the Markdown elements (bullet list, numbered list, italic, bold), committing directly to `main`, and uploading `index.html`
+- **Stitch ordering spec:** WebApp vs Mobile App, and the two required pages
+
+## Notes
+
+- The Strudel and DAW slides in `slide.qmd` are mostly demos and links, so they are left out unless covered in detail in class.
+- Some ideas cut across decks and could make good questions. For example, "which GitHub feature publishes a website?" or "how does a codespace relate to a branch?"
