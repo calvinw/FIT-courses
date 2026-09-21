@@ -1,0 +1,53 @@
+---
+title: "GitHub Codespaces"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## What is a Codespace
+
+- A codespace is a development computer that GitHub runs for you
+- It opens in the browser, so nothing is installed on your own machine
+- Each codespace starts with a copy of one repository
+- The work happens on GitHub's computer, not on the lab computer
+
+## Why Use a Codespace
+
+- Editing many files at once is easier than the pencil icon on GitHub
+- You can create folders, rename files, and move files around
+- You can preview a website before publishing it
+- The same setup works from any computer you sign in from
+
+## A Codespace Belongs to a Branch
+
+- A codespace is created from one branch of the repository
+- The files in the codespace are that branch's files
+- Changes you commit go back to that same branch
+- Working on a branch keeps `main` untouched until you are ready
+
+## Create a Codespace on a Branch
+
+1. Open the repository's **Code** page
+2. Open the branch menu and select the branch you want
+3. Confirm that the branch menu shows that branch
+4. Click the green **Code** button
+5. Select the **Codespaces** tab
+6. Click **Create codespace on** *your branch name*
+
+## While the Codespace Starts
+
+- A new browser tab opens
+- GitHub builds the machine and copies the repository onto it
+- The first start takes longer than later ones
+- When it finishes, the editor appears with your files
+
+## Visual Studio Code in the Browser
+
+- The codespace runs Visual Studio Code, a code editor
+- It is the same editor people install on their own computers
+- Here it runs in a browser tab instead
+- It is already signed in to GitHub as you

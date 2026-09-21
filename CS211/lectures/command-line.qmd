@@ -1,0 +1,134 @@
+---
+title: "The Command Line"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## What is the Command Line
+
+- A way to control the computer by typing instead of clicking
+- You type a command and press **Enter**
+- The computer runs the command and prints the result
+- Programmers use it every day
+
+## The Terminal and the Shell
+
+- The **terminal** is the window where you type
+- The **shell** is the program inside it that reads your commands
+- The shell runs each command and shows you the output
+- The terminal is the screen, the shell is the one listening
+
+## What is Bash
+
+- **Bash** is one of the most common shells
+- It is the default on Linux and in GitHub Codespaces
+- It is also available on macOS and Windows
+- The commands in this lesson work the same in all of them
+
+## The Prompt
+
+```
+#
+```
+
+- The `#` is the **prompt** - the shell is waiting for a command
+- Type the command after the prompt
+- Press **Enter** to run it
+- The output appears on the lines below
+
+## Our Example: Files and Folders
+
+```
+/Users/calvinw
+├── notes.txt
+├── todo.txt
+└── projects
+    ├── index.html
+    ├── about.html
+    └── style.css
+```
+
+- `/Users/calvinw` is our starting folder
+- It holds two files and one directory
+- The directory `projects` has three files inside it
+
+## pwd - Where Am I
+
+- `pwd` stands for **print working directory**
+- It prints the folder the shell is currently in
+- Every command runs relative to this folder
+
+```
+# pwd
+/Users/calvinw
+```
+
+## ls - What Is Here
+
+- `ls` **lists** the files and directories in the current folder
+- It does not change anything, it only shows what is there
+
+```
+# ls
+notes.txt  projects  todo.txt
+```
+
+- Two files and the `projects` directory
+
+## cd - Change Directory
+
+- `cd` **changes directory** - it moves the shell into another folder
+- Type `cd` followed by the name of the folder
+- It prints nothing when it works
+
+```
+# cd projects
+#
+```
+
+## Check That cd Worked
+
+- Run `pwd` again to see the new working directory
+
+```
+# pwd
+/Users/calvinw/projects
+```
+
+- The shell is now inside `projects`
+
+## ls Inside the Directory
+
+- Run `ls` again - the shell is in a different folder now
+- It lists the files in `projects`
+
+```
+# ls
+about.html  index.html  style.css
+```
+
+## Putting It Together
+
+```
+# pwd
+/Users/calvinw
+# ls
+notes.txt  projects  todo.txt
+# cd projects
+# pwd
+/Users/calvinw/projects
+# ls
+about.html  index.html  style.css
+```
+
+## Summary
+
+| Command | Meaning | What it does |
+|---------|---------|--------------|
+| `pwd` | print working directory | Shows where you are |
+| `ls` | list | Shows the files here |
+| `cd` | change directory | Moves you into a folder |
