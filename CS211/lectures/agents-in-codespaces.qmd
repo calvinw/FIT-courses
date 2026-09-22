@@ -1,0 +1,83 @@
+---
+title: "Agents in Codespaces"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## What is an Agent
+
+- An agent is an AI helper that can edit code for you
+- You describe a task, and it works directly in your files
+- It can create files, edit files, and run commands
+- You review the changes and keep the ones you want
+
+## What is an Agent Harness
+
+- A harness is the program that connects an LLM to your files
+- It gives the LLM access to a project's files, a terminal, and Git
+- Without a harness, an LLM can only talk - it cannot touch your files
+- A codespace can run more than one harness
+
+## Some Agent Harnesses
+
+- **OpenCode** - an open source harness that works with many models
+- **Claude Code** - Anthropic's harness
+- **Codex** - OpenAI's harness
+- All of them read a prompt, edit files, and can run commands
+- They differ mainly in which company built them and which models they use most easily
+
+## Create a Repository from a Template
+
+1. Open [github.com/calvinw/ai-agentic-tools-template](https://github.com/calvinw/ai-agentic-tools-template)
+2. Click **Use this template**
+3. Select **Create a new repository**
+4. Name your repository
+5. Click **Create repository from template**
+
+## What the Template Provides
+
+- The repository holds only configuration files
+- The codespace image already has OpenCode, Claude Code, and Codex installed
+- No installing anything yourself
+- Every harness is ready to run as soon as the codespace starts
+
+## Open the Repository in a Codespace
+
+1. Open your new repository's **Code** page
+2. Click the green **Code** button
+3. Select the **Codespaces** tab
+4. Click **Create codespace on main**
+5. Wait for the dev container to finish building
+
+## Start OpenCode
+
+1. Open a terminal in the codespace
+2. Run `opencode.sh`
+3. OpenCode starts and is ready for a prompt
+
+`opencode.sh` starts OpenCode with permissions already set to allow reading, writing, and running commands.
+
+## Select a Free Model
+
+- OpenCode can use models from many different providers
+- Some models cost nothing to use
+- Type `/models` inside OpenCode to see the list
+- Choose a free model, such as **MiniMax M2.5 Free**
+
+## Give OpenCode a Task
+
+- Type a prompt describing what you want, such as fixing a bug or adding a feature
+- OpenCode reads your files, plans the change, and edits them
+- It can run commands, such as tests, to check its own work
+- It shows you what it changed as it works
+
+## Review and Commit the Changes
+
+1. Read what OpenCode changed before trusting it
+2. Open the **Source Control** view to see the changed files
+3. Stage the changes you want to keep
+4. Commit and push, the same as any other codespace change
