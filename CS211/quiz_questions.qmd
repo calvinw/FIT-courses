@@ -1,0 +1,463 @@
+---
+title: "CS211 Quiz Question Bank"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    embed-resources: true
+    toc: true
+---
+
+The questions that are not on the quiz yet, grouped by deck. The correct answer is listed after each question. Pick the ones you want to add.
+
+## GitHub Basics (Questions 1-7)
+
+**1.** Who can own a repository?
+
+A) Only an organization
+B) Only a collaborator
+C) A user or an organization account
+D) Only someone with a private repository
+
+**Answer: C**
+
+**2.** Which use is best suited to a private repository?
+
+A) Homework, drafts, and work in progress
+B) An open source project
+C) A portfolio you want anyone to find
+D) Free web hosting for a class demo
+
+**Answer: A**
+
+**3.** Which option should you select when creating a repository so that it starts with a `README.md` file?
+
+A) Add file
+B) Create branch
+C) Add a README file
+D) Add people
+
+**Answer: C**
+
+**4.** A brand new repository with a README starts on which branch?
+
+A) readme
+B) main
+C) first
+D) index
+
+**Answer: B**
+
+**5.** Which icon do you click to edit an existing file such as `README.md`?
+
+A) Gear icon
+B) Magnifying glass icon
+C) Pencil icon
+D) Green Code button
+
+**Answer: C**
+
+**6.** How do you see all the commits in the entire repository?
+
+A) Click History on the far right above a file
+B) Open the Actions tab
+C) Open Settings
+D) Click the Commits label above the list of files on the Code page
+
+**Answer: D**
+
+**7.** How do you see only the commits that changed `README.md`?
+
+A) Open the file and click History
+B) Click the Commits label on the Code page
+C) Open Settings and select Collaborators
+D) Click the pencil icon
+
+**Answer: A**
+
+## GitHub Pages (Questions 8-12)
+
+**8.** What is the address format of a GitHub Pages website?
+
+A) `github.com/pages/username`
+B) `username.com/repository-name`
+C) `repository-name.github.com/username`
+D) `username.github.io/repository-name`
+
+**Answer: D**
+
+**9.** To publish from the `main` branch, what do you choose under Build and deployment?
+
+A) Deploy from a branch, then select the `main` branch and the `/ (root)` folder
+B) Deploy from a codespace, then select a collaborator
+C) Merge from a branch, then select Private
+D) Create a repository, then select Add a README file
+
+**Answer: A**
+
+**10.** Where do you watch the progress of a GitHub Pages deployment?
+
+A) Settings, then Collaborators
+B) The Commits label
+C) The branch menu
+D) The Actions tab
+
+**Answer: D**
+
+**11.** In the Actions tab, what does a yellow circle mean?
+
+A) The deployment failed
+B) The deployment is still running
+C) The deployment is complete
+D) The website was deleted
+
+**Answer: B**
+
+**12.** How do you add the website link to the repository's main page?
+
+A) Rename the repository
+B) Merge a branch into `main`
+C) Select the gear icon next to About and enter the address in the Website field
+D) Create a new branch called website
+
+**Answer: C**
+
+## GitHub Codespaces (Questions 13-16)
+
+**13.** When you commit changes in a codespace, where do they go?
+
+A) To `main` automatically
+B) To a new repository
+C) Nowhere
+D) Back to the same branch the codespace was created from
+
+**Answer: D**
+
+**14.** How do you create a codespace on a branch?
+
+A) Open Settings and select Codespaces
+B) Select the branch, click the green Code button, open the Codespaces tab, and click Create codespace
+C) Open the Actions tab and select New
+D) Click the pencil icon on the branch
+
+**Answer: B**
+
+**15.** Which editor runs inside a codespace?
+
+A) Visual Studio Code
+B) Notepad
+C) Microsoft Word
+D) Xcode
+
+**Answer: A**
+
+**16.** Which is a reason to use a codespace instead of the pencil icon on GitHub?
+
+A) It hides your files from collaborators
+B) It makes the repository public
+C) It makes editing many files, and creating folders, easier
+D) It merges branches automatically
+
+**Answer: C**
+
+## The Command Line (Questions 17-19)
+
+**17.** What is the command line?
+
+A) A way to control the computer by typing commands and pressing Enter
+B) A line of buttons at the top of a website
+C) A way to control the computer only by clicking
+D) A list of the files in a repository
+
+**Answer: A**
+
+**18.** What is the difference between the terminal and the shell?
+
+A) The terminal reads your commands and the shell is the window
+B) The terminal is the window where you type, and the shell is the program that reads and runs your commands
+C) They are the same thing
+D) The shell is a website and the terminal is a repository
+
+**Answer: B**
+
+**19.** What is Bash?
+
+A) A branch in a repository
+B) A website hosting service
+C) A text editor
+D) A shell that is the default on Linux and in GitHub Codespaces
+
+**Answer: D**
+
+## Vibe Coding (Questions 20-24)
+
+**20.** What is FigmaMake?
+
+A) A shell like Bash
+B) A vibe coding tool for design prototyping within Figma
+C) A database on DoltHub
+D) A branch of a repository
+
+**Answer: B**
+
+**21.** Which of these is typically NOT included when vibe coding?
+
+A) Writing a prompt
+B) Designing the user interface
+C) Version tracking
+D) Generating a prototype
+
+**Answer: C**
+
+**22.** Which item that vibe coding usually leaves out is source control that manages code changes over time?
+
+A) Authentication
+B) Version tracking
+C) Database
+D) Publishing
+
+**Answer: B**
+
+**23.** What is a Plan document?
+
+A) A short spec of what the app should do, written before you start vibe coding
+B) A list of the commits in a repository
+C) A branch that holds the plan
+D) A page published with GitHub Pages
+
+**Answer: A**
+
+**24.** In the counter web app plan, by which amounts can the counter be incremented or decremented?
+
+A) 1, 3, 5, and 10
+B) 1, 2, 10, and 100
+C) 1, 2, 5, and 10
+D) Only by 1
+
+**Answer: C**
+
+## Large Language Models (Question 25)
+
+**25.** How do you prompt an LLM with both video and audio?
+
+A) Open a repository on GitHub
+B) Use a terminal
+C) Use a keyboard only
+D) Use a webcam, speaking and showing the model what you want
+
+**Answer: D**
+
+## A Modern AI Application (Questions 26-30)
+
+**26.** How is the original (non-AI) FIT Retail Index hosted?
+
+A) On a traditional paid server
+B) Free on GitHub, with no traditional server
+C) Inside a codespace
+D) On DoltHub
+
+**Answer: B**
+
+**27.** Where does the FIT Retail Index get its financial data?
+
+A) From values typed into `index.html`
+B) From the README
+C) From a codespace
+D) From a DoltHub database, through a REST API
+
+**Answer: D**
+
+**28.** What does the original FIT Retail Index let you do?
+
+A) Compare one company against another, or against the segment it belongs to
+B) Chat with an AI
+C) Write Markdown
+D) Create branches
+
+**Answer: A**
+
+**29.** What is new in the AI version of the FIT Retail Index?
+
+A) It is hosted on GitHub
+B) It uses financial data for retail companies
+C) It has LLM Chat that can query the same DoltHub database
+D) It has no database
+
+**Answer: C**
+
+**30.** In the AI version, what can the AI do with the menus on the company to company page?
+
+A) Delete them
+B) See their state and set them for you
+C) Rename them
+D) Publish them
+
+**Answer: B**
+
+## Strudel (Questions 31-32)
+
+**31.** What is Strudel?
+
+A) A version tracking tool
+B) A shell for typing commands
+C) A hosting service for websites
+D) A musical language for live coding and DJing
+
+**Answer: D**
+
+**32.** Strudel is based on Tidal Cycles. Which programming language is Tidal Cycles written in?
+
+A) Haskell
+B) Python
+C) Bash
+D) Markdown
+
+**Answer: A**
+
+## Assignments (Questions 33-39)
+
+**33.** In the Hw GitHub Basics assignment, what repository do you create?
+
+A) `my-simple-webpage`, private
+B) `my-simple-webpage`, public
+C) `README`, public
+D) `index.html`, private
+
+**Answer: B**
+
+**34.** Which items must the `README.md` include in the assignment?
+
+A) A table, an image, a link, and a heading
+B) Only a heading
+C) A bullet list, a numbered list, italic text, and bold text
+D) Only a bullet list
+
+**Answer: C**
+
+**35.** Where do you commit your changes in the assignment?
+
+A) On a new branch
+B) In a codespace
+C) In a terminal
+D) Directly to `main`
+
+**Answer: D**
+
+**36.** How do you upload `index.html` to your repository?
+
+A) Select Add file, then Upload files
+B) Open Settings, then Collaborators
+C) Open the Actions tab
+D) Copy it into `README.md`
+
+**Answer: A**
+
+**37.** In the Stitch ordering spec, what kind of app must you create?
+
+A) A Mobile App
+B) A WebApp
+C) A terminal app
+D) A command line tool
+
+**Answer: B**
+
+**38.** What prominent element must Page 2, Ready to Pay, include?
+
+A) A logo carousel
+B) A branch menu
+C) A Submit Order button
+D) A Delete button
+
+**Answer: C**
+
+**39.** What does the Stitch ordering spec say about the menu?
+
+A) You may rename the items
+B) You may change the prices
+C) You may add new items
+D) Use the menu exactly, with no added, removed, or renamed items and no changed prices
+
+**Answer: D**
+
+## More Questions (Questions 40-48)
+
+**40.** How do you create a new file in a repository on GitHub?
+
+A) Click the pencil icon on `README.md`
+B) Open Settings and select New file
+C) Click the Commits label
+D) Select Add file, then Create new file
+
+**Answer: D**
+
+**41.** How do you delete a file from a repository on GitHub?
+
+A) Open the file, open its menu, select Delete file, and commit the change
+B) Click the gear icon next to About
+C) Open the branch menu and select Delete
+D) Open the Actions tab and select the file
+
+**Answer: A**
+
+**42.** Before you create a new branch in a new repository, what does the branch menu say?
+
+A) origin
+B) main
+C) branch
+D) root
+
+**Answer: B**
+
+**43.** Which kinds of files can a GitHub Pages website use?
+
+A) Only Markdown files
+B) Only images
+C) Only Word documents
+D) HTML, CSS, and JavaScript files
+
+**Answer: D**
+
+**44.** In the Actions tab, what does a green check mark mean for a deployment?
+
+A) The deployment is still running
+B) The deployment failed
+C) The deployment is complete
+D) The website was deleted
+
+**Answer: C**
+
+**45.** What is true about the first time a codespace starts?
+
+A) It is faster than later starts
+B) It takes longer than later starts
+C) It deletes the repository
+D) It only works on `main`
+
+**Answer: B**
+
+**46.** What does GitHub do while a codespace starts?
+
+A) Deletes the branch
+B) Emails your collaborators
+C) Publishes the repository as a website
+D) Builds the machine and copies the repository onto it
+
+**Answer: D**
+
+**47.** In the counter web app plan, what does the reset button do?
+
+A) Doubles the counter
+B) Deletes the app
+C) Sets the counter back to 0
+D) Changes the amount to 10
+
+**Answer: C**
+
+**48.** Which is an example of a financial data source an LLM can use as a tool?
+
+A) A README file
+B) A branch
+C) Yahoo Finance
+D) A commit message
+
+**Answer: C**
