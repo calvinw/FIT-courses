@@ -1,7 +1,5 @@
 ---
 title: "CS211 Quiz Question Bank"
-author: "Calvin Williamson, Science and Math"
-subtitle: "Fall 26"
 format:
   html:
     embed-resources: true

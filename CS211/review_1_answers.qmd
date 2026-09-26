@@ -1,7 +1,5 @@
 ---
 title: "CS211 Review 1 Answers"
-author: "Calvin Williamson, Science and Math"
-subtitle: "Fall 26"
 format:
   html:
     embed-resources: true
@@ -14,7 +12,7 @@ B) Turn it into a new repository
 C) Rename it `main`
 D) Delete it
 
-**Answer: D**
+**Answer: D** - Once its changes are in `main`, the branch has done its job, so deleting it keeps the repository tidy.
 
 **2.** In GitHub, what is the `main` branch?
 
@@ -23,211 +21,166 @@ B) The official, working version
 C) A branch only collaborators can see
 D) A branch that is deleted after every commit
 
-**Answer: B**
+**Answer: B** - `main` is the default branch that holds the official, working version of the project.
 
-**3.** In the Bash shell, you are in `/Users/calvinw`. Which command moves you into the `projects` directory?
-
-A) `ls projects`
-B) `pwd projects`
-C) `cd projects`
-D) `projects cd`
-
-**Answer: C**
-
-**4.** What is the first step in creating a new repository on GitHub?
+**3.** What is the first step in creating a new repository on GitHub?
 
 A) Select Add a README file
 B) Sign in to GitHub and click New repository
 C) Open the Actions tab
 D) Create a branch named main
 
-**Answer: B**
+**Answer: B** - You start by signing in to GitHub and clicking New repository; options like adding a README come after that.
 
-**5.** In the Bash command line, what does `pwd` stand for?
-
-A) print web directory
-B) print working directory
-C) previous working directory
-D) path with directories
-
-**Answer: B**
-
-**6.** In GitHub, how do you add a collaborator to a repository?
+**4.** In GitHub, how do you add a collaborator to a repository?
 
 A) Open the Actions tab and select Pages
 B) Click the Commits label above the list of files
 C) Click the pencil icon on `README.md`
 D) Open Settings, then select Collaborators under Access
 
-**Answer: D**
+**Answer: D** - Collaborators are managed in the repository's Settings, under Collaborators in the Access section.
 
-**7.** In app design and vibe coding, what is Stitch?
+**5.** In app design and vibe coding, what is Stitch?
 
 A) A version tracking tool
 B) A shell for typing commands
 C) A hosting service for websites
 D) An AI design tool for apps and webpages
 
-**Answer: D**
+**Answer: D** - Stitch is an AI design tool that helps you design the pages and screens of apps and webpages.
 
-**8.** When do changes to `index.html` appear on the published GitHub Pages website?
+**6.** When do changes to `index.html` appear on the published GitHub Pages website?
 
 A) After they are committed to the publishing branch
 B) As soon as you type them
 C) Only after you delete the repository
 D) Only after you create a codespace
 
-**Answer: A**
+**Answer: A** - GitHub Pages publishes what is committed to the publishing branch, so edits show up only after you commit them.
 
-**9.** How do you prompt a multimodal LLM (large language model) using audio?
+**7.** How do you prompt a multimodal LLM (large language model) using audio?
 
 A) Type the prompt into the terminal
 B) Commit an audio file to `main`
 C) Speak into a microphone on your computer
 D) Press Enter in Bash
 
-**Answer: C**
+**Answer: C** - A multimodal LLM accepts audio input, so you simply speak your prompt into your computer's microphone.
 
-**10.** In the Bash shell, you run `cd projects` from `/Users/calvinw` and then run `pwd`. What does `pwd` print?
-
-A) `/Users/calvinw`
-B) `/Users/calvinw/projects`
-C) `about.html  index.html  style.css`
-D) Nothing
-
-**Answer: B**
-
-**11.** Who can see the files in a public GitHub repository?
+**8.** Who can see the files in a public GitHub repository?
 
 A) Only the owner and collaborators
 B) Anyone on the internet
 C) Only people who have a codespace
 D) Only people who accepted an invitation
 
-**Answer: B**
+**Answer: B** - Public means anyone on the internet can see the files, even though only you and collaborators can change them.
 
-**12.** In an AI chat, what does the reasoning model, the DeepThink button, show you?
+**9.** In an AI chat, what does the reasoning model, the DeepThink button, show you?
 
 A) A list of collaborators
 B) The repository's commit history
 C) Only the final answer
 D) Its thinking process
 
-**Answer: D**
+**Answer: D** - A reasoning model like DeepThink shows its step-by-step thinking process before it gives the final answer.
 
-**13.** What made DeepSeek different from ChatGPT, Claude, and Gemini?
+**10.** What made DeepSeek different from ChatGPT, Claude, and Gemini?
 
 A) It is the only model that accepts images
 B) It was released as an open source model that anyone can download and run
 C) It cannot write code
 D) It is made by Anthropic
 
-**Answer: B**
+**Answer: B** - DeepSeek was released as open source, while ChatGPT, Claude, and Gemini are proprietary models.
 
-**14.** Which of these is a vibe coding tool for building apps with an LLM?
+**11.** Which of these is a vibe coding tool for building apps with an LLM?
 
 A) Lovable
 B) Bash
 C) GitHub Pages
 D) Markdown
 
-**Answer: A**
+**Answer: A** - Lovable is a vibe coding tool where you describe an app and an LLM builds it for you.
 
-**15.** In GitHub, why would you create a new branch?
+**12.** In GitHub, why would you create a new branch?
 
 A) To make the repository public
 B) To invite a collaborator
 C) To publish a website
 D) To make changes without changing `main`
 
-**Answer: D**
+**Answer: D** - A branch lets you work on changes separately, so `main` stays unchanged until you are ready.
 
-**16.** In vibe coding, what can Stitch generate or export for pages and screens?
+**13.** In vibe coding, what can Stitch generate or export for pages and screens?
 
 A) A Git repository
 B) HTML prototypes
 C) A DoltHub database
 D) A terminal session
 
-**Answer: B**
+**Answer: B** - Stitch can export the pages and screens it designs as HTML prototypes that an LLM can build from.
 
-**17.** In the Bash command line used in this lesson, the prompt is `#`. What does the prompt mean?
-
-A) An error occurred
-B) The command was deleted
-C) The shell is waiting for a command
-D) The file is a comment
-
-**Answer: C**
-
-**18.** In GitHub, when the work on a branch is ready, what do you do to bring it into the official version?
+**14.** In GitHub, when the work on a branch is ready, what do you do to bring it into the official version?
 
 A) Delete `main`
 B) Merge the branch into `main`
 C) Make the repository private
 D) Create a codespace
 
-**Answer: B**
+**Answer: B** - Merging brings the branch's commits into `main`, making them part of the official version.
 
-**19.** What does GitHub Pages do?
+**15.** What does GitHub Pages do?
 
 A) Tracks the commit history of a file
 B) Lets collaborators chat with each other
 C) Publishes a repository as a free website
 D) Creates a codespace for you
 
-**Answer: C**
+**Answer: C** - GitHub Pages turns a repository into a free website, with no server of your own needed.
 
-**20.** In GitHub, what is a branch?
+**16.** In GitHub, what is a branch?
 
 A) A permanent copy of the repository on your laptop
 B) A type of file
 C) A separate version of the repository
 D) A person who works on the repository
 
-**Answer: C**
+**Answer: C** - A branch is a separate version of the repository where you can make changes without affecting `main`.
 
-**21.** What is it sometimes called when an LLM (large language model) can call tools, which are external programs?
+**17.** What is it sometimes called when an LLM (large language model) can call tools, which are external programs?
 
 A) Agentic
 B) Multimodal
 C) Open source
 D) Proprietary
 
-**Answer: A**
+**Answer: A** - An LLM that can call tools to take actions on its own is described as agentic.
 
-**22.** Which item that vibe coding usually leaves out is about user identity verification and access control?
+**18.** Which item that vibe coding usually leaves out is about user identity verification and access control?
 
 A) Publishing
 B) Version tracking
 C) Database
 D) Authentication
 
-**Answer: D**
+**Answer: D** - Authentication is the part of an app that verifies who a user is and controls what they can access.
 
-**23.** In GitHub, how can you confirm which branch you are working on?
+**19.** In GitHub, how can you confirm which branch you are working on?
 
 A) The branch menu shows the current branch
 B) The title of the README
 C) The Collaborators page
 D) The Actions tab
 
-**Answer: A**
+**Answer: A** - The branch menu on the repository page always shows the name of the branch you are currently on.
 
-**24.** In the Bash command line, which command lists the files and directories in the current folder?
-
-A) `ls`
-B) `pwd`
-C) `cd`
-D) `bash`
-
-**Answer: A**
-
-**25.** In software development with AI, what is vibe coding?
+**20.** In software development with AI, what is vibe coding?
 
 A) Writing every line of code by hand
 B) Publishing a website with GitHub Pages
 C) Coding with an LLM but letting the AI do all the work
 D) Typing commands into a terminal
 
-**Answer: C**
+**Answer: C** - In vibe coding you work with an LLM and let the AI do the work of writing the code.

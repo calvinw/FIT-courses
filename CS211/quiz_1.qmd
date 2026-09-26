@@ -1,7 +1,5 @@
 ---
 title: "CS211 Quiz 1"
-author: "Calvin Williamson, Science and Math"
-subtitle: "Fall 26"
 format:
   html:
     embed-resources: true
@@ -95,91 +93,70 @@ B) Publish the app, design the pages, then write the prototype
 C) Assemble the app, write a spec, then design the pages
 D) Generate a prototype, publish it, then design the pages
 
-**13.** In the Bash shell, you are in `/Users/calvinw`, which contains the files `notes.txt` and `todo.txt` and a directory named `projects`. The `projects` directory contains `index.html`, `about.html`, and `style.css`. You type `cd projects`, then `ls`. What does `ls` print?
-
-A) `notes.txt  projects  todo.txt`
-B) `about.html  index.html  style.css`
-C) `/Users/calvinw/projects`
-D) Nothing
-
-**14.** Why did DeepSeek cause Wall Street to panic in Spring 25?
+**13.** Why did DeepSeek cause Wall Street to panic in Spring 25?
 
 A) It deleted financial data
 B) It stopped all AI models from working
 C) It challenged the idea that only companies with proprietary models would dominate AI
 D) It cost more than every other model
 
-**15.** In the Bash shell, you are in `/Users/calvinw`. You type `cd projects` and press Enter. What does the shell print?
-
-A) `/Users/calvinw/projects`
-B) `about.html  index.html  style.css`
-C) An error message
-D) Nothing - `cd` prints nothing when it works
-
-**16.** Which company makes the LLM ChatGPT?
+**14.** Which company makes the LLM ChatGPT?
 
 A) Anthropic
 B) Google
 C) DeepSeek
 D) OpenAI
 
-**17.** Which of these is an LLM (large language model)?
+**15.** Which of these is an LLM (large language model)?
 
 A) Git
 B) DeepSeek
 C) Bash
 D) Codespaces
 
-**18.** Which of these is an example of a tool (an external program) that an LLM (large language model) can call?
+**16.** Which of these is an example of a tool (an external program) that an LLM (large language model) can call?
 
 A) A branch
 B) A commit message
 C) A calculator
 D) A README
 
-**19.** In GitHub, you select a new branch, create a file, and commit it. Where is the file?
+**17.** In GitHub, you select a new branch, create a file, and commit it. Where is the file?
 
 A) On `main` only
 B) On both `main` and the new branch right away
 C) On the new branch, but not yet on `main`
 D) Nowhere until you delete the branch
 
-**20.** In the Bash command line, which command prints the folder the shell is currently in?
-
-A) `ls`
-B) `cd`
-C) `bash`
-D) `pwd`
-
-**21.** Where do you set up GitHub Pages for a repository?
+**18.** Where do you set up GitHub Pages for a repository?
 
 A) The Actions tab
 B) The green Code button
 C) Settings, then Pages
 D) The gear icon next to About
 
-**22.** According to the lecture, what are large language models (LLMs) especially good at?
+**19.** According to the lecture, what are large language models (LLMs) especially good at?
 
 A) Replacing GitHub
 B) Writing software
 C) Hosting websites
 D) Repairing computers
 
-**23.** What makes an LLM (large language model) multimodal?
+**20.** What makes an LLM (large language model) multimodal?
 
 A) Its prompts and responses can include text, images, audio, and video
 B) It can only respond with text
 C) It runs on several branches at once
 D) It is open source
 
-**24.** How do you create a new branch on GitHub?
+**21.** How do you create a new branch on GitHub?
 
 A) Open the branch menu, type a new branch name, and select Create branch
 B) Click Commits and choose New
 C) Open Settings, then Branches, then Delete
 D) Click the pencil icon on `README.md`
 
-**25.** In GitHub, after merging a branch into `main`, how can you verify that the merge worked?
+**22.** In GitHub, after merging a branch into `main`, how can you verify that the merge worked?
 
 A) Delete the `main` branch
 B) Open the Actions tab
