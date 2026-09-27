@@ -59,6 +59,8 @@ format:
 - Make changes to the files in the editor
 - Commit and push the changes back to the same branch
 
+## {background-image="images/github-compare.svg" background-size="contain" background-color="white"}
+
 ## {background-image="images/github-local-clone.svg" background-size="contain" background-color="white"}
 
 ## Local Clone Review
@@ -77,5 +79,3 @@ format:
 | Install needed      | Nothing - just a browser   | Git and a code editor    |
 | Get started         | Create codespace on branch | `git clone`              |
 | Send changes back   | Commit and push            | Commit and push          |
-
-## {background-image="images/github-compare.svg" background-size="contain" background-color="white"}
