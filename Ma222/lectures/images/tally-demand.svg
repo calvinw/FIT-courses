@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 761 172" width="761" height="172" font-family="sans-serif">
+<rect width="761" height="172" fill="white"/>
+<g transform="translate(0,0)"><svg viewBox="0 0 761 78" width="761" height="78" font-family="sans-serif">
+<rect width="761" height="78" fill="white"/>
+<text x="8" y="24.0" font-size="18" font-weight="bold" fill="#333">Data Value</text>
+<line x1="0" y1="34" x2="761" y2="34" stroke="#bbb"/>
+<text x="8" y="63.0" font-size="18" font-weight="bold" fill="#333">Tally</text>
+<line x1="115" y1="0" x2="115" y2="78" stroke="#bbb"/>
+<text x="132.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">25</text>
+<g transform="translate(132.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="149" y1="0" x2="149" y2="78" stroke="#bbb"/>
+<text x="166.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">26</text>
+<g transform="translate(166.0,43)"></g>
+<line x1="183" y1="0" x2="183" y2="78" stroke="#bbb"/>
+<text x="200.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">27</text>
+<g transform="translate(200.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="217" y1="0" x2="217" y2="78" stroke="#bbb"/>
+<text x="234.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">28</text>
+<g transform="translate(234.0,43)"></g>
+<line x1="251" y1="0" x2="251" y2="78" stroke="#bbb"/>
+<text x="268.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">29</text>
+<g transform="translate(268.0,43)"></g>
+<line x1="285" y1="0" x2="285" y2="78" stroke="#bbb"/>
+<text x="302.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">30</text>
+<g transform="translate(302.0,43)"></g>
+<line x1="319" y1="0" x2="319" y2="78" stroke="#bbb"/>
+<text x="336.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">31</text>
+<g transform="translate(336.0,43)"></g>
+<line x1="353" y1="0" x2="353" y2="78" stroke="#bbb"/>
+<text x="370.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">32</text>
+<g transform="translate(370.0,43)"></g>
+<line x1="387" y1="0" x2="387" y2="78" stroke="#bbb"/>
+<text x="404.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">33</text>
+<g transform="translate(404.0,43)"></g>
+<line x1="421" y1="0" x2="421" y2="78" stroke="#bbb"/>
+<text x="438.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">34</text>
+<g transform="translate(438.0,43)"></g>
+<line x1="455" y1="0" x2="455" y2="78" stroke="#bbb"/>
+<text x="472.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">35</text>
+<g transform="translate(472.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="489" y1="0" x2="489" y2="78" stroke="#bbb"/>
+<text x="506.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">36</text>
+<g transform="translate(506.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="523" y1="0" x2="523" y2="78" stroke="#bbb"/>
+<text x="540.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">37</text>
+<g transform="translate(540.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="557" y1="0" x2="557" y2="78" stroke="#bbb"/>
+<text x="574.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">38</text>
+<g transform="translate(574.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="591" y1="0" x2="591" y2="78" stroke="#bbb"/>
+<text x="608.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">39</text>
+<g transform="translate(608.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="625" y1="0" x2="625" y2="78" stroke="#bbb"/>
+<text x="642.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">40</text>
+<g transform="translate(638.5,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="659" y1="0" x2="659" y2="78" stroke="#bbb"/>
+<text x="676.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">41</text>
+<g transform="translate(676.0,43)"></g>
+<line x1="693" y1="0" x2="693" y2="78" stroke="#bbb"/>
+<text x="710.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">42</text>
+<g transform="translate(710.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="727" y1="0" x2="727" y2="78" stroke="#bbb"/>
+<text x="744.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">43</text>
+<g transform="translate(740.5,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+</svg></g>
+<g transform="translate(0,94)"><svg viewBox="0 0 761 78" width="761" height="78" font-family="sans-serif">
+<rect width="761" height="78" fill="white"/>
+<text x="8" y="24.0" font-size="18" font-weight="bold" fill="#333">Data Value</text>
+<line x1="0" y1="34" x2="761" y2="34" stroke="#bbb"/>
+<text x="8" y="63.0" font-size="18" font-weight="bold" fill="#333">Tally</text>
+<line x1="115" y1="0" x2="115" y2="78" stroke="#bbb"/>
+<text x="132.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">44</text>
+<g transform="translate(128.5,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="149" y1="0" x2="149" y2="78" stroke="#bbb"/>
+<text x="166.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">45</text>
+<g transform="translate(162.5,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="183" y1="0" x2="183" y2="78" stroke="#bbb"/>
+<text x="200.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">46</text>
+<g transform="translate(196.5,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="217" y1="0" x2="217" y2="78" stroke="#bbb"/>
+<text x="234.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">47</text>
+<g transform="translate(234.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="251" y1="0" x2="251" y2="78" stroke="#bbb"/>
+<text x="268.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">48</text>
+<g transform="translate(261.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="14" y1="0" x2="14" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="285" y1="0" x2="285" y2="78" stroke="#bbb"/>
+<text x="302.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">49</text>
+<g transform="translate(302.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="319" y1="0" x2="319" y2="78" stroke="#bbb"/>
+<text x="336.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">50</text>
+<g transform="translate(336.0,43)"></g>
+<line x1="353" y1="0" x2="353" y2="78" stroke="#bbb"/>
+<text x="370.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">51</text>
+<g transform="translate(363.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="14" y1="0" x2="14" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="387" y1="0" x2="387" y2="78" stroke="#bbb"/>
+<text x="404.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">52</text>
+<g transform="translate(404.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="421" y1="0" x2="421" y2="78" stroke="#bbb"/>
+<text x="438.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">53</text>
+<g transform="translate(434.5,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="455" y1="0" x2="455" y2="78" stroke="#bbb"/>
+<text x="472.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">54</text>
+<g transform="translate(472.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="489" y1="0" x2="489" y2="78" stroke="#bbb"/>
+<text x="506.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">55</text>
+<g transform="translate(506.0,43)"></g>
+<line x1="523" y1="0" x2="523" y2="78" stroke="#bbb"/>
+<text x="540.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">56</text>
+<g transform="translate(540.0,43)"></g>
+<line x1="557" y1="0" x2="557" y2="78" stroke="#bbb"/>
+<text x="574.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">57</text>
+<g transform="translate(574.0,43)"></g>
+<line x1="591" y1="0" x2="591" y2="78" stroke="#bbb"/>
+<text x="608.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">58</text>
+<g transform="translate(604.5,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="625" y1="0" x2="625" y2="78" stroke="#bbb"/>
+<text x="642.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">59</text>
+<g transform="translate(642.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="659" y1="0" x2="659" y2="78" stroke="#bbb"/>
+<text x="676.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">60</text>
+<g transform="translate(676.0,43)"></g>
+<line x1="693" y1="0" x2="693" y2="78" stroke="#bbb"/>
+<text x="710.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">61</text>
+<g transform="translate(706.5,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/><line x1="7" y1="0" x2="7" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+<line x1="727" y1="0" x2="727" y2="78" stroke="#bbb"/>
+<text x="744.0" y="24.0" font-size="18" text-anchor="middle" fill="#333">62</text>
+<g transform="translate(744.0,43)"><line x1="0" y1="0" x2="0" y2="26" stroke="#222" stroke-width="2.5" stroke-linecap="round"/></g>
+</svg></g>
+</svg>

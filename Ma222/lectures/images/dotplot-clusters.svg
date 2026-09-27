@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 117" width="900" height="117" font-family="sans-serif">
+<rect width="900" height="117" fill="white"/>
+<line x1="40" y1="72" x2="860" y2="72" stroke="#333" stroke-width="2"/>
+<line x1="103.1" y1="72" x2="103.1" y2="80" stroke="#333" stroke-width="2"/>
+<text x="103.1" y="102" font-size="20" text-anchor="middle" fill="#333">0</text>
+<line x1="166.2" y1="72" x2="166.2" y2="80" stroke="#333" stroke-width="2"/>
+<text x="166.2" y="102" font-size="20" text-anchor="middle" fill="#333">5</text>
+<line x1="229.2" y1="72" x2="229.2" y2="80" stroke="#333" stroke-width="2"/>
+<text x="229.2" y="102" font-size="20" text-anchor="middle" fill="#333">10</text>
+<line x1="292.3" y1="72" x2="292.3" y2="80" stroke="#333" stroke-width="2"/>
+<text x="292.3" y="102" font-size="20" text-anchor="middle" fill="#333">15</text>
+<line x1="355.4" y1="72" x2="355.4" y2="80" stroke="#333" stroke-width="2"/>
+<text x="355.4" y="102" font-size="20" text-anchor="middle" fill="#333">20</text>
+<line x1="418.5" y1="72" x2="418.5" y2="80" stroke="#333" stroke-width="2"/>
+<text x="418.5" y="102" font-size="20" text-anchor="middle" fill="#333">25</text>
+<line x1="481.5" y1="72" x2="481.5" y2="80" stroke="#333" stroke-width="2"/>
+<text x="481.5" y="102" font-size="20" text-anchor="middle" fill="#333">30</text>
+<line x1="544.6" y1="72" x2="544.6" y2="80" stroke="#333" stroke-width="2"/>
+<text x="544.6" y="102" font-size="20" text-anchor="middle" fill="#333">35</text>
+<line x1="607.7" y1="72" x2="607.7" y2="80" stroke="#333" stroke-width="2"/>
+<text x="607.7" y="102" font-size="20" text-anchor="middle" fill="#333">40</text>
+<line x1="670.8" y1="72" x2="670.8" y2="80" stroke="#333" stroke-width="2"/>
+<text x="670.8" y="102" font-size="20" text-anchor="middle" fill="#333">45</text>
+<line x1="733.8" y1="72" x2="733.8" y2="80" stroke="#333" stroke-width="2"/>
+<text x="733.8" y="102" font-size="20" text-anchor="middle" fill="#333">50</text>
+<line x1="796.9" y1="72" x2="796.9" y2="80" stroke="#333" stroke-width="2"/>
+<text x="796.9" y="102" font-size="20" text-anchor="middle" fill="#333">55</text>
+<line x1="860.0" y1="72" x2="860.0" y2="80" stroke="#333" stroke-width="2"/>
+<text x="860.0" y="102" font-size="20" text-anchor="middle" fill="#333">60</text>
+<circle cx="140.9" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="254.5" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="241.8" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="267.1" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="279.7" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="418.5" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="431.1" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="443.7" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="670.8" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="683.4" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="658.2" cy="57.0" r="8" fill="#b5121b"/>
+<circle cx="759.1" cy="57.0" r="8" fill="#b5121b"/>
+</svg>

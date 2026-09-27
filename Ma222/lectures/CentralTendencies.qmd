@@ -1,0 +1,251 @@
+---
+title: "Central Tendencies"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    theme: default
+    html-math-method: katex
+---
+
+## Central Tendencies
+
+A measure of **central tendency** is one number that describes the "center" of a set of data values.
+
+There are three main ones:
+
+- **Mean**
+- **Median**
+- **Mode**
+
+We want to know what each one represents and when to use it.
+
+## Mean
+
+The **mean** is the average. Add up all the data values and divide by how many there are.
+
+$$
+\bar{x} = \frac{\sum x}{n}
+$$
+
+$\bar{x}$ is read "x bar" and is the sample mean.
+
+$\sum x$ means "sum all the data values."
+
+$n$ is the sample size.
+
+## 1. Mean of a Sample
+
+Find the mean of this sample:
+
+$$
+10,\ 6,\ 5,\ 14,\ 6,\ 12
+$$
+
+## 1. Mean of a Sample
+
+Find the mean of this sample:
+
+$$
+10,\ 6,\ 5,\ 14,\ 6,\ 12
+$$
+
+What is $\sum x$? What is $n$?
+
+What is $\bar{x}$?
+
+## 1. Mean of a Sample
+
+Find the mean of this sample:
+
+$$
+10,\ 6,\ 5,\ 14,\ 6,\ 12
+$$
+
+$$
+\bar{x} = \frac{\sum x}{n} = \frac{10+6+5+14+6+12}{6} = \frac{53}{6} \approx 8.83
+$$
+
+## Median
+
+The **median** is the value in the "middle" of the data when you put the values in order from smallest to largest.
+
+- If $n$ is **odd**, the median is the middle value.
+- If $n$ is **even**, the median is the average of the two middle values.
+
+Always put the data in order first.
+
+## 2. Median, Sample Size Odd
+
+Find the median of this sample:
+
+$$
+2,\ 5,\ 3,\ 1,\ 7
+$$
+
+## 2. Median, Sample Size Odd
+
+Find the median of this sample:
+
+$$
+2,\ 5,\ 3,\ 1,\ 7
+$$
+
+What are the values in order?
+
+Which value is in the middle?
+
+## 2. Median, Sample Size Odd
+
+Find the median of this sample:
+
+$$
+2,\ 5,\ 3,\ 1,\ 7
+$$
+
+In order:
+
+$$
+1,\ 2,\ \mathbf{3},\ 5,\ 7
+$$
+
+$$
+\text{median} = 3
+$$
+
+## 3. Median, Sample Size Even
+
+Find the median of this sample:
+
+$$
+2,\ 5,\ 3,\ 7
+$$
+
+## 3. Median, Sample Size Even
+
+Find the median of this sample:
+
+$$
+2,\ 5,\ 3,\ 7
+$$
+
+What are the values in order?
+
+There is no single middle value. What do we do?
+
+## 3. Median, Sample Size Even
+
+Find the median of this sample:
+
+$$
+2,\ 5,\ 3,\ 7
+$$
+
+In order:
+
+$$
+2,\ \mathbf{3},\ \mathbf{5},\ 7
+$$
+
+$$
+\text{median} = \frac{3+5}{2} = 4
+$$
+
+## The Median Splits the Data
+
+The median has **half the data below it** and **half the data above it**.
+
+The mean is not guaranteed to be in the middle of the data. The median is.
+
+## Mode
+
+The **mode** is the value that occurs most often.
+
+## 4. Mode of a Sample
+
+Find the mode of this sample:
+
+$$
+12,\ 3,\ 8,\ 7,\ 6,\ 3,\ 15,\ 13,\ 9,\ 5
+$$
+
+## 4. Mode of a Sample
+
+Find the mode of this sample:
+
+$$
+12,\ 3,\ 8,\ 7,\ 6,\ 3,\ 15,\ 13,\ 9,\ 5
+$$
+
+Which value occurs most often?
+
+## 4. Mode of a Sample
+
+Find the mode of this sample:
+
+$$
+12,\ \mathbf{3},\ 8,\ 7,\ 6,\ \mathbf{3},\ 15,\ 13,\ 9,\ 5
+$$
+
+The value 3 occurs twice. Every other value occurs once.
+
+$$
+\text{mode} = 3
+$$
+
+## 5. Salaries at a Company
+
+Here are the salaries at a company:
+
+| Salary |
+|--:|
+| \$36,500 |
+| \$36,950 |
+| \$37,800 |
+| \$39,750 |
+| \$40,000 |
+| \$258,000 |
+
+## 5. Salaries at a Company
+
+Here are the salaries at a company:
+
+| Salary |
+|--:|
+| \$36,500 |
+| \$36,950 |
+| \$37,800 |
+| \$39,750 |
+| \$40,000 |
+| \$258,000 |
+
+What is the mean? What is the median?
+
+Which one better describes a "typical" salary?
+
+## 5. Salaries at a Company
+
+The CEO computes the mean:
+
+$$
+\bar{x} = \frac{\sum x}{n} = \frac{449{,}000}{6} \approx \$74{,}833
+$$
+
+The median is the average of the two middle values:
+
+$$
+\text{median} = \frac{37{,}800 + 39{,}750}{2} = \$38{,}775
+$$
+
+Five salaries are near \$38,000. The one very high salary pulls the mean up. The **median** better describes a typical salary.
+
+## Mean vs Median
+
+A few very large values pull the mean toward them. The median is not affected much.
+
+| Situation | Use |
+|:--|:--|
+| Salaries or income | Median |
+| Property or real estate values | Median |
+
+Look for the **median** home value in a county if you are looking for a place to live.

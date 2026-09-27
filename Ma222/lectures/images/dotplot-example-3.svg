@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 271" width="600" height="271" font-family="sans-serif">
+<rect width="600" height="271" fill="white"/>
+<line x1="40" y1="226" x2="560" y2="226" stroke="#333" stroke-width="2"/>
+<line x1="40.0" y1="226" x2="40.0" y2="234" stroke="#333" stroke-width="2"/>
+<text x="40.0" y="256" font-size="20" text-anchor="middle" fill="#333">2</text>
+<line x1="74.7" y1="226" x2="74.7" y2="234" stroke="#333" stroke-width="2"/>
+<text x="74.7" y="256" font-size="20" text-anchor="middle" fill="#333">3</text>
+<line x1="109.3" y1="226" x2="109.3" y2="234" stroke="#333" stroke-width="2"/>
+<text x="109.3" y="256" font-size="20" text-anchor="middle" fill="#333">4</text>
+<line x1="144.0" y1="226" x2="144.0" y2="234" stroke="#333" stroke-width="2"/>
+<text x="144.0" y="256" font-size="20" text-anchor="middle" fill="#333">5</text>
+<line x1="178.7" y1="226" x2="178.7" y2="234" stroke="#333" stroke-width="2"/>
+<text x="178.7" y="256" font-size="20" text-anchor="middle" fill="#333">6</text>
+<line x1="213.3" y1="226" x2="213.3" y2="234" stroke="#333" stroke-width="2"/>
+<text x="213.3" y="256" font-size="20" text-anchor="middle" fill="#333">7</text>
+<line x1="248.0" y1="226" x2="248.0" y2="234" stroke="#333" stroke-width="2"/>
+<text x="248.0" y="256" font-size="20" text-anchor="middle" fill="#333">8</text>
+<line x1="282.7" y1="226" x2="282.7" y2="234" stroke="#333" stroke-width="2"/>
+<text x="282.7" y="256" font-size="20" text-anchor="middle" fill="#333">9</text>
+<line x1="317.3" y1="226" x2="317.3" y2="234" stroke="#333" stroke-width="2"/>
+<text x="317.3" y="256" font-size="20" text-anchor="middle" fill="#333">10</text>
+<line x1="352.0" y1="226" x2="352.0" y2="234" stroke="#333" stroke-width="2"/>
+<text x="352.0" y="256" font-size="20" text-anchor="middle" fill="#333">11</text>
+<line x1="386.7" y1="226" x2="386.7" y2="234" stroke="#333" stroke-width="2"/>
+<text x="386.7" y="256" font-size="20" text-anchor="middle" fill="#333">12</text>
+<line x1="421.3" y1="226" x2="421.3" y2="234" stroke="#333" stroke-width="2"/>
+<text x="421.3" y="256" font-size="20" text-anchor="middle" fill="#333">13</text>
+<line x1="456.0" y1="226" x2="456.0" y2="234" stroke="#333" stroke-width="2"/>
+<text x="456.0" y="256" font-size="20" text-anchor="middle" fill="#333">14</text>
+<line x1="490.7" y1="226" x2="490.7" y2="234" stroke="#333" stroke-width="2"/>
+<text x="490.7" y="256" font-size="20" text-anchor="middle" fill="#333">15</text>
+<line x1="525.3" y1="226" x2="525.3" y2="234" stroke="#333" stroke-width="2"/>
+<text x="525.3" y="256" font-size="20" text-anchor="middle" fill="#333">16</text>
+<line x1="560.0" y1="226" x2="560.0" y2="234" stroke="#333" stroke-width="2"/>
+<text x="560.0" y="256" font-size="20" text-anchor="middle" fill="#333">17</text>
+<circle cx="109.3" cy="211.0" r="8" fill="#b5121b"/>
+<circle cx="109.3" cy="189.0" r="8" fill="#b5121b"/>
+<circle cx="109.3" cy="167.0" r="8" fill="#b5121b"/>
+<circle cx="109.3" cy="145.0" r="8" fill="#b5121b"/>
+<circle cx="74.7" cy="211.0" r="8" fill="#b5121b"/>
+<circle cx="74.7" cy="189.0" r="8" fill="#b5121b"/>
+<circle cx="178.7" cy="211.0" r="8" fill="#b5121b"/>
+<circle cx="178.7" cy="189.0" r="8" fill="#b5121b"/>
+<circle cx="178.7" cy="167.0" r="8" fill="#b5121b"/>
+<circle cx="144.0" cy="211.0" r="8" fill="#b5121b"/>
+<circle cx="144.0" cy="189.0" r="8" fill="#b5121b"/>
+<circle cx="248.0" cy="211.0" r="8" fill="#b5121b"/>
+<circle cx="213.3" cy="211.0" r="8" fill="#b5121b"/>
+<circle cx="456.0" cy="211.0" r="8" fill="#b5121b"/>
+<circle cx="456.0" cy="189.0" r="8" fill="#b5121b"/>
+<circle cx="456.0" cy="167.0" r="8" fill="#b5121b"/>
+<circle cx="456.0" cy="145.0" r="8" fill="#b5121b"/>
+<circle cx="456.0" cy="123.0" r="8" fill="#b5121b"/>
+<circle cx="490.7" cy="211.0" r="8" fill="#b5121b"/>
+<circle cx="490.7" cy="189.0" r="8" fill="#b5121b"/>
+<circle cx="490.7" cy="167.0" r="8" fill="#b5121b"/>
+<circle cx="490.7" cy="145.0" r="8" fill="#b5121b"/>
+<circle cx="490.7" cy="123.0" r="8" fill="#b5121b"/>
+<circle cx="490.7" cy="101.0" r="8" fill="#b5121b"/>
+<circle cx="525.3" cy="211.0" r="8" fill="#b5121b"/>
+<circle cx="421.3" cy="211.0" r="8" fill="#b5121b"/>
+</svg>
