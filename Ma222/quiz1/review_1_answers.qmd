@@ -19,7 +19,11 @@ format:
 
 **1.** A campus café wants to know how many cups of coffee FIT students drink per week. It asks 150 students waiting in line one morning. Identify the population, the sample, and the sample size.
 
-*Answer:* Population: all FIT students. Sample: the 150 students asked in line. Sample size: $n = 150$.
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** Population: all FIT students. Sample: the 150 students asked in line. Sample size: $n = 150$.
 
 ```{=latex}
 \vspace{0.45in}
@@ -27,7 +31,11 @@ format:
 
 **2.** A boutique sold 400 dresses last month. Its records for all 400 show that 12% were returned. A sample of 50 of those dresses shows that 8% were returned. Which number is the parameter and which is the statistic? Give the symbol for each.
 
-*Answer:* 12% is the parameter, $p = 0.12$ (it describes all 400 dresses). 8% is the statistic, $\hat{p} = 0.08$ (it describes the 50 sampled dresses).
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** 12% is the parameter, $p = 0.12$ (it describes all 400 dresses). 8% is the statistic, $\hat{p} = 0.08$ (it describes the 50 sampled dresses).
 
 ```{=latex}
 \vspace{0.45in}
@@ -35,7 +43,11 @@ format:
 
 **3.** The observational units are the students in this class. Is *the number of students in the class* a variable? Explain. Then give one example of a variable for these observational units.
 
-*Answer:* No. The number of students in the class is one number for the whole class. It does not have a value for each student. Examples of variables: each student's height, major, or whether the student has a job.
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** No. The number of students in the class is one number for the whole class. It does not have a value for each student. Examples of variables: each student's height, major, or whether the student has a job.
 
 ```{=latex}
 \vspace{0.45in}
@@ -48,7 +60,11 @@ b) State the customer lives in \
 c) Whether the customer has a store credit card \
 d) Number of orders placed last year
 
-*Answer:* a) Quantitative. b) Categorical, not binary. c) Categorical, binary. d) Quantitative.
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** a) Quantitative. b) Categorical, not binary. c) Categorical, binary. d) Quantitative.
 
 ```{=latex}
 \vspace{0.45in}
@@ -56,7 +72,11 @@ d) Number of orders placed last year
 
 **5.** A game show has 7 prizes: \$1, \$5, \$10, \$50, \$100, \$1,000, \$10,000. The mean prize is about \$1,595 and the median is \$50. What proportion of the prizes are bigger than the mean? What proportion are bigger than the median?
 
-*Answer:* Bigger than the mean: only \$10,000, so $1/7 \approx 0.14$. Bigger than the median: \$100, \$1,000, \$10,000, so $3/7 \approx 0.43$.
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** Bigger than the mean: only \$10,000, so $1/7 \approx 0.14$. Bigger than the median: \$100, \$1,000, \$10,000, so $3/7 \approx 0.43$.
 
 ```{=latex}
 \vspace{0.45in}
@@ -64,7 +84,11 @@ d) Number of orders placed last year
 
 **6.** A mall wants to know the mean amount of time shoppers spend in the mall. It tracks 60 shoppers and finds they spend a mean of 95 minutes. Identify the population, the sample, the parameter, and the statistic.
 
-*Answer:* Population: all shoppers at the mall. Sample: the 60 shoppers tracked. Parameter: the mean time for all shoppers, $\mu$ (unknown). Statistic: $\bar{x} = 95$ minutes.
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** Population: all shoppers at the mall. Sample: the 60 shoppers tracked. Parameter: the mean time for all shoppers, $\mu$ (unknown). Statistic: $\bar{x} = 95$ minutes.
 
 ```{=latex}
 \vspace{0.45in}
