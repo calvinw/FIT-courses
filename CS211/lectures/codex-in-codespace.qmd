@@ -15,8 +15,8 @@ format:
 3. Sign in with a device code
 4. Choose the `gpt-6-sol` model with `/model`
 5. Ask Codex to start the dev server, then open the app
-6. Ask Codex to make the **Export to Excel** button orange
-7. Ask Codex to commit and push the change
+6. Ask the model to make the changes
+7. Ask Codex to commit and push the changes
 
 ## What You Need
 
