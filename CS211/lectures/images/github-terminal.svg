@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="40" y="62" font-size="40" font-weight="bold" fill="#1b7c83">The Terminal</text>
+  <text x="40" y="98" font-size="22" fill="#57606a">A command line inside VS Code. Start the agent from here.</text>
+
+  <!-- VS Code window -->
+  <rect x="40" y="124" width="860" height="576" rx="10" fill="#1e1e1e"/>
+  <!-- title / menu bar -->
+  <path d="M40 134 a10 10 0 0 1 10 -10 h840 a10 10 0 0 1 10 10 v22 h-860 z" fill="#3c3c3c"/>
+
+  <!-- activity bar -->
+  <rect x="40" y="156" width="44" height="520" fill="#333333"/>
+  <rect x="46" y="160" width="32" height="30" rx="4" fill="#505050" stroke="#f2cc60" stroke-width="2"/>
+  <g stroke="#ffffff" stroke-width="2.2" stroke-linecap="round">
+    <line x1="53" y1="168" x2="71" y2="168"/><line x1="53" y1="175" x2="71" y2="175"/><line x1="53" y1="182" x2="71" y2="182"/>
+  </g>
+  <rect x="50" y="206" width="24" height="26" rx="2" fill="none" stroke="#d4d4d4" stroke-width="2"/>
+  <circle cx="60" cy="258" r="8" fill="none" stroke="#858585" stroke-width="2"/>
+  <line x1="66" y1="264" x2="74" y2="272" stroke="#858585" stroke-width="2"/>
+  <circle cx="56" cy="298" r="4" fill="none" stroke="#858585" stroke-width="2"/>
+  <circle cx="68" cy="312" r="4" fill="none" stroke="#858585" stroke-width="2"/>
+  <line x1="56" y1="302" x2="56" y2="318" stroke="#858585" stroke-width="2"/>
+
+  <!-- explorer -->
+  <rect x="84" y="156" width="176" height="520" fill="#252526"/>
+  <text x="98" y="182" font-size="12" fill="#bbbbbb" letter-spacing="1">EXPLORER</text>
+  <g font-size="14" fill="#cccccc">
+    <text x="104" y="212">› data</text>
+    <rect x="84" y="222" width="176" height="22" fill="#37373d"/>
+    <text x="112" y="238" fill="#ffffff">index.html</text>
+    <text x="112" y="262">style.css</text>
+    <text x="112" y="286">app.js</text>
+    <text x="112" y="310">README.md</text>
+  </g>
+
+  <!-- editor -->
+  <rect x="260" y="156" width="640" height="28" fill="#252526"/>
+  <rect x="260" y="156" width="118" height="28" fill="#1e1e1e"/>
+  <text x="274" y="175" font-size="13" fill="#ffffff">index.html</text>
+  <g font-family="Menlo, Consolas, monospace" font-size="14">
+    <text x="274" y="212" fill="#858585">1</text>
+    <text x="300" y="212" fill="#808080">&lt;<tspan fill="#569cd6">html</tspan>&gt;</text>
+    <text x="274" y="234" fill="#858585">2</text>
+    <text x="316" y="234" fill="#808080">&lt;<tspan fill="#569cd6">body</tspan>&gt;</text>
+    <text x="274" y="256" fill="#858585">3</text>
+    <text x="332" y="256" fill="#808080">&lt;<tspan fill="#569cd6">h1</tspan>&gt;<tspan fill="#d4d4d4">FIT Retail Index</tspan>&lt;/<tspan fill="#569cd6">h1</tspan>&gt;</text>
+    <text x="274" y="278" fill="#858585">4</text>
+    <text x="316" y="278" fill="#808080">&lt;/<tspan fill="#569cd6">body</tspan>&gt;</text>
+    <text x="274" y="300" fill="#858585">5</text>
+    <text x="300" y="300" fill="#808080">&lt;/<tspan fill="#569cd6">html</tspan>&gt;</text>
+  </g>
+
+  <!-- panel -->
+  <line x1="260" y1="336" x2="900" y2="336" stroke="#3c3c3c" stroke-width="2"/>
+  <g font-size="12" fill="#969696" letter-spacing="1">
+    <text x="276" y="360">PROBLEMS</text>
+    <text x="366" y="360">OUTPUT</text>
+    <text x="440" y="360" fill="#e7e7e7">TERMINAL</text>
+    <text x="526" y="360">PORTS</text>
+  </g>
+  <line x1="440" y1="367" x2="514" y2="367" stroke="#e7e7e7" stroke-width="1.5"/>
+  <text x="884" y="360" font-size="13" fill="#cccccc" text-anchor="end">bash  +</text>
+
+  <!-- terminal: the prompt and the command -->
+  <g font-family="Menlo, Consolas, monospace" font-size="14">
+    <text x="276" y="398" fill="#cccccc">#</text>
+    <rect x="290" y="382" width="106" height="24" rx="4" fill="none" stroke="#f2cc60" stroke-width="2"/>
+    <text x="296" y="398" fill="#ffffff" font-weight="bold">opencode.sh</text>
+  </g>
+
+  <!-- terminal: OpenCode running -->
+  <text x="580" y="452" font-family="Menlo, Consolas, monospace" font-size="30" font-weight="bold" fill="#808080" text-anchor="middle">open<tspan fill="#ffffff">code</tspan></text>
+  <rect x="290" y="476" width="580" height="70" rx="4" fill="#252526"/>
+  <rect x="290" y="476" width="4" height="70" fill="#4c9be8"/>
+  <rect x="286" y="472" width="588" height="78" rx="6" fill="none" stroke="#f2cc60" stroke-width="2"/>
+  <g font-family="Menlo, Consolas, monospace" font-size="14">
+    <text x="308" y="504" fill="#eeeeee">Add an About page and link to it</text>
+    <text x="308" y="526" fill="#eeeeee">from index.html<tspan fill="#ffffff">▌</tspan></text>
+    <text x="308" y="574" fill="#4c9be8" font-weight="bold">Build  <tspan fill="#cccccc" font-weight="normal">MiniMax M2.5 Free</tspan></text>
+    <text x="870" y="574" fill="#808080" text-anchor="end">enter send</text>
+  </g>
+
+  <!-- status bar -->
+  <path d="M40 676 h860 v14 a10 10 0 0 1 -10 10 h-840 a10 10 0 0 1 -10 -10 z" fill="#8250df"/>
+  <text x="54" y="693" font-size="13" fill="#ffffff">Codespaces: fluffy-space-waffle</text>
+  <text x="270" y="693" font-size="13" fill="#ffffff">branch: main</text>
+
+  <!-- leader lines -->
+  <g stroke="#f2cc60" stroke-width="2.5" stroke-dasharray="6 5">
+    <polyline points="938,141 62,141 62,158" fill="none"/>
+    <line x1="396" y1="394" x2="938" y2="394"/>
+    <line x1="874" y1="511" x2="938" y2="511"/>
+  </g>
+
+  <!-- callouts -->
+  <g font-size="18" fill="#24292f">
+    <circle cx="954" cy="141" r="15" fill="#1b7c83"/>
+    <text x="954" y="147" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="980" y="147" font-weight="bold">Open a terminal</text>
+    <text x="980" y="171" font-size="16" fill="#57606a">☰ menu &gt; Terminal &gt; New Terminal</text>
+    <text x="980" y="193" font-size="16" fill="#57606a">or press Ctrl + `</text>
+
+
+    <circle cx="954" cy="394" r="15" fill="#1b7c83"/>
+    <text x="954" y="400" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="980" y="400" font-weight="bold">Run <tspan font-family="Menlo, Consolas, monospace" font-size="17">opencode.sh</tspan></text>
+    <text x="980" y="424" font-size="16" fill="#57606a">starts the OpenCode agent</text>
+    <text x="980" y="446" font-size="16" fill="#57606a">inside the terminal</text>
+
+    <circle cx="954" cy="511" r="15" fill="#1b7c83"/>
+    <text x="954" y="517" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="980" y="517" font-weight="bold">Type a task</text>
+    <text x="980" y="541" font-size="16" fill="#57606a">the agent reads and edits</text>
+    <text x="980" y="563" font-size="16" fill="#57606a">your files</text>
+
+    <circle cx="954" cy="632" r="15" fill="#1b7c83"/>
+    <text x="954" y="638" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="980" y="638" font-weight="bold">Review, then commit</text>
+    <text x="980" y="662" font-size="16" fill="#57606a">and push the changes</text>
+  </g>
+  <!-- open hamburger menu: Terminal > New Terminal -->
+  <g font-size="14" fill="#cccccc">
+    <rect x="84" y="160" width="150" height="186" rx="6" fill="#252526" stroke="#454545"/>
+    <text x="100" y="180">File</text>
+    <text x="100" y="202">Edit</text>
+    <text x="100" y="224">Selection</text>
+    <text x="100" y="246">View</text>
+    <text x="100" y="268">Go</text>
+    <text x="100" y="290">Run</text>
+    <rect x="88" y="296" width="142" height="22" rx="4" fill="#04395e" stroke="#f2cc60" stroke-width="1.5"/>
+    <text x="100" y="312" fill="#ffffff">Terminal</text>
+    <text x="220" y="312" fill="#ffffff" text-anchor="end">›</text>
+    <text x="100" y="336">Help</text>
+    <rect x="236" y="290" width="170" height="56" rx="6" fill="#252526" stroke="#454545"/>
+    <rect x="240" y="296" width="162" height="22" rx="4" fill="#04395e" stroke="#f2cc60" stroke-width="1.5"/>
+    <text x="252" y="312" fill="#ffffff">New Terminal</text>
+    <text x="252" y="336">Split Terminal</text>
+  </g>
+</svg>
