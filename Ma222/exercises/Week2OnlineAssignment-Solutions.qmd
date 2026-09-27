@@ -1,0 +1,122 @@
+---
+format:
+  html: default
+  pdf:
+    geometry:
+      - margin=0.55in
+    fontsize: 9pt
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist{nosep,leftmargin=*}
+        \setlength{\parskip}{4pt}
+        \setlength{\parindent}{0pt}
+---
+
+# Week 2 Online Assignment - Solutions
+
+## Ex 1 Twitter Posts
+
+Suppose the observational units for some data are Twitter posts. Say whether each of the following is a variable or not. If it is a variable, give its type. If it is categorical, also say whether it is binary.
+
+| Item | Variable? | Type | Why |
+|:----------------------|:-----|:-----------|:------------------------------|
+| a) Number of words in the post | Yes | Quantitative | It counts the words, and each post has its own value. |
+| b) Number of days since the post | Yes | Quantitative | It measures an amount of time for each post. |
+| c) Number of retweets of the post | Yes | Quantitative | It counts the retweets of each post. |
+| d) Total number of posts by a person | No | -- | This describes a person, not a single post. It would be a variable if the observational units were Twitter users. |
+| e) Average number of words for all posts by a certain user on a certain day | No | -- | This is one summary of many posts, not a value recorded for each post. |
+| f) Whether or not a post has a reply to it | Yes | Categorical, binary | Each post is Yes or No. |
+| g) First word in the post | Yes | Categorical, not binary | The first word is a category, and there are many possible words. |
+| h) Whether or not the post uses any capital letters | Yes | Categorical, binary | Each post is Yes or No. |
+
+## Ex 2 Sales Transactions
+
+**Sales Transactions: July 14**
+
+| Cust ID | Region | Payment | Transaction Code | Source | Amount | Product | Time Of Day |
+|--:|:--|:--|--:|:--|--:|:--|--:|
+| 10001 | East | Paypal | 93816545 | Web | \$20.19 | DVD | 22:19 |
+| 10002 | West | Credit | 74083490 | Web | \$17.85 | DVD | 13:27 |
+| 10003 | North | Credit | 64942368 | Web | \$23.98 | DVD | 14:27 |
+| 10004 | West | Paypal | 70560957 | Email | \$23.51 | Book | 15:38 |
+| 10005 | South | Credit | 35208817 | Web | \$15.33 | Book | 15:21 |
+| 10006 | West | Paypal | 20978903 | Email | \$17.30 | DVD | 13:11 |
+| 10007 | East | Credit | 80103311 | Web | \$177.72 | Book | 21:59 |
+| 10008 | West | Credit | 14132683 | Web | \$21.76 | Book | 4:04 |
+| 10009 | West | Paypal | 40128225 | Web | \$15.92 | DVD | 19:35 |
+| 10010 | South | Paypal | 49073721 | Web | \$23.39 | DVD | 13:26 |
+
+**a) Identify the observational units.** The observational units are the **sales transactions** on July 14. Each row is one transaction.
+
+**b) What are the variables?** The variables are the columns: Cust ID, Region, Payment, Transaction Code, Source, Amount, Product, and Time Of Day.
+
+**c) Name each variable and give its type.**
+
+| Variable | Type | Binary? |
+|:--|:--|:--|
+| Cust ID | Categorical. The number only identifies the customer. | No |
+| Region | Categorical (East, West, North, South) | No |
+| Payment | Categorical (Paypal, Credit) | Yes |
+| Transaction Code | Categorical. The number only identifies the transaction. | No |
+| Source | Categorical (Web, Email) | Yes |
+| Amount | Quantitative. It measures money spent. | -- |
+| Product | Categorical (DVD, Book) | Yes |
+| Time Of Day | Quantitative. It measures the time of the transaction. | -- |
+
+Cust ID and Transaction Code use digits, but they do not measure an amount, so they are categorical, like ZIP codes and SKUs.
+
+Payment, Source, and Product each have only two categories in this data, so they are binary here. If the store also took other payment types or sold other products, they would not be binary.
+
+## Ex 3 Parameter vs Statistic
+
+**1) Time to return an item.** We want to study how long customers wait, on average, to return something. We record 50 customers' time to return an item (the number of days from buying something to returning it) and get an average of 7.5 days.
+
+**a) Population:** All customers who return an item.
+
+**b) Sample:** The 50 customers whose return times were recorded.
+
+**c) Parameter:** The mean number of days to return an item for all customers who return something, $\mu$. Its value is unknown.
+
+**d) Statistic:** The mean number of days for the 50 sampled customers, $\bar{x} = 7.5$ days.
+
+**2) Coke or Pepsi.** We want to study whether people prefer Coke or Pepsi. We collect 123 responses that say Coke, 89 that say Pepsi, and 12 that say neither.
+
+**a) Population:** All people whose soda preference we want to know.
+
+**b) Sample:** The $123 + 89 + 12 = 224$ people who responded.
+
+**c) Parameter:** The proportion of all people who prefer Coke, $p$. Its value is unknown. (The proportion of all people who prefer Pepsi, or who prefer neither, are also parameters of interest.)
+
+**d) Statistic:** The proportion of the sample who prefer Coke:
+
+$$
+\hat{p} = \frac{123}{224} \approx 0.549 \ (54.9\%)
+$$
+
+For Pepsi, $\hat{p} = 89/224 \approx 0.397$ (39.7%). For neither, $\hat{p} = 12/224 \approx 0.054$ (5.4%).
+
+## Ex 4 Retail Variables
+
+Below are some terms related to retail items you might keep track of in a store.
+
+**a) What are the observational units?** The observational units are the **retail items (products)** in the store.
+
+**b) Identify the type of each variable.**
+
+| Variable | Type | Binary? |
+|:--|:--|:--|
+| Product tree (categories, family, product type) | Categorical | No |
+| Reference number | Categorical. The number only identifies the item, like an SKU. | No |
+| Product name | Categorical | No |
+| Product status (new or not) | Categorical | Yes |
+| Purchase price | Quantitative | -- |
+| Supplier lead time | Quantitative | -- |
+| Minimum Order Quantity (MOQ) | Quantitative | -- |
+| Catalog sale price | Quantitative | -- |
+| Actual sale price | Quantitative | -- |
+| Product end date | Quantitative. A date is a point in time, and we can find the time between two dates. | -- |
+| Margin | Quantitative | -- |
+| Past sales (52 weeks, 4 weeks, 1 week) in quantity and value | Quantitative (these are really six variables) | -- |
+| Current stock in quantity and value | Quantitative (two variables) | -- |
+| Average stock coverage | Quantitative | -- |
