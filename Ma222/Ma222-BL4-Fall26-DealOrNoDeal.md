@@ -26,3 +26,37 @@ c) Are the median and the mean close to each other? Why or why not?
 d) What proportion of the prize amounts are bigger than the mean?
 
 e) What proportion of the prize amounts are bigger than the median?
+
+## Data for a Spreadsheet
+
+Copy this column and paste it into cell A1 of a spreadsheet. The amounts are in dollars.
+
+```
+Amount
+0.01
+1
+5
+10
+25
+50
+75
+100
+200
+300
+400
+500
+750
+1000
+5000
+10000
+25000
+50000
+75000
+100000
+200000
+300000
+400000
+500000
+750000
+1000000
+```
