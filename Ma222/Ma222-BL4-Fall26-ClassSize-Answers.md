@@ -15,17 +15,17 @@ Suppose a college is offering five sections of an introductory statistics course
 |:--|--:|--:|--:|--:|--:|
 | Class size | 10 | 4 | 5 | 3 | 6 |
 
-**a) The 5 sections are the observational units.**
+**a) Find the mean class size per section. What is the observational unit? What is the variable?**
 
-The observational units are the **5 sections**. The variable is the **class size** of each section.
+The observational unit is a **section** (there are 5). The variable is the **class size** of the section.
 
 $$
 \bar{x} = \frac{10 + 4 + 5 + 3 + 6}{5} = \frac{28}{5} = 5.6 \text{ students}
 $$
 
-**b) The 28 students are the observational units.**
+**b) Find the mean class size per student, using the class sizes the students report. What is the observational unit? What is the variable?**
 
-The observational units are the **28 students**. The variable is the **class size of the student's section**. Each student reports the class size of their own section:
+The observational unit is a **student** (there are 28). The variable is the **class size of the student's section**, as the student reports it. Each student reports the class size of their own section:
 
 | Section | Students reporting | Value each reports | Total |
 |:--|--:|--:|--:|
