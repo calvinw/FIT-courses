@@ -9,14 +9,12 @@ format:
 
 # Mean Class Size
 
-Suppose a college is offering five sections of an introductory statistics course. The enrollments for the sections are:
+Suppose a college is offering five sections of an introductory statistics course. The class sizes for the sections are:
 
-| Section | 1 | 2 | 3 | 4 | 5 |
+| Section | 301 | 302 | 303 | 304 | 305 |
 |:--|--:|--:|--:|--:|--:|
-| Enrollment | 200 | 35 | 35 | 20 | 10 |
+| Class size | 10 | 4 | 5 | 3 | 6 |
 
-a) What are the observational units? What is the variable?
+a) Consider the 5 sections to be the observational units. What is the variable? Calculate the mean class size.
 
-b) Calculate the mean enrollment per section.
-
-c) Now consider the 300 students taking introductory statistics at this college to be the observational units, and the variable to be the number of students in the student's class. Calculate the mean of this variable. [Hint: The 200 students in section 1 will all report that there are 200 students in their class.]
+b) Now consider the 28 students taking the course to be the observational units. Each student reports the class size of their own section. What is the variable? Calculate the mean of this variable. [Hint: The 10 students in section 301 will all report a class size of 10.]
