@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="40" y="30" width="92" height="34" rx="17" fill="#1b7c83"/>
-  <text x="86" y="53" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Step 9</text>
-  <text x="148" y="58" font-size="34" font-weight="bold" fill="#24292f">Codex makes the button orange</text>
-  <text x="40" y="104" font-size="21" fill="#57606a">It edits the 3 files that draw the button. Check what it changed before you keep it.</text>
+  <text x="86" y="53" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Step 11</text>
+  <text x="148" y="58" font-size="34" font-weight="bold" fill="#24292f">The app updates by itself</text>
+  <text x="40" y="104" font-size="21" fill="#57606a">Codex edits the 3 files that draw the button. The dev server reloads the page: the button is now orange.</text>
   <g transform="translate(40,0)">
     <rect x="0" y="176" width="560" height="440" rx="10" fill="#fafafa" stroke="#d0d7de" stroke-width="1.5"/>
     <rect x="0" y="176" width="130" height="440" fill="#ffffff"/>

@@ -1,5 +1,5 @@
 ---
-title: "Codex in a Codespace"
+title: "Making Changes to GitHub Repo using Codespace Agent"
 author: "Calvin Williamson, Science and Math"
 subtitle: "Fall 26"
 format:
@@ -8,18 +8,21 @@ format:
       theme: forest
 ---
 
-## The Plan
+## The Plan For Contributing Changes to BusMgmtBenchmarks Repo
 
 1. Create a codespace on `main` of BusMgmtBenchmarks
 2. Start Codex in the terminal with `codex.sh`
 3. Sign in with a device code
 4. Choose the `gpt-6-sol` model with `/model`
-5. Ask Codex to make the **Export to Excel** button orange
-6. Ask Codex to commit and push the change
+5. Ask Codex to start the dev server, then open the app
+6. Ask Codex to make the **Export to Excel** button orange
+7. Ask Codex to commit and push the change
 
 ## What You Need
 
-- A GitHub account with access to [BusMgmtBenchmarks](https://github.com/calvinw/BusMgmtBenchmarks)
+- A GitHub account
+- The repository: [https://github.com/calvinw/BusMgmtBenchmarks](https://github.com/calvinw/BusMgmtBenchmarks)
+- To push your changes, you must be a **collaborator** on that repository
 - A ChatGPT account to sign in to Codex
 - The live app, to compare before and after: [Company vs Company](https://calvinw.github.io/BusMgmtBenchmarks/company_to_company.html)
 
@@ -31,25 +34,36 @@ format:
 
 ## {background-image="images/codex/codex-4-device-code.svg" background-size="contain" background-color="white"}
 
-## Why a Device Code?
-
-- Codex runs on GitHub's computer, not on the computer in front of you
-- It cannot open a browser window for you to sign in
-- So it prints a link and a one-time code instead
-- You sign in on your own browser tab and type in the code
-- Only use a code that **your** Codex printed - never one someone gives you
-
 ## {background-image="images/codex/codex-5-signed-in.svg" background-size="contain" background-color="white"}
 
 ## {background-image="images/codex/codex-6-slash-model.svg" background-size="contain" background-color="white"}
 
 ## {background-image="images/codex/codex-7-pick-model.svg" background-size="contain" background-color="white"}
 
-## {background-image="images/codex/codex-8-ask.svg" background-size="contain" background-color="white"}
+## {background-image="images/codex/codex-8-dev-server.svg" background-size="contain" background-color="white"}
 
-## {background-image="images/codex/codex-9-result.svg" background-size="contain" background-color="white"}
+## {background-image="images/codex/codex-9-open-app.svg" background-size="contain" background-color="white"}
 
-## {background-image="images/codex/codex-10-commit-push.svg" background-size="contain" background-color="white"}
+## The Dev Server
+
+- The dev server runs your copy of the site inside the codespace
+- It watches the files: when a file changes, the page reloads by itself
+- Only you can see it - the public site does not change until you push
+- If it stops, ask Codex to run `start_servers.sh` again
+
+## {background-image="images/codex/codex-10-ask.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-11-result.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-12-commit-push.svg" background-size="contain" background-color="white"}
+
+## You Must Be a Collaborator
+
+- Anyone can make a codespace and change files in it
+- Only **collaborators** can push those changes to [calvinw/BusMgmtBenchmarks](https://github.com/calvinw/BusMgmtBenchmarks)
+- If you are not a collaborator, the push fails with a permission error
+- Ask Calvin to add you under **Settings** > **Collaborators**
+- Accept the invitation from your email or GitHub notifications, then ask Codex to push again
 
 ## Check the Live Site
 
@@ -61,7 +75,6 @@ format:
 ## Summary
 
 - A codespace gives you VS Code and a terminal in the browser
-- `codex.sh` starts the Codex agent in that terminal
-- Sign in once with a device code, then pick a model with `/model`
-- Describe the change in plain words and review what Codex edits
-- Ask Codex to commit and push, and GitHub Pages publishes the new version
+- `codex.sh` starts Codex; sign in and pick a model
+- Codex starts the dev server so you see changes live
+- Describe the change, then ask Codex to commit and push

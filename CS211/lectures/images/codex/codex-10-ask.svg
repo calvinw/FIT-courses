@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
   <rect width="1280" height="720" fill="#ffffff"/>
   <rect x="40" y="30" width="92" height="34" rx="17" fill="#1b7c83"/>
-  <text x="86" y="53" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Step 5</text>
-  <text x="148" y="58" font-size="34" font-weight="bold" fill="#24292f">You are signed in</text>
-  <text x="40" y="104" font-size="21" fill="#57606a">Read the notes, then press Enter to continue</text>
+  <text x="86" y="53" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Step 10</text>
+  <text x="148" y="58" font-size="34" font-weight="bold" fill="#24292f">Ask Codex for the change</text>
+  <text x="40" y="104" font-size="21" fill="#57606a">Describe what you want in plain words, then press Enter</text>
   <rect x="40" y="128" width="1200" height="572" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
   <path d="M41 138 a9 9 0 0 1 9 -9 h1180 a9 9 0 0 1 9 9 v24 h-1198 z" fill="#f3f3f3"/>
   <circle cx="62" cy="146" r="6" fill="#ff5f57"/><circle cx="82" cy="146" r="6" fill="#febc2e"/><circle cx="102" cy="146" r="6" fill="#28c840"/>
@@ -64,16 +64,8 @@
   <text x="58" y="692" font-size="12" fill="#ffffff">⤫ Codespaces: animated sniffle</text>
   <text x="264" y="692" font-size="12" fill="#57606a">⎇ main</text>
   <rect x="318" y="264" width="908" height="31" rx="6" fill="#fff6dd" stroke="#f2a900" stroke-width="2.5"/>
-  <rect x="318" y="589" width="908" height="31" rx="6" fill="#fff6dd" stroke="#f2a900" stroke-width="2.5"/>
-  <text x="330" y="232" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#1f2328">Welcome to </tspan><tspan fill="#1f2328" font-weight="bold">Codex</tspan><tspan fill="#1f2328">, OpenAI&#x27;s command-line coding agent</tspan></text>
-  <text x="330" y="282" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#1a7f37">✓ Signed in with your ChatGPT account</tspan></text>
-  <text x="330" y="332" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#1f2328">Before you start:</tspan></text>
-  <text x="330" y="382" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#1f2328">Decide how much autonomy you want to grant Codex</tspan></text>
-  <text x="330" y="407" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#8c959f">For more details see the Codex docs</tspan></text>
-  <text x="330" y="457" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#1f2328">Codex can make mistakes</tspan></text>
-  <text x="330" y="482" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#8c959f">Review the code it writes and commands it runs</tspan></text>
-  <text x="330" y="532" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#1f2328">Powered by your ChatGPT account</tspan></text>
-  <text x="330" y="557" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#8c959f">Uses your plan&#x27;s rate limits and training data preferences</tspan></text>
-  <text x="330" y="607" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#0b7fa3">Press enter to continue</tspan></text>
+  <text x="330" y="232" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#8c959f">• The dev server is running on port 3000.</tspan></text>
+  <text x="330" y="282" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#1f2328">› </tspan><tspan fill="#1f2328" font-weight="bold">Make the Export to Excel button orange</tspan><tspan fill="#1f2328">▌</tspan></text>
+  <text x="330" y="332" font-family="Menlo, Consolas, monospace" font-size="16" xml:space="preserve"><tspan fill="#9a4f00">gpt-6-sol medium</tspan><tspan fill="#1f2328"> · </tspan><tspan fill="#1a7f37">/workspaces/BusMgmtBenchmarks</tspan></text>
 
 </svg>

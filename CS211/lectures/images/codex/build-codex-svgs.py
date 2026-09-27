@@ -17,9 +17,15 @@ HILITE = "#f2a900"
 # terminal text colors, as Codex shows them in the light theme
 INK, DIM, CYAN, GREEN, BROWN, LINK = "#1f2328", "#8c959f", "#0b7fa3", "#1a7f37", "#9a4f00", "#0b7fa3"
 
-FILES = [".devcontainer", ".github", "extract", "mcp", "public", "skills", "src",
-         ".gitignore", "CLAUDE.md", "CODESPACES_SETUP.md", "company_to_company.html",
-         "components.json", "index.html", "package.json", "README.md"]
+FOLDERS = [".devcontainer", ".github", "extract", "mcp", "public", "skills", "src"]
+FILES = FOLDERS + [
+    ".gitignore", "CLAUDE.md", "CODESPACES_SETUP.md", "company_to_company_students.html",
+    "company_to_company.html", "components.json", "eslint.config.js",
+    "fit-button-lockup-retail-index-report-black.png", "fit-button-lockup-retail-index-report-blue.png",
+    "fit-button-long-lockup-retail-index-report-black.png", "fit-button-long-lockup-retail-index-report-blue.png",
+    "fit-retail-index.png", "helloworld.md", "index.html", "LICENSE", "MAINTAINERS.md",
+    "package-lock.json", "package.json", "README.md", "start_servers.sh", "tsconfig.app.json",
+    "tsconfig.json", "tsconfig.node.json", "vite.config.student.ts", "vite.config.ts"]
 
 
 def header(step, title, subtitle):
@@ -29,7 +35,7 @@ def header(step, title, subtitle):
   <text x="40" y="104" font-size="21" fill="#57606a">{subtitle}</text>'''
 
 
-def window():
+def window(mark_file=None):
     """Light codespace window: title bar, activity bar, explorer, terminal panel, status bar."""
     o = ['''  <rect x="40" y="128" width="1200" height="572" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
   <path d="M41 138 a9 9 0 0 1 9 -9 h1180 a9 9 0 0 1 9 9 v24 h-1198 z" fill="#f3f3f3"/>
@@ -49,11 +55,13 @@ def window():
   <text x="100" y="186" font-size="13" font-weight="bold" fill="#1f2328">Explorer</text>
   <text x="100" y="210" font-size="13" font-weight="bold" fill="#1f2328">⌄ BusMgmtBenchmarks</text>''']
     for i, f in enumerate(FILES):
-        y = 234 + i * 24
-        folder = f in (".devcontainer", ".github", "extract", "mcp", "public", "skills", "src")
-        mark = "›" if folder else " "
-        o.append(f'  <text x="104" y="{y}" font-size="13" fill="#57606a">{mark}</text>'
-                 f'<text x="118" y="{y}" font-size="13" fill="#1f2328">{escape(f)}</text>')
+        y = 226 + i * 13.5
+        name = f if len(f) <= 30 else f[:29] + "…"
+        if f == mark_file:
+            o.append(f'  <rect x="96" y="{y - 11}" width="200" height="15" rx="3" fill="#fff6dd" stroke="{HILITE}" stroke-width="2"/>')
+        mark = "›" if f in FOLDERS else " "
+        o.append(f'  <text x="104" y="{y}" font-size="11" fill="#57606a">{mark}</text>'
+                 f'<text x="116" y="{y}" font-size="11" fill="#1f2328">{escape(name)}</text>')
     o.append('''  <g font-size="13" fill="#57606a">
     <text x="322" y="186">Problems</text><text x="396" y="186">Output</text><text x="460" y="186">Debug Console</text>
     <rect x="566" y="170" width="72" height="24" rx="5" fill="#e8eaed"/><text x="578" y="187" fill="#1f2328">Terminal</text>
@@ -90,11 +98,11 @@ def s(t, c=INK, bold=False):
     return (t, c, bold)
 
 
-def page(name, step, title, subtitle, lines, hilites=(), extra=""):
+def page(name, step, title, subtitle, lines, hilites=(), extra="", mark_file=None):
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
   <rect width="1280" height="720" fill="#ffffff"/>
 {header(step, title, subtitle)}
-{window()}
+{window(mark_file)}
 {terminal(lines, hilites)}
 {extra}
 </svg>
@@ -180,12 +188,12 @@ page("codex-7-pick-model.svg", 7, "Pick gpt-6-sol",
      hilites=[(4, 4)])
 
 # Step 8: ask for the change
-page("codex-8-ask.svg", 8, "Ask Codex for the change",
+page("codex-10-ask.svg", 10, "Ask Codex for the change",
      "Describe what you want in plain words, then press Enter",
-     [[s("• Model changed to gpt-6-sol medium")], None,
+     [[s("• The dev server is running on port 3000.", DIM)], None,
       [s("› "), s("Make the Export to Excel button orange", INK, True), s("▌")], None,
       [s("gpt-6-sol medium", BROWN), s(" · "), s("/workspaces/BusMgmtBenchmarks", GREEN)]],
-     hilites=[(0, 0), (2, 2)])
+     hilites=[(2, 2)])
 
 
 def plain(name, step, title, subtitle, body):
@@ -212,8 +220,12 @@ for i, (f, msg) in enumerate(REPO_ROWS):
                 f'<text x="114" y="{y}" font-size="16" fill="#1f2328">{f}</text>'
                 f'<text x="380" y="{y}" font-size="16" fill="#57606a">{msg}</text>')
 plain("codex-1-create-codespace.svg", 1, "Create a codespace on main",
-      "On the BusMgmtBenchmarks repo: <tspan font-weight=\"bold\">Code</tspan> → <tspan font-weight=\"bold\">Codespaces</tspan> → <tspan font-weight=\"bold\">Create codespace on main</tspan>",
-      """  <text x="40" y="160" font-size="24" font-weight="bold" fill="#1f2328">BusMgmtBenchmarks</text>
+      "Go to the repo",
+      """  <rect x="40" y="118" width="1200" height="30" rx="15" fill="#f3f3f3" stroke="#f2a900" stroke-width="2.5"/>
+  <text x="60" y="138" font-size="15" fill="#1f2328">https://github.com/calvinw/BusMgmtBenchmarks</text>
+  <text x="40" y="180" font-size="21" fill="#57606a">Then <tspan font-weight="bold" fill="#24292f">Codespaces</tspan> → <tspan font-weight="bold" fill="#24292f">Create codespace on main</tspan></text>
+  <g transform="translate(0,62)">
+  <text x="40" y="160" font-size="24" font-weight="bold" fill="#1f2328">BusMgmtBenchmarks</text>
   <rect x="310" y="142" width="62" height="24" rx="12" fill="none" stroke="#57606a"/>
   <text x="341" y="159" font-size="13" fill="#57606a" text-anchor="middle">Public</text>
   <rect x="40" y="186" width="104" height="34" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
@@ -246,7 +258,8 @@ plain("codex-1-create-codespace.svg", 1, "Create a codespace on main",
   <text x="1060" y="376" font-size="16" fill="#57606a">machine. VS Code</text>
   <text x="1060" y="400" font-size="16" fill="#57606a">appears with the</text>
   <text x="1060" y="424" font-size="16" fill="#57606a">terminal open at</text>
-  <text x="1060" y="448" font-size="16" fill="#57606a">a <tspan font-family="Menlo, Consolas, monospace" fill="#1f2328">#</tspan> prompt.</text>""")
+  <text x="1060" y="448" font-size="16" fill="#57606a">a <tspan font-family="Menlo, Consolas, monospace" fill="#1f2328">#</tspan> prompt.</text>
+  </g>""")
 
 
 # Step 9: the change in the app, before and after
@@ -285,16 +298,52 @@ def app(x, color, hover_label, label):
     <text x="280" y="652" font-size="22" font-weight="bold" fill="{hover_label}" text-anchor="middle">{label}</text>
   </g>"""
 
-plain("codex-9-result.svg", 9, "Codex makes the button orange",
-      "It edits the 3 files that draw the button. Check what it changed before you keep it.",
+plain("codex-11-result.svg", 11, "The app updates by itself",
+      "Codex edits the 3 files that draw the button. The dev server reloads the page: the button is now orange.",
       app(40, "#2563eb", "#57606a", "Before: blue") + app(680, "#f97316", "#c2410c", "After: orange") +
       """  <text x="640" y="410" font-size="44" fill="#57606a" text-anchor="middle">→</text>""")
 
 
 # Step 10: ask Codex to commit and push
-page("codex-10-commit-push.svg", 10, "Ask Codex to commit and push",
-     "No git buttons: just tell Codex in plain words, then press Enter",
+page("codex-12-commit-push.svg", 12, "Ask Codex to commit and push",
+     "Tell Codex in plain words. You must be a <tspan font-weight=\"bold\" fill=\"#24292f\">collaborator</tspan> on the repo for the push to work.",
      [[s("• Made the Export to Excel button orange in 3 files.", DIM)], None,
       [s("› "), s("Commit and push these changes", INK, True), s("▌")], None,
       [s("gpt-6-sol medium", BROWN), s(" · "), s("/workspaces/BusMgmtBenchmarks", GREEN)]],
      hilites=[(2, 2)])
+
+
+# Step 8: ask Codex to start the dev server
+APP_URL = "https://animated-sniffle-gxr9pp57g5fwx7v-3000.app.github.dev"
+page("codex-8-dev-server.svg", 8, "Ask Codex to start the dev server",
+     "Codex runs the repo's <tspan font-family=\"Menlo, Consolas, monospace\" fill=\"#24292f\">start_servers.sh</tspan> script for you",
+     [[s("• Model changed to gpt-6-sol medium")], None,
+      [s("› "), s("Start the dev server for me with start_servers.sh", INK, True)], None,
+      [s("• Ran ", DIM), s("bash start_servers.sh", INK, True)],
+      [s("  └ ┄┄┄ Step 1/2: Installing dependencies ┄┄┄", DIM)],
+      [s("    ✓ Dependencies installed.", DIM)],
+      [s("    ┄┄┄ Step 2/2: Starting dev server ┄┄┄", DIM)],
+      [s("    ✓ Server started.", GREEN)],
+      [s("    App : ", DIM), s(APP_URL, LINK, True)], None,
+      [s("• The dev server is running on port 3000.")],
+      [s("  Open the App link above to see the site.")]],
+     hilites=[(2, 2), (9, 9)], mark_file="start_servers.sh")
+
+# Step 9: the running app in its own tab
+plain("codex-9-open-app.svg", 9, "Open the app",
+      "The codespace opens port 3000 in a new tab. This is your copy of the site, running in the codespace.",
+      f"""  <rect x="290" y="128" width="700" height="572" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+  <path d="M291 138 a9 9 0 0 1 9 -9 h680 a9 9 0 0 1 9 9 v30 h-698 z" fill="#f3f3f3"/>
+  <circle cx="312" cy="149" r="6" fill="#ff5f57"/><circle cx="332" cy="149" r="6" fill="#febc2e"/><circle cx="352" cy="149" r="6" fill="#28c840"/>
+  <rect x="372" y="137" width="604" height="24" rx="12" fill="#ffffff" stroke="#f2a900" stroke-width="2.5"/>
+  <text x="386" y="154" font-size="13" fill="#1f2328">{APP_URL}/company_to_company.html</text>
+  <line x1="291" y1="168" x2="989" y2="168" stroke="#d0d7de"/>
+  <g transform="translate(304,-35) scale(1.18)">
+{app(0, "#2563eb", "#57606a", "")}
+  </g>
+  <text x="1010" y="300" font-size="18" font-weight="bold" fill="#1f2328">Still blue</text>
+  <text x="1010" y="326" font-size="16" fill="#57606a">Nothing has</text>
+  <text x="1010" y="350" font-size="16" fill="#57606a">changed yet.</text>
+  <text x="1010" y="398" font-size="16" fill="#57606a">Keep this tab</text>
+  <text x="1010" y="422" font-size="16" fill="#57606a">open for the</text>
+  <text x="1010" y="446" font-size="16" fill="#57606a">next step.</text>""")
