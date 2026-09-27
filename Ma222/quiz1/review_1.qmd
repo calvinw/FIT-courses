@@ -1,0 +1,63 @@
+---
+format:
+  pdf:
+    geometry:
+      - margin=0.6in
+    fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist{nosep,leftmargin=*}
+        \setlength{\parskip}{4pt}
+        \setlength{\parindent}{0pt}
+        \pagenumbering{gobble}
+  html:
+    embed-resources: true
+---
+
+# MA222 Review 1
+
+Name: ______________________________
+
+Calculator allowed. No notes, no phone, no internet. Show your work.
+
+**1.** A campus café wants to know how many cups of coffee FIT students drink per week. It asks 150 students waiting in line one morning. Identify the population, the sample, and the sample size.
+
+```{=latex}
+\vspace{0.9in}
+```
+
+**2.** A boutique sold 400 dresses last month. Its records for all 400 show that 12% were returned. A sample of 50 of those dresses shows that 8% were returned. Which number is the parameter and which is the statistic? Give the symbol for each.
+
+```{=latex}
+\vspace{0.8in}
+```
+
+**3.** The observational units are the students in this class. Is *the number of students in the class* a variable? Explain. Then give one example of a variable for these observational units.
+
+```{=latex}
+\vspace{0.8in}
+```
+
+**4.** The observational units are the customers of an online store. Classify each variable as quantitative or categorical. If it is categorical, say whether it is binary.
+
+a) Amount spent on the last order \
+b) State the customer lives in \
+c) Whether the customer has a store credit card \
+d) Number of orders placed last year
+
+```{=latex}
+\vspace{0.5in}
+```
+
+**5.** A game show has 7 prizes: \$1, \$5, \$10, \$50, \$100, \$1,000, \$10,000. The mean prize is about \$1,595 and the median is \$50. What proportion of the prizes are bigger than the mean? What proportion are bigger than the median?
+
+```{=latex}
+\vspace{0.8in}
+```
+
+**6.** A mall wants to know the mean amount of time shoppers spend in the mall. It tracks 60 shoppers and finds they spend a mean of 95 minutes. Identify the population, the sample, the parameter, and the statistic.
+
+```{=latex}
+\vspace{1.0in}
+```
