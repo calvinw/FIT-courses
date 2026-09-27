@@ -31,6 +31,7 @@ e) What proportion of the prize amounts are bigger than the median?
 
 Copy this table (including the Amount heading) and paste it into cell A1 of a spreadsheet. The amounts are in dollars.
 
+::: {style="width: 10em;"}
 | Amount |
 |--:|
 | 0.01 |
@@ -59,3 +60,4 @@ Copy this table (including the Amount heading) and paste it into cell A1 of a sp
 | 500000 |
 | 750000 |
 | 1000000 |
+:::
