@@ -1,0 +1,67 @@
+---
+title: "Codex in a Codespace"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## The Plan
+
+1. Create a codespace on `main` of BusMgmtBenchmarks
+2. Start Codex in the terminal with `codex.sh`
+3. Sign in with a device code
+4. Choose the `gpt-6-sol` model with `/model`
+5. Ask Codex to make the **Export to Excel** button orange
+6. Ask Codex to commit and push the change
+
+## What You Need
+
+- A GitHub account with access to [BusMgmtBenchmarks](https://github.com/calvinw/BusMgmtBenchmarks)
+- A ChatGPT account to sign in to Codex
+- The live app, to compare before and after: [Company vs Company](https://calvinw.github.io/BusMgmtBenchmarks/company_to_company.html)
+
+## {background-image="images/codex/codex-1-create-codespace.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-2-start.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-3-signin.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-4-device-code.svg" background-size="contain" background-color="white"}
+
+## Why a Device Code?
+
+- Codex runs on GitHub's computer, not on the computer in front of you
+- It cannot open a browser window for you to sign in
+- So it prints a link and a one-time code instead
+- You sign in on your own browser tab and type in the code
+- Only use a code that **your** Codex printed - never one someone gives you
+
+## {background-image="images/codex/codex-5-signed-in.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-6-slash-model.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-7-pick-model.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-8-ask.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-9-result.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/codex/codex-10-commit-push.svg" background-size="contain" background-color="white"}
+
+## Check the Live Site
+
+- The push starts the deploy in the repository's **Actions** tab
+- Wait for the green check mark
+- Reload [Company vs Company](https://calvinw.github.io/BusMgmtBenchmarks/company_to_company.html)
+- The **Export to Excel** button is now orange
+
+## Summary
+
+- A codespace gives you VS Code and a terminal in the browser
+- `codex.sh` starts the Codex agent in that terminal
+- Sign in once with a device code, then pick a model with `/model`
+- Describe the change in plain words and review what Codex edits
+- Ask Codex to commit and push, and GitHub Pages publishes the new version
