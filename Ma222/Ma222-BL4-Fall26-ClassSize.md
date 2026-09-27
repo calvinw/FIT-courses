@@ -17,4 +17,4 @@ Suppose a college is offering five sections of an introductory statistics course
 
 a) Find the mean class size per section. What is the observational unit? What is the variable?
 
-b) Now ask each of the 28 students in the course for the class size of their own section. Find the mean class size per student, using the class sizes the students report. What is the observational unit? What is the variable? [Hint: The 10 students in section 301 will all report a class size of 10.]
+b) Now ask all the students from all the sections what the class size of their section is. Find the mean class size per student. What is the observational unit? What is the variable? [Hint: The 10 students in section 301 will all report a class size of 10.]

@@ -23,7 +23,7 @@ $$
 \bar{x} = \frac{10 + 4 + 5 + 3 + 6}{5} = \frac{28}{5} = 5.6 \text{ students}
 $$
 
-**b) Find the mean class size per student, using the class sizes the students report. What is the observational unit? What is the variable?**
+**b) Now ask all the students from all the sections what the class size of their section is. Find the mean class size per student. What is the observational unit? What is the variable?**
 
 The observational unit is a **student** (there are 28). The variable is the **class size of the student's section**, as the student reports it. Each student reports the class size of their own section:
 
