@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="40" font-weight="bold" fill="#0969da">A GitHub Repository</text>
+  <text x="60" y="108" font-size="22" fill="#57606a">A project folder on GitHub that keeps every version of your files</text>
+
+  <!-- Browser frame -->
+  <rect x="60" y="140" width="720" height="530" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+  <path d="M60 152 a12 12 0 0 1 12 -12 h696 a12 12 0 0 1 12 12 v34 h-720 z" fill="#f6f8fa"/>
+  <line x1="60" y1="186" x2="780" y2="186" stroke="#d0d7de" stroke-width="2"/>
+  <circle cx="84" cy="163" r="6" fill="#ff5f57"/>
+  <circle cx="104" cy="163" r="6" fill="#febc2e"/>
+  <circle cx="124" cy="163" r="6" fill="#28c840"/>
+  <rect x="150" y="150" width="600" height="26" rx="13" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="168" y="168" font-size="15" fill="#24292f">github.com/calvinw/BusMgmtBenchmarks</text>
+
+  <!-- Repo header -->
+  <rect x="84" y="208" width="22" height="26" rx="3" fill="none" stroke="#57606a" stroke-width="2"/>
+  <line x1="90" y1="215" x2="100" y2="215" stroke="#57606a" stroke-width="2"/>
+  <text x="118" y="229" font-size="22" fill="#0969da">calvinw</text>
+  <text x="200" y="229" font-size="22" fill="#57606a">/</text>
+  <text x="218" y="229" font-size="22" font-weight="bold" fill="#0969da">BusMgmtBenchmarks</text>
+  <rect x="472" y="210" width="72" height="24" rx="12" fill="none" stroke="#57606a"/>
+  <text x="508" y="227" font-size="14" fill="#57606a" text-anchor="middle">Public</text>
+
+  <!-- Branch + commits bar -->
+  <rect x="84" y="254" width="120" height="32" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+  <circle cx="102" cy="264" r="3.5" fill="none" stroke="#24292f" stroke-width="2"/>
+  <circle cx="102" cy="277" r="3.5" fill="none" stroke="#24292f" stroke-width="2"/>
+  <text x="116" y="276" font-size="16" font-weight="bold" fill="#24292f">main</text>
+  <text x="186" y="275" font-size="12" fill="#57606a">▾</text>
+  <text x="756" y="276" font-size="16" fill="#24292f" text-anchor="end"><tspan font-weight="bold">247</tspan> Commits</text>
+
+  <!-- File table -->
+  <rect x="84" y="300" width="672" height="346" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M84 308 a8 8 0 0 1 8 -8 h656 a8 8 0 0 1 8 8 v40 h-672 z" fill="#f6f8fa"/>
+  <circle cx="110" cy="324" r="11" fill="#0969da"/>
+  <text x="130" y="329" font-size="16" font-weight="bold" fill="#24292f">calvinw</text>
+  <text x="200" y="329" font-size="16" fill="#57606a">Add chart to home page</text>
+  <text x="740" y="329" font-size="15" fill="#57606a" text-anchor="end">2 days ago</text>
+
+  <g font-size="17">
+    <!-- rows at y 348 + n*50 -->
+    <line x1="84" y1="348" x2="756" y2="348" stroke="#d0d7de"/>
+    <path d="M104 362 h9 l4 4 h14 v16 h-27 z" fill="#54aeff"/>
+    <text x="146" y="380" fill="#24292f">data</text>
+    <text x="360" y="380" fill="#57606a">Add data files</text>
+
+    <line x1="84" y1="398" x2="756" y2="398" stroke="#d0d7de"/>
+    <path d="M106 410 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="146" y="430" fill="#24292f">index.html</text>
+    <text x="360" y="430" fill="#57606a">Add chart to home page</text>
+
+    <line x1="84" y1="448" x2="756" y2="448" stroke="#d0d7de"/>
+    <path d="M106 460 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="146" y="480" fill="#24292f">style.css</text>
+    <text x="360" y="480" fill="#57606a">Change colors</text>
+
+    <line x1="84" y1="498" x2="756" y2="498" stroke="#d0d7de"/>
+    <path d="M106 510 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="146" y="530" fill="#24292f">app.js</text>
+    <text x="360" y="530" fill="#57606a">Add chart to home page</text>
+
+    <line x1="84" y1="548" x2="756" y2="548" stroke="#d0d7de"/>
+    <path d="M106 560 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="146" y="580" fill="#24292f">README.md</text>
+    <text x="360" y="580" fill="#57606a">Fix typo in README</text>
+
+    <line x1="84" y1="598" x2="756" y2="598" stroke="#d0d7de"/>
+    <path d="M106 610 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="146" y="630" fill="#24292f">LICENSE</text>
+    <text x="360" y="630" fill="#57606a">Initial commit</text>
+  </g>
+
+  <!-- Right: History -->
+  <text x="840" y="170" font-size="26" font-weight="bold" fill="#24292f">History</text>
+  <text x="840" y="198" font-size="18" fill="#57606a">Every commit is saved</text>
+  <line x1="866" y1="240" x2="866" y2="440" stroke="#0969da" stroke-width="4"/>
+  <g font-size="18" fill="#24292f">
+    <circle cx="866" cy="240" r="11" fill="#0969da"/>
+    <text x="892" y="236">Add chart to home page</text>
+    <text x="892" y="258" font-size="15" fill="#57606a">2 days ago</text>
+    <circle cx="866" cy="306" r="11" fill="#ffffff" stroke="#0969da" stroke-width="4"/>
+    <text x="892" y="302">Fix typo in README</text>
+    <text x="892" y="324" font-size="15" fill="#57606a">last week</text>
+    <circle cx="866" cy="372" r="11" fill="#ffffff" stroke="#0969da" stroke-width="4"/>
+    <text x="892" y="368">Add data files</text>
+    <text x="892" y="390" font-size="15" fill="#57606a">last month</text>
+    <circle cx="866" cy="440" r="11" fill="#ffffff" stroke="#0969da" stroke-width="4"/>
+    <text x="892" y="436">Initial commit</text>
+    <text x="892" y="458" font-size="15" fill="#57606a">last year</text>
+  </g>
+
+  <!-- Right: Collaborators -->
+  <text x="840" y="530" font-size="26" font-weight="bold" fill="#24292f">Collaborators</text>
+  <text x="840" y="558" font-size="18" fill="#57606a">People invited to work on it</text>
+  <g>
+    <circle cx="870" cy="614" r="26" fill="#0969da"/>
+    <text x="870" y="622" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">C</text>
+    <circle cx="936" cy="614" r="26" fill="#8250df"/>
+    <text x="936" y="622" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">A</text>
+    <circle cx="1002" cy="614" r="26" fill="#1a7f37"/>
+    <text x="1002" y="622" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">J</text>
+    <circle cx="1068" cy="614" r="26" fill="#ffffff" stroke="#d0d7de" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="1068" y="623" font-size="26" fill="#57606a" text-anchor="middle">+</text>
+  </g>
+</svg>

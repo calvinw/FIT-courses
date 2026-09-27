@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#bc4c00"/>
+    </marker>
+    <marker id="arrowGrayThin" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="40" font-weight="bold" fill="#bc4c00">Local Clone</text>
+  <text x="60" y="108" font-size="22" fill="#57606a">Downloads a copy of the repository onto your own computer</text>
+
+  <!-- Left: repository on GitHub -->
+  <text x="60" y="170" font-size="24" font-weight="bold" fill="#0969da">Repository</text>
+  <text x="196" y="170" font-size="18" fill="#57606a">on GitHub</text>
+  <rect x="60" y="188" width="300" height="380" rx="12" fill="#ffffff" stroke="#0969da" stroke-width="3"/>
+  <rect x="80" y="208" width="104" height="32" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+  <circle cx="98" cy="218" r="3.5" fill="none" stroke="#24292f" stroke-width="2"/>
+  <circle cx="98" cy="231" r="3.5" fill="none" stroke="#24292f" stroke-width="2"/>
+  <text x="112" y="230" font-size="16" font-weight="bold" fill="#24292f">main</text>
+  <g font-size="18" fill="#24292f">
+    <path d="M84 266 h9 l4 4 h14 v16 h-27 z" fill="#54aeff"/>
+    <text x="124" y="284">data</text>
+    <path d="M86 310 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="124" y="330">index.html</text>
+    <path d="M86 356 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="124" y="376">style.css</text>
+    <path d="M86 402 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="124" y="422">app.js</text>
+    <path d="M86 448 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="124" y="468">README.md</text>
+    <path d="M86 494 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="124" y="514">LICENSE</text>
+  </g>
+  <text x="210" y="552" font-size="15" fill="#57606a" text-anchor="middle">github.com/calvinw/BusMgmtBenchmarks</text>
+
+  <!-- Middle: clone arrow -->
+  <line x1="378" y1="330" x2="568" y2="330" stroke="#bc4c00" stroke-width="7" marker-end="url(#arrowOrange)"/>
+  <text x="470" y="296" font-size="22" font-weight="bold" fill="#bc4c00" text-anchor="middle">git clone</text>
+  <text x="470" y="370" font-size="16" fill="#57606a" text-anchor="middle">downloads a copy</text>
+  <text x="470" y="390" font-size="16" fill="#57606a" text-anchor="middle">once, at the start</text>
+
+  <!-- Middle: staying in sync later -->
+  <text x="470" y="452" font-size="15" font-weight="bold" fill="#57606a" text-anchor="middle" letter-spacing="1">LATER</text>
+  <line x1="400" y1="476" x2="556" y2="476" stroke="#57606a" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrowGrayThin)"/>
+  <text x="470" y="498" font-size="15" fill="#24292f" text-anchor="middle"><tspan font-weight="bold">Pull</tspan>  (get new commits)</text>
+  <line x1="556" y1="524" x2="400" y2="524" stroke="#57606a" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrowGrayThin)"/>
+  <text x="470" y="546" font-size="15" fill="#24292f" text-anchor="middle"><tspan font-weight="bold">Push</tspan>  (send your commits)</text>
+
+  <!-- Right: laptop -->
+  <text x="600" y="170" font-size="24" font-weight="bold" fill="#bc4c00">Your Computer</text>
+  <rect x="600" y="188" width="620" height="380" rx="16" fill="#24292f"/>
+  <rect x="616" y="204" width="588" height="348" rx="4" fill="#dde3ea"/>
+  <path d="M566 568 h688 l-26 26 h-636 z" fill="#afb8c1"/>
+  <rect x="860" y="568" width="100" height="8" rx="4" fill="#8c959f"/>
+
+  <!-- folder window on the laptop screen -->
+  <rect x="646" y="224" width="528" height="308" rx="10" fill="#ffffff" stroke="#afb8c1"/>
+  <path d="M646 234 a10 10 0 0 1 10 -10 h508 a10 10 0 0 1 10 10 v24 h-528 z" fill="#f6f8fa"/>
+  <line x1="646" y1="258" x2="1174" y2="258" stroke="#d0d7de"/>
+  <circle cx="666" cy="241" r="5.5" fill="#ff5f57"/>
+  <circle cx="684" cy="241" r="5.5" fill="#febc2e"/>
+  <circle cx="702" cy="241" r="5.5" fill="#28c840"/>
+  <path d="M900 234 h8 l3 3 h13 v11 h-24 z" fill="#54aeff"/>
+  <text x="932" y="247" font-size="15" font-weight="bold" fill="#24292f">BusMgmtBenchmarks</text>
+
+  <g font-size="15" fill="#24292f" text-anchor="middle">
+    <!-- row 1 -->
+    <path d="M684 290 h20 l7 7 h33 v40 h-60 z" fill="#54aeff"/>
+    <text x="714" y="362">data</text>
+    <path d="M814 286 h26 l10 10 v46 h-36 z" fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+    <text x="832" y="362">index.html</text>
+    <path d="M934 286 h26 l10 10 v46 h-36 z" fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+    <text x="952" y="362">style.css</text>
+    <path d="M1054 286 h26 l10 10 v46 h-36 z" fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+    <text x="1072" y="362">app.js</text>
+    <!-- row 2 -->
+    <path d="M696 402 h26 l10 10 v46 h-36 z" fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+    <text x="714" y="480">README.md</text>
+    <path d="M814 402 h26 l10 10 v46 h-36 z" fill="#ffffff" stroke="#57606a" stroke-width="2"/>
+    <text x="832" y="480">LICENSE</text>
+    <path d="M922 410 h20 l7 7 h33 v40 h-60 z" fill="#d0d7de"/>
+    <text x="952" y="480" fill="#57606a">.git</text>
+    <text x="952" y="500" font-size="13" fill="#57606a">(hidden)</text>
+  </g>
+  <text x="1150" y="518" font-size="14" fill="#57606a" text-anchor="end">.git holds the full history</text>
+
+  <!-- Bottom: terminal command -->
+  <rect x="60" y="626" width="1160" height="52" rx="8" fill="#1e1e1e"/>
+  <text x="84" y="659" font-family="Menlo, Consolas, monospace" font-size="19" fill="#d4d4d4"><tspan fill="#73c991">$</tspan> git clone https://github.com/calvinw/BusMgmtBenchmarks.git</text>
+</svg>

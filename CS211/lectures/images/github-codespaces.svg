@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8250df"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0969da"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="40" font-weight="bold" fill="#8250df">GitHub Codespaces</text>
+  <text x="60" y="108" font-size="22" fill="#57606a">A computer that GitHub runs for you, opened in a browser tab</text>
+
+  <!-- Left: repository on a branch -->
+  <text x="60" y="170" font-size="24" font-weight="bold" fill="#0969da">Repository</text>
+  <rect x="60" y="188" width="300" height="360" rx="12" fill="#ffffff" stroke="#0969da" stroke-width="3"/>
+  <rect x="80" y="208" width="200" height="32" rx="6" fill="#fbefff" stroke="#8250df"/>
+  <circle cx="98" cy="218" r="3.5" fill="none" stroke="#8250df" stroke-width="2"/>
+  <circle cx="98" cy="231" r="3.5" fill="none" stroke="#8250df" stroke-width="2"/>
+  <text x="112" y="230" font-size="16" font-weight="bold" fill="#8250df">add-about-page</text>
+  <g font-size="18" fill="#24292f">
+    <path d="M84 266 h9 l4 4 h14 v16 h-27 z" fill="#54aeff"/>
+    <text x="124" y="284">data</text>
+    <path d="M86 310 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="124" y="330">index.html</text>
+    <path d="M86 356 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="124" y="376">style.css</text>
+    <path d="M86 402 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="124" y="422">app.js</text>
+    <path d="M86 448 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="124" y="468">README.md</text>
+  </g>
+  <text x="210" y="526" font-size="15" fill="#57606a" text-anchor="middle">one branch of the repository</text>
+
+  <!-- Arrows between repo and codespace -->
+  <line x1="372" y1="286" x2="484" y2="286" stroke="#8250df" stroke-width="5" marker-end="url(#arrowPurple)"/>
+  <text x="428" y="250" font-size="17" font-weight="bold" fill="#8250df" text-anchor="middle">1. copy</text>
+  <text x="428" y="270" font-size="15" fill="#57606a" text-anchor="middle">the branch</text>
+
+  <line x1="484" y1="450" x2="372" y2="450" stroke="#0969da" stroke-width="5" marker-end="url(#arrowBlue)"/>
+  <text x="428" y="414" font-size="17" font-weight="bold" fill="#0969da" text-anchor="middle">2. commit</text>
+  <text x="428" y="434" font-size="15" fill="#57606a" text-anchor="middle">back to it</text>
+
+  <!-- Right: cloud computer running VS Code -->
+  <text x="500" y="170" font-size="24" font-weight="bold" fill="#8250df">Codespace</text>
+  <text x="640" y="170" font-size="18" fill="#57606a">runs on GitHub's computer</text>
+  <rect x="500" y="188" width="720" height="440" rx="12" fill="#ffffff" stroke="#8250df" stroke-width="3"/>
+  <!-- browser chrome -->
+  <path d="M501.5 200 a10.5 10.5 0 0 1 10.5 -10.5 h696 a10.5 10.5 0 0 1 10.5 10.5 v28 h-717 z" fill="#f6f8fa"/>
+  <circle cx="524" cy="209" r="6" fill="#ff5f57"/>
+  <circle cx="544" cy="209" r="6" fill="#febc2e"/>
+  <circle cx="564" cy="209" r="6" fill="#28c840"/>
+  <rect x="588" y="197" width="610" height="24" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="604" y="214" font-size="15" fill="#24292f">fluffy-space-waffle.github.dev</text>
+  <!-- VS Code body -->
+  <rect x="502" y="228" width="716" height="398" fill="#1e1e1e"/>
+  <rect x="502" y="228" width="44" height="398" fill="#333333"/>
+  <rect x="512" y="244" width="24" height="26" rx="2" fill="none" stroke="#d4d4d4" stroke-width="2"/>
+  <circle cx="522" cy="296" r="8" fill="none" stroke="#858585" stroke-width="2"/>
+  <line x1="528" y1="302" x2="536" y2="310" stroke="#858585" stroke-width="2"/>
+  <circle cx="518" cy="336" r="4" fill="none" stroke="#858585" stroke-width="2"/>
+  <circle cx="530" cy="350" r="4" fill="none" stroke="#858585" stroke-width="2"/>
+  <line x1="518" y1="340" x2="518" y2="356" stroke="#858585" stroke-width="2"/>
+  <!-- explorer -->
+  <rect x="546" y="228" width="190" height="398" fill="#252526"/>
+  <text x="560" y="254" font-size="13" fill="#bbbbbb" letter-spacing="1">EXPLORER</text>
+  <g font-size="15" fill="#cccccc">
+    <text x="566" y="286">› data</text>
+    <rect x="546" y="296" width="190" height="24" fill="#37373d"/>
+    <text x="574" y="313" fill="#ffffff">index.html</text>
+    <text x="574" y="340">style.css</text>
+    <text x="574" y="366">app.js</text>
+    <text x="574" y="392">README.md</text>
+    <text x="574" y="418" fill="#73c991">about.md</text>
+    <text x="724" y="418" fill="#73c991" text-anchor="end">U</text>
+  </g>
+  <!-- editor -->
+  <rect x="736" y="228" width="482" height="30" fill="#252526"/>
+  <rect x="736" y="228" width="130" height="30" fill="#1e1e1e"/>
+  <text x="752" y="248" font-size="14" fill="#ffffff">index.html</text>
+  <g font-family="Menlo, Consolas, monospace" font-size="15">
+    <text x="752" y="286" fill="#858585">1</text>
+    <text x="780" y="286" fill="#808080">&lt;<tspan fill="#569cd6">html</tspan>&gt;</text>
+    <text x="752" y="310" fill="#858585">2</text>
+    <text x="796" y="310" fill="#808080">&lt;<tspan fill="#569cd6">body</tspan>&gt;</text>
+    <text x="752" y="334" fill="#858585">3</text>
+    <text x="812" y="334" fill="#808080">&lt;<tspan fill="#569cd6">h1</tspan>&gt;<tspan fill="#d4d4d4">FIT Retail Index</tspan>&lt;/<tspan fill="#569cd6">h1</tspan>&gt;</text>
+    <text x="752" y="358" fill="#858585">4</text>
+    <text x="812" y="358" fill="#808080">&lt;<tspan fill="#569cd6">a</tspan> <tspan fill="#9cdcfe">href</tspan>=<tspan fill="#ce9178">"about.md"</tspan>&gt;<tspan fill="#d4d4d4">About</tspan>&lt;/<tspan fill="#569cd6">a</tspan>&gt;</text>
+    <text x="752" y="382" fill="#858585">5</text>
+    <text x="796" y="382" fill="#808080">&lt;/<tspan fill="#569cd6">body</tspan>&gt;</text>
+    <text x="752" y="406" fill="#858585">6</text>
+    <text x="780" y="406" fill="#808080">&lt;/<tspan fill="#569cd6">html</tspan>&gt;</text>
+  </g>
+  <!-- terminal -->
+  <line x1="736" y1="470" x2="1218" y2="470" stroke="#3c3c3c" stroke-width="2"/>
+  <text x="752" y="494" font-size="12" fill="#e7e7e7" letter-spacing="1">TERMINAL</text>
+  <line x1="752" y1="500" x2="822" y2="500" stroke="#e7e7e7"/>
+  <g font-family="Menlo, Consolas, monospace" font-size="14">
+    <text x="752" y="530" fill="#73c991">@calvinw <tspan fill="#569cd6">➜</tspan> <tspan fill="#cccccc">/workspaces/BusMgmtBenchmarks</tspan></text>
+    <text x="752" y="556" fill="#cccccc">$ git commit -m "Add about page"</text>
+  </g>
+  <!-- status bar -->
+  <rect x="502" y="602" width="716" height="24" fill="#8250df"/>
+  <text x="514" y="619" font-size="13" fill="#ffffff">Codespaces: fluffy-space-waffle   |   branch: add-about-page</text>
+
+  <!-- Bottom notes -->
+  <text x="60" y="672" font-size="20" fill="#24292f">Visual Studio Code in the browser. Nothing to install on the lab computer.</text>
+</svg>

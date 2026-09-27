@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1a7f37"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="40" font-weight="bold" fill="#1a7f37">GitHub Pages</text>
+  <text x="60" y="108" font-size="22" fill="#57606a">Publishes the files in a repository as a free website</text>
+
+  <!-- Left: repository -->
+  <text x="60" y="170" font-size="24" font-weight="bold" fill="#0969da">Repository</text>
+  <text x="60" y="196" font-size="17" fill="#57606a">github.com/calvinw/BusMgmtBenchmarks</text>
+  <rect x="60" y="214" width="380" height="380" rx="12" fill="#ffffff" stroke="#0969da" stroke-width="3"/>
+  <rect x="84" y="236" width="104" height="32" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+  <circle cx="102" cy="246" r="3.5" fill="none" stroke="#24292f" stroke-width="2"/>
+  <circle cx="102" cy="259" r="3.5" fill="none" stroke="#24292f" stroke-width="2"/>
+  <text x="116" y="258" font-size="16" font-weight="bold" fill="#24292f">main</text>
+
+  <g font-size="19" fill="#24292f">
+    <path d="M86 296 h9 l4 4 h14 v16 h-27 z" fill="#54aeff"/>
+    <text x="128" y="314">data</text>
+
+    <rect x="76" y="336" width="348" height="46" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+    <path d="M88 346 h14 l6 6 v18 h-20 z" fill="#ffffff" stroke="#1a7f37" stroke-width="1.8"/>
+    <text x="128" y="366" font-weight="bold" fill="#1a7f37">index.html</text>
+    <text x="410" y="365" font-size="15" fill="#1a7f37" text-anchor="end">home page</text>
+
+    <path d="M88 400 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="128" y="420">style.css</text>
+    <path d="M88 450 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="128" y="470">app.js</text>
+    <path d="M88 500 h14 l6 6 v18 h-20 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="128" y="520">README.md</text>
+  </g>
+  <text x="250" y="572" font-size="16" fill="#57606a" text-anchor="middle">HTML, CSS, and JavaScript files</text>
+
+  <!-- Middle: arrow -->
+  <line x1="462" y1="404" x2="586" y2="404" stroke="#1a7f37" stroke-width="6" marker-end="url(#arrowGreen)"/>
+  <text x="522" y="368" font-size="19" font-weight="bold" fill="#1a7f37" text-anchor="middle">publishes</text>
+  <text x="522" y="446" font-size="15" fill="#57606a" text-anchor="middle">after each</text>
+  <text x="522" y="466" font-size="15" fill="#57606a" text-anchor="middle">commit to main</text>
+
+  <!-- Right: browser showing the website -->
+  <text x="610" y="170" font-size="24" font-weight="bold" fill="#1a7f37">Website</text>
+  <text x="610" y="196" font-size="17" fill="#57606a">username.github.io/repository-name</text>
+  <rect x="610" y="214" width="610" height="380" rx="12" fill="#ffffff" stroke="#1a7f37" stroke-width="3"/>
+  <path d="M611.5 226 a10.5 10.5 0 0 1 10.5 -10.5 h586 a10.5 10.5 0 0 1 10.5 10.5 v28 h-607 z" fill="#f6f8fa"/>
+  <line x1="610" y1="254" x2="1220" y2="254" stroke="#d0d7de" stroke-width="2"/>
+  <circle cx="634" cy="235" r="6" fill="#ff5f57"/>
+  <circle cx="654" cy="235" r="6" fill="#febc2e"/>
+  <circle cx="674" cy="235" r="6" fill="#28c840"/>
+  <rect x="698" y="223" width="500" height="24" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="714" y="240" font-size="15" fill="#24292f">calvinw.github.io/BusMgmtBenchmarks</text>
+
+  <!-- mock page -->
+  <rect x="612" y="256" width="606" height="58" fill="#1f3a5f"/>
+  <text x="640" y="294" font-size="24" font-weight="bold" fill="#ffffff">FIT Retail Index</text>
+  <g font-size="15" fill="#c9d6e8" text-anchor="end"><text x="1010" y="292">Companies</text><text x="1106" y="292">Segments</text><text x="1190" y="292">About</text></g>
+  <rect x="640" y="336" width="300" height="12" rx="6" fill="#d0d7de"/>
+  <rect x="640" y="358" width="220" height="12" rx="6" fill="#e6e9ed"/>
+  <!-- bar chart -->
+  <line x1="660" y1="560" x2="1190" y2="560" stroke="#8c959f" stroke-width="2"/>
+  <rect x="690" y="480" width="54" height="80" fill="#4c9be8"/>
+  <rect x="770" y="430" width="54" height="130" fill="#4c9be8"/>
+  <rect x="850" y="400" width="54" height="160" fill="#4c9be8"/>
+  <rect x="930" y="455" width="54" height="105" fill="#4c9be8"/>
+  <rect x="1010" y="390" width="54" height="170" fill="#4c9be8"/>
+  <rect x="1090" y="440" width="54" height="120" fill="#4c9be8"/>
+
+  <!-- Bottom: visitors -->
+  <g fill="#1a7f37">
+    <circle cx="660" cy="638" r="10"/><path d="M644 668 a16 14 0 0 1 32 0 z"/>
+    <circle cx="700" cy="638" r="10"/><path d="M684 668 a16 14 0 0 1 32 0 z"/>
+    <circle cx="740" cy="638" r="10"/><path d="M724 668 a16 14 0 0 1 32 0 z"/>
+  </g>
+  <text x="776" y="660" font-size="20" fill="#24292f">Anyone on the internet can visit the website</text>
+  <text x="60" y="660" font-size="20" fill="#24292f">No server needed. Free to host.</text>
+</svg>

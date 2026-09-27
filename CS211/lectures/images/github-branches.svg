@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowMain" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0969da"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="40" font-weight="bold" fill="#bf3989">GitHub Branches</text>
+  <text x="60" y="108" font-size="22" fill="#57606a">Work on a separate version of the repository, then merge it into main</text>
+
+  <!-- main line -->
+  <rect x="40" y="204" width="90" height="32" rx="16" fill="#0969da"/>
+  <text x="85" y="226" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">main</text>
+  <line x1="130" y1="220" x2="1210" y2="220" stroke="#0969da" stroke-width="6" marker-end="url(#arrowMain)"/>
+
+  <!-- branch line, fork and merge -->
+  <path d="M360 220 C 440 220, 420 380, 500 380 L 740 380 C 820 380, 800 220, 880 220" fill="none" stroke="#bf3989" stroke-width="6"/>
+  <rect x="226" y="364" width="176" height="32" rx="16" fill="#bf3989"/>
+  <text x="314" y="386" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">add-about-page</text>
+
+  <!-- deleted branch stub -->
+  <line x1="770" y1="380" x2="880" y2="380" stroke="#bf3989" stroke-width="4" stroke-dasharray="8 7" opacity="0.45"/>
+  <text x="898" y="389" font-size="26" font-weight="bold" fill="#bf3989" opacity="0.7" text-anchor="middle">✕</text>
+
+  <!-- commits on main -->
+  <g font-size="16" fill="#24292f" text-anchor="middle">
+    <circle cx="200" cy="220" r="13" fill="#ffffff" stroke="#0969da" stroke-width="5"/>
+    <text x="200" y="186">Initial commit</text>
+    <circle cx="360" cy="220" r="13" fill="#ffffff" stroke="#0969da" stroke-width="5"/>
+    <text x="360" y="186">Add data files</text>
+    <circle cx="880" cy="220" r="15" fill="#0969da" stroke="#bf3989" stroke-width="5"/>
+    <text x="880" y="184" font-weight="bold">Merge pull request</text>
+    <circle cx="1060" cy="220" r="13" fill="#ffffff" stroke="#0969da" stroke-width="5"/>
+    <text x="1060" y="186">Next change</text>
+  </g>
+
+  <!-- commits on the branch -->
+  <g font-size="16" fill="#24292f" text-anchor="middle">
+    <circle cx="560" cy="380" r="13" fill="#ffffff" stroke="#bf3989" stroke-width="5"/>
+    <text x="560" y="420">Create about.md</text>
+    <circle cx="700" cy="380" r="13" fill="#ffffff" stroke="#bf3989" stroke-width="5"/>
+    <text x="700" y="420">Link to about page</text>
+  </g>
+
+  <!-- numbered steps -->
+  <g font-size="18" fill="#24292f">
+    <circle cx="452" cy="296" r="14" fill="#24292f"/>
+    <text x="452" y="302" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="474" y="302">Create a branch</text>
+
+    <circle cx="560" cy="460" r="14" fill="#24292f"/>
+    <text x="560" y="466" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="582" y="466">Commit changes on the branch</text>
+
+    <circle cx="840" cy="296" r="14" fill="#24292f"/>
+    <text x="840" y="302" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="862" y="302">Merge into main</text>
+    <text x="862" y="324" font-size="15" fill="#57606a">with a pull request</text>
+
+    <circle cx="936" cy="382" r="14" fill="#24292f"/>
+    <text x="936" y="388" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="958" y="388">Delete the merged branch</text>
+    <text x="958" y="410" font-size="15" fill="#57606a">its commits stay in main's history</text>
+  </g>
+
+  <!-- GitHub branch menu -->
+  <text x="40" y="430" font-size="15" fill="#57606a">The branch menu on GitHub</text>
+  <rect x="40" y="440" width="196" height="34" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+  <circle cx="58" cy="451" r="3.5" fill="none" stroke="#24292f" stroke-width="2"/>
+  <circle cx="58" cy="464" r="3.5" fill="none" stroke="#24292f" stroke-width="2"/>
+  <text x="72" y="463" font-size="15" font-weight="bold" fill="#24292f">add-about-page</text>
+  <text x="222" y="462" font-size="11" fill="#57606a" text-anchor="middle">▼</text>
+  <rect x="40" y="482" width="360" height="206" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <text x="56" y="506" font-size="15" font-weight="bold" fill="#24292f">Switch branches/tags</text>
+  <text x="384" y="506" font-size="15" fill="#57606a" text-anchor="end">✕</text>
+  <line x1="40" y1="516" x2="400" y2="516" stroke="#d0d7de"/>
+  <rect x="54" y="524" width="332" height="28" rx="6" fill="#ffffff" stroke="#0969da" stroke-width="1.5"/>
+  <text x="66" y="543" font-size="14" fill="#8c959f">Find or create a branch…</text>
+  <text x="64" y="576" font-size="14" font-weight="bold" fill="#24292f">Branches</text>
+  <line x1="56" y1="584" x2="138" y2="584" stroke="#fd8c73" stroke-width="3"/>
+  <text x="156" y="576" font-size="14" fill="#57606a">Tags</text>
+  <line x1="40" y1="586" x2="400" y2="586" stroke="#d0d7de"/>
+  <rect x="44" y="590" width="352" height="28" rx="6" fill="#f3f4f6"/>
+  <text x="58" y="609" font-size="15" font-weight="bold" fill="#24292f">✓</text>
+  <text x="80" y="609" font-size="15" fill="#24292f">add-about-page</text>
+  <text x="80" y="639" font-size="15" fill="#24292f">main</text>
+  <rect x="332" y="624" width="56" height="20" rx="10" fill="none" stroke="#d0d7de"/>
+  <text x="360" y="638" font-size="12" fill="#57606a" text-anchor="middle">default</text>
+  <line x1="40" y1="652" x2="400" y2="652" stroke="#d0d7de"/>
+  <text x="220" y="675" font-size="14" fill="#0969da" text-anchor="middle">View all branches</text>
+
+  <!-- Bottom: what's on each branch -->
+  <g font-size="17" fill="#24292f">
+    <rect x="440" y="506" width="250" height="180" rx="10" fill="#ffffff" stroke="#0969da" stroke-width="2.5"/>
+    <text x="458" y="536" font-size="17" font-weight="bold" fill="#0969da">main <tspan font-weight="normal" fill="#57606a">before merge</tspan></text>
+    <line x1="440" y1="550" x2="690" y2="550" stroke="#d0d7de"/>
+    <path d="M460 564 h8 l4 4 h12 v14 h-24 z" fill="#54aeff"/>
+    <text x="496" y="580">data</text>
+    <path d="M462 596 h12 l5 5 v16 h-17 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="496" y="613">index.html</text>
+    <path d="M462 629 h12 l5 5 v16 h-17 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="496" y="646">README.md</text>
+    <text x="496" y="676" font-size="15" font-style="italic" fill="#8c959f">no about.md yet</text>
+    <rect x="715" y="506" width="250" height="180" rx="10" fill="#ffffff" stroke="#bf3989" stroke-width="2.5"/>
+    <text x="733" y="536" font-size="17" font-weight="bold" fill="#bf3989">add-about-page</text>
+    <line x1="715" y1="550" x2="965" y2="550" stroke="#d0d7de"/>
+    <path d="M735 564 h8 l4 4 h12 v14 h-24 z" fill="#54aeff"/>
+    <text x="771" y="580">data</text>
+    <path d="M737 596 h12 l5 5 v16 h-17 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="771" y="613">index.html <tspan font-size="14" fill="#9a6700">(changed)</tspan></text>
+    <path d="M737 629 h12 l5 5 v16 h-17 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="771" y="646">README.md</text>
+    <rect x="727" y="656" width="226" height="26" rx="6" fill="#dafbe1"/>
+    <path d="M737 660 h12 l5 5 v14 h-17 z" fill="#ffffff" stroke="#1a7f37" stroke-width="1.8"/>
+    <text x="771" y="676" font-weight="bold" fill="#1a7f37">about.md <tspan font-size="14" font-weight="normal">(new)</tspan></text>
+    <rect x="990" y="506" width="250" height="180" rx="10" fill="#ffffff" stroke="#0969da" stroke-width="2.5"/>
+    <text x="1008" y="536" font-size="17" font-weight="bold" fill="#0969da">main <tspan font-weight="normal" fill="#57606a">after merge</tspan></text>
+    <line x1="990" y1="550" x2="1240" y2="550" stroke="#d0d7de"/>
+    <path d="M1010 564 h8 l4 4 h12 v14 h-24 z" fill="#54aeff"/>
+    <text x="1046" y="580">data</text>
+    <path d="M1012 596 h12 l5 5 v16 h-17 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="1046" y="613">index.html <tspan font-size="14" fill="#9a6700">(changed)</tspan></text>
+    <path d="M1012 629 h12 l5 5 v16 h-17 z" fill="none" stroke="#57606a" stroke-width="1.8"/>
+    <text x="1046" y="646">README.md</text>
+    <rect x="1002" y="656" width="226" height="26" rx="6" fill="#dafbe1"/>
+    <path d="M1012 660 h12 l5 5 v14 h-17 z" fill="#ffffff" stroke="#1a7f37" stroke-width="1.8"/>
+    <text x="1046" y="676" font-weight="bold" fill="#1a7f37">about.md</text>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+---
+title: "GitHub Review"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## The Big Picture
+
+- **Repository** - where the files live
+- **Pages** - where the website is shown
+- **Branch** - a separate version of the files to work on
+- **Codespace** - where you work on the files, in the browser
+- **Local Clone** - where you work on the files, on your own computer
+
+## {background-image="images/github-repo.svg" background-size="contain" background-color="white"}
+
+## Repository Review
+
+- A project folder on GitHub that keeps the full history
+- Every commit is saved with a message describing it
+- Public repositories - anyone can see the files
+- Private repositories - only you and your collaborators
+- Invite collaborators under **Settings** > **Collaborators**
+- Address: [https://github.com/calvinw/BusMgmtBenchmarks](https://github.com/calvinw/BusMgmtBenchmarks)
+
+## {background-image="images/github-pages.svg" background-size="contain" background-color="white"}
+
+## Pages Review
+
+- GitHub Pages publishes a repository as a free website
+- `index.html` is the home page of the website
+- Turn it on under **Settings** > **Pages** > **Deploy from a branch**
+- It rebuilds and publishes after each commit to `main`
+- Watch the deployment in the **Actions** tab
+- Address: [https://calvinw.github.io/BusMgmtBenchmarks/](https://calvinw.github.io/BusMgmtBenchmarks/)
+
+## {background-image="images/github-branches.svg" background-size="contain" background-color="white"}
+
+## Branch Review
+
+- A branch is a separate version of the repository
+- `main` is the official, working version
+- Create a branch from the branch menu: type a name, then **Create branch**
+- Commits on the branch do not change `main`
+- Merge the branch into `main` with a **Pull Request**
+- Delete the branch after it is merged - its commits stay in the history
+
+## {background-image="images/github-codespaces.svg" background-size="contain" background-color="white"}
+
+## Codespace Review
+
+- A computer that GitHub runs for you, opened in a browser tab
+- It runs Visual Studio Code - nothing to install
+- Create it from one branch: **Code** > **Codespaces** > **Create codespace on** *branch*
+- Make changes to the files in the editor
+- Commit and push the changes back to the same branch
+
+## {background-image="images/github-local-clone.svg" background-size="contain" background-color="white"}
+
+## Local Clone Review
+
+- A copy of the repository downloaded to your own computer
+- `git clone https://github.com/calvinw/BusMgmtBenchmarks.git`
+- The hidden `.git` folder holds the full history
+- **Pull** gets new commits from GitHub
+- **Push** sends your commits to GitHub
+
+## Codespace or Local Clone?
+
+|                     | Codespace                  | Local Clone              |
+|---------------------|----------------------------|--------------------------|
+| Runs on             | GitHub's computer          | Your own computer        |
+| Install needed      | Nothing - just a browser   | Git and a code editor    |
+| Get started         | Create codespace on branch | `git clone`              |
+| Send changes back   | Commit and push            | Commit and push          |
+
+## {background-image="images/github-compare.svg" background-size="contain" background-color="white"}
