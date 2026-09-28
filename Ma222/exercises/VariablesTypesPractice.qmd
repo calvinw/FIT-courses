@@ -54,3 +54,30 @@ The observational units are 22 Broadway productions. Classify each variable from
 **e)** Capacity
 
 **f)** Top price
+
+## Dataset: Broadway Productions
+
+| Production | Type | Gross | Attendance | Capacity | Top price |
+|---|---|--:|--:|--:|--:|
+| Annie Get Your Gun | Musical | 572885 | 9892 | 12761 | 75 |
+| Cabaret | Musical | 466670 | 6647 | 7360 | 90 |
+| Cats | Musical | 350368 | 7200 | 11856 | 70 |
+| Chicago | Musical | 536852 | 9664 | 11680 | 80 |
+| Death of a Salesman | Play | 351082 | 6531 | 7483 | 75 |
+| Epic Proportions | Play | 80379 | 2564 | 4776 | 65 |
+| Footloose | Musical | 271022 | 6974 | 10784 | 75 |
+| Fosse | Musical | 566644 | 8118 | 9128 | 80 |
+| It Ain't Nothin' But The Blues | Musical | 88014 | 2366 | 5500 | 75 |
+| Jekyll & Hyde | Musical | 283674 | 5613 | 8512 | 80 |
+| Kat and the Kings | Musical | 108091 | 3218 | 8672 | 75 |
+| Les Miserables | Musical | 375318 | 7677 | 11336 | 80 |
+| Miss Saigon | Musical | 395522 | 8558 | 13945 | 80 |
+| Ragtime | Musical | 420902 | 8913 | 14495 | 75 |
+| Rent | Musical | 333248 | 6219 | 9448 | 80 |
+| Side Man | Play | 106437 | 2894 | 6440 | 60 |
+| Smokey Joe's Cafe | Musical | 168276 | 3547 | 9697 | 75 |
+| The Lion King | Musical | 880717 | 14199 | 14032 | 80 |
+| The Phantom of the Opera | Musical | 601218 | 9974 | 12856 | 80 |
+| The Scarlet Pimpernel | Musical | 125597 | 2284 | 5464 | 80 |
+| The Weir | Play | 120605 | 3450 | 7576 | 60 |
+| Voices in the Dark | Play | 114607 | 3848 | 8688 | 60 |
