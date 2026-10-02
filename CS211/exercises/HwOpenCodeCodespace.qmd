@@ -1,0 +1,78 @@
+---
+title: "Hw SVG Practice with OpenCode"
+format:
+  html:
+    embed-resources: true
+---
+
+Create a repository, open it in a codespace, and install OpenCode from npm. Then ask each model in the **OpenCode Zen** section to draw the same picture as an SVG, and compare the results.
+
+## Create your repository
+
+1. Sign in to GitHub and create a new **public** repository named `svg-practice`.
+2. Select **Add a README file**, then create the repository.
+3. Confirm that you are on the `main` branch.
+
+## Start a codespace
+
+1. On the main page of your `svg-practice` repository, select the green **Code** button.
+2. Select the **Codespaces** tab.
+3. Select **Create codespace on main**.
+4. Wait for the codespace to finish loading. VS Code opens in your browser with your repository's files on the left.
+
+## Install and start OpenCode
+
+1. Either use the terminal that is already open at the bottom of the screen, or go to the hamburger menu (☰) and choose **Terminal → New Terminal**.
+2. Type or copy and paste the following command into the terminal, then press **Enter** to run it:
+
+   ```
+   npm install -g opencode-ai
+   ```
+
+3. Once it is done, type the following and press **Enter** to get OpenCode running:
+
+   ```
+   opencode
+   ```
+
+## Choose a model
+
+1. Inside OpenCode, type or copy and paste the following, then press **Enter**:
+
+   ```
+   /models
+   ```
+
+2. Find the **OpenCode Zen** section of the list. These models are free to use.
+3. Use the arrow keys to highlight the first model in that section, then press **Enter** to choose it.
+4. Check that the name of the model appears at the bottom of the OpenCode screen.
+
+## Generate an SVG with each model
+
+An **SVG** is a picture written as text. A model can draw one by writing the code for it.
+
+1. Type or copy and paste the following into OpenCode, then press **Enter**:
+
+   ```
+   Generate an SVG of a pelican riding a bicycle.
+   ```
+
+2. Wait for OpenCode to finish, then check that the new `.svg` file appears in the file list on the left.
+3. Type `/models` again, choose the **next** free model in the OpenCode Zen section, and give it the same prompt.
+4. Repeat until every free model in the OpenCode Zen section has made an SVG.
+
+You can pick a different picture if you like, such as a cat playing a piano. Use the **same** prompt for every model so you can compare them.
+
+## Commit and push
+
+1. To save your work to GitHub, type or copy and paste the following into OpenCode, then press **Enter**:
+
+   ```
+   Commit all the SVG files and push them to GitHub.
+   ```
+
+2. Open your `svg-practice` repository on GitHub and refresh the page. Select each `.svg` file to see the picture.
+
+## When you are done
+
+Stop your codespace so it does not use up your free hours: open the menu (☰) and select **Codespaces → Stop Current Codespace**.
