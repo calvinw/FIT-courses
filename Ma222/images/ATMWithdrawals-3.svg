@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 427" width="900" height="427" font-family="sans-serif">
+<rect width="900" height="427" fill="white"/>
+<line x1="40" y1="382" x2="860" y2="382" stroke="#333" stroke-width="2"/>
+<line x1="40.0" y1="382" x2="40.0" y2="390" stroke="#333" stroke-width="2"/>
+<text x="40.0" y="412" font-size="18" text-anchor="middle" fill="#333">$10</text>
+<line x1="108.3" y1="382" x2="108.3" y2="390" stroke="#333" stroke-width="2"/>
+<text x="108.3" y="412" font-size="18" text-anchor="middle" fill="#333">$20</text>
+<line x1="176.7" y1="382" x2="176.7" y2="390" stroke="#333" stroke-width="2"/>
+<text x="176.7" y="412" font-size="18" text-anchor="middle" fill="#333">$30</text>
+<line x1="245.0" y1="382" x2="245.0" y2="390" stroke="#333" stroke-width="2"/>
+<text x="245.0" y="412" font-size="18" text-anchor="middle" fill="#333">$40</text>
+<line x1="313.3" y1="382" x2="313.3" y2="390" stroke="#333" stroke-width="2"/>
+<text x="313.3" y="412" font-size="18" text-anchor="middle" fill="#333">$50</text>
+<line x1="381.7" y1="382" x2="381.7" y2="390" stroke="#333" stroke-width="2"/>
+<text x="381.7" y="412" font-size="18" text-anchor="middle" fill="#333">$60</text>
+<line x1="450.0" y1="382" x2="450.0" y2="390" stroke="#333" stroke-width="2"/>
+<text x="450.0" y="412" font-size="18" text-anchor="middle" fill="#333">$70</text>
+<line x1="518.3" y1="382" x2="518.3" y2="390" stroke="#333" stroke-width="2"/>
+<text x="518.3" y="412" font-size="18" text-anchor="middle" fill="#333">$80</text>
+<line x1="586.7" y1="382" x2="586.7" y2="390" stroke="#333" stroke-width="2"/>
+<text x="586.7" y="412" font-size="18" text-anchor="middle" fill="#333">$90</text>
+<line x1="655.0" y1="382" x2="655.0" y2="390" stroke="#333" stroke-width="2"/>
+<text x="655.0" y="412" font-size="18" text-anchor="middle" fill="#333">$100</text>
+<line x1="723.3" y1="382" x2="723.3" y2="390" stroke="#333" stroke-width="2"/>
+<text x="723.3" y="412" font-size="18" text-anchor="middle" fill="#333">$110</text>
+<line x1="791.7" y1="382" x2="791.7" y2="390" stroke="#333" stroke-width="2"/>
+<text x="791.7" y="412" font-size="18" text-anchor="middle" fill="#333">$120</text>
+<line x1="860.0" y1="382" x2="860.0" y2="390" stroke="#333" stroke-width="2"/>
+<text x="860.0" y="412" font-size="18" text-anchor="middle" fill="#333">$130</text>
+<circle cx="108.3" cy="373.5" r="5" fill="#b5121b"/>
+<circle cx="108.3" cy="362.5" r="5" fill="#b5121b"/>
+<circle cx="108.3" cy="351.5" r="5" fill="#b5121b"/>
+<circle cx="108.3" cy="340.5" r="5" fill="#b5121b"/>
+<circle cx="108.3" cy="329.5" r="5" fill="#b5121b"/>
+<circle cx="108.3" cy="318.5" r="5" fill="#b5121b"/>
+<circle cx="108.3" cy="307.5" r="5" fill="#b5121b"/>
+<circle cx="108.3" cy="296.5" r="5" fill="#b5121b"/>
+<circle cx="108.3" cy="285.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="373.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="362.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="351.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="340.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="329.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="318.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="307.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="296.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="285.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="274.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="263.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="252.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="241.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="230.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="219.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="208.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="197.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="186.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="175.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="164.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="153.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="142.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="131.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="120.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="109.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="98.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="87.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="76.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="65.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="54.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="43.5" r="5" fill="#b5121b"/>
+<circle cx="450.0" cy="32.5" r="5" fill="#b5121b"/>
+<circle cx="791.7" cy="373.5" r="5" fill="#b5121b"/>
+<circle cx="791.7" cy="362.5" r="5" fill="#b5121b"/>
+<circle cx="791.7" cy="351.5" r="5" fill="#b5121b"/>
+<circle cx="791.7" cy="340.5" r="5" fill="#b5121b"/>
+<circle cx="791.7" cy="329.5" r="5" fill="#b5121b"/>
+<circle cx="791.7" cy="318.5" r="5" fill="#b5121b"/>
+<circle cx="791.7" cy="307.5" r="5" fill="#b5121b"/>
+<circle cx="791.7" cy="296.5" r="5" fill="#b5121b"/>
+<circle cx="791.7" cy="285.5" r="5" fill="#b5121b"/>
+</svg>
