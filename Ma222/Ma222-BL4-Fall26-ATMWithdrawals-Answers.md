@@ -19,6 +19,14 @@ A bank wants to monitor the ATM withdrawals its customers make at three location
 
 ![](images/ATMWithdrawals-1.svg){width=65%}
 
+```{=html}
+<div style="height: 3em"></div>
+```
+
+```{=latex}
+\vspace{2em}
+```
+
 ### Machine 2
 
 | Amount | \$20 | \$30 | \$40 | \$50 | \$60 | \$70 | \$80 | \$90 | \$100 | \$110 | \$120 |
@@ -26,6 +34,14 @@ A bank wants to monitor the ATM withdrawals its customers make at three location
 | Count | 2 | 8 | 1 | 9 | 2 | 6 | 2 | 9 | 1 | 8 | 2 |
 
 ![](images/ATMWithdrawals-2.svg){width=65%}
+
+```{=html}
+<div style="height: 3em"></div>
+```
+
+```{=latex}
+\vspace{2em}
+```
 
 ### Machine 3
 
