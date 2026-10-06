@@ -1,0 +1,68 @@
+---
+title: "Database Questions"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format: html
+---
+
+## Questions about the Retail Orders Database
+
+Try to answer these questions by hand first, then we'll verify the answers using SQL queries on the Dolt database. The tables are in the [Retail Orders Database slides](retail-orders-database.html), and the keys are in the [schema](database-schema.html).
+
+### Question 1: Customer Loyalty Analysis
+
+Which customer has placed the most orders, and how much total revenue have they generated for the business?
+
+---
+
+### Question 2: Customer Spending Ranking
+
+List the top 3 customers by total spending (sum of all product prices for their orders), including their name and total spent.
+
+---
+
+### Question 3: Price Range Distribution
+
+How many products fall into each price range: under $50, $50-$100, and over $100?
+
+---
+
+### Question 4: Customer Segmentation
+
+Identify which customers have only purchased products under $100, and how many such customers are there?
+
+---
+
+### Question 5: Product Popularity Analysis
+
+Which products (if any) have never been ordered? List their names and prices.
+
+---
+
+### Question 6: Repeat Purchase Analysis
+
+Which customers ordered the same product more than once? List the customer name, product name, and how many times they ordered it.
+
+---
+
+### Question 7: Monthly Revenue Analysis
+
+Which month (March or April 2025) had higher total revenue, and by how much?
+
+---
+
+### Question 8: Customer Revenue Percentage
+
+What percentage of total revenue does each customer represent? List customer names and their percentage of total sales, ordered from highest to lowest.
+
+---
+
+### Question 9: Average Order Value
+
+What is the average order value (price of product per order)? Are there any orders that are more than 50% above the average?
+
+---
+
+### Question 10: Product Pricing Analysis
+
+List all products that are priced above the average product price, along with how much more expensive they are than the average.

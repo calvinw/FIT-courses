@@ -1,0 +1,81 @@
+---
+title: "Database Summary"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format: html
+---
+
+## Marketing Database
+
+The Marketing Database is designed to track marketing campaigns and their effectiveness. It contains three interconnected tables:
+
+- **Leads Table**: Stores potential customers with their email addresses and how they were acquired (source). Each lead represents a person who has shown interest in the business.
+
+- **Campaigns Table**: Contains all the marketing activities and initiatives, including campaign names and the channels used to reach customers (Email, PPC, Social Media, etc.).
+
+- **Conversions Table**: Records the actions taken by leads in response to campaigns. It uses foreign keys (`lead_id` and `campaign_id`) to track which lead responded to which campaign, what action they took (email signup, download, trial signup, etc.), and when the conversion occurred.
+
+This database helps understand which marketing channels are most effective and which leads are most valuable.
+
+---
+
+## Retail Orders Database
+
+The Retail Orders Database manages customer purchases and product inventory for a retail business. It contains three main tables:
+
+- **Customers Table**: Maintains a complete customer directory with personal information including first name, last name, and email address. Each customer has a unique ID for reference.
+
+- **Products Table**: Contains the product catalog with details about items available for sale, including pricing and descriptions. Each product has a unique ID.
+
+- **Orders Table**: Records all customer transactions. Each order links a customer to a product through foreign keys (`customer_id` and `product_id`) and records the date of the order.
+
+This database enables tracking of customer behavior, inventory management, and order processing.
+
+---
+
+## Orders & Products Database
+
+The Orders & Products Database is a simple two-table system for tracking product sales. It contains:
+
+- **Products Table**: A catalog of items available for purchase with pricing and stock status. Products include various items like electronics, food, and apparel with varying price points and availability.
+
+- **Orders Table**: Records of customer purchases, linked to specific products by the `product_id` foreign key. Each order shows which customer bought what product, the quantity purchased, and whether the order was completed.
+
+This database provides a straightforward way to manage product inventory and order fulfillment for businesses with simpler sales structures.
+
+---
+
+## Coffee Shop Database
+
+The Coffee Shop Database manages the daily operations of a coffee shop including menu management and order tracking. It contains two main tables:
+
+- **Products Table**: Represents the coffee shop menu with 12 items across three categories (Coffee, Tea, and Pastry). Each product includes pricing information and stock availability. The menu ranges from basic espresso drinks to pastries, with prices from $2.50 to $4.50.
+
+- **Orders Table**: Records customer orders throughout the day. Each order captures which product was ordered (the `product_id` foreign key), the customer's name, the quantity, the time of order, and whether the order has been completed. This helps track order fulfillment and identify which items are most popular.
+
+This database is essential for managing daily operations, tracking popular items, and ensuring efficient order processing.
+
+---
+
+## Summary of All Databases
+
+| Database | Purpose | Tables | Foreign Keys | Key Use Cases |
+|----------|---------|--------|--------------|---------------|
+| Marketing | Track campaigns and conversions | Leads, Campaigns, Conversions | Conversions → Leads, Campaigns | Measure marketing effectiveness, identify best channels |
+| Retail Orders | Manage sales and inventory | Customers, Products, Orders | Orders → Customers, Products | Process orders, track sales, manage inventory |
+| Orders & Products | Simple product and sales tracking | Products, Orders | Orders → Products | Manage inventory, track sales, process orders |
+| Coffee Shop | Daily operations and menu | Products, Orders | Orders → Products | Track orders, manage menu, measure popularity |
+
+---
+
+## View Database Presentations
+
+Click the links below to view the detailed presentations for each database:
+
+- [Marketing Database Slides](marketing_database.html)
+- [Simple Orders & Products Database Slides](simple-orders-and-products-database.html)
+- [Retail Orders Database Slides](retail-orders-database.html)
+- [Coffee Shop Database Slides](coffee-shop-database.html)
+- [Retail Orders Database Schema](database-schema.html)
+- [Creating Dolt Databases with LLMs Guide](dolt-database-creation-guide.html)
+- [Dolt Branches and LLMs](dolt-branches-and-llms.html)

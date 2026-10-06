@@ -1,0 +1,242 @@
+---
+title: "Creating Dolt Databases with LLMs"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+---
+
+## Relational Databases
+
+- A **relational database** stores data in **tables** (rows and columns)
+- Each table holds one kind of thing: products, customers, orders
+- Tables are connected to each other through **keys**
+- We talk to the database with **SQL** (Structured Query Language)
+- [Dolt](https://www.dolthub.com) is a SQL database with Git-style versioning: branches, commits, pull requests
+
+---
+
+## Primary Keys
+
+A **Primary Key** is a column (or set of columns) that uniquely identifies each row in a table. Every row must have a unique primary key value, and it cannot be NULL.
+
+::: {style="font-size: 0.75em;"}
+| product_id | name | price | in_stock |
+|------------|------|-------|----------|
+| 1 | Wireless Headphones | 79.99 | 1 |
+| 2 | Coffee Beans | 14.99 | 1 |
+| 3 | T-Shirt | 24.99 | 1 |
+| 4 | USB-C Cable | 12.99 | 0 |
+:::
+
+In this Products table, `product_id` is the primary key that uniquely identifies each product.
+
+---
+
+## Foreign Keys
+
+A **Foreign Key** is a column that references the primary key of another table.
+
+::: {style="font-size: 0.5em;"}
+
+**Products Table**
+
+| product_id | name | price | in_stock |
+|------------|------|-------|----------|
+| 1 | Wireless Headphones | 79.99 | 1 |
+| 2 | Coffee Beans | 14.99 | 1 |
+| 3 | T-Shirt | 24.99 | 1 |
+
+**Orders Table**
+
+| order_id | product_id | customer | qty | completed |
+|----------|-----------|----------|-----|-----------|
+| 101 | 1 | Alice | 2 | 1 |
+| 102 | 2 | Bob | 5 | 1 |
+| 103 | 3 | Carol | 3 | 0 |
+
+:::
+
+The `product_id` in Orders references `product_id` in Products.
+
+---
+
+## Foreign Keys Protect Your Data
+
+- The database **checks** every foreign key value
+- An order must point to a product that **exists**
+
+```sql
+-- Fails: there is no product with product_id 99
+INSERT INTO orders VALUES (106, 99, 'Emily', 1, 1);
+```
+
+- You also can't delete a product that orders still point to
+- This is called **referential integrity**
+
+---
+
+## Relationships Between Tables
+
+```{mermaid}
+erDiagram
+    PRODUCTS ||--o{ ORDERS : "ordered in"
+    PRODUCTS {
+        int product_id PK
+        varchar name
+        decimal price
+        tinyint in_stock
+    }
+    ORDERS {
+        int order_id PK
+        int product_id FK
+        varchar customer
+        int qty
+        tinyint completed
+    }
+```
+
+**One-to-many:** one product can appear in many orders, but each order is for one product.
+
+---
+
+## MySQL Data Types
+
+::: {style="font-size: 0.65em;"}
+| Data Type | Description | Example |
+|-----------|-------------|---------|
+| INT | Integer (whole numbers) | 1, 100, -50 |
+| VARCHAR(n) | Text up to n characters | 'John', 'hello' |
+| DECIMAL(m,n) | Exact decimal: m digits, n after the point | 99.99, 19.50 |
+| TEXT | Long text content | Descriptions, comments |
+| TIMESTAMP | Date and time | 2025-04-13 08:15:00 |
+| TINYINT | Small integer (-128 to 127) | 0, 1 (true/false) |
+| DATE | Date only | 2025-04-13 |
+:::
+
+---
+
+## Step 1: Create a Dolt Account
+
+Visit [https://www.dolthub.com](https://www.dolthub.com) and click the "Sign Up" button. Fill in your email address and create a password. You'll receive a verification email to confirm your account.
+
+Once verified, you'll have access to all Dolt features including the ability to create and manage databases.
+
+---
+
+## Step 2: Navigate to Your Profile
+
+Once logged in, go to [https://www.dolthub.com/profile](https://www.dolthub.com/profile) to access your dashboard. This is where you can manage all your databases and repositories.
+
+---
+
+## Step 3: Create a New Database
+
+On your profile page, click the **"Create Database"** button. Choose a name for your database (for example: "simple-orders-and-products"). Provide a description if desired, then click **"Create"**.
+
+Your new database will be created and you'll be taken to the database homepage.
+
+---
+
+## Step 4: Generate Complete SQL Script
+
+Prepare all your database information:
+
+- Table descriptions and structure
+- Sample data for each table
+- Which column is the **primary key** of each table, and which columns are **foreign keys**
+- Paste everything into an LLM (like Gemini or Claude)
+- Have the LLM generate ONE complete SQL script with both CREATE TABLE and INSERT statements
+
+---
+
+## Example Complete SQL Script
+
+::: {style="font-size: 0.65em;"}
+```sql
+CREATE TABLE products (
+  product_id INT PRIMARY KEY,
+  name VARCHAR(100),
+  price DECIMAL(10,2),
+  in_stock TINYINT
+);
+
+CREATE TABLE orders (
+  order_id INT PRIMARY KEY,
+  product_id INT,
+  customer VARCHAR(100),
+  qty INT,
+  completed TINYINT,
+  FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+INSERT INTO products VALUES (1, 'Wireless Headphones', 79.99, 1);
+INSERT INTO products VALUES (2, 'Coffee Beans', 14.99, 1);
+
+INSERT INTO orders VALUES (101, 1, 'Alice', 2, 1);
+INSERT INTO orders VALUES (102, 2, 'Bob', 5, 1);
+```
+:::
+
+Create the `products` table first: `orders` can only reference a table that already exists.
+
+---
+
+## Step 5: Upload and Run SQL Script
+
+Once you have your complete SQL script from the LLM:
+
+1. Copy and paste the script into [SQL File Save Utility](https://gemini.google.com/share/25c00e5399fc) and save it to your hard drive as `create_database.sql` or similar.
+2. Go to your database on Dolt
+3. Click the **"Add"** menu on the far right
+4. Choose **"Upload a file"**
+5. Select your SQL file and upload it
+6. The script will execute, creating all tables and inserting data on a branch.
+
+---
+
+## Step 6: Merge the Changes
+
+The changes are placed on a **branch**, not on the main branch. To commit your changes to the main branch:
+
+1. After the uploaded script executes, navigate to the **"Jobs"** section
+2. Look for **"Pull Request #1"** (or similar)
+3. Click on the pull request to open it
+4. Look for the **"Merge"** button
+5. Click **"Merge"** to merge your changes from the temporary branch to the main branch
+
+---
+
+## Step 7: Check Your Changes on the Main Branch
+
+1. **Refresh the whole repo webpage** - changes don't always appear right away
+2. Your tables and data are now permanently saved on the main branch
+
+---
+
+## Query Your Data
+
+Use SELECT statements to view your data:
+
+```sql
+SELECT * FROM products;
+
+SELECT * FROM orders WHERE completed = 1;
+```
+
+---
+
+## Joining Tables with Keys
+
+A **JOIN** matches the foreign key in one table to the primary key in another:
+
+```sql
+SELECT p.name, COUNT(o.order_id) AS total_orders
+FROM products p
+LEFT JOIN orders o ON p.product_id = o.product_id
+GROUP BY p.product_id, p.name;
+```
+
+`LEFT JOIN` keeps products with no orders (they show `0`).

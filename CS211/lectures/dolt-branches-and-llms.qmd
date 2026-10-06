@@ -1,0 +1,49 @@
+---
+title: "Dolt Branches and LLMs"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format: revealjs
+---
+
+## Allowing an LLM to Edit a Database
+
+::: {style="font-size: 0.85em;"}
+
+When working with an LLM it is dangerous to have them editing directly your data sources.
+
+- **LLMs can hallucinate** - they may generate incorrect data or SQL
+- **They can make mistakes and misunderstand your prompt instructions** - instructions can be ambiguous
+- **It is always smart to use a backup when editing your database** - protect yourself from unwanted changes
+
+:::
+
+---
+
+## Creating an API Key for the LLM
+
+::: {style="font-size: 0.85em;"}
+
+You can create an API key in Dolt so that you can have an LLM making changes to the database. 
+
+- This is usually called a **write** or **commit Token** and is found under **Settings > Tokens** in Dolt
+- Create one of these and save it somewhere secure so that you can give it to the LLM later
+- Configure permissions so that it only works on the database you are working on
+- Optionally restrict it to only the allowed branch that the LLM will work on
+
+:::
+
+---
+
+## Creating a Branch for the LLM to Use
+
+::: {style="font-size: 0.85em;"}
+
+In Dolt you can have the LLM make database changes using `write_query` on a dedicated branch. This workflow keeps your main branch safe.
+
+- **Create a branch** in the database for the LLM to do its work on
+- **Give the LLM an API key** to write to the database, but only on the branch (not main)
+- **Work with the LLM** to do the work on the branch (INSERTS, UPDATES, etc.)
+- **Check the work** before committing it to main - review all changes carefully
+- **Create a Pull Request** to merge the branch, then merge that request to make changes permanent
+
+:::

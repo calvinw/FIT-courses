@@ -1,0 +1,250 @@
+---
+title: "Database Questions - SQL Queries"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format: html
+---
+
+## SQL Queries for Retail Orders Database Questions
+
+---
+
+### Question 1: Customer Loyalty Analysis
+
+**Question:** Which customer has placed the most orders, and how much total revenue have they generated for the business?
+
+```sql
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    COUNT(o.order_id) AS order_count,
+    SUM(p.price) AS total_revenue
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN products p ON o.product_id = p.product_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+ORDER BY order_count DESC, total_revenue DESC
+LIMIT 1;
+```
+
+---
+
+### Question 2: Customer Spending Ranking
+
+**Question:** List the top 3 customers by total spending (sum of all product prices for their orders), including their name and total spent.
+
+```sql
+SELECT
+    c.first_name,
+    c.last_name,
+    SUM(p.price) AS total_spent
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN products p ON o.product_id = p.product_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+ORDER BY total_spent DESC
+LIMIT 3;
+```
+
+---
+
+### Question 3: Price Range Distribution
+
+**Question:** How many products fall into each price range: under $50, $50-$100, and over $100?
+
+```sql
+SELECT
+    CASE
+        WHEN price < 50 THEN 'Under $50'
+        WHEN price >= 50 AND price <= 100 THEN '$50-$100'
+        WHEN price > 100 THEN 'Over $100'
+    END AS price_range,
+    COUNT(*) AS product_count
+FROM products
+GROUP BY price_range
+ORDER BY
+    CASE
+        WHEN price < 50 THEN 1
+        WHEN price >= 50 AND price <= 100 THEN 2
+        WHEN price > 100 THEN 3
+    END;
+```
+
+---
+
+### Question 4: Customer Segmentation
+
+**Question:** Identify which customers have only purchased products under $100, and how many such customers are there?
+
+```sql
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    MAX(p.price) AS max_purchase_price
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN products p ON o.product_id = p.product_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+HAVING MAX(p.price) < 100
+ORDER BY c.last_name;
+```
+
+To get just the count:
+
+```sql
+SELECT COUNT(*) AS customer_count
+FROM (
+    SELECT c.customer_id
+    FROM customers c
+    JOIN orders o ON c.customer_id = o.customer_id
+    JOIN products p ON o.product_id = p.product_id
+    GROUP BY c.customer_id
+    HAVING MAX(p.price) < 100
+) AS customers_under_100;
+```
+
+---
+
+### Question 5: Product Popularity Analysis
+
+**Question:** Which products (if any) have never been ordered? List their names and prices.
+
+```sql
+SELECT
+    p.product_id,
+    p.name,
+    p.price
+FROM products p
+LEFT JOIN orders o ON p.product_id = o.product_id
+WHERE o.order_id IS NULL
+ORDER BY p.price DESC;
+```
+
+---
+
+### Question 6: Repeat Purchase Analysis
+
+**Question:** Which customers ordered the same product more than once? List the customer name, product name, and how many times they ordered it.
+
+```sql
+SELECT
+    c.first_name,
+    c.last_name,
+    p.name AS product_name,
+    COUNT(*) AS times_ordered
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN products p ON o.product_id = p.product_id
+GROUP BY c.customer_id, c.first_name, c.last_name, p.product_id, p.name
+HAVING COUNT(*) > 1
+ORDER BY times_ordered DESC;
+```
+
+---
+
+### Question 7: Monthly Revenue Analysis
+
+**Question:** Which month (March or April 2025) had higher total revenue, and by how much?
+
+```sql
+SELECT
+    MONTH(order_date) AS month,
+    MONTHNAME(order_date) AS month_name,
+    SUM(p.price) AS monthly_revenue
+FROM orders o
+JOIN products p ON o.product_id = p.product_id
+WHERE YEAR(order_date) = 2025 AND MONTH(order_date) IN (3, 4)
+GROUP BY MONTH(order_date), MONTHNAME(order_date)
+ORDER BY month;
+```
+
+To calculate the difference:
+
+```sql
+SELECT
+    ABS(
+        (SELECT SUM(p.price)
+         FROM orders o
+         JOIN products p ON o.product_id = p.product_id
+         WHERE MONTH(order_date) = 3 AND YEAR(order_date) = 2025) -
+        (SELECT SUM(p.price)
+         FROM orders o
+         JOIN products p ON o.product_id = p.product_id
+         WHERE MONTH(order_date) = 4 AND YEAR(order_date) = 2025)
+    ) AS revenue_difference;
+```
+
+---
+
+### Question 8: Customer Revenue Percentage
+
+**Question:** What percentage of total revenue does each customer represent? List customer names and their percentage of total sales, ordered from highest to lowest.
+
+```sql
+SELECT
+    c.first_name,
+    c.last_name,
+    SUM(p.price) AS customer_revenue,
+    ROUND(
+        (SUM(p.price) / (SELECT SUM(p2.price)
+                         FROM orders o2
+                         JOIN products p2 ON o2.product_id = p2.product_id)) * 100,
+        2
+    ) AS revenue_percentage
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN products p ON o.product_id = p.product_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+ORDER BY revenue_percentage DESC;
+```
+
+---
+
+### Question 9: Average Order Value
+
+**Question:** What is the average order value (price of product per order)? Are there any orders that are more than 50% above the average?
+
+```sql
+-- First, get the average
+SELECT AVG(p.price) AS average_order_value
+FROM orders o
+JOIN products p ON o.product_id = p.product_id;
+
+-- Then find orders more than 50% above average
+SELECT
+    o.order_id,
+    c.first_name,
+    c.last_name,
+    pr.name AS product_name,
+    pr.price AS order_value,
+    ROUND((SELECT AVG(p.price) FROM orders o2 JOIN products p ON o2.product_id = p.product_id), 2) AS avg_order_value
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN products pr ON o.product_id = pr.product_id
+WHERE pr.price > (
+    SELECT AVG(p.price) * 1.5
+    FROM orders o2
+    JOIN products p ON o2.product_id = p.product_id
+)
+ORDER BY pr.price DESC;
+```
+
+---
+
+### Question 10: Product Pricing Analysis
+
+**Question:** List all products that are priced above the average product price, along with how much more expensive they are than the average.
+
+```sql
+SELECT
+    product_id,
+    name,
+    price,
+    ROUND((SELECT AVG(price) FROM products), 2) AS average_price,
+    ROUND(price - (SELECT AVG(price) FROM products), 2) AS price_above_average
+FROM products
+WHERE price > (SELECT AVG(price) FROM products)
+ORDER BY price_above_average DESC;
+```

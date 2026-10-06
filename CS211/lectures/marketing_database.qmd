@@ -1,0 +1,45 @@
+---
+title: "Marketing Database"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format: revealjs
+---
+
+## 1. Leads Table
+
+Description: This table is your list of potential customers. It stores the "who" – any person who has shown interest in your business but hasn't necessarily bought anything yet. Each lead gets a unique ID: `lead_id` is the primary key.
+
+::: {style="font-size: 0.8em;"}
+| lead_id | email | source |
+|---------|-------|--------|
+| 1 | sarah.j@example.com | Web Form |
+| 2 | kevin.lee@example.com | Newsletter Sign-up |
+| 3 | amanda.w@example.com | Trade Show |
+| 4 | brian.c@example.com | Web Form |
+:::
+
+## 2. Campaigns Table
+
+Description: This table is your list of marketing activities. It stores the "what" – the different campaigns you are running to try and attract leads. Each campaign gets a unique ID: `campaign_id` is the primary key.
+
+::: {style="font-size: 0.8em;"}
+| campaign_id | campaign_name | channel |
+|-------------|---------------|---------|
+| 10 | Spring 2025 Sale | Email |
+| 11 | Free Trial Offer | PPC (Google Ads) |
+| 12 | Holiday Gift Guide | Social (Instagram) |
+| 13 | Summer Clearance | Email |
+:::
+
+## 3. Conversions Table
+
+Description: This table links the leads and campaigns tables together. It records the "action" – which lead responded to which campaign, what they did, and when it happened. `lead_id` and `campaign_id` are foreign keys that refer back to the first two tables.
+
+::: {style="font-size: 0.75em;"}
+| conversion_id | lead_id | campaign_id | conversion_date | action |
+|---------------|---------|-------------|-----------------|--------|
+| 500 | 1 | 10 | 2025-06-15 09:15:00 | Email signup |
+| 501 | 3 | 12 | 2025-07-22 11:30:00 | Download guide |
+| 502 | 1 | 11 | 2025-08-03 14:00:00 | Trial signup |
+| 503 | 2 | 10 | 2025-08-18 16:45:00 | Email signup |
+:::

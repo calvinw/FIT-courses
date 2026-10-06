@@ -1,0 +1,97 @@
+---
+title: "Retail Orders Database Schema"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format: html
+---
+
+## Database Schema
+
+This document describes the structure of the retail orders database tables.
+
+In the **Key** column, `PRI` marks a primary key, `UNI` a unique key, and `MUL` an indexed column whose values can repeat (here, the foreign keys).
+
+---
+
+## Customers Table
+
+| Field | Type | Null | Key | Default | Extra |
+|-------|------|------|-----|---------|-------|
+| customer_id | int | NO | PRI | NULL | auto_increment |
+| first_name | varchar(50) | NO |  | NULL | |
+| last_name | varchar(50) | NO |  | NULL | |
+| email | varchar(100) | NO | UNI | NULL | |
+
+**Primary Key:** customer_id
+
+**Unique Key:** email
+
+**Description:** Stores customer information including name and contact details.
+
+---
+
+## Orders Table
+
+| Field | Type | Null | Key | Default | Extra |
+|-------|------|------|-----|---------|-------|
+| order_id | int | NO | PRI | NULL | auto_increment |
+| customer_id | int | NO | MUL | NULL | |
+| product_id | int | NO | MUL | NULL | |
+| order_date | timestamp | YES |  | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+
+**Primary Key:** order_id
+
+**Foreign Keys:**
+- customer_id references customers(customer_id)
+- product_id references products(product_id)
+
+**Description:** Records customer orders with references to customer and product. Order date defaults to current timestamp.
+
+---
+
+## Products Table
+
+| Field | Type | Null | Key | Default | Extra |
+|-------|------|------|-----|---------|-------|
+| product_id | int | NO | PRI | NULL | auto_increment |
+| name | varchar(100) | NO |  | NULL | |
+| price | decimal(10,2) | NO |  | NULL | |
+| description | varchar(100) | NO |  | NULL | |
+
+**Primary Key:** product_id
+
+**Description:** Contains the product catalog with name, price, and description.
+
+---
+
+## Entity Relationship Diagram
+
+```{mermaid}
+erDiagram
+    CUSTOMERS ||--o{ ORDERS : places
+    PRODUCTS ||--o{ ORDERS : "ordered in"
+    CUSTOMERS {
+        int customer_id PK
+        varchar first_name
+        varchar last_name
+        varchar email UK
+    }
+    ORDERS {
+        int order_id PK
+        int customer_id FK
+        int product_id FK
+        timestamp order_date
+    }
+    PRODUCTS {
+        int product_id PK
+        varchar name
+        decimal price
+        varchar description
+    }
+```
+
+## Key Relationships
+
+- **One-to-Many:** One customer can place many orders
+- **Many-to-One:** Many orders can reference one product
+- **Many-to-Many (through Orders):** Customers and products have a many-to-many relationship via the orders table

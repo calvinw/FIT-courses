@@ -1,0 +1,33 @@
+---
+title: "Simple Orders & Products Database"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format: revealjs
+---
+
+## 1. Products Table
+
+Description: Stores your catalog of items – product ID, name, price, and availability. `product_id` is the primary key.
+
+::: {style="font-size: 0.8em;"}
+| product_id | name | price | in_stock |
+|------------|------|-------|----------|
+| 1 | Wireless Headphones | 79.99 | 1 |
+| 2 | Coffee Beans | 14.99 | 1 |
+| 3 | T-Shirt | 24.99 | 1 |
+| 4 | USB-C Cable | 12.99 | 0 |
+:::
+
+## 2. Orders Table
+
+Description: Records transactions – which customer bought what product, quantity ordered, and completion status. `order_id` is the primary key, and `product_id` is a foreign key that links to the Products table.
+
+::: {style="font-size: 0.8em;"}
+| order_id | product_id | customer | qty | completed |
+|----------|------------|----------|-----|-----------|
+| 101 | 1 | Alice | 2 | 1 |
+| 102 | 2 | Bob | 5 | 1 |
+| 103 | 3 | Carol | 3 | 0 |
+| 104 | 1 | David | 1 | 1 |
+| 105 | 3 | Alice | 1 | 1 |
+:::

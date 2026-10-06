@@ -1,0 +1,61 @@
+---
+title: "Retail Orders Database"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format: revealjs
+---
+
+## 1. Customers Table
+
+Description: This table stores customer information – the "who" with names and contact details. Each customer gets a unique ID: `customer_id` is the primary key.
+
+::: {style="font-size: 0.65em;"}
+| customer_id | first_name | last_name | email |
+|------------|-----------|----------|------------------------|
+| 1 | John | Doe | john.doe@example.com |
+| 2 | Jane | Smith | jane.smith@example.com |
+| 3 | Robert | Johnson | robert.johnson@example.com |
+| 4 | Sarah | Williams | sarah.williams@example.com |
+| 5 | Michael | Brown | michael.brown@example.com |
+| 6 | Emily | Jones | emily.jones@example.com |
+| 7 | David | Miller | david.miller@example.com |
+| 8 | Lisa | Davis | lisa.davis@example.com |
+:::
+
+## 2. Products Table
+
+Description: This table stores product information – the "what" with pricing and descriptions. Each product gets a unique ID: `product_id` is the primary key.
+
+::: {style="font-size: 0.55em;"}
+| product_id | name | price | description |
+|-----------|-----|-------|-------------------------|
+| 1 | Silk Blouse | 89.99 | Elegant office wear |
+| 2 | Denim Jeans | 79.99 | Classic straight cut |
+| 3 | Cashmere Sweater | 149.99 | Soft winter essential |
+| 4 | Leather Jacket | 249.99 | Stylish outerwear |
+| 5 | Cotton T-Shirt | 29.99 | Casual everyday staple |
+| 6 | Linen Dress | 119.99 | Perfect summer outfit |
+| 7 | Wool Coat | 199.99 | Warm winter classic |
+| 8 | Canvas Sneakers | 59.99 | Comfortable streetwear |
+| 9 | Satin Skirt | 69.99 | Versatile evening piece |
+| 10 | Knit Cardigan | 89.99 | Cozy layering option |
+:::
+
+## 3. Orders Table
+
+Description: This table links customers and products together – the "transaction" showing who ordered what and when. `customer_id` and `product_id` are foreign keys that refer back to the Customers and Products tables.
+
+::: {style="font-size: 0.6em;"}
+| order_id | customer_id | product_id | order_date |
+|----------|------------|-----------|-----|
+| 1 | 1 | 3 | 2025-03-10 |
+| 2 | 2 | 1 | 2025-03-12 |
+| 3 | 3 | 5 | 2025-03-15 |
+| 4 | 2 | 5 | 2025-03-18 |
+| 5 | 4 | 2 | 2025-03-20 |
+| 6 | 5 | 5 | 2025-03-22 |
+| 7 | 2 | 3 | 2025-03-25 |
+| 8 | 6 | 2 | 2025-03-28 |
+| 9 | 7 | 1 | 2025-04-01 |
+| 10 | 1 | 3 | 2025-04-05 |
+:::
