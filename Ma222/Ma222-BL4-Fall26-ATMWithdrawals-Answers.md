@@ -9,7 +9,7 @@ format:
 
 # Answers: ATM Withdrawals at Three Machines
 
-A bank wants to monitor the ATM withdrawals its customers make at three locations. The bank samples 50 withdrawals from each machine. For each machine, the table shows how many of the 50 withdrawals were for each amount, with the dotplot below it. The data is also in [ATMWithdrawals.csv](data/ATMWithdrawals.csv), one column per machine, so you can open it in Google Sheets.
+A bank wants to monitor the ATM withdrawals its customers make at three locations. The bank samples 50 withdrawals from each machine. For each machine, the table shows how many of the 50 withdrawals were for each amount, with the dotplot below it. The data is also in [this Google Sheet](https://docs.google.com/spreadsheets/d/15pFkGd14hbOmTyxklF73Yys3RhEmTmI2aKSHvLdejiA/edit?usp=sharing), one column per machine.
 
 ### Machine 1
 
