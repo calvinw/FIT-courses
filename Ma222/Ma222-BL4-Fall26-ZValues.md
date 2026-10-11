@@ -7,11 +7,11 @@ format:
     fontsize: 10pt
 ---
 
-# Z-Values for Commute Times
+# Z-Values
 
-The commute times of students to campus have mean $\mu = 33$ minutes and standard deviation $\sigma = 4$ minutes.
+The mean is $\mu = 33$ and the standard deviation is $\sigma = 4$.
 
-The z-value of a commute time $x$ is
+The z-value of a data value $x$ is
 
 $$
 z = \frac{x - \mu}{\sigma}
@@ -21,14 +21,14 @@ a) Fill in the x-values for each z-value on the number line.
 
 ![](images/ZValues-question.svg){width=80%}
 
-For each commute time below:
+For each data value below:
 
 - **Visually:** mark $x$ on the number line and read off its z-value.
 - **Calculate:** find the z-value with the formula.
 
 Check that your two answers match.
 
-### b) Ana's commute is $x = 39$ minutes
+### b) $x = 39$
 
 ![](images/ZValues-line.svg){width=80%}
 
@@ -44,7 +44,7 @@ Calculate: $z = \dfrac{39 - 33}{4} =$ \_\_\_\_\_\_\_\_\_\_\_\_
 \vspace{1.5em}
 ```
 
-### c) Ben's commute is $x = 31$ minutes
+### c) $x = 31$
 
 ![](images/ZValues-line.svg){width=80%}
 
@@ -60,7 +60,7 @@ Calculate: $z =$ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 \vspace{1.5em}
 ```
 
-### d) Carla's commute is $x = 26$ minutes
+### d) $x = 26$
 
 ![](images/ZValues-line.svg){width=80%}
 
@@ -76,7 +76,7 @@ Calculate: $z =$ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 \vspace{1.5em}
 ```
 
-### e) Dev's commute is $x = 36$ minutes
+### e) $x = 36$
 
 ![](images/ZValues-line.svg){width=80%}
 
