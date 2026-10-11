@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 185" width="900" height="185" font-family="sans-serif">
+<rect width="900" height="185" fill="white"/>
+<text x="20" y="65" font-size="20" fill="#b5121b">x</text>
+<text x="20" y="135" font-size="20" fill="#1f5fa8">z</text>
+<line x1="40" y1="90" x2="860" y2="90" stroke="#333" stroke-width="2"/>
+<line x1="60.0" y1="85" x2="60.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="60.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">11</text>
+<line x1="99.0" y1="85" x2="99.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="99.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">12</text>
+<line x1="138.0" y1="85" x2="138.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="138.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">13</text>
+<line x1="177.0" y1="85" x2="177.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="177.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">14</text>
+<line x1="216.0" y1="85" x2="216.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="216.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">15</text>
+<line x1="255.0" y1="85" x2="255.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="255.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">16</text>
+<line x1="294.0" y1="85" x2="294.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="294.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">17</text>
+<line x1="333.0" y1="85" x2="333.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="333.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">18</text>
+<line x1="372.0" y1="85" x2="372.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="372.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">19</text>
+<line x1="411.0" y1="85" x2="411.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="411.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">20</text>
+<line x1="450.0" y1="85" x2="450.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="450.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">21</text>
+<line x1="489.0" y1="85" x2="489.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="489.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">22</text>
+<line x1="528.0" y1="85" x2="528.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="528.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">23</text>
+<line x1="567.0" y1="85" x2="567.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="567.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">24</text>
+<line x1="606.0" y1="85" x2="606.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="606.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">25</text>
+<line x1="645.0" y1="85" x2="645.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="645.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">26</text>
+<line x1="684.0" y1="85" x2="684.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="684.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">27</text>
+<line x1="723.0" y1="85" x2="723.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="723.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">28</text>
+<line x1="762.0" y1="85" x2="762.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="762.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">29</text>
+<line x1="801.0" y1="85" x2="801.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="801.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">30</text>
+<line x1="840.0" y1="85" x2="840.0" y2="95" stroke="#333" stroke-width="1.5"/>
+<text x="840.0" y="65" font-size="20" text-anchor="middle" fill="#b5121b">31</text>
+<line x1="60.0" y1="78" x2="60.0" y2="102" stroke="#333" stroke-width="3"/>
+<text x="60.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">-2</text>
+<line x1="255.0" y1="78" x2="255.0" y2="102" stroke="#333" stroke-width="3"/>
+<text x="255.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">-1</text>
+<line x1="450.0" y1="78" x2="450.0" y2="102" stroke="#333" stroke-width="3"/>
+<text x="450.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">0</text>
+<line x1="645.0" y1="78" x2="645.0" y2="102" stroke="#333" stroke-width="3"/>
+<text x="645.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">1</text>
+<line x1="840.0" y1="78" x2="840.0" y2="102" stroke="#333" stroke-width="3"/>
+<text x="840.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">2</text>
+<circle cx="723.0" cy="90" r="9" fill="#2a8a3e"/>
+<line x1="723.0" y1="100" x2="723.0" y2="152" stroke="#2a8a3e" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="723.0" y="175" font-size="22" font-weight="bold" text-anchor="middle" fill="#2a8a3e">z = 1.4</text>
+</svg>
