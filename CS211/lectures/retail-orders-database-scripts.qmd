@@ -1,0 +1,166 @@
+---
+title: "Retail Orders Database: Starter SQL Scripts"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    code-copy: true
+    toc: true
+---
+
+These scripts build a small retail orders database with three tables:
+`customers`, `products`, and `orders`. Copy each block (use the copy button in
+its top right corner) and paste it into the Dolt online SQL editor, then run it.
+Run the blocks in order: `orders` refers to the other two tables, so they have
+to exist first.
+
+## 1. Create the customers table
+
+Each customer gets a unique `customer_id`, which is the primary key.
+
+```sql
+CREATE TABLE customers (
+  customer_id int NOT NULL,
+  first_name varchar(255),
+  last_name varchar(255),
+  email varchar(255),
+  PRIMARY KEY (customer_id)
+);
+```
+
+## 2. Add the customers
+
+```sql
+INSERT INTO customers (customer_id, first_name, last_name, email) VALUES
+(1, 'John', 'Doe', 'john.doe@example.com'),
+(2, 'Jane', 'Smith', 'jane.smith@example.com'),
+(3, 'Robert', 'Johnson', 'robert.johnson@example.com'),
+(4, 'Sarah', 'Williams', 'sarah.williams@example.com'),
+(5, 'Michael', 'Brown', 'michael.brown@example.com'),
+(6, 'Emily', 'Jones', 'emily.jones@example.com'),
+(7, 'David', 'Miller', 'david.miller@example.com'),
+(8, 'Lisa', 'Davis', 'lisa.davis@example.com');
+```
+
+## 3. Create the products table
+
+Each product gets a unique `product_id`, which is the primary key.
+
+```sql
+CREATE TABLE products (
+  product_id int NOT NULL,
+  name varchar(255),
+  price decimal(10,2),
+  description varchar(1023),
+  PRIMARY KEY (product_id)
+);
+```
+
+## 4. Add the products
+
+```sql
+INSERT INTO products (product_id, name, price, description) VALUES
+(1, 'Silk Blouse', 89.99, 'Elegant office wear'),
+(2, 'Denim Jeans', 79.99, 'Classic straight cut'),
+(3, 'Cashmere Sweater', 149.99, 'Soft winter essential'),
+(4, 'Leather Jacket', 249.99, 'Stylish outerwear'),
+(5, 'Cotton T-Shirt', 29.99, 'Casual everyday staple'),
+(6, 'Linen Dress', 119.99, 'Perfect summer outfit'),
+(7, 'Wool Coat', 199.99, 'Warm winter classic'),
+(8, 'Canvas Sneakers', 59.99, 'Comfortable streetwear'),
+(9, 'Satin Skirt', 69.99, 'Versatile evening piece'),
+(10, 'Knit Cardigan', 89.99, 'Cozy layering option');
+```
+
+## 5. Create the orders table
+
+Each order records who bought what and when. `order_id` is the primary key.
+`customer_id` and `product_id` are foreign keys that point back to the
+`customers` and `products` tables.
+
+```sql
+CREATE TABLE orders (
+  order_id int NOT NULL,
+  customer_id int NOT NULL,
+  product_id int NOT NULL,
+  order_date datetime,
+  PRIMARY KEY (order_id),
+  FOREIGN KEY (customer_id) REFERENCES customers (customer_id),
+  FOREIGN KEY (product_id) REFERENCES products (product_id)
+);
+```
+
+## 6. Add the orders
+
+```sql
+INSERT INTO orders (order_id, customer_id, product_id, order_date) VALUES
+(1, 1, 3, '2025-03-10 14:30:00'),
+(2, 2, 1, '2025-03-12 09:15:00'),
+(3, 3, 5, '2025-03-15 16:45:00'),
+(4, 2, 5, '2025-03-18 11:20:00'),
+(5, 4, 2, '2025-03-20 13:10:00'),
+(6, 5, 5, '2025-03-22 10:30:00'),
+(7, 2, 3, '2025-03-25 15:45:00'),
+(8, 6, 2, '2025-03-28 12:00:00'),
+(9, 7, 1, '2025-04-01 09:30:00'),
+(10, 1, 3, '2025-04-05 14:15:00');
+```
+
+## 7. Try some queries
+
+All the orders:
+
+```sql
+SELECT * FROM orders;
+```
+
+Each order with the customer's name and the product they bought:
+
+```sql
+SELECT o.order_id, c.first_name, c.last_name, p.name, p.price, o.order_date
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN products p ON o.product_id = p.product_id
+ORDER BY o.order_date;
+```
+
+How many orders each customer placed and how much they spent:
+
+```sql
+SELECT c.first_name, c.last_name, COUNT(*) AS num_orders, SUM(p.price) AS total_spent
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN products p ON o.product_id = p.product_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+ORDER BY total_spent DESC;
+```
+
+How many times each product was ordered:
+
+```sql
+SELECT p.name, COUNT(*) AS times_ordered
+FROM orders o
+JOIN products p ON o.product_id = p.product_id
+GROUP BY p.product_id, p.name
+ORDER BY times_ordered DESC;
+```
+
+Customers who haven't placed any orders:
+
+```sql
+SELECT c.first_name, c.last_name
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id
+WHERE o.order_id IS NULL;
+```
+
+## Start over
+
+To delete all three tables and begin again from step 1. `orders` is dropped
+first because it refers to the other two.
+
+```sql
+DROP TABLE orders;
+DROP TABLE products;
+DROP TABLE customers;
+```
