@@ -9,7 +9,7 @@ format:
 ---
 
 These scripts build a small `books` database. Copy each block (use the copy
-button in its top right corner) and paste it into the Dolt SQL workbench, then
+button in its top right corner) and paste it into the Dolt online SQL editor, then
 run it. Run the blocks in order.
 
 ## 1. Create the table
@@ -39,17 +39,7 @@ INSERT INTO books (id, title, author, year, genre) VALUES
 (5, 'Moby Dick', 'Herman Melville', 1851, 'Adventure');
 ```
 
-## 3. Save your work with a Dolt commit
-
-Dolt keeps a history of your database, like Git does for files. This stages
-every changed table and commits it with a message.
-
-```sql
-CALL DOLT_ADD('-A');
-CALL DOLT_COMMIT('-m', 'Create books table with classics');
-```
-
-## 4. Add science fiction books
+## 3. Add science fiction books
 
 ```sql
 INSERT INTO books (id, title, author, year, genre) VALUES
@@ -60,7 +50,7 @@ INSERT INTO books (id, title, author, year, genre) VALUES
 (10, 'The Martian Chronicles', 'Ray Bradbury', 1950, 'Science Fiction');
 ```
 
-## 5. Add self help books
+## 4. Add self help books
 
 ```sql
 INSERT INTO books (id, title, author, year, genre) VALUES
@@ -71,12 +61,7 @@ INSERT INTO books (id, title, author, year, genre) VALUES
 (15, 'How to Win Friends and Influence People', 'Dale Carnegie', 1936, 'Self Help');
 ```
 
-```sql
-CALL DOLT_ADD('-A');
-CALL DOLT_COMMIT('-m', 'Add science fiction and self help books');
-```
-
-## 6. Try some queries
+## 5. Try some queries
 
 All the books:
 
@@ -109,22 +94,6 @@ SELECT genre, COUNT(*) AS num_books
 FROM books
 GROUP BY genre
 ORDER BY num_books DESC;
-```
-
-## 7. Look at the history
-
-The commits you made:
-
-```sql
-SELECT commit_hash, committer, message, date
-FROM dolt_log;
-```
-
-Every row added, changed, or deleted in the `books` table, and which commit did it:
-
-```sql
-SELECT to_id, to_title, diff_type, to_commit
-FROM dolt_diff_books;
 ```
 
 ## Start over

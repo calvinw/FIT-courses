@@ -85,11 +85,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#create-the-table" id="toc-create-the-table" class="nav-link active" data-scroll-target="#create-the-table">1. Create the table</a></li>
   <li><a href="#add-some-classics" id="toc-add-some-classics" class="nav-link" data-scroll-target="#add-some-classics">2. Add some classics</a></li>
-  <li><a href="#save-your-work-with-a-dolt-commit" id="toc-save-your-work-with-a-dolt-commit" class="nav-link" data-scroll-target="#save-your-work-with-a-dolt-commit">3. Save your work with a Dolt commit</a></li>
-  <li><a href="#add-science-fiction-books" id="toc-add-science-fiction-books" class="nav-link" data-scroll-target="#add-science-fiction-books">4. Add science fiction books</a></li>
-  <li><a href="#add-self-help-books" id="toc-add-self-help-books" class="nav-link" data-scroll-target="#add-self-help-books">5. Add self help books</a></li>
-  <li><a href="#try-some-queries" id="toc-try-some-queries" class="nav-link" data-scroll-target="#try-some-queries">6. Try some queries</a></li>
-  <li><a href="#look-at-the-history" id="toc-look-at-the-history" class="nav-link" data-scroll-target="#look-at-the-history">7. Look at the history</a></li>
+  <li><a href="#add-science-fiction-books" id="toc-add-science-fiction-books" class="nav-link" data-scroll-target="#add-science-fiction-books">3. Add science fiction books</a></li>
+  <li><a href="#add-self-help-books" id="toc-add-self-help-books" class="nav-link" data-scroll-target="#add-self-help-books">4. Add self help books</a></li>
+  <li><a href="#try-some-queries" id="toc-try-some-queries" class="nav-link" data-scroll-target="#try-some-queries">5. Try some queries</a></li>
   <li><a href="#start-over" id="toc-start-over" class="nav-link" data-scroll-target="#start-over">Start over</a></li>
   </ul>
 </nav>
@@ -122,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>These scripts build a small <code>books</code> database. Copy each block (use the copy button in its top right corner) and paste it into the Dolt SQL workbench, then run it. Run the blocks in order.</p>
+<p>These scripts build a small <code>books</code> database. Copy each block (use the copy button in its top right corner) and paste it into the Dolt online SQL editor, then run it. Run the blocks in order.</p>
 <section id="create-the-table" class="level2">
 <h2 class="anchored" data-anchor-id="create-the-table">1. Create the table</h2>
 <p>Each book has an <code>id</code> (the primary key), a title, an author, the year it was published, and a genre.</p>
@@ -144,65 +142,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">4</span>, <span class="st">'The Great Gatsby'</span>, <span class="st">'F. Scott Fitzgerald'</span>, <span class="dv">1925</span>, <span class="st">'Tragedy'</span>),</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>(<span class="dv">5</span>, <span class="st">'Moby Dick'</span>, <span class="st">'Herman Melville'</span>, <span class="dv">1851</span>, <span class="st">'Adventure'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="save-your-work-with-a-dolt-commit" class="level2">
-<h2 class="anchored" data-anchor-id="save-your-work-with-a-dolt-commit">3. Save your work with a Dolt commit</h2>
-<p>Dolt keeps a history of your database, like Git does for files. This stages every changed table and commits it with a message.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CALL</span> DOLT_ADD(<span class="st">'-A'</span>);</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CALL</span> DOLT_COMMIT(<span class="st">'-m'</span>, <span class="st">'Create books table with classics'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
 <section id="add-science-fiction-books" class="level2">
-<h2 class="anchored" data-anchor-id="add-science-fiction-books">4. Add science fiction books</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> books (<span class="kw">id</span>, title, author, <span class="dt">year</span>, genre) <span class="kw">VALUES</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">6</span>, <span class="st">'Dune'</span>, <span class="st">'Frank Herbert'</span>, <span class="dv">1965</span>, <span class="st">'Science Fiction'</span>),</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">7</span>, <span class="st">'Foundation'</span>, <span class="st">'Isaac Asimov'</span>, <span class="dv">1951</span>, <span class="st">'Science Fiction'</span>),</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>(<span class="dv">8</span>, <span class="st">'Do Androids Dream of Electric Sheep?'</span>, <span class="st">'Philip K. Dick'</span>, <span class="dv">1968</span>, <span class="st">'Science Fiction'</span>),</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">9</span>, <span class="st">'A Fire Upon the Deep'</span>, <span class="st">'Vernor Vinge'</span>, <span class="dv">1992</span>, <span class="st">'Science Fiction'</span>),</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>(<span class="dv">10</span>, <span class="st">'The Martian Chronicles'</span>, <span class="st">'Ray Bradbury'</span>, <span class="dv">1950</span>, <span class="st">'Science Fiction'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h2 class="anchored" data-anchor-id="add-science-fiction-books">3. Add science fiction books</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> books (<span class="kw">id</span>, title, author, <span class="dt">year</span>, genre) <span class="kw">VALUES</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">6</span>, <span class="st">'Dune'</span>, <span class="st">'Frank Herbert'</span>, <span class="dv">1965</span>, <span class="st">'Science Fiction'</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">7</span>, <span class="st">'Foundation'</span>, <span class="st">'Isaac Asimov'</span>, <span class="dv">1951</span>, <span class="st">'Science Fiction'</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>(<span class="dv">8</span>, <span class="st">'Do Androids Dream of Electric Sheep?'</span>, <span class="st">'Philip K. Dick'</span>, <span class="dv">1968</span>, <span class="st">'Science Fiction'</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">9</span>, <span class="st">'A Fire Upon the Deep'</span>, <span class="st">'Vernor Vinge'</span>, <span class="dv">1992</span>, <span class="st">'Science Fiction'</span>),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>(<span class="dv">10</span>, <span class="st">'The Martian Chronicles'</span>, <span class="st">'Ray Bradbury'</span>, <span class="dv">1950</span>, <span class="st">'Science Fiction'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="add-self-help-books" class="level2">
-<h2 class="anchored" data-anchor-id="add-self-help-books">5. Add self help books</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> books (<span class="kw">id</span>, title, author, <span class="dt">year</span>, genre) <span class="kw">VALUES</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">11</span>, <span class="st">'The 7 Habits of Highly Effective People'</span>, <span class="st">'Stephen Covey'</span>, <span class="dv">1989</span>, <span class="st">'Self Help'</span>),</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">12</span>, <span class="st">'Atomic Habits'</span>, <span class="st">'James Clear'</span>, <span class="dv">2018</span>, <span class="st">'Self Help'</span>),</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>(<span class="dv">13</span>, <span class="st">'Daring Greatly'</span>, <span class="st">'Brené Brown'</span>, <span class="dv">2012</span>, <span class="st">'Self Help'</span>),</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">14</span>, <span class="st">'Think and Grow Rich'</span>, <span class="st">'Napoleon Hill'</span>, <span class="dv">1937</span>, <span class="st">'Self Help'</span>),</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>(<span class="dv">15</span>, <span class="st">'How to Win Friends and Influence People'</span>, <span class="st">'Dale Carnegie'</span>, <span class="dv">1936</span>, <span class="st">'Self Help'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CALL</span> DOLT_ADD(<span class="st">'-A'</span>);</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CALL</span> DOLT_COMMIT(<span class="st">'-m'</span>, <span class="st">'Add science fiction and self help books'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h2 class="anchored" data-anchor-id="add-self-help-books">4. Add self help books</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> books (<span class="kw">id</span>, title, author, <span class="dt">year</span>, genre) <span class="kw">VALUES</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">11</span>, <span class="st">'The 7 Habits of Highly Effective People'</span>, <span class="st">'Stephen Covey'</span>, <span class="dv">1989</span>, <span class="st">'Self Help'</span>),</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">12</span>, <span class="st">'Atomic Habits'</span>, <span class="st">'James Clear'</span>, <span class="dv">2018</span>, <span class="st">'Self Help'</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>(<span class="dv">13</span>, <span class="st">'Daring Greatly'</span>, <span class="st">'Brené Brown'</span>, <span class="dv">2012</span>, <span class="st">'Self Help'</span>),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">14</span>, <span class="st">'Think and Grow Rich'</span>, <span class="st">'Napoleon Hill'</span>, <span class="dv">1937</span>, <span class="st">'Self Help'</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>(<span class="dv">15</span>, <span class="st">'How to Win Friends and Influence People'</span>, <span class="st">'Dale Carnegie'</span>, <span class="dv">1936</span>, <span class="st">'Self Help'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="try-some-queries" class="level2">
-<h2 class="anchored" data-anchor-id="try-some-queries">6. Try some queries</h2>
+<h2 class="anchored" data-anchor-id="try-some-queries">5. Try some queries</h2>
 <p>All the books:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> books;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> books;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Just the science fiction, oldest first:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> title, author, <span class="dt">year</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> books</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> genre <span class="op">=</span> <span class="st">'Science Fiction'</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dt">year</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> title, author, <span class="dt">year</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> books</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> genre <span class="op">=</span> <span class="st">'Science Fiction'</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dt">year</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Books published before 1950:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> title, <span class="dt">year</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> books</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="dt">year</span> <span class="op">&lt;</span> <span class="dv">1950</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dt">year</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> title, <span class="dt">year</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> books</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="dt">year</span> <span class="op">&lt;</span> <span class="dv">1950</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dt">year</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>How many books are in each genre:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> genre, <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> num_books</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> books</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> genre</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> num_books <span class="kw">DESC</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="look-at-the-history" class="level2">
-<h2 class="anchored" data-anchor-id="look-at-the-history">7. Look at the history</h2>
-<p>The commits you made:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> commit_hash, committer, message, <span class="dt">date</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> dolt_log;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Every row added, changed, or deleted in the <code>books</code> table, and which commit did it:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> to_id, to_title, diff_type, to_commit</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> dolt_diff_books;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> genre, <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> num_books</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> books</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> genre</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> num_books <span class="kw">DESC</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="start-over" class="level2">
 <h2 class="anchored" data-anchor-id="start-over">Start over</h2>
 <p>To delete the table and begin again from step 1:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> books;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> books;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 
 </main>
