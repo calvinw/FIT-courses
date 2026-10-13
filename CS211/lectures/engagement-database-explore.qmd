@@ -1,0 +1,216 @@
+---
+title: "Exploring the Engagement Database"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    code-copy: true
+    toc: true
+---
+
+The [engagement database](https://www.dolthub.com/repositories/calvinw/engagement)
+on DoltHub tracks how users interact with a company's marketing: which
+channel reached them (email, web, social, ...), which campaign it was part of,
+and whether it led to a purchase (a *conversion*).
+
+Open the database on DoltHub, copy each query below (use the copy button in its
+top right corner), paste it into the SQL editor, and run it. Each step builds
+on the one before, so work through them in order.
+
+## 1. What's in the database?
+
+Start by listing the tables:
+
+```sql
+SHOW TABLES;
+```
+
+You'll see seven names. Three are real tables that hold data: `users`,
+`channels`, and `interactions`. The other four are *views*, which are saved
+queries (more on those in step 8).
+
+## 2. Look at each table's columns
+
+`DESCRIBE` shows a table's columns, their types, and which column is the key.
+
+```sql
+DESCRIBE users;
+```
+
+```sql
+DESCRIBE channels;
+```
+
+```sql
+DESCRIBE interactions;
+```
+
+In `interactions`, `interaction_id` is the primary key. `user_id` and
+`channel_id` are foreign keys: they point to a row in `users` and a row in
+`channels`.
+
+## 3. Look at some rows
+
+The two small tables:
+
+```sql
+SELECT * FROM channels;
+```
+
+```sql
+SELECT * FROM users;
+```
+
+The first few interactions. `LIMIT` keeps you from pulling back every row.
+
+```sql
+SELECT * FROM interactions
+LIMIT 10;
+```
+
+`opened_email`, `clicked_link`, and `converted` are 1 for yes and 0 for no.
+`session_duration` is in seconds.
+
+## 4. How big is it?
+
+```sql
+SELECT COUNT(*) AS num_users FROM users;
+```
+
+```sql
+SELECT COUNT(*) AS num_interactions FROM interactions;
+```
+
+When did users sign up?
+
+```sql
+SELECT MIN(signup_date) AS first_signup, MAX(signup_date) AS last_signup
+FROM users;
+```
+
+## 5. Filter and sort
+
+Only the interactions that ended in a conversion:
+
+```sql
+SELECT * FROM interactions
+WHERE converted = 1;
+```
+
+The longest sessions:
+
+```sql
+SELECT interaction_id, user_id, campaign, session_duration, pages_visited
+FROM interactions
+WHERE session_duration IS NOT NULL
+ORDER BY session_duration DESC
+LIMIT 10;
+```
+
+Some cells are empty (`NULL`), meaning no value was recorded. Count the
+missing values in two of the columns:
+
+```sql
+SELECT
+  SUM(opened_email IS NULL) AS missing_opened_email,
+  SUM(session_duration IS NULL) AS missing_session_duration,
+  COUNT(*) AS total_rows
+FROM interactions;
+```
+
+## 6. Group and summarize
+
+Interactions and conversions for each campaign:
+
+```sql
+SELECT campaign,
+  COUNT(*) AS num_interactions,
+  SUM(converted) AS num_conversions
+FROM interactions
+GROUP BY campaign
+ORDER BY num_conversions DESC;
+```
+
+Average session length and pages visited by channel. `channel_id` is just a
+number here; step 7 fixes that with a join.
+
+```sql
+SELECT channel_id,
+  ROUND(AVG(session_duration)) AS avg_seconds,
+  ROUND(AVG(pages_visited), 1) AS avg_pages
+FROM interactions
+GROUP BY channel_id
+ORDER BY channel_id;
+```
+
+## 7. Join the tables
+
+A join replaces the id numbers with names from the other tables:
+
+```sql
+SELECT i.interaction_id, u.name, c.channel_name, i.campaign, i.converted
+FROM interactions i
+JOIN users u ON i.user_id = u.user_id
+JOIN channels c ON i.channel_id = c.channel_id
+ORDER BY i.interaction_id
+LIMIT 20;
+```
+
+Conversions by channel name:
+
+```sql
+SELECT c.channel_name,
+  COUNT(*) AS num_interactions,
+  SUM(i.converted) AS num_conversions
+FROM interactions i
+JOIN channels c ON i.channel_id = c.channel_id
+GROUP BY c.channel_name
+ORDER BY num_conversions DESC;
+```
+
+Are there any channels with no interactions at all? A `LEFT JOIN` keeps every
+channel, even ones with no matching rows in `interactions`:
+
+```sql
+SELECT c.channel_name, COUNT(i.interaction_id) AS num_interactions
+FROM channels c
+LEFT JOIN interactions i ON c.channel_id = i.channel_id
+GROUP BY c.channel_name
+ORDER BY num_interactions;
+```
+
+## 8. Use the views
+
+The database already has four views: saved queries you can treat like tables.
+Each one calculates a conversion rate, which is conversions divided by
+interactions, as a percent.
+
+```sql
+SELECT * FROM conversion_rate_per_channel;
+```
+
+```sql
+SELECT * FROM conversion_rate_per_campaign;
+```
+
+```sql
+SELECT * FROM conversion_rate_per_customer;
+```
+
+```sql
+SELECT * FROM user_total_interactions;
+```
+
+To see the query behind a view:
+
+```sql
+SHOW CREATE VIEW conversion_rate_per_channel;
+```
+
+## 9. Questions to try on your own
+
+1. Which user signed up most recently?
+2. How many interactions came from the `social` channel?
+3. Which campaign has the most interactions?
+4. Of the email interactions, how many had the email opened but the link not clicked?
+5. Which users have never converted?
