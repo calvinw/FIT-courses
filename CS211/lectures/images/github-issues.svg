@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#bc4c00"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="40" font-weight="bold" fill="#bc4c00">GitHub Issues</text>
+  <text x="60" y="108" font-size="22" fill="#57606a">A to-do list for the repository: bugs, tasks, and ideas</text>
+
+  <!-- Repo page in a browser, Issues tab selected -->
+  <rect x="60" y="140" width="600" height="470" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+  <path d="M60 152 a12 12 0 0 1 12 -12 h576 a12 12 0 0 1 12 12 v34 h-600 z" fill="#f6f8fa"/>
+  <line x1="60" y1="186" x2="660" y2="186" stroke="#d0d7de" stroke-width="2"/>
+  <circle cx="84" cy="163" r="6" fill="#ff5f57"/>
+  <circle cx="104" cy="163" r="6" fill="#febc2e"/>
+  <circle cx="124" cy="163" r="6" fill="#28c840"/>
+  <rect x="146" y="150" width="496" height="26" rx="13" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="162" y="168" font-size="15" fill="#24292f">github.com/calvinw/BusMgmtBenchmarks/issues</text>
+
+  <!-- repo name -->
+  <rect x="84" y="204" width="18" height="22" rx="3" fill="none" stroke="#57606a" stroke-width="2"/>
+  <line x1="89" y1="210" x2="97" y2="210" stroke="#57606a" stroke-width="2"/>
+  <text x="112" y="222" font-size="19" fill="#0969da">calvinw</text>
+  <text x="184" y="222" font-size="19" fill="#57606a">/</text>
+  <text x="198" y="222" font-size="19" font-weight="bold" fill="#0969da">BusMgmtBenchmarks</text>
+  <rect x="418" y="205" width="62" height="22" rx="11" fill="none" stroke="#57606a"/>
+  <text x="449" y="221" font-size="13" fill="#57606a" text-anchor="middle">Public</text>
+
+  <!-- repo tabs -->
+  <g font-size="16" fill="#24292f">
+    <text x="84" y="262">Code</text>
+    <text x="150" y="262" font-weight="bold">Issues</text>
+    <rect x="204" y="248" width="22" height="20" rx="10" fill="#d0d7de"/>
+    <text x="215" y="263" font-size="13" text-anchor="middle">2</text>
+    <text x="246" y="262">Pull requests</text>
+    <text x="358" y="262">Actions</text>
+    <text x="430" y="262">Settings</text>
+  </g>
+  <rect x="142" y="274" width="92" height="4" rx="2" fill="#fd8c73"/>
+  <line x1="60" y1="278" x2="660" y2="278" stroke="#d0d7de" stroke-width="1.5"/>
+
+  <!-- issues list box -->
+  <rect x="84" y="296" width="552" height="290" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M84 304 a8 8 0 0 1 8 -8 h536 a8 8 0 0 1 8 8 v40 h-552 z" fill="#f6f8fa"/>
+  <line x1="84" y1="344" x2="636" y2="344" stroke="#d0d7de"/>
+  <g font-size="16">
+    <circle cx="108" cy="320" r="8" fill="none" stroke="#1a7f37" stroke-width="2.5"/>
+    <circle cx="108" cy="320" r="2.5" fill="#1a7f37"/>
+    <text x="124" y="326" font-weight="bold" fill="#24292f">2 Open</text>
+    <text x="200" y="326" fill="#57606a">✓ 1 Closed</text>
+  </g>
+  <rect x="512" y="306" width="110" height="28" rx="6" fill="#1f883d"/>
+  <text x="567" y="325" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">New issue</text>
+
+  <!-- issue 12 -->
+  <circle cx="108" cy="376" r="9" fill="none" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="108" cy="376" r="3" fill="#1a7f37"/>
+  <text x="128" y="382" font-size="18" font-weight="bold" fill="#24292f">Header logo is too big</text>
+  <rect x="338" y="364" width="44" height="24" rx="12" fill="#ffebe9" stroke="#d1242f"/>
+  <text x="360" y="381" font-size="13" fill="#d1242f" text-anchor="middle">bug</text>
+  <text x="128" y="406" font-size="14" fill="#57606a">#12 opened by calvinw · assigned to a student</text>
+  <line x1="84" y1="424" x2="636" y2="424" stroke="#d0d7de"/>
+
+  <!-- issue 11 -->
+  <circle cx="108" cy="456" r="9" fill="none" stroke="#1a7f37" stroke-width="2.5"/>
+  <circle cx="108" cy="456" r="3" fill="#1a7f37"/>
+  <text x="128" y="462" font-size="18" font-weight="bold" fill="#24292f">Add an about page</text>
+  <rect x="300" y="444" width="104" height="24" rx="12" fill="#ddf4ff" stroke="#0969da"/>
+  <text x="352" y="461" font-size="13" fill="#0969da" text-anchor="middle">enhancement</text>
+  <text x="128" y="486" font-size="14" fill="#57606a">#11 opened by calvinw · 2 comments</text>
+  <line x1="84" y1="504" x2="636" y2="504" stroke="#d0d7de"/>
+
+  <!-- issue 9 (closed) -->
+  <circle cx="108" cy="536" r="9" fill="#8250df"/>
+  <text x="108" y="541" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="128" y="542" font-size="18" font-weight="bold" fill="#57606a">Fix broken link on home page</text>
+  <text x="128" y="566" font-size="14" fill="#57606a">#9 closed by pull request #10</text>
+
+  <!-- Life of an issue -->
+  <text x="700" y="166" font-size="24" font-weight="bold" fill="#bc4c00">Life of an issue</text>
+  <g font-size="18" fill="#24292f">
+    <rect x="700" y="184" width="520" height="60" rx="10" fill="#fff8f2" stroke="#bc4c00" stroke-width="2"/>
+    <circle cx="732" cy="214" r="14" fill="#24292f"/>
+    <text x="732" y="220" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="758" y="210" font-weight="bold">Open issue #12</text>
+    <text x="758" y="232" font-size="15" fill="#57606a">"Header logo is too big"</text>
+
+    <line x1="960" y1="246" x2="960" y2="272" stroke="#bc4c00" stroke-width="4" marker-end="url(#arrowOrange)"/>
+
+    <rect x="700" y="278" width="520" height="60" rx="10" fill="#fff8f2" stroke="#bc4c00" stroke-width="2"/>
+    <circle cx="732" cy="308" r="14" fill="#24292f"/>
+    <text x="732" y="314" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="758" y="304" font-weight="bold">Fix it on a branch</text>
+    <text x="758" y="326" font-size="15" fill="#57606a">branch: fix-header</text>
+
+    <line x1="960" y1="340" x2="960" y2="366" stroke="#bc4c00" stroke-width="4" marker-end="url(#arrowOrange)"/>
+
+    <rect x="700" y="372" width="520" height="60" rx="10" fill="#fff8f2" stroke="#bc4c00" stroke-width="2"/>
+    <circle cx="732" cy="402" r="14" fill="#24292f"/>
+    <text x="732" y="408" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="758" y="398" font-weight="bold">Open a pull request</text>
+    <text x="758" y="420" font-size="15" fill="#57606a">description says "Fixes #12"</text>
+
+    <line x1="960" y1="434" x2="960" y2="460" stroke="#bc4c00" stroke-width="4" marker-end="url(#arrowOrange)"/>
+
+    <rect x="700" y="466" width="520" height="60" rx="10" fill="#fbefff" stroke="#8250df" stroke-width="2"/>
+    <circle cx="732" cy="496" r="14" fill="#24292f"/>
+    <text x="732" y="502" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="758" y="492" font-weight="bold">Merge into main</text>
+    <text x="758" y="514" font-size="15" fill="#57606a">issue #12 closes automatically</text>
+  </g>
+
+  <!-- Bottom notes -->
+  <text x="60" y="660" font-size="20" fill="#24292f">Open an issue under <tspan font-weight="bold">Issues</tspan> &gt; <tspan font-weight="bold">New issue</tspan>. Write "Fixes #12" in a pull request to close it.</text>
+</svg>

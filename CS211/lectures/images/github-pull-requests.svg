@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowMain" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0969da"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="60" y="70" font-size="40" font-weight="bold" fill="#1b7c83">GitHub Pull Requests</text>
+  <text x="60" y="108" font-size="22" fill="#57606a">Ask to merge a fix from a branch into main</text>
+
+  <!-- Repo page in a browser, Pull requests tab selected -->
+  <rect x="60" y="140" width="600" height="470" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+  <path d="M60 152 a12 12 0 0 1 12 -12 h576 a12 12 0 0 1 12 12 v34 h-600 z" fill="#f6f8fa"/>
+  <line x1="60" y1="186" x2="660" y2="186" stroke="#d0d7de" stroke-width="2"/>
+  <circle cx="84" cy="163" r="6" fill="#ff5f57"/>
+  <circle cx="104" cy="163" r="6" fill="#febc2e"/>
+  <circle cx="124" cy="163" r="6" fill="#28c840"/>
+  <rect x="146" y="150" width="496" height="26" rx="13" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="162" y="168" font-size="15" fill="#24292f">github.com/calvinw/BusMgmtBenchmarks/pull/13</text>
+
+  <!-- repo name -->
+  <rect x="84" y="204" width="18" height="22" rx="3" fill="none" stroke="#57606a" stroke-width="2"/>
+  <line x1="89" y1="210" x2="97" y2="210" stroke="#57606a" stroke-width="2"/>
+  <text x="112" y="222" font-size="19" fill="#0969da">calvinw</text>
+  <text x="184" y="222" font-size="19" fill="#57606a">/</text>
+  <text x="198" y="222" font-size="19" font-weight="bold" fill="#0969da">BusMgmtBenchmarks</text>
+  <rect x="418" y="205" width="62" height="22" rx="11" fill="none" stroke="#57606a"/>
+  <text x="449" y="221" font-size="13" fill="#57606a" text-anchor="middle">Public</text>
+
+  <!-- repo tabs -->
+  <g font-size="16" fill="#24292f">
+    <text x="84" y="262">Code</text>
+    <text x="140" y="262">Issues</text>
+    <text x="206" y="262" font-weight="bold">Pull requests</text>
+    <rect x="320" y="248" width="22" height="20" rx="10" fill="#d0d7de"/>
+    <text x="331" y="263" font-size="13" text-anchor="middle">1</text>
+    <text x="362" y="262">Actions</text>
+    <text x="434" y="262">Settings</text>
+  </g>
+  <rect x="198" y="274" width="152" height="4" rx="2" fill="#fd8c73"/>
+  <line x1="60" y1="278" x2="660" y2="278" stroke="#d0d7de" stroke-width="1.5"/>
+
+  <!-- PR header -->
+  <text x="84" y="318" font-size="22" fill="#24292f"><tspan font-weight="bold">Fix header logo size</tspan> <tspan fill="#57606a">#13</tspan></text>
+  <rect x="84" y="334" width="82" height="28" rx="14" fill="#1f883d"/>
+  <text x="125" y="353" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Open</text>
+  <text x="178" y="353" font-size="15" fill="#57606a">merge 1 commit into</text>
+  <rect x="320" y="338" width="50" height="22" rx="6" fill="#ddf4ff"/>
+  <text x="345" y="354" font-size="14" fill="#0969da" text-anchor="middle">main</text>
+  <text x="378" y="353" font-size="15" fill="#57606a">from</text>
+  <rect x="416" y="338" width="90" height="22" rx="6" fill="#ddf4ff"/>
+  <text x="461" y="354" font-size="14" fill="#0969da" text-anchor="middle">fix-header</text>
+
+  <!-- PR sub-tabs -->
+  <g font-size="15" fill="#24292f">
+    <text x="84" y="394" font-weight="bold">Conversation</text>
+    <text x="200" y="394">Commits 1</text>
+    <text x="290" y="394">Files changed 1</text>
+  </g>
+  <rect x="80" y="402" width="104" height="3" rx="1.5" fill="#fd8c73"/>
+  <line x1="84" y1="405" x2="636" y2="405" stroke="#d0d7de"/>
+
+  <!-- description comment -->
+  <rect x="84" y="418" width="552" height="74" rx="8" fill="#ffffff" stroke="#d0d7de"/>
+  <path d="M84 426 a8 8 0 0 1 8 -8 h536 a8 8 0 0 1 8 8 v22 h-552 z" fill="#f6f8fa"/>
+  <text x="100" y="440" font-size="14" fill="#57606a"><tspan font-weight="bold" fill="#24292f">a student</tspan> commented</text>
+  <text x="100" y="474" font-size="16" fill="#24292f">Made the logo smaller. <tspan font-weight="bold" fill="#0969da">Fixes #12</tspan></text>
+
+  <!-- merge box -->
+  <rect x="84" y="506" width="552" height="86" rx="8" fill="#ffffff" stroke="#1f883d" stroke-width="1.5"/>
+  <circle cx="110" cy="532" r="10" fill="#1f883d"/>
+  <text x="110" y="537" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+  <text x="130" y="537" font-size="15" font-weight="bold" fill="#24292f">No conflicts with the main branch</text>
+  <rect x="100" y="552" width="170" height="30" rx="6" fill="#1f883d"/>
+  <text x="185" y="572" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">Merge pull request</text>
+  <text x="284" y="572" font-size="14" fill="#57606a">after someone reviews it</text>
+
+  <!-- Right: a fix on a branch -->
+  <text x="700" y="166" font-size="24" font-weight="bold" fill="#1b7c83">A branch for each fix</text>
+
+  <rect x="700" y="204" width="70" height="30" rx="15" fill="#0969da"/>
+  <text x="735" y="225" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">main</text>
+  <line x1="770" y1="219" x2="1220" y2="219" stroke="#0969da" stroke-width="6" marker-end="url(#arrowMain)"/>
+
+  <path d="M820 219 C 870 219, 860 320, 910 320 L 1040 320 C 1090 320, 1080 219, 1130 219" fill="none" stroke="#1b7c83" stroke-width="6"/>
+  <rect x="700" y="306" width="104" height="28" rx="14" fill="#1b7c83"/>
+  <text x="752" y="325" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">fix-header</text>
+
+  <circle cx="820" cy="219" r="11" fill="#ffffff" stroke="#0969da" stroke-width="5"/>
+  <circle cx="975" cy="320" r="11" fill="#ffffff" stroke="#1b7c83" stroke-width="5"/>
+  <text x="975" y="356" font-size="15" fill="#24292f" text-anchor="middle">Make logo smaller</text>
+  <circle cx="1130" cy="219" r="13" fill="#0969da" stroke="#1b7c83" stroke-width="5"/>
+  <text x="1130" y="190" font-size="15" font-weight="bold" fill="#24292f" text-anchor="middle">Merge PR #13</text>
+
+  <g font-size="18" fill="#24292f">
+    <circle cx="716" cy="414" r="14" fill="#24292f"/>
+    <text x="716" y="420" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="742" y="420">Make a branch for the fix: <tspan font-weight="bold">fix-header</tspan></text>
+
+    <circle cx="716" cy="464" r="14" fill="#24292f"/>
+    <text x="716" y="470" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="742" y="470">Commit and push the fix to the branch</text>
+
+    <circle cx="716" cy="514" r="14" fill="#24292f"/>
+    <text x="716" y="520" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="742" y="520">Open a pull request into <tspan font-weight="bold">main</tspan></text>
+
+    <circle cx="716" cy="564" r="14" fill="#24292f"/>
+    <text x="716" y="570" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="742" y="570">Review it, then <tspan font-weight="bold">Merge pull request</tspan></text>
+  </g>
+
+  <!-- Bottom notes -->
+  <text x="60" y="660" font-size="20" fill="#24292f">One fix, one branch, one pull request. Merging it puts the fix into <tspan font-weight="bold">main</tspan>.</text>
+</svg>

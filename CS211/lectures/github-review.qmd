@@ -12,6 +12,7 @@ format:
 
 - **Repository** (Repo for short) - where the files live
 - **Pages** - where the website is shown
+- **Issue** - a to-do item or bug report for the repo
 - **Branch** - a separate version of the files to work on
 - **Codespace** - where you work on the files, in the browser
 - **Local Clone** - where you work on the files, on your own computer
@@ -63,6 +64,28 @@ format:
 - Agents (Claude Code, Codex, OpenCode) can run in the codespace terminal
 
 ## {background-image="images/github-compare.svg" background-size="contain" background-color="white"}
+
+## {background-image="images/github-issues.svg" background-size="contain" background-color="white"}
+
+## GitHub Issues
+
+- An issue is a to-do item, bug report, or idea for the repository
+- Open one in the **Issues** tab > **New issue**: give it a title and a description
+- Each issue gets a number, like #12, and a discussion thread for comments
+- Assign it to a person and add labels like `bug` or `enhancement`
+- Fix it on a branch, then write "Fixes #12" in the pull request
+- The issue closes when the pull request is merged into `main`
+
+## {background-image="images/github-pull-requests.svg" background-size="contain" background-color="white"}
+
+## Pull Requests
+
+- A pull request (PR) asks to merge a branch into `main`
+- Make one branch for each fix, like `fix-header`
+- Commit and push the fix to the branch, then open a PR: **Pull requests** > **New pull request**
+- Write "Fixes #12" in the description to link it to the issue
+- Others can review the changes and comment before it is merged
+- **Merge pull request** puts the fix into `main` and closes the issue
 
 ## {background-image="images/github-local-clone.svg" background-size="contain" background-color="white"}
 
