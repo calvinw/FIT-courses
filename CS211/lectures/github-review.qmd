@@ -11,11 +11,11 @@ format:
 
 - **Repository** (Repo for short) - where the files live
 - **Pages** - where the website is shown
-- **Issue** - a to-do item or bug report for the repo
 - **Branch** - a separate version of the files to work on
 - **Codespace** - where you work on the files, in the browser
+- **Issue** - a to-do item or bug report for the repo
+- **Pull Request** - asks to merge a branch with a fix into `main`
 - **Local Clone** - where you work on the files, on your own computer
-- **Agent** - an AI helper (Claude Code, Codex, OpenCode) that works on the files for you
 
 ## {background-image="images/github-repo.svg" background-size="contain" background-color="white"}
 
