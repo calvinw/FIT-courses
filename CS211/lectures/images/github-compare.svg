@@ -19,7 +19,7 @@
   <rect width="1280" height="720" fill="#ffffff"/>
 
   <!-- Title -->
-  <text x="60" y="70" font-size="40" font-weight="bold" fill="#8250df">GitHub Codespaces</text>
+  <text x="60" y="70" font-size="40" font-weight="bold" fill="#8250df">GitHub Codespaces <tspan font-size="24" font-weight="normal" fill="#57606a">(where the agents claude, codex, opencode run)</tspan></text>
   <text x="60" y="108" font-size="22" fill="#57606a">A computer that GitHub runs for you, opened in a browser tab</text>
 
   <!-- Left: repository on a branch -->
@@ -49,12 +49,13 @@
   <text x="428" y="270" font-size="15" fill="#57606a" text-anchor="middle">the branch</text>
 
   <line x1="484" y1="450" x2="372" y2="450" stroke="#0969da" stroke-width="5" marker-end="url(#arrowBlue)"/>
-  <text x="428" y="414" font-size="17" font-weight="bold" fill="#0969da" text-anchor="middle">2. commit</text>
+  <text x="428" y="394" font-size="17" font-weight="bold" fill="#0969da" text-anchor="middle">2. commit</text>
+  <text x="428" y="414" font-size="17" font-weight="bold" fill="#0969da" text-anchor="middle">and push</text>
   <text x="428" y="434" font-size="15" fill="#57606a" text-anchor="middle">back to it</text>
 
   <!-- Right: cloud computer running VS Code -->
   <text x="500" y="170" font-size="24" font-weight="bold" fill="#8250df">Codespace</text>
-  <text x="640" y="170" font-size="18" fill="#57606a">runs on GitHub's computer</text>
+  <text x="640" y="170" font-size="18" fill="#57606a">runs in cloud on GitHub</text>
   <rect x="500" y="188" width="720" height="440" rx="12" fill="#ffffff" stroke="#8250df" stroke-width="3"/>
   <!-- browser chrome -->
   <path d="M501.5 200 a10.5 10.5 0 0 1 10.5 -10.5 h696 a10.5 10.5 0 0 1 10.5 10.5 v28 h-717 z" fill="#f6f8fa"/>
@@ -108,8 +109,7 @@
   <text x="752" y="494" font-size="12" fill="#e7e7e7" letter-spacing="1">TERMINAL</text>
   <line x1="752" y1="500" x2="822" y2="500" stroke="#e7e7e7"/>
   <g font-family="Menlo, Consolas, monospace" font-size="14">
-    <text x="752" y="530" fill="#73c991">@calvinw <tspan fill="#569cd6">➜</tspan> <tspan fill="#cccccc">/workspaces/BusMgmtBenchmarks</tspan></text>
-    <text x="752" y="556" fill="#cccccc">$ git commit -m "Add about page"</text>
+    <text x="752" y="530" fill="#cccccc"># claude</text>
   </g>
   <!-- status bar -->
   <rect x="502" y="602" width="716" height="24" fill="#8250df"/>

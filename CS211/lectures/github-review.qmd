@@ -10,15 +10,16 @@ format:
 
 ## The Big Picture
 
-- **Repository** - where the files live
+- **Repository** (Repo for short) - where the files live
 - **Pages** - where the website is shown
 - **Branch** - a separate version of the files to work on
 - **Codespace** - where you work on the files, in the browser
 - **Local Clone** - where you work on the files, on your own computer
+- **Agent** - an AI helper (Claude Code, Codex, OpenCode) that works on the files for you
 
 ## {background-image="images/github-repo.svg" background-size="contain" background-color="white"}
 
-## Repository Review
+## Repositories (Repos)
 
 - A project folder on GitHub that keeps the full history
 - Every commit is saved with a message describing it
@@ -29,7 +30,7 @@ format:
 
 ## {background-image="images/github-pages.svg" background-size="contain" background-color="white"}
 
-## Pages Review
+## GitHub Pages
 
 - GitHub Pages publishes a repository as a free website
 - `index.html` is the home page of the website
@@ -40,30 +41,32 @@ format:
 
 ## {background-image="images/github-branches.svg" background-size="contain" background-color="white"}
 
-## Branch Review
+## Branches
 
 - A branch is a separate version of the repository
 - `main` is the official, working version
 - Create a branch from the branch menu: type a name, then **Create branch**
 - Commits on the branch do not change `main`
+- An agent can create the branch for you: "create a branch called fix-header"
 - Merge the branch into `main` with a **Pull Request**
 - Delete the branch after it is merged - its commits stay in the history
 
 ## {background-image="images/github-codespaces.svg" background-size="contain" background-color="white"}
 
-## Codespace Review
+## Codespaces
 
 - A computer that GitHub runs for you, opened in a browser tab
 - It runs Visual Studio Code - nothing to install
 - Create it from one branch: **Code** > **Codespaces** > **Create codespace on** *branch*
 - Make changes to the files in the editor
 - Commit and push the changes back to the same branch
+- Agents (Claude Code, Codex, OpenCode) can run in the codespace terminal
 
 ## {background-image="images/github-compare.svg" background-size="contain" background-color="white"}
 
 ## {background-image="images/github-local-clone.svg" background-size="contain" background-color="white"}
 
-## Local Clone Review
+## Local Clone
 
 - A copy of the repository downloaded to your own computer
 - `git clone https://github.com/calvinw/BusMgmtBenchmarks.git`
@@ -75,7 +78,8 @@ format:
 
 |                     | Codespace                  | Local Clone              |
 |---------------------|----------------------------|--------------------------|
-| Runs on             | GitHub's computer          | Your own computer        |
+| Runs                | In cloud on GitHub         | On your own computer     |
 | Install needed      | Nothing - just a browser   | Git and a code editor    |
-| Get started         | Create codespace on branch | `git clone`              |
+| Get started         | Create codespace on a branch | `git clone`              |
 | Send changes back   | Commit and push            | Commit and push          |
+| Agents              | Installed by the template  | Install them yourself    |

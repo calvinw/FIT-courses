@@ -142,18 +142,19 @@ Calvin Williamson, Science and Math
 <section id="the-big-picture" class="slide level2">
 <h2>The Big Picture</h2>
 <ul>
-<li><strong>Repository</strong> - where the files live</li>
+<li><strong>Repository</strong> (Repo for short) - where the files live</li>
 <li><strong>Pages</strong> - where the website is shown</li>
 <li><strong>Branch</strong> - a separate version of the files to work on</li>
 <li><strong>Codespace</strong> - where you work on the files, in the browser</li>
 <li><strong>Local Clone</strong> - where you work on the files, on your own computer</li>
+<li><strong>Agent</strong> - an AI helper (Claude Code, Codex, OpenCode) that works on the files for you</li>
 </ul>
 </section>
 <section id="section" class="slide level2" data-background-image="images/github-repo.svg" data-background-size="contain" data-background-color="white">
 <h2></h2>
 </section>
-<section id="repository-review" class="slide level2">
-<h2>Repository Review</h2>
+<section id="repositories-repos" class="slide level2">
+<h2>Repositories (Repos)</h2>
 <ul>
 <li>A project folder on GitHub that keeps the full history</li>
 <li>Every commit is saved with a message describing it</li>
@@ -166,8 +167,8 @@ Calvin Williamson, Science and Math
 <section id="section-1" class="slide level2" data-background-image="images/github-pages.svg" data-background-size="contain" data-background-color="white">
 <h2></h2>
 </section>
-<section id="pages-review" class="slide level2">
-<h2>Pages Review</h2>
+<section id="github-pages" class="slide level2">
+<h2>GitHub Pages</h2>
 <ul>
 <li>GitHub Pages publishes a repository as a free website</li>
 <li><code>index.html</code> is the home page of the website</li>
@@ -180,13 +181,14 @@ Calvin Williamson, Science and Math
 <section id="section-2" class="slide level2" data-background-image="images/github-branches.svg" data-background-size="contain" data-background-color="white">
 <h2></h2>
 </section>
-<section id="branch-review" class="slide level2">
-<h2>Branch Review</h2>
+<section id="branches" class="slide level2">
+<h2>Branches</h2>
 <ul>
 <li>A branch is a separate version of the repository</li>
 <li><code>main</code> is the official, working version</li>
 <li>Create a branch from the branch menu: type a name, then <strong>Create branch</strong></li>
 <li>Commits on the branch do not change <code>main</code></li>
+<li>An agent can create the branch for you: “create a branch called fix-header”</li>
 <li>Merge the branch into <code>main</code> with a <strong>Pull Request</strong></li>
 <li>Delete the branch after it is merged - its commits stay in the history</li>
 </ul>
@@ -194,14 +196,15 @@ Calvin Williamson, Science and Math
 <section id="section-3" class="slide level2" data-background-image="images/github-codespaces.svg" data-background-size="contain" data-background-color="white">
 <h2></h2>
 </section>
-<section id="codespace-review" class="slide level2">
-<h2>Codespace Review</h2>
+<section id="codespaces" class="slide level2">
+<h2>Codespaces</h2>
 <ul>
 <li>A computer that GitHub runs for you, opened in a browser tab</li>
 <li>It runs Visual Studio Code - nothing to install</li>
 <li>Create it from one branch: <strong>Code</strong> &gt; <strong>Codespaces</strong> &gt; <strong>Create codespace on</strong> <em>branch</em></li>
 <li>Make changes to the files in the editor</li>
 <li>Commit and push the changes back to the same branch</li>
+<li>Agents (Claude Code, Codex, OpenCode) can run in the codespace terminal</li>
 </ul>
 </section>
 <section id="section-4" class="slide level2" data-background-image="images/github-compare.svg" data-background-size="contain" data-background-color="white">
@@ -210,8 +213,8 @@ Calvin Williamson, Science and Math
 <section id="section-5" class="slide level2" data-background-image="images/github-local-clone.svg" data-background-size="contain" data-background-color="white">
 <h2></h2>
 </section>
-<section id="local-clone-review" class="slide level2">
-<h2>Local Clone Review</h2>
+<section id="local-clone" class="slide level2">
+<h2>Local Clone</h2>
 <ul>
 <li>A copy of the repository downloaded to your own computer</li>
 <li><code>git clone https://github.com/calvinw/BusMgmtBenchmarks.git</code></li>
@@ -237,9 +240,9 @@ Calvin Williamson, Science and Math
 </thead>
 <tbody>
 <tr class="odd">
-<td>Runs on</td>
-<td>GitHub’s computer</td>
-<td>Your own computer</td>
+<td>Runs</td>
+<td>In cloud on GitHub</td>
+<td>On your own computer</td>
 </tr>
 <tr class="even">
 <td>Install needed</td>
@@ -248,13 +251,18 @@ Calvin Williamson, Science and Math
 </tr>
 <tr class="odd">
 <td>Get started</td>
-<td>Create codespace on branch</td>
+<td>Create codespace on a branch</td>
 <td><code>git clone</code></td>
 </tr>
 <tr class="even">
 <td>Send changes back</td>
 <td>Commit and push</td>
 <td>Commit and push</td>
+</tr>
+<tr class="odd">
+<td>Agents</td>
+<td>Installed by the template</td>
+<td>Install them yourself</td>
 </tr>
 </tbody>
 </table>
