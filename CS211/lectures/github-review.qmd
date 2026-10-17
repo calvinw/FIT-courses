@@ -1,7 +1,6 @@
 ---
 title: "GitHub Review"
 author: "Calvin Williamson, Science and Math"
-subtitle: "Fall 26"
 format:
   revealjs:
     mermaid:
