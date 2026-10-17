@@ -1,0 +1,150 @@
+---
+title: "Coffee Shop Database: Starter SQL Scripts"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    code-copy: true
+    toc: true
+---
+
+These scripts build a small coffee shop database with two tables: `products`
+and `orders`. Copy each block (use the copy button in its top right corner)
+and paste it into the Dolt online SQL editor, then run it. Run the blocks in
+order: `orders` refers to `products`, so `products` has to exist first.
+
+## 1. Create the products table
+
+Each menu item gets a unique `product_id`, which is the primary key.
+`in_stock` is 1 if the item is available and 0 if it isn't.
+
+```sql
+CREATE TABLE products (
+  product_id int NOT NULL,
+  name varchar(255),
+  category varchar(255),
+  price decimal(10,2),
+  in_stock tinyint,
+  PRIMARY KEY (product_id)
+);
+```
+
+## 2. Add the products
+
+```sql
+INSERT INTO products (product_id, name, category, price, in_stock) VALUES
+(1, 'Espresso', 'Coffee', 2.50, 1),
+(2, 'Cappuccino', 'Coffee', 3.50, 1),
+(3, 'Latte', 'Coffee', 3.75, 1),
+(4, 'Americano', 'Coffee', 2.75, 1),
+(5, 'Matcha Latte', 'Tea', 4.25, 1),
+(6, 'Earl Grey', 'Tea', 2.50, 1),
+(7, 'Chocolate Croissant', 'Pastry', 3.25, 1),
+(8, 'Blueberry Muffin', 'Pastry', 2.95, 1),
+(9, 'Iced Coffee', 'Coffee', 3.25, 1),
+(10, 'Chai Latte', 'Tea', 3.95, 1),
+(11, 'Lemon Tart', 'Pastry', 4.50, 1),
+(12, 'Cold Brew', 'Coffee', 4.00, 1);
+```
+
+## 3. Create the orders table
+
+Each order records which product a customer bought, how many, and whether the
+order has been completed (1) or is still waiting (0). `order_id` is the
+primary key. `product_id` is a foreign key that points back to the `products`
+table.
+
+```sql
+CREATE TABLE orders (
+  order_id int NOT NULL,
+  product_id int NOT NULL,
+  customer_name varchar(255),
+  quantity int,
+  order_date date,
+  completed tinyint,
+  PRIMARY KEY (order_id),
+  FOREIGN KEY (product_id) REFERENCES products (product_id)
+);
+```
+
+## 4. Add the orders
+
+```sql
+INSERT INTO orders (order_id, product_id, customer_name, quantity, order_date, completed) VALUES
+(1, 2, 'John Smith', 1, '2025-04-13', 1),
+(2, 7, 'John Smith', 1, '2025-04-13', 1),
+(3, 5, 'Emma Johnson', 1, '2025-04-13', 1),
+(4, 10, 'Michael Brown', 2, '2025-04-13', 1),
+(5, 1, 'Sarah Davis', 1, '2025-04-13', 1),
+(6, 3, 'David Wilson', 1, '2025-04-13', 0),
+(7, 8, 'David Wilson', 2, '2025-04-13', 0),
+(8, 9, 'Jennifer Lee', 1, '2025-04-13', 0),
+(9, 4, 'Robert Taylor', 1, '2025-04-13', 0),
+(10, 6, 'Lisa Anderson', 3, '2025-04-13', 0);
+```
+
+## 5. Try some queries
+
+All the orders:
+
+```sql
+SELECT * FROM orders;
+```
+
+Each order with the product name and what it cost (price times quantity):
+
+```sql
+SELECT o.order_id, o.customer_name, p.name, o.quantity, p.price,
+       p.price * o.quantity AS total
+FROM orders o
+JOIN products p ON o.product_id = p.product_id
+ORDER BY o.order_id;
+```
+
+How much each customer spent:
+
+```sql
+SELECT o.customer_name, SUM(p.price * o.quantity) AS total_spent
+FROM orders o
+JOIN products p ON o.product_id = p.product_id
+GROUP BY o.customer_name
+ORDER BY total_spent DESC;
+```
+
+Orders that are still waiting to be made:
+
+```sql
+SELECT o.order_id, o.customer_name, p.name, o.quantity
+FROM orders o
+JOIN products p ON o.product_id = p.product_id
+WHERE o.completed = 0;
+```
+
+Items sold in each category:
+
+```sql
+SELECT p.category, SUM(o.quantity) AS items_sold
+FROM orders o
+JOIN products p ON o.product_id = p.product_id
+GROUP BY p.category
+ORDER BY items_sold DESC;
+```
+
+Menu items nobody has ordered:
+
+```sql
+SELECT p.name, p.category
+FROM products p
+LEFT JOIN orders o ON p.product_id = o.product_id
+WHERE o.order_id IS NULL;
+```
+
+## Start over
+
+To delete both tables and begin again from step 1. `orders` is dropped first
+because it refers to `products`.
+
+```sql
+DROP TABLE orders;
+DROP TABLE products;
+```
