@@ -4,8 +4,9 @@ Run from this folder: python3 make_zvalues.py
 """
 WIDTH = 900
 MARGIN = 60
-COLOR = "#b5121b"
-CENTER = "#1f5fa8"
+# x-values are always blue and z-values always red, as in the normal curve lectures
+X_COLOR = "#1f5fa8"
+Z_COLOR = "#b5121b"
 MARK = "#2a8a3e"
 
 
@@ -31,26 +32,26 @@ def z_line_svg(mu, sigma, zmax, x_labels=None, mark=None):
         return MARGIN + (z + zmax) / (2 * zmax) * (WIDTH - 2 * MARGIN)
 
     parts = header(height)
-    parts.append(f'<text x="20" y="{axis_y - 25}" font-size="20" fill="{COLOR}">x</text>')
-    parts.append(f'<text x="20" y="{axis_y + 45}" font-size="20" fill="{CENTER}">z</text>')
+    parts.append(f'<text x="20" y="{axis_y - 25}" font-size="20" fill="{X_COLOR}">x</text>')
+    parts.append(f'<text x="20" y="{axis_y + 45}" font-size="20" fill="{Z_COLOR}">z</text>')
     parts.append(f'<line x1="{MARGIN - 20}" y1="{axis_y}" x2="{WIDTH - MARGIN + 20}" y2="{axis_y}" stroke="#333" stroke-width="2"/>')
     # Every integer x gets a small tick, and a label unless this is a question
     for v in range(mu - zmax * sigma, mu + zmax * sigma + 1):
         px = x((v - mu) / sigma)
         parts.append(f'<line x1="{px:.1f}" y1="{axis_y - 5}" x2="{px:.1f}" y2="{axis_y + 5}" stroke="#333" stroke-width="1.5"/>')
         if x_labels is None:
-            parts.append(f'<text x="{px:.1f}" y="{axis_y - 25}" font-size="20" text-anchor="middle" fill="{COLOR}">{v}</text>')
+            parts.append(f'<text x="{px:.1f}" y="{axis_y - 25}" font-size="20" text-anchor="middle" fill="{X_COLOR}">{v}</text>')
     # Whole standard deviations get a tall tick and a z label
     for z in zs:
         parts.append(f'<line x1="{x(z):.1f}" y1="{axis_y - 12}" x2="{x(z):.1f}" y2="{axis_y + 12}" stroke="#333" stroke-width="3"/>')
-        parts.append(f'<text x="{x(z):.1f}" y="{axis_y + 45}" font-size="22" text-anchor="middle" fill="{CENTER}">{z}</text>')
+        parts.append(f'<text x="{x(z):.1f}" y="{axis_y + 45}" font-size="22" text-anchor="middle" fill="{Z_COLOR}">{z}</text>')
         if x_labels and z in x_labels:
-            parts.append(f'<text x="{x(z):.1f}" y="{axis_y - 25}" font-size="22" text-anchor="middle" fill="{COLOR}">{x_labels[z]}</text>')
+            parts.append(f'<text x="{x(z):.1f}" y="{axis_y - 25}" font-size="22" text-anchor="middle" fill="{X_COLOR}">{x_labels[z]}</text>')
     if mark is not None:
         z = (mark - mu) / sigma
         parts.append(f'<circle cx="{x(z):.1f}" cy="{axis_y}" r="9" fill="{MARK}"/>')
         parts.append(f'<line x1="{x(z):.1f}" y1="{axis_y + 10}" x2="{x(z):.1f}" y2="{axis_y + 62}" stroke="{MARK}" stroke-width="2" stroke-dasharray="4 4"/>')
-        parts.append(f'<text x="{x(z):.1f}" y="{axis_y + 85}" font-size="22" font-weight="bold" text-anchor="middle" fill="{MARK}">z = {z:g}</text>')
+        parts.append(f'<text x="{x(z):.1f}" y="{axis_y + 85}" font-size="22" font-weight="bold" text-anchor="middle" fill="{Z_COLOR}">z = {z:g}</text>')
     parts.append("</svg>")
     return "\n".join(parts)
 

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150" width="900" height="150" font-family="sans-serif">
 <rect width="900" height="150" fill="white"/>
-<text x="20" y="65" font-size="20" fill="#b5121b">x</text>
-<text x="20" y="135" font-size="20" fill="#1f5fa8">z</text>
+<text x="20" y="65" font-size="20" fill="#1f5fa8">x</text>
+<text x="20" y="135" font-size="20" fill="#b5121b">z</text>
 <line x1="40" y1="90" x2="860" y2="90" stroke="#333" stroke-width="2"/>
 <line x1="60.0" y1="85" x2="60.0" y2="95" stroke="#333" stroke-width="1.5"/>
 <line x1="108.8" y1="85" x2="108.8" y2="95" stroke="#333" stroke-width="1.5"/>
@@ -21,18 +21,18 @@
 <line x1="791.2" y1="85" x2="791.2" y2="95" stroke="#333" stroke-width="1.5"/>
 <line x1="840.0" y1="85" x2="840.0" y2="95" stroke="#333" stroke-width="1.5"/>
 <line x1="60.0" y1="78" x2="60.0" y2="102" stroke="#333" stroke-width="3"/>
-<text x="60.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">-2</text>
-<text x="60.0" y="65" font-size="22" text-anchor="middle" fill="#b5121b">?</text>
+<text x="60.0" y="135" font-size="22" text-anchor="middle" fill="#b5121b">-2</text>
+<text x="60.0" y="65" font-size="22" text-anchor="middle" fill="#1f5fa8">?</text>
 <line x1="255.0" y1="78" x2="255.0" y2="102" stroke="#333" stroke-width="3"/>
-<text x="255.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">-1</text>
-<text x="255.0" y="65" font-size="22" text-anchor="middle" fill="#b5121b">?</text>
+<text x="255.0" y="135" font-size="22" text-anchor="middle" fill="#b5121b">-1</text>
+<text x="255.0" y="65" font-size="22" text-anchor="middle" fill="#1f5fa8">?</text>
 <line x1="450.0" y1="78" x2="450.0" y2="102" stroke="#333" stroke-width="3"/>
-<text x="450.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">0</text>
-<text x="450.0" y="65" font-size="22" text-anchor="middle" fill="#b5121b">12</text>
+<text x="450.0" y="135" font-size="22" text-anchor="middle" fill="#b5121b">0</text>
+<text x="450.0" y="65" font-size="22" text-anchor="middle" fill="#1f5fa8">12</text>
 <line x1="645.0" y1="78" x2="645.0" y2="102" stroke="#333" stroke-width="3"/>
-<text x="645.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">1</text>
-<text x="645.0" y="65" font-size="22" text-anchor="middle" fill="#b5121b">?</text>
+<text x="645.0" y="135" font-size="22" text-anchor="middle" fill="#b5121b">1</text>
+<text x="645.0" y="65" font-size="22" text-anchor="middle" fill="#1f5fa8">?</text>
 <line x1="840.0" y1="78" x2="840.0" y2="102" stroke="#333" stroke-width="3"/>
-<text x="840.0" y="135" font-size="22" text-anchor="middle" fill="#1f5fa8">2</text>
-<text x="840.0" y="65" font-size="22" text-anchor="middle" fill="#b5121b">?</text>
+<text x="840.0" y="135" font-size="22" text-anchor="middle" fill="#b5121b">2</text>
+<text x="840.0" y="65" font-size="22" text-anchor="middle" fill="#1f5fa8">?</text>
 </svg>
