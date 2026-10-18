@@ -21,13 +21,9 @@ h1.title{font-size:2em;margin:0 0 .5em}
 </style>
 ```
 
-## YouTube Playlists
+## Agentic Tools Playlists
 
 <table>
-<tr>
-<td width="240"><a href="#dolt-databases-and-the-sql-editor-oct-26"><img src="https://img.youtube.com/vi/pRBr23ceFzQ/mqdefault.jpg" width="240" alt="Dolt Databases and the SQL Editor"></a></td>
-<td><b><a href="#dolt-databases-and-the-sql-editor-oct-26">Dolt Databases and the SQL Editor (Oct 26)</a></b><br>Four videos that build a small coffee shop database on DoltHub by pasting SQL into the query editor. They describe the two tables, create and fill them, save a joined report as a view, and change a price on a branch before merging it back into main.</td>
-</tr>
 <tr>
 <td width="240"><a href="#agentic-tools-dolt-database-mcp-codespaces-apr-26"><img src="https://img.youtube.com/vi/3EWMabP7XWs/mqdefault.jpg" width="240" alt="Agentic Tools, Dolt Database MCP, Codespaces"></a></td>
 <td><b><a href="#agentic-tools-dolt-database-mcp-codespaces-apr-26">Agentic Tools, Dolt Database MCP, Codespaces (Apr 26)</a></b><br>Five agentic coding tools, each run in the same codespace with a Dolt database MCP: Claude Code, OpenCode, Copilot CLI, Crush and Codex. Each video signs in, checks <code>/mcp</code>, and asks about a small books database on DoltHub, comparing how the tools look and work.</td>
@@ -40,37 +36,18 @@ h1.title{font-size:2em;margin:0 0 .5em}
 <td width="240"><a href="#mcp-servers---connectors-sep-25"><img src="https://img.youtube.com/vi/7uxJPLFWKQM/mqdefault.jpg" width="240" alt="MCP Servers - Connectors"></a></td>
 <td><b><a href="#mcp-servers---connectors-sep-25">MCP Servers - Connectors (Sep 25)</a></b><br>Three videos on MCP servers, which give LLMs tools and data. An introduction explains how a tool call works, then the Dolt database and Yahoo Finance MCPs for the business management benchmarks project are added to Claude.ai and Mistral's chatbot as custom connectors.</td>
 </tr>
-<tr>
-<td width="240"><a href="#intro-dolt-databases-sep-25"><img src="https://img.youtube.com/vi/vespI0yJxM4/mqdefault.jpg" width="240" alt="Intro Dolt Databases"></a></td>
-<td><b><a href="#intro-dolt-databases-sep-25">Intro Dolt Databases (Sep 25)</a></b><br>Two short videos introducing DoltHub, a free host for open-source SQL databases that works like GitHub. Using a small coffee shop database, they cover tables, rows, primary and foreign keys, views, schemas and branches, and why branches suit working with LLMs.</td>
-</tr>
 </table>
 
-## Dolt Databases and the SQL Editor (Oct 26)
-
-<table class="playlist">
-<tr>
-<td width="320"><a href="https://www.youtube.com/playlist?list=PLLmvdD1XPeXQ"><img src="https://img.youtube.com/vi/pRBr23ceFzQ/hqdefault.jpg" width="320" alt="Dolt Databases and the SQL Editor playlist"></a></td>
-<td><b><a href="https://www.youtube.com/playlist?list=PLLmvdD1XPeXQ">Playlist: Dolt Databases and the SQL Editor</a></b> · 4 videos<br>Four videos that build a small coffee shop database on DoltHub by pasting SQL into the query editor. They describe the two tables, create and fill them, save a joined report as a view, and change a price on a branch before merging it back into main.</td>
-</tr>
-</table>
+## DoltHub Database Playlists
 
 <table>
 <tr>
-<td width="240"><a href="https://www.youtube.com/watch?v=pRBr23ceFzQ"><img src="https://img.youtube.com/vi/pRBr23ceFzQ/mqdefault.jpg" width="240" alt="Description of Coffee Orders Database"></a></td>
-<td><b>1. <a href="https://www.youtube.com/watch?v=pRBr23ceFzQ">Description of Coffee Orders Database</a></b><br>A look at the database you'll build: a products table and an orders table. Each has a primary key, and orders uses <code>product_id</code> as a foreign key, so a join can show product names in a report.</td>
+<td width="240"><a href="#dolt-databases-and-the-sql-editor-oct-26"><img src="https://img.youtube.com/vi/pRBr23ceFzQ/mqdefault.jpg" width="240" alt="Dolt Databases and the SQL Editor"></a></td>
+<td><b><a href="#dolt-databases-and-the-sql-editor-oct-26">Dolt Databases and the SQL Editor (Oct 26)</a></b><br>Four videos that build a small coffee shop database on DoltHub by pasting SQL into the query editor. They describe the two tables, create and fill them, save a joined report as a view, and change a price on a branch before merging it back into main.</td>
 </tr>
 <tr>
-<td width="240"><a href="https://www.youtube.com/watch?v=Is_4ZK__nyU"><img src="https://img.youtube.com/vi/Is_4ZK__nyU/mqdefault.jpg" width="240" alt="Creating the Coffee Shop Database on DoltHub using SQL Queries"></a></td>
-<td><b>2. <a href="https://www.youtube.com/watch?v=Is_4ZK__nyU">Creating the Coffee Shop Database on DoltHub using SQL Queries</a></b><br>Creates a public database on DoltHub, then pastes each SQL snippet from the starter page into the query editor: create the products table, add its rows, then do the same for orders. Every change needs Commit directly, and the ER diagram shows the link.</td>
-</tr>
-<tr>
-<td width="240"><a href="https://www.youtube.com/watch?v=WjXIsTQZpIc"><img src="https://img.youtube.com/vi/WjXIsTQZpIc/mqdefault.jpg" width="240" alt="Creating and Saving a View in Dolt"></a></td>
-<td><b>3. <a href="https://www.youtube.com/watch?v=WjXIsTQZpIc">Creating and Saving a View in Dolt</a></b><br>Runs a starter query that joins orders to products to show each order with its product name and cost, then saves it with Create view and commits it. The saved view appears under Views, ready to run again like a report.</td>
-</tr>
-<tr>
-<td width="240"><a href="https://www.youtube.com/watch?v=XMe8hGDapaY"><img src="https://img.youtube.com/vi/XMe8hGDapaY/mqdefault.jpg" width="240" alt="Creating a Branch in Dolt Database"></a></td>
-<td><b>4. <a href="https://www.youtube.com/watch?v=XMe8hGDapaY">Creating a Branch in Dolt Database</a></b><br>Creates a change-price branch, edits the espresso price and commits it there, so main keeps the old price. A pull request then merges the branch into main, and the branch is deleted, which takes effect right away without a commit.</td>
+<td width="240"><a href="#intro-dolt-databases-sep-25"><img src="https://img.youtube.com/vi/vespI0yJxM4/mqdefault.jpg" width="240" alt="Intro Dolt Databases"></a></td>
+<td><b><a href="#intro-dolt-databases-sep-25">Intro Dolt Databases (Sep 25)</a></b><br>Two short videos introducing DoltHub, a free host for open-source SQL databases that works like GitHub. Using a small coffee shop database, they cover tables, rows, primary and foreign keys, views, schemas and branches, and why branches suit working with LLMs.</td>
 </tr>
 </table>
 
@@ -167,6 +144,34 @@ h1.title{font-size:2em;margin:0 0 .5em}
 <tr>
 <td width="240"><a href="https://www.youtube.com/watch?v=DojnnXKUgHk"><img src="https://img.youtube.com/vi/DojnnXKUgHk/mqdefault.jpg" width="240" alt="Mistral AI Connectors"></a></td>
 <td><b>3. <a href="https://www.youtube.com/watch?v=DojnnXKUgHk">Mistral AI Connectors</a></b><br>Adds the Dolt database MCP to Mistral's chatbot, which now offers connectors on every plan. Turn on developer mode, add a custom connector, and watch for the name field, which is editable even though it doesn't look it. Then enable its tools and test it.</td>
+</tr>
+</table>
+
+## Dolt Databases and the SQL Editor (Oct 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PLLmvdD1XPeXQ"><img src="https://img.youtube.com/vi/pRBr23ceFzQ/hqdefault.jpg" width="320" alt="Dolt Databases and the SQL Editor playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PLLmvdD1XPeXQ">Playlist: Dolt Databases and the SQL Editor</a></b> · 4 videos<br>Four videos that build a small coffee shop database on DoltHub by pasting SQL into the query editor. They describe the two tables, create and fill them, save a joined report as a view, and change a price on a branch before merging it back into main.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=pRBr23ceFzQ"><img src="https://img.youtube.com/vi/pRBr23ceFzQ/mqdefault.jpg" width="240" alt="Description of Coffee Orders Database"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=pRBr23ceFzQ">Description of Coffee Orders Database</a></b><br>A look at the database you'll build: a products table and an orders table. Each has a primary key, and orders uses <code>product_id</code> as a foreign key, so a join can show product names in a report.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=Is_4ZK__nyU"><img src="https://img.youtube.com/vi/Is_4ZK__nyU/mqdefault.jpg" width="240" alt="Creating the Coffee Shop Database on DoltHub using SQL Queries"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=Is_4ZK__nyU">Creating the Coffee Shop Database on DoltHub using SQL Queries</a></b><br>Creates a public database on DoltHub, then pastes each SQL snippet from the starter page into the query editor: create the products table, add its rows, then do the same for orders. Every change needs Commit directly, and the ER diagram shows the link.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=WjXIsTQZpIc"><img src="https://img.youtube.com/vi/WjXIsTQZpIc/mqdefault.jpg" width="240" alt="Creating and Saving a View in Dolt"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=WjXIsTQZpIc">Creating and Saving a View in Dolt</a></b><br>Runs a starter query that joins orders to products to show each order with its product name and cost, then saves it with Create view and commits it. The saved view appears under Views, ready to run again like a report.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=XMe8hGDapaY"><img src="https://img.youtube.com/vi/XMe8hGDapaY/mqdefault.jpg" width="240" alt="Creating a Branch in Dolt Database"></a></td>
+<td><b>4. <a href="https://www.youtube.com/watch?v=XMe8hGDapaY">Creating a Branch in Dolt Database</a></b><br>Creates a change-price branch, edits the espresso price and commits it there, so main keeps the old price. A pull request then merges the branch into main, and the branch is deleted, which takes effect right away without a commit.</td>
 </tr>
 </table>
 
