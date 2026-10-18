@@ -28,11 +28,13 @@ def table_svg(rows, row=None, col=None, show_answer=False):
     def cx(c):
         return FIRST_W + c * CELL_W
 
-    # Highlight the row and column first so the grid and text sit on top
+    # Highlight the row and column first so the grid and text sit on top.
+    # The row runs from its label over to the cell, and the column runs from
+    # its header down to the cell, so both stop at the area being found.
     if row is not None:
         r = rows.index(row) + 1
-        parts.append(f'<rect x="0" y="{r * ROW_H}" width="{WIDTH}" height="{ROW_H}" fill="{LINE}"/>')
-        parts.append(f'<rect x="{cx(col):.1f}" y="0" width="{CELL_W:.1f}" height="{height}" fill="{LINE}"/>')
+        parts.append(f'<rect x="0" y="{r * ROW_H}" width="{cx(col) + CELL_W:.1f}" height="{ROW_H}" fill="{LINE}"/>')
+        parts.append(f'<rect x="{cx(col):.1f}" y="0" width="{CELL_W:.1f}" height="{(r + 1) * ROW_H}" fill="{LINE}"/>')
         if show_answer:
             parts.append(f'<rect x="{cx(col):.1f}" y="{r * ROW_H}" width="{CELL_W:.1f}" height="{ROW_H}" fill="{HIT}" stroke="{COLOR}" stroke-width="3"/>')
 

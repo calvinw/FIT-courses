@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 336" width="900" height="336" font-family="sans-serif">
 <rect width="900" height="336" fill="white"/>
-<rect x="0" y="168" width="900" height="42" fill="#f3d9a4"/>
-<rect x="252.0" y="0" width="81.0" height="336" fill="#f3d9a4"/>
+<rect x="0" y="168" width="333.0" height="42" fill="#f3d9a4"/>
+<rect x="252.0" y="0" width="81.0" height="210" fill="#f3d9a4"/>
 <rect x="252.0" y="168" width="81.0" height="42" fill="#f2b84b" stroke="#b5121b" stroke-width="3"/>
 <rect x="0" y="0" width="900" height="336" fill="none" stroke="#333" stroke-width="2"/>
 <line x1="0" y1="42" x2="900" y2="42" stroke="#333" stroke-width="2"/>
