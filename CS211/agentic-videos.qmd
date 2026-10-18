@@ -1,0 +1,191 @@
+---
+title: "Agentic Codespaces, MCPs, Dolt Databases and Skills"
+format:
+  html:
+    minimal: true
+    embed-resources: true
+---
+
+```{=html}
+<style>
+body{max-width:900px;margin:2rem auto;padding:0 16px;font:19px/1.6 -apple-system,system-ui,sans-serif;color:#1f2328;background:#fff}
+a{color:#0969da}h1{border-bottom:1px solid #ddd;padding-bottom:.3em}h2{margin-top:2em}li{margin-bottom:.8em}
+@media (prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}a{color:#4493f8}h1{border-color:#30363d}}
+img{max-width:320px;width:100%;border-radius:8px;margin:.4em 0}
+img{max-width:240px;margin:0}
+table{border-collapse:collapse;width:100%}td{vertical-align:top;padding:10px 8px;border-bottom:1px solid #ddd}td:first-child{width:240px;padding-left:0}
+@media (prefers-color-scheme:dark){td{border-color:#30363d}}
+@media (max-width:560px){td{display:block;width:auto!important;border:0;padding:4px 0}tr{display:block;border-bottom:1px solid #ddd;padding:8px 0}}
+table.playlist{margin-bottom:1em}table.playlist td{border-bottom:0}table.playlist td:first-child{width:320px}table.playlist img{max-width:320px}
+h1.title{font-size:2em;margin:0 0 .5em}
+</style>
+```
+
+## YouTube Playlists
+
+<table>
+<tr>
+<td width="240"><a href="#dolt-databases-and-the-sql-editor-oct-26"><img src="https://img.youtube.com/vi/pRBr23ceFzQ/mqdefault.jpg" width="240" alt="Dolt Databases and the SQL Editor"></a></td>
+<td><b><a href="#dolt-databases-and-the-sql-editor-oct-26">Dolt Databases and the SQL Editor (Oct 26)</a></b><br>Four videos that build a small coffee shop database on DoltHub by pasting SQL into the query editor. They describe the two tables, create and fill them, save a joined report as a view, and change a price on a branch before merging it back into main.</td>
+</tr>
+<tr>
+<td width="240"><a href="#agentic-tools-dolt-database-mcp-codespaces-apr-26"><img src="https://img.youtube.com/vi/3EWMabP7XWs/mqdefault.jpg" width="240" alt="Agentic Tools, Dolt Database MCP, Codespaces"></a></td>
+<td><b><a href="#agentic-tools-dolt-database-mcp-codespaces-apr-26">Agentic Tools, Dolt Database MCP, Codespaces (Apr 26)</a></b><br>Five agentic coding tools, each run in the same codespace with a Dolt database MCP: Claude Code, OpenCode, Copilot CLI, Crush and Codex. Each video signs in, checks <code>/mcp</code>, and asks about a small books database on DoltHub, comparing how the tools look and work.</td>
+</tr>
+<tr>
+<td width="240"><a href="#agentic-tools-skills-codespaces-apr-26"><img src="https://img.youtube.com/vi/wM7Yd17w2F0/mqdefault.jpg" width="240" alt="Agentic Tools, Skills, Codespaces"></a></td>
+<td><b><a href="#agentic-tools-skills-codespaces-apr-26">Agentic Tools, Skills, Codespaces (Apr 26)</a></b><br>A seven-part project that edits a pizza-ordering skill in a codespace. It covers making your own repo from the template, starting OpenCode and Claude Code, editing files with an agent, what a skill file is, testing and editing with two agents, and committing and pushing.</td>
+</tr>
+<tr>
+<td width="240"><a href="#mcp-servers---connectors-sep-25"><img src="https://img.youtube.com/vi/7uxJPLFWKQM/mqdefault.jpg" width="240" alt="MCP Servers - Connectors"></a></td>
+<td><b><a href="#mcp-servers---connectors-sep-25">MCP Servers - Connectors (Sep 25)</a></b><br>Three videos on MCP servers, which give LLMs tools and data. An introduction explains how a tool call works, then the Dolt database and Yahoo Finance MCPs for the business management benchmarks project are added to Claude.ai and Mistral's chatbot as custom connectors.</td>
+</tr>
+<tr>
+<td width="240"><a href="#intro-dolt-databases-sep-25"><img src="https://img.youtube.com/vi/vespI0yJxM4/mqdefault.jpg" width="240" alt="Intro Dolt Databases"></a></td>
+<td><b><a href="#intro-dolt-databases-sep-25">Intro Dolt Databases (Sep 25)</a></b><br>Two short videos introducing DoltHub, a free host for open-source SQL databases that works like GitHub. Using a small coffee shop database, they cover tables, rows, primary and foreign keys, views, schemas and branches, and why branches suit working with LLMs.</td>
+</tr>
+</table>
+
+## Dolt Databases and the SQL Editor (Oct 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PLLmvdD1XPeXQ"><img src="https://img.youtube.com/vi/pRBr23ceFzQ/hqdefault.jpg" width="320" alt="Dolt Databases and the SQL Editor playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PLLmvdD1XPeXQ">Playlist: Dolt Databases and the SQL Editor</a></b> · 4 videos<br>Four videos that build a small coffee shop database on DoltHub by pasting SQL into the query editor. They describe the two tables, create and fill them, save a joined report as a view, and change a price on a branch before merging it back into main.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=pRBr23ceFzQ"><img src="https://img.youtube.com/vi/pRBr23ceFzQ/mqdefault.jpg" width="240" alt="Description of Coffee Orders Database"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=pRBr23ceFzQ">Description of Coffee Orders Database</a></b><br>A look at the database you'll build: a products table and an orders table. Each has a primary key, and orders uses <code>product_id</code> as a foreign key, so a join can show product names in a report.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=Is_4ZK__nyU"><img src="https://img.youtube.com/vi/Is_4ZK__nyU/mqdefault.jpg" width="240" alt="Creating the Coffee Shop Database on DoltHub using SQL Queries"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=Is_4ZK__nyU">Creating the Coffee Shop Database on DoltHub using SQL Queries</a></b><br>Creates a public database on DoltHub, then pastes each SQL snippet from the starter page into the query editor: create the products table, add its rows, then do the same for orders. Every change needs Commit directly, and the ER diagram shows the link.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=WjXIsTQZpIc"><img src="https://img.youtube.com/vi/WjXIsTQZpIc/mqdefault.jpg" width="240" alt="Creating and Saving a View in Dolt"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=WjXIsTQZpIc">Creating and Saving a View in Dolt</a></b><br>Runs a starter query that joins orders to products to show each order with its product name and cost, then saves it with Create view and commits it. The saved view appears under Views, ready to run again like a report.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=XMe8hGDapaY"><img src="https://img.youtube.com/vi/XMe8hGDapaY/mqdefault.jpg" width="240" alt="Creating a Branch in Dolt Database"></a></td>
+<td><b>4. <a href="https://www.youtube.com/watch?v=XMe8hGDapaY">Creating a Branch in Dolt Database</a></b><br>Creates a change-price branch, edits the espresso price and commits it there, so main keeps the old price. A pull request then merges the branch into main, and the branch is deleted, which takes effect right away without a commit.</td>
+</tr>
+</table>
+
+## Agentic Tools, Dolt Database MCP, Codespaces (Apr 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PL3miIiuTRI6cakKjucnxbHtKDePbSGI9H"><img src="https://img.youtube.com/vi/3EWMabP7XWs/hqdefault.jpg" width="320" alt="Agentic Tools, Dolt Database MCP, Codespaces playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PL3miIiuTRI6cakKjucnxbHtKDePbSGI9H">Playlist: Agentic Tools, Dolt Database MCP, Codespaces</a></b> · 5 videos<br>Five agentic coding tools, each run in the same codespace with a Dolt database MCP: Claude Code, OpenCode, Copilot CLI, Crush and Codex. Each video signs in, checks <code>/mcp</code>, and asks about a small books database on DoltHub, comparing how the tools look and work.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=3EWMabP7XWs"><img src="https://img.youtube.com/vi/3EWMabP7XWs/mqdefault.jpg" width="240" alt="Claude Code, Dolt Database MCP, Codespaces"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=3EWMabP7XWs">Claude Code, Dolt Database MCP, Codespaces</a></b><br>Introduces the codespace with five agentic tools and which subscription each needs; GitHub Education gives students 300 Copilot requests a month. Starts Claude Code from the permissions script, signs in, and queries the books database, showing the SQL and the MCP's tools.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=n3z4rkTVDnw"><img src="https://img.youtube.com/vi/n3z4rkTVDnw/mqdefault.jpg" width="240" alt="OpenCode, Dolt Database MCP, Codespaces"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=n3z4rkTVDnw">OpenCode, Dolt Database MCP, Codespaces</a></b><br>OpenCode picks up your GitHub Copilot subscription automatically. Choose Haiku 4.5, check <code>/mcp</code>, and ask about the books table: its columns, first and last rows, and which authors have the most books. Also tries a free model, themes and hiding the sidebar.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=70TDqfS-ljo"><img src="https://img.youtube.com/vi/70TDqfS-ljo/mqdefault.jpg" width="240" alt="Copilot CLI, Dolt Database MCP, Codespaces"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=70TDqfS-ljo">Copilot CLI, Dolt Database MCP, Codespaces</a></b><br>GitHub's Copilot CLI signs in with your GitHub account. Covers choosing models by cost (1x, a third, or free), checking your monthly allowance, and hiding the model's thinking with Ctrl+T. It queries the books and coffee shop databases, though its output is noisier.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=XBuKiiHsaaI"><img src="https://img.youtube.com/vi/XBuKiiHsaaI/mqdefault.jpg" width="240" alt="Crush, Dolt Database MCP, Codespaces"></a></td>
+<td><b>4. <a href="https://www.youtube.com/watch?v=XBuKiiHsaaI">Crush, Dolt Database MCP, Codespaces</a></b><br>Crush signs in to GitHub Copilot with a device code. Running init first writes an <code>AGENTS.md</code> summary of the project; be careful it doesn't overwrite one you already have. Its compact, expandable output stands out, and it writes a report file from a query.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=c1SxZ4ylsLU"><img src="https://img.youtube.com/vi/c1SxZ4ylsLU/mqdefault.jpg" width="240" alt="Codex, Dolt Database MCP, Codespaces"></a></td>
+<td><b>5. <a href="https://www.youtube.com/watch?v=c1SxZ4ylsLU">Codex, Dolt Database MCP, Codespaces</a></b><br>OpenAI's Codex CLI needs a ChatGPT subscription and works only with GPT models. Sign in with a device code (turn that on in your ChatGPT account first), check <code>/mcp</code>, and query the books database. Its output is clean and minimal.</td>
+</tr>
+</table>
+
+## Agentic Tools, Skills, Codespaces (Apr 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PL3miIiuTRI6fqT2g8yYvKIzPhbrJOny2W"><img src="https://img.youtube.com/vi/wM7Yd17w2F0/hqdefault.jpg" width="320" alt="Agentic Tools, Skills, Codespaces playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PL3miIiuTRI6fqT2g8yYvKIzPhbrJOny2W">Playlist: Agentic Tools, Skills, Codespaces</a></b> · 7 videos<br>A seven-part project that edits a pizza-ordering skill in a codespace. It covers making your own repo from the template, starting OpenCode and Claude Code, editing files with an agent, what a skill file is, testing and editing with two agents, and committing and pushing.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=wM7Yd17w2F0"><img src="https://img.youtube.com/vi/wM7Yd17w2F0/mqdefault.jpg" width="240" alt="Introduction to Order Pizza Skills with Codespaces"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=wM7Yd17w2F0">Introduction to Order Pizza Skills with Codespaces</a></b><br>What skills are and how to set up the project: make your own repo from the template, sign up for GitHub Education, and create a codespace on main. Tours the codespace layout, the terminal, <code>ls</code> and <code>pwd</code>, and previewing the README.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=vz9xNaQlzeo"><img src="https://img.youtube.com/vi/vz9xNaQlzeo/mqdefault.jpg" width="240" alt="Starting OpenCode in a Codespace"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=vz9xNaQlzeo">Starting OpenCode in a Codespace</a></b><br>Starts OpenCode from the permissions script using tab completion, switches the model to Claude Haiku 4.5 through GitHub Copilot, and asks it to describe the repo. Shows referring to files with <code>@</code> and how <code>CLAUDE.md</code> tells the agent how to work with students.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=ab6vRz7WfTs"><img src="https://img.youtube.com/vi/ab6vRz7WfTs/mqdefault.jpg" width="240" alt="Claude Code (Pro/Max) in Codespaces"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=ab6vRz7WfTs">Claude Code (Pro/Max) in Codespaces</a></b><br>The same steps with Claude Code and a Claude Pro subscription: start it from the script, sign in by pasting the login code, and switch to Haiku. It creates a practice folder with a markdown table and notices edits you make to the file yourself.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=k5QsDVyw378"><img src="https://img.youtube.com/vi/k5QsDVyw378/mqdefault.jpg" width="240" alt="Free Models in OpenCode (Qwen3.6), Editing Files"></a></td>
+<td><b>4. <a href="https://www.youtube.com/watch?v=k5QsDVyw378">Free Models in OpenCode (Qwen3.6), Editing Files</a></b><br>Back in OpenCode with Qwen 3.6, a free OpenCode Zen model, so no Copilot requests are used. It edits the practice table and deletes the folder, then explains the skill file: the name and description header, role, menu, discounts and workflow.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=cXYhZMvJiKg"><img src="https://img.youtube.com/vi/cXYhZMvJiKg/mqdefault.jpg" width="240" alt="OpenCode Haiku 4.5 and the Skill Tester"></a></td>
+<td><b>5. <a href="https://www.youtube.com/watch?v=cXYhZMvJiKg">OpenCode Haiku 4.5 and the Skill Tester</a></b><br>Sets up the first of two agents as the skill tester: it reads the skill file fresh each session, stays in character and never edits. A full test order covers the menu, adding items, the discount tiers and the senior citizen discount.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=VPQjPhvTqYA"><img src="https://img.youtube.com/vi/VPQjPhvTqYA/mqdefault.jpg" width="240" alt="Open Code, Haiku 4.5 and Skill Editor"></a></td>
+<td><b>6. <a href="https://www.youtube.com/watch?v=VPQjPhvTqYA">Open Code, Haiku 4.5 and Skill Editor</a></b><br>Opens a second terminal for a skill editor agent next to the tester. The editor adds the missing eggplant pizza but makes up prices until told to use the README; the tester then reruns an order and confirms the new menu.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=nxSqSSjLlFY"><img src="https://img.youtube.com/vi/nxSqSSjLlFY/mqdefault.jpg" width="240" alt="Commiting and Pushing Your Changes To The GitHub Repo"></a></td>
+<td><b>7. <a href="https://www.youtube.com/watch?v=nxSqSSjLlFY">Commiting and Pushing Your Changes To The GitHub Repo</a></b><br>Shows OpenCode's plan mode, which can't edit files, and build mode, which can. After changing a price and retesting, the agent lists the changes, commits them and pushes them to GitHub, so the work survives deleting the codespace.</td>
+</tr>
+</table>
+
+## MCP Servers - Connectors (Sep 25)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PL3miIiuTRI6eZXhYoroWIHgZq5ip6LLCC"><img src="https://img.youtube.com/vi/7uxJPLFWKQM/hqdefault.jpg" width="320" alt="MCP Servers - Connectors playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PL3miIiuTRI6eZXhYoroWIHgZq5ip6LLCC">Playlist: MCP Servers - Connectors</a></b> · 3 videos<br>Three videos on MCP servers, which give LLMs tools and data. An introduction explains how a tool call works, then the Dolt database and Yahoo Finance MCPs for the business management benchmarks project are added to Claude.ai and Mistral's chatbot as custom connectors.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=7uxJPLFWKQM"><img src="https://img.youtube.com/vi/7uxJPLFWKQM/mqdefault.jpg" width="240" alt="Model Context Protocol (MCP) Introduction"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=7uxJPLFWKQM">Model Context Protocol (MCP) Introduction</a></b><br>What the Model Context Protocol is. Without tools, an LLM can only answer from its training. With MCP, the app (the client) calls a tool on an MCP server for the LLM, such as web search or email, and passes the result back as extra context.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=gnLTa2w6IbU"><img src="https://img.youtube.com/vi/gnLTa2w6IbU/mqdefault.jpg" width="240" alt="Hooking Up Mcp Servers To Claude Web"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=gnLTa2w6IbU">Hooking Up Mcp Servers To Claude Web</a></b><br>Adds the Dolt database MCP to Claude.ai as a custom connector, allows its tools, and lists the tables in the business management benchmarks database before pulling Costco's financials. Then adds a Yahoo Finance MCP and gets four years of Nike's data.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=DojnnXKUgHk"><img src="https://img.youtube.com/vi/DojnnXKUgHk/mqdefault.jpg" width="240" alt="Mistral AI Connectors"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=DojnnXKUgHk">Mistral AI Connectors</a></b><br>Adds the Dolt database MCP to Mistral's chatbot, which now offers connectors on every plan. Turn on developer mode, add a custom connector, and watch for the name field, which is editable even though it doesn't look it. Then enable its tools and test it.</td>
+</tr>
+</table>
+
+## Intro Dolt Databases (Sep 25)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PL3miIiuTRI6f2xpBWl-ezjv6a5FKSOfSd"><img src="https://img.youtube.com/vi/vespI0yJxM4/hqdefault.jpg" width="320" alt="Intro Dolt Databases playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PL3miIiuTRI6f2xpBWl-ezjv6a5FKSOfSd">Playlist: Intro Dolt Databases</a></b> · 2 videos<br>Two short videos introducing DoltHub, a free host for open-source SQL databases that works like GitHub. Using a small coffee shop database, they cover tables, rows, primary and foreign keys, views, schemas and branches, and why branches suit working with LLMs.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=vespI0yJxM4"><img src="https://img.youtube.com/vi/vespI0yJxM4/mqdefault.jpg" width="240" alt="Dolt Databases Part1"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=vespI0yJxM4">Dolt Databases Part1</a></b><br>A tour of DoltHub and the coffee shop database. A database is a set of related tables, a bit like worksheets. Covers the ER diagram, columns and rows, primary keys, and how the orders table uses a foreign key to point to products.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=W2nMlj-JEQc"><img src="https://img.youtube.com/vi/W2nMlj-JEQc/mqdefault.jpg" width="240" alt="Dolt Databases Part2"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=W2nMlj-JEQc">Dolt Databases Part2</a></b><br>Views are saved queries, like reports: the coffee shop's completed and in-progress orders, with product names filled in. Also covers table schemas, database names written as owner/database/branch, and how branches let you experiment safely, especially with LLMs.</td>
+</tr>
+</table>
