@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 336" width="900" height="336" font-family="sans-serif">
+<rect width="900" height="336" fill="white"/>
+<rect x="0" y="168" width="900" height="42" fill="#f3d9a4"/>
+<rect x="495.0" y="0" width="81.0" height="336" fill="#f3d9a4"/>
+<rect x="0" y="0" width="900" height="336" fill="none" stroke="#333" stroke-width="2"/>
+<line x1="0" y1="42" x2="900" y2="42" stroke="#333" stroke-width="2"/>
+<line x1="90" y1="0" x2="90" y2="336" stroke="#333" stroke-width="2"/>
+<text x="45.0" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">z</text>
+<text x="130.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.00</text>
+<text x="211.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.01</text>
+<text x="292.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.02</text>
+<text x="373.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.03</text>
+<text x="454.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.04</text>
+<text x="535.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.05</text>
+<text x="616.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.06</text>
+<text x="697.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.07</text>
+<text x="778.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.08</text>
+<text x="859.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.09</text>
+<text x="45.0" y="70.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.5</text>
+<text x="130.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0668</text>
+<text x="211.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0655</text>
+<text x="292.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0643</text>
+<text x="373.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0630</text>
+<text x="454.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0618</text>
+<text x="535.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0606</text>
+<text x="616.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0594</text>
+<text x="697.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0582</text>
+<text x="778.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0571</text>
+<text x="859.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0559</text>
+<text x="45.0" y="112.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.4</text>
+<text x="130.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0808</text>
+<text x="211.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0793</text>
+<text x="292.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0778</text>
+<text x="373.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0764</text>
+<text x="454.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0749</text>
+<text x="535.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0735</text>
+<text x="616.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0721</text>
+<text x="697.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0708</text>
+<text x="778.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0694</text>
+<text x="859.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0681</text>
+<text x="45.0" y="154.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.3</text>
+<text x="130.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0968</text>
+<text x="211.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0951</text>
+<text x="292.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0934</text>
+<text x="373.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0918</text>
+<text x="454.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0901</text>
+<text x="535.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0885</text>
+<text x="616.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0869</text>
+<text x="697.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0853</text>
+<text x="778.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0838</text>
+<text x="859.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0823</text>
+<text x="45.0" y="196.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.2</text>
+<text x="130.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1151</text>
+<text x="211.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1131</text>
+<text x="292.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1112</text>
+<text x="373.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1093</text>
+<text x="454.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1075</text>
+<text x="535.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1056</text>
+<text x="616.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1038</text>
+<text x="697.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1020</text>
+<text x="778.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1003</text>
+<text x="859.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.0985</text>
+<text x="45.0" y="238.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.1</text>
+<text x="130.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1357</text>
+<text x="211.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1335</text>
+<text x="292.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1314</text>
+<text x="373.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1292</text>
+<text x="454.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1271</text>
+<text x="535.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1251</text>
+<text x="616.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1230</text>
+<text x="697.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1210</text>
+<text x="778.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1190</text>
+<text x="859.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1170</text>
+<text x="45.0" y="280.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.0</text>
+<text x="130.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1587</text>
+<text x="211.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1562</text>
+<text x="292.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1539</text>
+<text x="373.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1515</text>
+<text x="454.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1492</text>
+<text x="535.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1469</text>
+<text x="616.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1446</text>
+<text x="697.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1423</text>
+<text x="778.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1401</text>
+<text x="859.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1379</text>
+<text x="45.0" y="322.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-0.9</text>
+<text x="130.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1841</text>
+<text x="211.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1814</text>
+<text x="292.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1788</text>
+<text x="373.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1762</text>
+<text x="454.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1736</text>
+<text x="535.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1711</text>
+<text x="616.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1685</text>
+<text x="697.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1660</text>
+<text x="778.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1635</text>
+<text x="859.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1611</text>
+</svg>

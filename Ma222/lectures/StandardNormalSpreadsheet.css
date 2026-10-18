@@ -1,0 +1,21 @@
+.reveal table {
+  border-collapse: collapse;
+  font-size: 0.8em;
+}
+
+/* Spreadsheet cells and formulas stay on one line */
+.reveal table th,
+.reveal table td {
+  border: 1px solid #999;
+  white-space: nowrap;
+  padding: 0.25em 0.6em;
+}
+
+/* The theme drops the last row's bottom border */
+.reveal table tbody tr:last-child td {
+  border-bottom: 1px solid #999;
+}
+
+.reveal code {
+  white-space: nowrap;
+}
