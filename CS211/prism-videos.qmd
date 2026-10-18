@@ -2,14 +2,22 @@
 title: "PRISM Video Playlists"
 format:
   html:
+    minimal: true
     embed-resources: true
 ---
 
 ```{=html}
 <style>
-td { vertical-align: top; padding: 10px 8px; }
-td:first-child { padding-left: 0; }
-td img { max-width: 100%; height: auto; border-radius: 6px; }
+body{max-width:760px;margin:2rem auto;padding:0 16px;font:16px/1.6 -apple-system,system-ui,sans-serif;color:#1f2328;background:#fff}
+a{color:#0969da}h1{border-bottom:1px solid #ddd;padding-bottom:.3em}h2{margin-top:2em}li{margin-bottom:.8em}
+@media (prefers-color-scheme:dark){body{color:#e6edf3;background:#0d1117}a{color:#4493f8}h1{border-color:#30363d}}
+img{max-width:320px;width:100%;border-radius:8px;margin:.4em 0}
+img{max-width:240px;margin:0}
+table{border-collapse:collapse;width:100%}td{vertical-align:top;padding:10px 8px;border-bottom:1px solid #ddd}td:first-child{width:240px;padding-left:0}
+@media (prefers-color-scheme:dark){td{border-color:#30363d}}
+@media (max-width:560px){td{display:block;width:auto!important;border:0;padding:4px 0}tr{display:block;border-bottom:1px solid #ddd;padding:8px 0}}
+table.playlist{margin-bottom:1em}table.playlist td{border-bottom:0}table.playlist td:first-child{width:320px}table.playlist img{max-width:320px}
+h1.title{font-size:2em;margin:0 0 .5em}
 </style>
 ```
 
