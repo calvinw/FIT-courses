@@ -19,5 +19,6 @@
 <text x="672.9" y="300" font-size="20" text-anchor="middle" fill="#1f5fa8">68</text>
 <line x1="784.3" y1="264" x2="784.3" y2="276" stroke="#333" stroke-width="2"/>
 <text x="784.3" y="300" font-size="20" text-anchor="middle" fill="#1f5fa8">78</text>
-<text x="249.4" y="330" font-size="22" font-weight="bold" text-anchor="middle" fill="#b5121b">30</text>
+<rect x="203.4" y="228" width="92" height="30" rx="5" fill="white" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="249.4" y="251" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f5fa8">x = 30</text>
 </svg>

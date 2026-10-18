@@ -20,6 +20,8 @@
 <text x="672.9" y="300" font-size="20" text-anchor="middle" fill="#1f5fa8">2.9</text>
 <line x1="784.3" y1="264" x2="784.3" y2="276" stroke="#333" stroke-width="2"/>
 <text x="784.3" y="300" font-size="20" text-anchor="middle" fill="#1f5fa8">3.7</text>
-<text x="491.8" y="330" font-size="22" font-weight="bold" text-anchor="middle" fill="#b5121b">1.6</text>
-<text x="658.9" y="330" font-size="22" font-weight="bold" text-anchor="middle" fill="#b5121b">2.8</text>
+<rect x="439.3" y="228" width="105" height="30" rx="5" fill="white" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="491.8" y="251" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f5fa8">x = 1.6</text>
+<rect x="606.4" y="228" width="105" height="30" rx="5" fill="white" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="658.9" y="251" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f5fa8">x = 2.8</text>
 </svg>

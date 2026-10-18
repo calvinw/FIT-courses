@@ -19,5 +19,6 @@
 <text x="672.9" y="300" font-size="20" text-anchor="middle" fill="#1f5fa8">2.2</text>
 <line x1="784.3" y1="264" x2="784.3" y2="276" stroke="#333" stroke-width="2"/>
 <text x="784.3" y="300" font-size="20" text-anchor="middle" fill="#1f5fa8">2.7</text>
-<text x="565.9" y="330" font-size="22" font-weight="bold" text-anchor="middle" fill="#b5121b">1.72</text>
+<rect x="506.9" y="228" width="118" height="30" rx="5" fill="white" stroke="#1f5fa8" stroke-width="1.5"/>
+<text x="565.9" y="251" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f5fa8">x = 1.72</text>
 </svg>

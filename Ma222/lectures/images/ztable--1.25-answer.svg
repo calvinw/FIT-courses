@@ -6,18 +6,18 @@
 <rect x="0" y="0" width="900" height="336" fill="none" stroke="#333" stroke-width="2"/>
 <line x1="0" y1="42" x2="900" y2="42" stroke="#333" stroke-width="2"/>
 <line x1="90" y1="0" x2="90" y2="336" stroke="#333" stroke-width="2"/>
-<text x="45.0" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">z</text>
-<text x="130.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.00</text>
-<text x="211.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.01</text>
-<text x="292.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.02</text>
-<text x="373.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.03</text>
-<text x="454.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.04</text>
-<text x="535.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.05</text>
-<text x="616.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.06</text>
-<text x="697.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.07</text>
-<text x="778.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.08</text>
-<text x="859.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.09</text>
-<text x="45.0" y="70.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.5</text>
+<text x="45.0" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">z</text>
+<text x="130.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.00</text>
+<text x="211.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.01</text>
+<text x="292.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.02</text>
+<text x="373.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.03</text>
+<text x="454.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.04</text>
+<text x="535.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.05</text>
+<text x="616.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.06</text>
+<text x="697.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.07</text>
+<text x="778.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.08</text>
+<text x="859.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.09</text>
+<text x="45.0" y="70.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">-1.5</text>
 <text x="130.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0668</text>
 <text x="211.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0655</text>
 <text x="292.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0643</text>
@@ -28,7 +28,7 @@
 <text x="697.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0582</text>
 <text x="778.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0571</text>
 <text x="859.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.0559</text>
-<text x="45.0" y="112.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.4</text>
+<text x="45.0" y="112.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">-1.4</text>
 <text x="130.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0808</text>
 <text x="211.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0793</text>
 <text x="292.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0778</text>
@@ -39,7 +39,7 @@
 <text x="697.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0708</text>
 <text x="778.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0694</text>
 <text x="859.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.0681</text>
-<text x="45.0" y="154.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.3</text>
+<text x="45.0" y="154.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">-1.3</text>
 <text x="130.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0968</text>
 <text x="211.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0951</text>
 <text x="292.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0934</text>
@@ -50,7 +50,7 @@
 <text x="697.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0853</text>
 <text x="778.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0838</text>
 <text x="859.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.0823</text>
-<text x="45.0" y="196.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.2</text>
+<text x="45.0" y="196.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">-1.2</text>
 <text x="130.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1151</text>
 <text x="211.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1131</text>
 <text x="292.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1112</text>
@@ -61,7 +61,7 @@
 <text x="697.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1020</text>
 <text x="778.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.1003</text>
 <text x="859.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.0985</text>
-<text x="45.0" y="238.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.1</text>
+<text x="45.0" y="238.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">-1.1</text>
 <text x="130.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1357</text>
 <text x="211.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1335</text>
 <text x="292.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1314</text>
@@ -72,7 +72,7 @@
 <text x="697.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1210</text>
 <text x="778.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1190</text>
 <text x="859.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.1170</text>
-<text x="45.0" y="280.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-1.0</text>
+<text x="45.0" y="280.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">-1.0</text>
 <text x="130.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1587</text>
 <text x="211.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1562</text>
 <text x="292.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1539</text>
@@ -83,7 +83,7 @@
 <text x="697.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1423</text>
 <text x="778.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1401</text>
 <text x="859.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.1379</text>
-<text x="45.0" y="322.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">-0.9</text>
+<text x="45.0" y="322.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">-0.9</text>
 <text x="130.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1841</text>
 <text x="211.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1814</text>
 <text x="292.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.1788</text>

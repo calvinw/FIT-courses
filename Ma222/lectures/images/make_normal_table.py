@@ -2,7 +2,7 @@
 
 Run from this folder: python3 make_normal_table.py
 """
-from make_normal import CENTER, COLOR, area_left, normal_svg, write
+from make_normal import COLOR, area_left, normal_svg, write
 
 WIDTH = 900
 ROW_H = 42
@@ -39,12 +39,12 @@ def table_svg(rows, row=None, col=None, show_answer=False):
     parts.append(f'<rect x="0" y="0" width="{WIDTH}" height="{height}" fill="none" stroke="#333" stroke-width="2"/>')
     parts.append(f'<line x1="0" y1="{ROW_H}" x2="{WIDTH}" y2="{ROW_H}" stroke="#333" stroke-width="2"/>')
     parts.append(f'<line x1="{FIRST_W}" y1="0" x2="{FIRST_W}" y2="{height}" stroke="#333" stroke-width="2"/>')
-    parts.append(f'<text x="{FIRST_W / 2}" y="{ROW_H * 0.68}" font-size="20" font-weight="bold" text-anchor="middle" fill="{CENTER}">z</text>')
+    parts.append(f'<text x="{FIRST_W / 2}" y="{ROW_H * 0.68}" font-size="20" font-weight="bold" text-anchor="middle" fill="{COLOR}">z</text>')
     for c in range(10):
-        parts.append(f'<text x="{cx(c) + CELL_W / 2:.1f}" y="{ROW_H * 0.68}" font-size="20" font-weight="bold" text-anchor="middle" fill="{CENTER}">.0{c}</text>')
+        parts.append(f'<text x="{cx(c) + CELL_W / 2:.1f}" y="{ROW_H * 0.68}" font-size="20" font-weight="bold" text-anchor="middle" fill="{COLOR}">.0{c}</text>')
     for i, label in enumerate(rows, start=1):
         y = i * ROW_H + ROW_H * 0.68
-        parts.append(f'<text x="{FIRST_W / 2}" y="{y}" font-size="20" font-weight="bold" text-anchor="middle" fill="{CENTER}">{label}</text>')
+        parts.append(f'<text x="{FIRST_W / 2}" y="{y}" font-size="20" font-weight="bold" text-anchor="middle" fill="{COLOR}">{label}</text>')
         base = float(label)
         for c in range(10):
             # Negative rows (including -0.0) go further left with each column

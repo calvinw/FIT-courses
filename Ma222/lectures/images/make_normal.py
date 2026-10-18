@@ -35,23 +35,30 @@ def curve_points(lo, hi, steps=200):
     return [(px(lo + (hi - lo) * i / steps), py(lo + (hi - lo) * i / steps)) for i in range(steps + 1)]
 
 
-def normal_svg(lo=None, hi=None, ticks=(), mu=None, sigma=None):
+def normal_svg(lo=None, hi=None, ticks=(), mu=None, sigma=None, named=False):
     """Standard normal curve, shaded from z = lo to z = hi.
 
     lo=None shades the whole left tail and hi=None the whole right tail;
     both None (with no ticks) draws the plain curve. Each z in ticks is
     labeled in bold red under the axis.
 
+    With named=True each tick label reads "z = -0.86" in a red tag under the
+    axis, centered on its boundary line.
+
     With mu and sigma this is an x-curve instead: lo, hi and ticks are
     x-values, and the axis is labeled in x at each whole standard deviation.
+    Each tick is labeled "x = 1.23" in a blue tag just above the axis,
+    centered on its boundary line.
+
+    z-values are always red and x-values always blue.
     """
-    axis = "z"
+    axis = "z" if mu is None else "x"
+    color = COLOR if mu is None else CENTER
     labels = {z: f"{z}" for z in range(-3, 4)}
-    tick_labels = [f"{t:g}" for t in ticks]
+    tick_labels = [f"{axis} = {t:g}" if named or mu is not None else f"{t:g}" for t in ticks]
     if mu is not None:
         def to_z(v):
             return None if v is None else (v - mu) / sigma
-        axis = "x"
         labels = {z: f"{round(mu + z * sigma, 6):g}" for z in range(-3, 4)}
         lo, hi, ticks = to_z(lo), to_z(hi), [to_z(t) for t in ticks]
     parts = [
@@ -70,12 +77,20 @@ def normal_svg(lo=None, hi=None, ticks=(), mu=None, sigma=None):
     pts = curve_points(-ZMAX, ZMAX)
     parts.append('<polyline points="' + " ".join(f"{x:.1f},{y:.1f}" for x, y in pts) + '" fill="none" stroke="#333" stroke-width="3"/>')
     parts.append(f'<line x1="{MARGIN - 20}" y1="{AXIS_Y}" x2="{WIDTH - MARGIN + 20}" y2="{AXIS_Y}" stroke="#333" stroke-width="2"/>')
-    parts.append(f'<text x="{WIDTH - 25}" y="{AXIS_Y + 30}" font-size="22" font-style="italic" fill="{CENTER}">{axis}</text>')
+    parts.append(f'<text x="{WIDTH - 25}" y="{AXIS_Y + 30}" font-size="22" font-style="italic" fill="{color}">{axis}</text>')
     for z in range(-3, 4):
         parts.append(f'<line x1="{px(z):.1f}" y1="{AXIS_Y - 6}" x2="{px(z):.1f}" y2="{AXIS_Y + 6}" stroke="#333" stroke-width="2"/>')
-        parts.append(f'<text x="{px(z):.1f}" y="{AXIS_Y + 30}" font-size="20" text-anchor="middle" fill="{CENTER}">{labels[z]}</text>')
+        parts.append(f'<text x="{px(z):.1f}" y="{AXIS_Y + 30}" font-size="20" text-anchor="middle" fill="{color}">{labels[z]}</text>')
     for z, label in zip(ticks, tick_labels):
-        parts.append(f'<text x="{px(z):.1f}" y="{AXIS_Y + 60}" font-size="22" font-weight="bold" text-anchor="middle" fill="{COLOR}">{label}</text>')
+        if mu is None and not named:
+            parts.append(f'<text x="{px(z):.1f}" y="{AXIS_Y + 60}" font-size="22" font-weight="bold" text-anchor="middle" fill="{color}">{label}</text>')
+            continue
+        # A small white tag centered on the boundary line: x above the axis,
+        # z below it with the z-values
+        w = 13 * len(label) + 14
+        top = AXIS_Y - 42 if mu is not None else AXIS_Y + 38
+        parts.append(f'<rect x="{px(z) - w / 2:.1f}" y="{top}" width="{w}" height="30" rx="5" fill="white" stroke="{color}" stroke-width="1.5"/>')
+        parts.append(f'<text x="{px(z):.1f}" y="{top + 23}" font-size="22" font-weight="bold" text-anchor="middle" fill="{color}">{label}</text>')
     parts.append("</svg>")
     return "\n".join(parts)
 

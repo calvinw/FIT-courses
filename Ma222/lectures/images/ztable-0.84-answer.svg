@@ -6,18 +6,18 @@
 <rect x="0" y="0" width="900" height="336" fill="none" stroke="#333" stroke-width="2"/>
 <line x1="0" y1="42" x2="900" y2="42" stroke="#333" stroke-width="2"/>
 <line x1="90" y1="0" x2="90" y2="336" stroke="#333" stroke-width="2"/>
-<text x="45.0" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">z</text>
-<text x="130.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.00</text>
-<text x="211.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.01</text>
-<text x="292.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.02</text>
-<text x="373.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.03</text>
-<text x="454.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.04</text>
-<text x="535.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.05</text>
-<text x="616.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.06</text>
-<text x="697.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.07</text>
-<text x="778.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.08</text>
-<text x="859.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">.09</text>
-<text x="45.0" y="70.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">0.5</text>
+<text x="45.0" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">z</text>
+<text x="130.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.00</text>
+<text x="211.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.01</text>
+<text x="292.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.02</text>
+<text x="373.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.03</text>
+<text x="454.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.04</text>
+<text x="535.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.05</text>
+<text x="616.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.06</text>
+<text x="697.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.07</text>
+<text x="778.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.08</text>
+<text x="859.5" y="28.560000000000002" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">.09</text>
+<text x="45.0" y="70.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">0.5</text>
 <text x="130.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.6915</text>
 <text x="211.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.6950</text>
 <text x="292.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.6985</text>
@@ -28,7 +28,7 @@
 <text x="697.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.7157</text>
 <text x="778.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.7190</text>
 <text x="859.5" y="70.56" font-size="20" text-anchor="middle" fill="#333">.7224</text>
-<text x="45.0" y="112.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">0.6</text>
+<text x="45.0" y="112.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">0.6</text>
 <text x="130.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.7257</text>
 <text x="211.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.7291</text>
 <text x="292.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.7324</text>
@@ -39,7 +39,7 @@
 <text x="697.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.7486</text>
 <text x="778.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.7517</text>
 <text x="859.5" y="112.56" font-size="20" text-anchor="middle" fill="#333">.7549</text>
-<text x="45.0" y="154.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">0.7</text>
+<text x="45.0" y="154.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">0.7</text>
 <text x="130.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.7580</text>
 <text x="211.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.7611</text>
 <text x="292.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.7642</text>
@@ -50,7 +50,7 @@
 <text x="697.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.7794</text>
 <text x="778.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.7823</text>
 <text x="859.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.7852</text>
-<text x="45.0" y="196.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">0.8</text>
+<text x="45.0" y="196.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">0.8</text>
 <text x="130.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.7881</text>
 <text x="211.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.7910</text>
 <text x="292.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.7939</text>
@@ -61,7 +61,7 @@
 <text x="697.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.8078</text>
 <text x="778.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.8106</text>
 <text x="859.5" y="196.56" font-size="20" text-anchor="middle" fill="#333">.8133</text>
-<text x="45.0" y="238.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">0.9</text>
+<text x="45.0" y="238.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">0.9</text>
 <text x="130.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.8159</text>
 <text x="211.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.8186</text>
 <text x="292.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.8212</text>
@@ -72,7 +72,7 @@
 <text x="697.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.8340</text>
 <text x="778.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.8365</text>
 <text x="859.5" y="238.56" font-size="20" text-anchor="middle" fill="#333">.8389</text>
-<text x="45.0" y="280.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">1.0</text>
+<text x="45.0" y="280.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">1.0</text>
 <text x="130.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.8413</text>
 <text x="211.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.8438</text>
 <text x="292.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.8461</text>
@@ -83,7 +83,7 @@
 <text x="697.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.8577</text>
 <text x="778.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.8599</text>
 <text x="859.5" y="280.56" font-size="20" text-anchor="middle" fill="#333">.8621</text>
-<text x="45.0" y="322.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f5fa8">1.1</text>
+<text x="45.0" y="322.56" font-size="20" font-weight="bold" text-anchor="middle" fill="#b5121b">1.1</text>
 <text x="130.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.8643</text>
 <text x="211.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.8665</text>
 <text x="292.5" y="322.56" font-size="20" text-anchor="middle" fill="#333">.8686</text>

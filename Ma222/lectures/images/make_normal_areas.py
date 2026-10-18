@@ -21,7 +21,7 @@ for mu, sigma, x, z, rows in (
     (48, 10, 30, -1.8, ("-1.9", "-1.8", "-1.7")),
 ):
     write(f"normal-x-left-{x:g}.svg", normal_svg(hi=x, ticks=(x,), mu=mu, sigma=sigma))
-    write(f"normal-left-{z:g}.svg", normal_svg(hi=z, ticks=(z,)))
+    write(f"normal-left-{z:g}.svg", normal_svg(hi=z, ticks=(z,), named=True))
     print(f"left of x = {x:g}: z = {(x - mu) / sigma:.4f}")
     table(z, rows)
 
@@ -32,7 +32,7 @@ for mu, sigma, x, z, rows in (
     (230, 25, 265, 1.4, ("1.3", "1.4", "1.5")),
 ):
     write(f"normal-x-right-{x:g}.svg", normal_svg(lo=x, ticks=(x,), mu=mu, sigma=sigma))
-    write(f"normal-right-{z:g}.svg", normal_svg(lo=z, ticks=(z,)))
+    write(f"normal-right-{z:g}.svg", normal_svg(lo=z, ticks=(z,), named=True))
     print(f"right of x = {x:g}: z = {(x - mu) / sigma:.4f}")
     table(z, rows)
 
@@ -42,7 +42,7 @@ for mu, sigma, (x1, x2), (z1, z2), (rows1, rows2) in (
     (1.3, 0.8, (1.6, 2.8), (0.38, 1.88), (("0.2", "0.3", "0.4"), ("1.7", "1.8", "1.9"))),
 ):
     write(f"normal-x-between-{x1:g}-{x2:g}.svg", normal_svg(lo=x1, hi=x2, ticks=(x1, x2), mu=mu, sigma=sigma))
-    write(f"normal-between-{z1:g}-{z2:g}.svg", normal_svg(lo=z1, hi=z2, ticks=(z1, z2)))
+    write(f"normal-between-{z1:g}-{z2:g}.svg", normal_svg(lo=z1, hi=z2, ticks=(z1, z2), named=True))
     print(f"between x = {x1:g} and {x2:g}: z1 = {(x1 - mu) / sigma:.4f}, z2 = {(x2 - mu) / sigma:.4f}")
     table(z1, rows1)
     table(z2, rows2)
