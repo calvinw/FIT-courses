@@ -1,0 +1,235 @@
+---
+title: "PRISM Video Playlists"
+format:
+  html:
+    embed-resources: true
+---
+
+```{=html}
+<style>
+td { vertical-align: top; padding: 10px 8px; }
+td:first-child { padding-left: 0; }
+td img { max-width: 100%; height: auto; border-radius: 6px; }
+</style>
+```
+
+## YouTube Playlists
+
+<table>
+<tr>
+<td width="240"><a href="#fixing-issues-in-prism-repos-oct-26"><img src="https://img.youtube.com/vi/IHpj3DbrOhk/mqdefault.jpg" width="240" alt="Fixing Issues in Prism Repos"></a></td>
+<td><b><a href="#fixing-issues-in-prism-repos-oct-26">Fixing Issues in Prism Repos (Oct 26)</a></b><br>A five-part walkthrough of how PRISM repos fix issues with an AI agent, using issue #34 in prism-practice-repo. It goes from writing and assigning the issue, through starting a codespace, branching, planning and fixing, to opening the pull request, merging it and cleaning up.</td>
+</tr>
+<tr>
+<td width="240"><a href="#ai-features-from-prism-lca-project-oct-26"><img src="https://img.youtube.com/vi/V4bxUoPtKSs/mqdefault.jpg" width="240" alt="AI Features from Prism LCA Project"></a></td>
+<td><b><a href="#ai-features-from-prism-lca-project-oct-26">AI Features from Prism LCA Project (Oct 26)</a></b><br>Five demos of PRISM's AI features. The Prism LCA MCP connects Claude.ai, ChatGPT and the Product Graph Editor's assistant directly to the LCA engine. The demos run case studies, chart results, and search the BAFU background database to find and compare alternative materials for a plastic broom.</td>
+</tr>
+<tr>
+<td width="240"><a href="#prism-lca-org-introduction-and-pull-requests-oct-26"><img src="https://img.youtube.com/vi/lPOnk9LaVOM/mqdefault.jpg" width="240" alt="Prism LCA Org Introduction and Pull Requests"></a></td>
+<td><b><a href="#prism-lca-org-introduction-and-pull-requests-oct-26">Prism LCA Org Introduction and Pull Requests (Oct 26)</a></b><br>An introduction to the prism-lca GitHub organization and its pull request workflow. It tours the org page and project board, writes an issue in prism-practice-repo, and fixes it twice, once with Codex and once with Claude Code. Each fix goes through a pull request that a maintainer merges.</td>
+</tr>
+<tr>
+<td width="240"><a href="#prism-product-graph-editor-oct-26"><img src="https://img.youtube.com/vi/DmLMN0XQrkU/mqdefault.jpg" width="240" alt="PRISM Product Graph Editor"></a></td>
+<td><b><a href="#prism-product-graph-editor-oct-26">PRISM Product Graph Editor (Oct 26)</a></b><br>An eight-part tour of the Product Graph Editor, PRISM's main web app. It covers where the app and engine live, the graph editor and its YAML files, then each results tab: inventory, impact analysis, process results, contribution tree and Sankey graphs, using the cotton fiber and jacket templates.</td>
+</tr>
+<tr>
+<td width="240"><a href="#life-cycle-assessment-mcp-introduction-jul-26"><img src="https://img.youtube.com/vi/G52V_GB2wos/mqdefault.jpg" width="240" alt="Life Cycle Assessment MCP Introduction"></a></td>
+<td><b><a href="#life-cycle-assessment-mcp-introduction-jul-26">Life Cycle Assessment MCP Introduction (Jul 26)</a></b><br>A four-part introduction to LCA using the Prism LCA MCP in Claude.ai and the cotton fiber case study. It covers installing the connector, product graphs and unit processes, running the LCA to get the inventory and scaling, and calculating TRACI 2.1 impact scores from characterization factors.</td>
+</tr>
+<tr>
+<td width="240"><a href="#openlca-and-mock-lca-tests-jul-26"><img src="https://img.youtube.com/vi/xZ0UToMz-NY/mqdefault.jpg" width="240" alt="OpenLCA and Mock LCA Tests"></a></td>
+<td><b><a href="#openlca-and-mock-lca-tests-jul-26">OpenLCA and Mock LCA Tests (Jul 26)</a></b><br>Three videos on checking the Prism LCA engine against OpenLCA. They tour the case studies in the lca-mock-tests repo, install OpenLCA, and import the cotton fiber case study to confirm it gives the same inventory and TRACI 2.1 impact scores as the Prism MCP.</td>
+</tr>
+</table>
+
+## Fixing Issues in Prism Repos (Oct 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PLWZRArvUaVQI"><img src="https://img.youtube.com/vi/IHpj3DbrOhk/hqdefault.jpg" width="320" alt="Fixing Issues in Prism Repos playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PLWZRArvUaVQI">Playlist: Fixing Issues in Prism Repos</a></b> · 5 videos<br>A five-part walkthrough of how PRISM repos fix issues with an AI agent, using issue #34 in prism-practice-repo. It goes from writing and assigning the issue, through starting a codespace, branching, planning and fixing, to opening the pull request, merging it and cleaning up.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=IHpj3DbrOhk"><img src="https://img.youtube.com/vi/IHpj3DbrOhk/mqdefault.jpg" width="240" alt="Fixing Issues in Prism Repos"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=IHpj3DbrOhk">Fixing Issues in Prism Repos</a></b><br>How PRISM issues get fixed. An assigned issue moves to In Progress on the project board. An agent fixes it on its own branch, then a code owner merges the pull request, which closes the issue automatically.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=no0cgICQUsk"><img src="https://img.youtube.com/vi/no0cgICQUsk/mqdefault.jpg" width="240" alt="Creating a New Issue in A Repo"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=no0cgICQUsk">Creating a New Issue in A Repo</a></b><br>Writes issue #34: create <code>docs/calvinw.md</code> saying "hello from Calvin W", with a goal and acceptance criteria. After assigning it, tours the project board's board and table views and outlines the flow: codespace, issue, branch, plan, fix, test, pull request.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=wAJURzAaGLQ"><img src="https://img.youtube.com/vi/wAJURzAaGLQ/mqdefault.jpg" width="240" alt="Creating a Codespace on Main And Asking Agent for Issue"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=wAJURzAaGLQ">Creating a Codespace on Main And Asking Agent for Issue</a></b><br>Starts a codespace on main, logs in to Claude Code, and asks for assigned issues. The agent finds #34 and, following <code>AGENTS.md</code>, offers to branch from an up-to-date main and write a plan first. Tip: one issue at a time.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=E8xySDxowoE"><img src="https://img.youtube.com/vi/E8xySDxowoE/mqdefault.jpg" width="240" alt="Making the Issue Branch, Creating the Plan, Fixing the Bug"></a></td>
+<td><b>4. <a href="https://www.youtube.com/watch?v=E8xySDxowoE">Making the Issue Branch, Creating the Plan, Fixing the Bug</a></b><br>The agent creates the issue-34 branch and drafts a plan with the goal, acceptance criteria and testing steps. After approval it pushes the plan, then the fix. Anyone can push to branches other than main. The fix is checked on GitHub.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=lcKqbSLwx3w"><img src="https://img.youtube.com/vi/lcKqbSLwx3w/mqdefault.jpg" width="240" alt="Opening the Pull Request to Merge Issue Branch"></a></td>
+<td><b>5. <a href="https://www.youtube.com/watch?v=lcKqbSLwx3w">Opening the Pull Request to Merge Issue Branch</a></b><br>The agent opens a pull request. A code owner merges it on GitHub, closing #34, deleting the branch and moving the card to Done. The agent then switches to main, pulls and removes the local branch. The plan stays in <code>plans/</code>.</td>
+</tr>
+</table>
+
+## AI Features from Prism LCA Project (Oct 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PLF7QVJHf7fjU"><img src="https://img.youtube.com/vi/V4bxUoPtKSs/hqdefault.jpg" width="320" alt="AI Features from Prism LCA Project playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PLF7QVJHf7fjU">Playlist: AI Features from Prism LCA Project</a></b> · 5 videos<br>Five demos of PRISM's AI features. The Prism LCA MCP connects Claude.ai, ChatGPT and the Product Graph Editor's assistant directly to the LCA engine. The demos run case studies, chart results, and search the BAFU background database to find and compare alternative materials for a plastic broom.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=V4bxUoPtKSs"><img src="https://img.youtube.com/vi/V4bxUoPtKSs/mqdefault.jpg" width="240" alt="AI Assistant in Product Graph Editor"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=V4bxUoPtKSs">AI Assistant in Product Graph Editor</a></b><br>A first look at the Product Graph Editor's AI assistant. It sees the graph, YAML, settings and results, and calls the Prism LCA MCP to run the engine. It summarizes a graph, moves to the results page and explains contribution tree values.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=pclNFJ8pTxs"><img src="https://img.youtube.com/vi/pclNFJ8pTxs/mqdefault.jpg" width="240" alt="Using the Prism LCA MCP from Claude.ai"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=pclNFJ8pTxs">Using the Prism LCA MCP from Claude.ai</a></b><br>Adds the Prism LCA MCP to Claude.ai as a custom connector and tours its tools. With the jacket case study, Claude shows the scaled graph, runs the LCA, builds a contribution tree and table, and explains how each process is scaled.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=4cJnidPVtWI"><img src="https://img.youtube.com/vi/4cJnidPVtWI/mqdefault.jpg" width="240" alt="Using the Prism LCA MCP from ChatGPT"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=4cJnidPVtWI">Using the Prism LCA MCP from ChatGPT</a></b><br>Adds the same MCP to ChatGPT as a custom MCP server. With the wool yarn case study, ChatGPT shows the structured and scaled graphs and charts the impact categories, a contribution tree and the inventory, with a few labeling mistakes.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=N8eWRTyb5P0"><img src="https://img.youtube.com/vi/N8eWRTyb5P0/mqdefault.jpg" width="240" alt="Plastic Broom LCA with Background (BAFU database) in Claude.ai"></a></td>
+<td><b>4. <a href="https://www.youtube.com/watch?v=N8eWRTyb5P0">Plastic Broom LCA with Background (BAFU database) in Claude.ai</a></b><br>Explains foreground and background processes using OpenLCA's plastic broom, linked to the Swiss BAFU database. Claude.ai describes BAFU, reads the broom's YAML and finds PLA alternatives. A commodity plastic lowered both climate change and acidification (cradle-to-gate).</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=mJjvz7FFXNM"><img src="https://img.youtube.com/vi/mJjvz7FFXNM/mqdefault.jpg" width="240" alt="Plastic Broom (BAFU linked) in Product Graph Editor"></a></td>
+<td><b>5. <a href="https://www.youtube.com/watch?v=mJjvz7FFXNM">Plastic Broom (BAFU linked) in Product Graph Editor</a></b><br>The broom analysis in the Product Graph Editor's chat, using a GPT model through OpenRouter. The assistant searches BAFU, edits the YAML to swap PLA for HDPE and reruns the LCA. Lesson: save results before comparing scenarios.</td>
+</tr>
+</table>
+
+## Prism LCA Org Introduction and Pull Requests (Oct 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PLLp4EmvQ0GEg"><img src="https://img.youtube.com/vi/lPOnk9LaVOM/hqdefault.jpg" width="320" alt="Prism LCA Org Introduction and Pull Requests playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PLLp4EmvQ0GEg">Playlist: Prism LCA Org Introduction and Pull Requests</a></b> · 5 videos<br>An introduction to the prism-lca GitHub organization and its pull request workflow. It tours the org page and project board, writes an issue in prism-practice-repo, and fixes it twice, once with Codex and once with Claude Code. Each fix goes through a pull request that a maintainer merges.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=lPOnk9LaVOM"><img src="https://img.youtube.com/vi/lPOnk9LaVOM/mqdefault.jpg" width="240" alt="Introduction to Prism org site in Github"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=lPOnk9LaVOM">Introduction to Prism org site in Github</a></b><br>A tour of the prism-lca GitHub organization: its repos, the public and member views, and the Prism LCA project board, where issues from every repo move from To Do to In Progress to Done. Changes reach main only through pull requests that maintainers merge.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=RR9syIty1kU"><img src="https://img.youtube.com/vi/RR9syIty1kU/mqdefault.jpg" width="240" alt="Creating an Issue in a Prism Repo"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=RR9syIty1kU">Creating an Issue in a Prism Repo</a></b><br>Why everyone should write issues, and how pull requests protect main. Writes an issue asking Calvin to add his name to the README, with tips on formatting and adding screenshots for the agent, then assigns it and shows it under In Progress on the board.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=-vJJwbYps50"><img src="https://img.youtube.com/vi/-vJJwbYps50/mqdefault.jpg" width="240" alt="Starting Codex to Fix an Issue For a Repo"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=-vJJwbYps50">Starting Codex to Fix an Issue For a Repo</a></b><br>Starts a codespace on main, waits while setup installs the agents, then runs <code>codex --yolo</code> and signs in with a device code. Covers choosing the model and reasoning level and checking <code>/usage</code>. Tip: skip fast mode, which uses tokens twice as fast.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=52zfX2sEXkY"><img src="https://img.youtube.com/vi/52zfX2sEXkY/mqdefault.jpg" width="240" alt="Fixing the Issue and Issuing the Pull Request"></a></td>
+<td><b>4. <a href="https://www.youtube.com/watch?v=52zfX2sEXkY">Fixing the Issue and Issuing the Pull Request</a></b><br>Codex finds issue #10, adds Calvin's name to the README, and opens a pull request on a new branch. A maintainer merges it on GitHub, where <code>Fixes #10</code> closes the issue and the board moves it to Done. Then the codespace is deleted.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=Y8cc6OAGqyo"><img src="https://img.youtube.com/vi/Y8cc6OAGqyo/mqdefault.jpg" width="240" alt="CLAUDE CODE version - Fixing the Issue"></a></td>
+<td><b>5. <a href="https://www.youtube.com/watch?v=Y8cc6OAGqyo">CLAUDE CODE version - Fixing the Issue</a></b><br>The same fix with Claude Code: run <code>claude --dangerously-skip-permissions</code>, sign in by pasting the login code back, and have Claude add Elena's name to the README and open a pull request. After the merge, Claude cleans up the branch and closes the issue.</td>
+</tr>
+</table>
+
+## PRISM Product Graph Editor (Oct 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PLSglZScsi7LA"><img src="https://img.youtube.com/vi/DmLMN0XQrkU/hqdefault.jpg" width="320" alt="PRISM Product Graph Editor playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PLSglZScsi7LA">Playlist: PRISM Product Graph Editor</a></b> · 8 videos<br>An eight-part tour of the Product Graph Editor, PRISM's main web app. It covers where the app and engine live, the graph editor and its YAML files, then each results tab: inventory, impact analysis, process results, contribution tree and Sankey graphs, using the cotton fiber and jacket templates.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=DmLMN0XQrkU"><img src="https://img.youtube.com/vi/DmLMN0XQrkU/mqdefault.jpg" width="240" alt="Introduction to Product Graph Editor"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=DmLMN0XQrkU">Introduction to Product Graph Editor</a></b><br>Where things live in the prism-lca org. The engine, life-cycle-assessment-mcp, is built on Brightway, runs on DigitalOcean, and has a REST API for the web app and an MCP for LLMs. The editor is JavaScript on GitHub Pages and rebuilds whenever main changes.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=VImCZZTk-sI"><img src="https://img.youtube.com/vi/VImCZZTk-sI/mqdefault.jpg" width="240" alt="The Graph Editor - Structure Graph, Scaled Graph"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=VImCZZTk-sI">The Graph Editor - Structure Graph, Scaled Graph</a></b><br>Sign in with Google, pick a template, and explore the cotton fiber and jacket graphs. The structure graph shows how activities connect; the scaled graph shows the amounts needed for the functional unit. Also covers reference amounts, elementary and technosphere flows, and graph controls.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=oOE0noTj0hM"><img src="https://img.youtube.com/vi/oOE0noTj0hM/mqdefault.jpg" width="240" alt="Product Graph Yaml Files"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=oOE0noTj0hM">Product Graph Yaml Files</a></b><br>The Edit tab shows the model as a readable YAML file with the goal, functional unit, products, and each process's inputs, outputs and emissions. The File menu loads templates, saves, downloads and uploads YAML files, shows edit history, and clears the session.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=1MQ_rXXDIZ4"><img src="https://img.youtube.com/vi/1MQ_rXXDIZ4/mqdefault.jpg" width="240" alt="Inventory Results"></a></td>
+<td><b>4. <a href="https://www.youtube.com/watch?v=1MQ_rXXDIZ4">Inventory Results</a></b><br>Using the jacket graph, covers the global settings for decimal places and light or dark mode, then the LCA results summary: life cycle inventory totals and five TRACI impact scores. The Inventory tab lists total emissions and how much each process produces.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=q3j6pYukn-I"><img src="https://img.youtube.com/vi/q3j6pYukn-I/mqdefault.jpg" width="240" alt="Impact Analysis"></a></td>
+<td><b>5. <a href="https://www.youtube.com/watch?v=q3j6pYukn-I">Impact Analysis</a></b><br>The Impact Analysis tab breaks each impact category down by processes then flows, or flows then processes. Characterization factors show how scores are calculated: for climate change, each kilogram of methane counts 25 times as much as CO2, and everything is summed.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=fbP868qBino"><img src="https://img.youtube.com/vi/fbP868qBino/mqdefault.jpg" width="240" alt="Process Results"></a></td>
+<td><b>6. <a href="https://www.youtube.com/watch?v=fbP868qBino">Process Results</a></b><br>Process Results looks at one activity at a time. The top shows its inputs and outputs; the bottom shows its share of each impact score, split into upstream and direct. For example, fabric weaving contributes 75% of climate change and 54% of acidification.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=BB8ZiB5HYng"><img src="https://img.youtube.com/vi/BB8ZiB5HYng/mqdefault.jpg" width="240" alt="Contribution Tree Analysis"></a></td>
+<td><b>7. <a href="https://www.youtube.com/watch?v=BB8ZiB5HYng">Contribution Tree Analysis</a></b><br>The contribution tree drills down from the functional unit to find hotspots. For the jacket's climate change score, fabric weaving gives 75%, zipper production 8% and jacket assembly itself about 16%. Each row shows direct and accumulated contributions.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=OUnZ5Y5gk8A"><img src="https://img.youtube.com/vi/OUnZ5Y5gk8A/mqdefault.jpg" width="240" alt="Sankey Graphs"></a></td>
+<td><b>8. <a href="https://www.youtube.com/watch?v=OUnZ5Y5gk8A">Sankey Graphs</a></b><br>The Sankey tab shows contributions as line thickness, by impact category or by flow, with filters for the number of processes and minimum share. Each card shows direct and upstream amounts, and clicking an activity highlights everything feeding into it.</td>
+</tr>
+</table>
+
+## Life Cycle Assessment MCP Introduction (Jul 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PLXpFAJz7YaHo"><img src="https://img.youtube.com/vi/G52V_GB2wos/hqdefault.jpg" width="320" alt="Life Cycle Assessment MCP Introduction playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PLXpFAJz7YaHo">Playlist: Life Cycle Assessment MCP Introduction</a></b> · 4 videos<br>A four-part introduction to LCA using the Prism LCA MCP in Claude.ai and the cotton fiber case study. It covers installing the connector, product graphs and unit processes, running the LCA to get the inventory and scaling, and calculating TRACI 2.1 impact scores from characterization factors.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=G52V_GB2wos"><img src="https://img.youtube.com/vi/G52V_GB2wos/mqdefault.jpg" width="240" alt="LCA Mcp Installation and Simple Cotton Fiber Case Study"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=G52V_GB2wos">LCA Mcp Installation and Simple Cotton Fiber Case Study</a></b><br>Adds the LCA MCP to Claude.ai as a custom connector, lists its tools and the three mock case studies, and opens the cotton fiber product graph YAML. The structure graph introduces the functional unit, unit processes, and elementary flows: emissions and extractions.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=LxIWEObPdfo"><img src="https://img.youtube.com/vi/LxIWEObPdfo/mqdefault.jpg" width="240" alt="Product Graphs, Unit Processes, Inventory for LCAs"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=LxIWEObPdfo">Product Graphs, Unit Processes, Inventory for LCAs</a></b><br>Looks at the two cotton fiber unit processes one at a time, as they'd appear in a database like ecoinvent. Fertilizer production emits 3.5 kg of CO2 per kilogram; cotton farming needs 0.2 kg of fertilizer and 800 L of water per kilogram of fiber.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=e1t2J7NOSrg"><img src="https://img.youtube.com/vi/e1t2J7NOSrg/mqdefault.jpg" width="240" alt="Running the LCA and Finding Inventory Results"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=e1t2J7NOSrg">Running the LCA and Finding Inventory Results</a></b><br>Runs the LCA on the YAML file. The inventory totals each emission across processes: 1.5 kg CO2, 0.015 kg N2O, 0.01 kg NH3 and 800 L of water. The scaled graph shows activity levels, such as fertilizer production scaled by 0.2.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=DuWWbeepPt4"><img src="https://img.youtube.com/vi/DuWWbeepPt4/mqdefault.jpg" width="240" alt="Impact Assessment Calculations"></a></td>
+<td><b>4. <a href="https://www.youtube.com/watch?v=DuWWbeepPt4">Impact Assessment Calculations</a></b><br>Turns the inventory into TRACI 2.1 impact scores by multiplying each emission by its characterization factor and adding them up. Global warming totals 5.97, mostly from N2O, which counts 283 times as much as CO2. Also covers acidification, eutrophication and particulate matter.</td>
+</tr>
+</table>
+
+## OpenLCA and Mock LCA Tests (Jul 26)
+
+<table class="playlist">
+<tr>
+<td width="320"><a href="https://www.youtube.com/playlist?list=PLb9bj98Vo5cc"><img src="https://img.youtube.com/vi/xZ0UToMz-NY/hqdefault.jpg" width="320" alt="OpenLCA and Mock LCA Tests playlist"></a></td>
+<td><b><a href="https://www.youtube.com/playlist?list=PLb9bj98Vo5cc">Playlist: OpenLCA and Mock LCA Tests</a></b> · 3 videos<br>Three videos on checking the Prism LCA engine against OpenLCA. They tour the case studies in the lca-mock-tests repo, install OpenLCA, and import the cotton fiber case study to confirm it gives the same inventory and TRACI 2.1 impact scores as the Prism MCP.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=xZ0UToMz-NY"><img src="https://img.youtube.com/vi/xZ0UToMz-NY/mqdefault.jpg" width="240" alt="Mock LCA Tests Github Repo"></a></td>
+<td><b>1. <a href="https://www.youtube.com/watch?v=xZ0UToMz-NY">Mock LCA Tests Github Repo</a></b><br>A tour of the lca-mock-tests repo, used to check that the Brightway-based engine matches other LCA software. Each case study's README shows its graphs, inventory and TRACI 2.1 scores, and release zip files hold each case study as an importable database.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=x2OIwzgoflM"><img src="https://img.youtube.com/vi/x2OIwzgoflM/mqdefault.jpg" width="240" alt="Download OpenLCA Software"></a></td>
+<td><b>2. <a href="https://www.youtube.com/watch?v=x2OIwzgoflM">Download OpenLCA Software</a></b><br>A short guide to installing OpenLCA, a free, open-source desktop LCA app with good graphing and impact assessment tools. Download version 2.6.2 for your operating system from the openlca.org downloads page and install it before importing the case studies.</td>
+</tr>
+<tr>
+<td width="240"><a href="https://www.youtube.com/watch?v=lOUbUEJkMjs"><img src="https://img.youtube.com/vi/lOUbUEJkMjs/mqdefault.jpg" width="240" alt="OpenLCA Cotton Fiber Product System"></a></td>
+<td><b>3. <a href="https://www.youtube.com/watch?v=lOUbUEJkMjs">OpenLCA Cotton Fiber Product System</a></b><br>Creates an empty OpenLCA database, imports the cotton fiber zip from the repo's releases, and calculates the product system with TRACI. The inventory (CO2 total of 1.5) and all four impact scores match the Prism results. Also tours the contribution tree and Sankey diagram.</td>
+</tr>
+</table>
