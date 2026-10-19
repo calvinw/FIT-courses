@@ -1,0 +1,115 @@
+---
+format:
+  pdf:
+    geometry:
+      - margin=0.6in
+    fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \usepackage{tikz}
+        \setlist{nosep,leftmargin=*}
+        \setlength{\parskip}{4pt}
+        \setlength{\parindent}{0pt}
+        \pagenumbering{gobble}
+  html:
+    embed-resources: true
+---
+
+# MA222 Review 2 Answers
+
+**1.** Twelve customers at a store bought this many items each: $2,\ 3,\ 3,\ 4,\ 4,\ 4,\ 5,\ 5,\ 6,\ 3,\ 4,\ 14$. Make a dotplot of the data. Then describe the distribution: Where is the peak? What is the range? Is there an outlier?
+
+```{=latex}
+\vspace{0.45in}
+\begin{center}
+\begin{tikzpicture}[x=0.9cm]
+  \draw (-0.3,0) -- (15.3,0);
+  \foreach \i in {0,...,15} { \draw (\i,0.1) -- (\i,-0.1) node[below] {\small \i}; }
+\end{tikzpicture}
+\end{center}
+```
+
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** Tally: 2 (1 dot), 3 (3 dots), 4 (4 dots), 5 (2 dots), 6 (1 dot), 14 (1 dot). The peak is at $4$. The range is $14 - 2 = 12$. The value $14$ is an outlier: it is far from the rest of the data.
+
+```{=latex}
+\vspace{0.45in}
+```
+
+**2.** Three student clubs have these numbers of members (no student is in more than one club):
+
+| Club | Art | Chess | Dance |
+|:--|:-:|:-:|:-:|
+| Members | 6 | 8 | 5 |
+
+a) The observational units are the clubs, and the variable is the number of members in the club. Find the mean and the median of this variable. \
+b) The observational units are the 19 students, and the variable is the number of members in the student's club. Find the mean and the median of this variable.
+
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** a) Mean: $\dfrac{6 + 8 + 5}{3} = \dfrac{19}{3} \approx 6.33$ members. Median: in order $5, 6, 8$, so $6$ members. b) Six students report 6, eight report 8, and five report 5. Mean: $\dfrac{6 \cdot 6 + 8 \cdot 8 + 5 \cdot 5}{19} = \dfrac{36 + 64 + 25}{19} = \dfrac{125}{19} \approx 6.58$ members. Median: in order, five 5s, six 6s, then eight 8s; the middle (10th) of the 19 values is $6$ members.
+
+```{=latex}
+\vspace{0.45in}
+```
+
+**3.** Maya and Leo take exams in different classes.
+
+| | Score | Class mean | Class std dev |
+|:--|:-:|:-:|:-:|
+| Maya | $88$ | $80$ | $6$ |
+| Leo | $91$ | $85$ | $4$ |
+
+Who did better compared to their own class? Use z-values to explain.
+
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** Maya: $z = \dfrac{88 - 80}{6} = \dfrac{8}{6} = 1.33$. Leo: $z = \dfrac{91 - 85}{4} = \dfrac{6}{4} = 1.5$. Leo did better compared to his class: he is $1.5$ standard deviations above his class mean, and Maya is $1.33$ above hers.
+
+```{=latex}
+\vspace{0.45in}
+```
+
+**4.** Use the standard normal table. Sketch the area, then find the left tail area for $z = -1.47$.
+
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** Row $-1.4$, column $.07$: left tail area $= 0.0708 \approx 7\%$.
+
+```{=latex}
+\vspace{0.45in}
+```
+
+**5.** Use the standard normal table. Sketch the area, then find the right tail area for $z = 1.21$.
+
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** Row $1.2$, column $.01$: left tail area $= 0.8869$, so right tail area $= 1.0 - 0.8869 = 0.1131 \approx 11\%$.
+
+```{=latex}
+\vspace{0.45in}
+```
+
+**6.** Use the standard normal table. Sketch the area, then find the area between $z = -0.85$ and $z = 1.10$.
+
+```{=latex}
+\vspace{\baselineskip}
+```
+
+**Answer:** Left tail area for $z = 1.10$ (row $1.1$, column $.00$) is $0.8643$. Left tail area for $z = -0.85$ (row $-0.8$, column $.05$) is $0.1977$. Area between $= 0.8643 - 0.1977 = 0.6666 \approx 67\%$.
+
+```{=latex}
+\vspace{0.45in}
+```

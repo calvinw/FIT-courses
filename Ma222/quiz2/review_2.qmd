@@ -1,0 +1,83 @@
+---
+format:
+  pdf:
+    geometry:
+      - margin=0.6in
+    fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \usepackage{tikz}
+        \setlist{nosep,leftmargin=*}
+        \setlength{\parskip}{4pt}
+        \setlength{\parindent}{0pt}
+        \pagenumbering{gobble}
+  html:
+    embed-resources: true
+---
+
+# MA222 Review 2
+
+Name: ______________________________
+
+Calculator and standard normal table allowed. No notes, no phone, no internet. Show your work.
+
+**1.** Twelve customers at a store bought this many items each: $2,\ 3,\ 3,\ 4,\ 4,\ 4,\ 5,\ 5,\ 6,\ 3,\ 4,\ 14$. Make a dotplot of the data. Then describe the distribution: Where is the peak? What is the range? Is there an outlier?
+
+```{=latex}
+\vspace{0.45in}
+\begin{center}
+\begin{tikzpicture}[x=0.9cm]
+  \draw (-0.3,0) -- (15.3,0);
+  \foreach \i in {0,...,15} { \draw (\i,0.1) -- (\i,-0.1) node[below] {\small \i}; }
+\end{tikzpicture}
+\end{center}
+```
+
+```{=latex}
+\vspace{0.25in}
+```
+
+**2.** Three student clubs have these numbers of members (no student is in more than one club):
+
+| Club | Art | Chess | Dance |
+|:--|:-:|:-:|:-:|
+| Members | 6 | 8 | 5 |
+
+a) The observational units are the clubs, and the variable is the number of members in the club. Find the mean and the median of this variable. \
+b) The observational units are the 19 students, and the variable is the number of members in the student's club. Find the mean and the median of this variable.
+
+```{=latex}
+\vspace{0.65in}
+```
+
+**3.** Maya and Leo take exams in different classes.
+
+| | Score | Class mean | Class std dev |
+|:--|:-:|:-:|:-:|
+| Maya | $88$ | $80$ | $6$ |
+| Leo | $91$ | $85$ | $4$ |
+
+Who did better compared to their own class? Use z-values to explain.
+
+```{=latex}
+\vspace{0.85in}
+```
+
+**4.** Use the standard normal table. Sketch the area, then find the left tail area for $z = -1.47$.
+
+```{=latex}
+\vspace{0.7in}
+```
+
+**5.** Use the standard normal table. Sketch the area, then find the right tail area for $z = 1.21$.
+
+```{=latex}
+\vspace{0.7in}
+```
+
+**6.** Use the standard normal table. Sketch the area, then find the area between $z = -0.85$ and $z = 1.10$.
+
+```{=latex}
+\vspace{0.85in}
+```
