@@ -1,30 +1,21 @@
 ---
-title: "Retail Orders: Queries by Hand"
-author: "Calvin Williamson, Science and Math"
-subtitle: "Fall 26"
+pagetitle: "Retail Orders: Queries by Hand"
 format:
   html:
     toc: false
-    css: |
-      .answer { border: 1px solid #bbb; border-radius: 4px; height: 7em; margin: 0.5em 0 1.5em 0; }
-      .answer.tall { height: 12em; }
   pdf:
-    geometry: margin=0.9in
+    geometry: margin=0.6in
     fontsize: 11pt
-    colorlinks: true
+    pagestyle: empty
+    include-in-header:
+      text: |
+        \usepackage{enumitem}
+        \setlist{itemsep=1pt, topsep=2pt}
 ---
 
-The retail orders database has three tables. Each order is one customer
-buying one product. `customer_id` and `product_id` in `orders` point back to
-the `customers` and `products` tables.
+:::: {layout="[[1,1],[1]]"}
 
-Answer each question **by hand**, using only the tables below. Write your
-answer as a small table or a number. Later you will write a SQL query for
-each question and check your answers on the
-[database](https://calvinw.github.io/FIT-courses/CS211/lectures/sql/create-retail-orders-brief-db.sql).
-
-## The tables
-
+::: {}
 **customers**
 
 | customer_id | first_name | last_name |
@@ -33,7 +24,9 @@ each question and check your answers on the
 | 2 | Jane | Smith |
 | 3 | Robert | Johnson |
 | 4 | Sarah | Williams |
+:::
 
+::: {}
 **products**
 
 | product_id | name | price |
@@ -43,7 +36,9 @@ each question and check your answers on the
 | 3 | Cashmere Sweater | 149.99 |
 | 4 | Cotton T-Shirt | 29.99 |
 | 5 | Wool Coat | 199.99 |
+:::
 
+::: {}
 **orders**
 
 | order_id | customer_id | product_id | order_date |
@@ -54,159 +49,32 @@ each question and check your answers on the
 | 4 | 2 | 4 | 2025-03-18 |
 | 5 | 1 | 2 | 2025-03-20 |
 | 6 | 2 | 3 | 2025-03-25 |
-
-{{< pagebreak >}}
-
-## Level 1: one table
-
-**1.** Which products cost less than \$100? Give the name and price of each.
-
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3cm}
 :::
 
-**2.** List all the products from most expensive to least expensive.
+::::
 
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3.5cm}
-:::
+### Level 1: one table
 
-**3.** List the order number and date of every order Jane Smith placed.
+1. Which products cost less than \$100? Give the name and price of each.
+2. List all the products from most expensive to least expensive.
+3. List the order number and date of every order Jane Smith placed.
+4. How many orders were placed on or after March 15, 2025?
+5. What are the average, highest, and lowest product prices?
 
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3cm}
-:::
+### Level 2: more than one table
 
-**4.** How many orders were placed on or after March 15, 2025?
+6. For every order, give the order number, the first name of the customer, and the name of the product.
+7. Who bought the Cashmere Sweater? Give their first and last names.
+8. What is the total amount of money from all the orders?
 
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{2cm}
-:::
+### Level 3: totals for each group
 
-**5.** What are the average, highest, and lowest product prices?
+9. How much did each customer spend in total? List only customers who placed at least one order.
+10. How many orders did each customer place? Include every customer, even one with no orders.
+11. How many times was each product ordered? Include every product, even one that was never ordered.
 
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{2cm}
-:::
+### Think about it
 
-{{< pagebreak >}}
-
-## Level 2: more than one table
-
-**6.** For every order, give the order number, the first name of the customer, and the name of the product.
-
-::: {.content-visible when-format="html"}
-::: {.answer .tall}
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{4.5cm}
-:::
-
-**7.** Who bought the Cashmere Sweater? Give their first and last names.
-
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3cm}
-:::
-
-**8.** What is the total amount of money from all the orders?
-
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{2cm}
-:::
-
-{{< pagebreak >}}
-
-## Level 3: totals for each group
-
-**9.** How much did each customer spend in total? List only customers who placed at least one order.
-
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3.5cm}
-:::
-
-**10.** How many orders did each customer place? Include every customer, even one with no orders.
-
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3.5cm}
-:::
-
-**11.** How many times was each product ordered? Include every product, even one that was never ordered.
-
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3.5cm}
-:::
-
-{{< pagebreak >}}
-
-## Think about it
-
-**12.** Which customer has never placed an order? How did you find out?
-
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3cm}
-:::
-
-**13.** Which product has never been ordered? How did you find out?
-
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3cm}
-:::
-
-**14.** If you paired every customer with every product, how many pairs would there be? Explain how you got your answer.
-
-::: {.content-visible when-format="html"}
-::: answer
-:::
-:::
-::: {.content-visible when-format="pdf"}
-\vspace{3cm}
-:::
+12. Which customer has never placed an order? How did you find out?
+13. Which product has never been ordered? How did you find out?
+14. If you paired every customer with every product, how many pairs would there be? Explain how you got your answer.

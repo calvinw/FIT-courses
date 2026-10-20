@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Calvin Williamson, Science and Math">
 
 <title>Retail Orders: Queries by Hand</title>
 <style>
@@ -38,8 +37,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="InClassRetailOrdersByHand_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
-<link rel="stylesheet" href=".answer { border: 1px solid #bbb; border-radius: 4px; height: 7em; margin: 0.5em 0 1.5em 0; }
-.answer.tall { height: 12em; }">
 </head>
 
 <body class="quarto-light">
@@ -49,226 +46,172 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="InClassRetailOrdersByHand.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Retail Orders: Queries by Hand</h1>
-<p class="subtitle lead">Fall 26</p>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Calvin Williamson, Science and Math </p>
-          </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>The retail orders database has three tables. Each order is one customer buying one product. <code>customer_id</code> and <code>product_id</code> in <code>orders</code> point back to the <code>customers</code> and <code>products</code> tables.</p>
-<p>Answer each question <strong>by hand</strong>, using only the tables below. Write your answer as a small table or a number. Later you will write a SQL query for each question and check your answers on the <a href="https://calvinw.github.io/FIT-courses/CS211/lectures/sql/create-retail-orders-brief-db.sql">database</a>.</p>
-<section id="the-tables" class="level2">
-<h2 class="anchored" data-anchor-id="the-tables">The tables</h2>
+<div class="quarto-layout-panel" data-layout="[[1,1],[1]]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><strong>customers</strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>customer_id</th>
-<th>first_name</th>
-<th>last_name</th>
+<th style="text-align: left;">customer_id</th>
+<th style="text-align: left;">first_name</th>
+<th style="text-align: left;">last_name</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>John</td>
-<td>Doe</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">John</td>
+<td style="text-align: left;">Doe</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>Jane</td>
-<td>Smith</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Jane</td>
+<td style="text-align: left;">Smith</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>Robert</td>
-<td>Johnson</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Robert</td>
+<td style="text-align: left;">Johnson</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td>Sarah</td>
-<td>Williams</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Sarah</td>
+<td style="text-align: left;">Williams</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><strong>products</strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>product_id</th>
-<th>name</th>
-<th>price</th>
+<th style="text-align: left;">product_id</th>
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">price</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>Silk Blouse</td>
-<td>89.99</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Silk Blouse</td>
+<td style="text-align: left;">89.99</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>Denim Jeans</td>
-<td>79.99</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Denim Jeans</td>
+<td style="text-align: left;">79.99</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>Cashmere Sweater</td>
-<td>149.99</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Cashmere Sweater</td>
+<td style="text-align: left;">149.99</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td>Cotton T-Shirt</td>
-<td>29.99</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Cotton T-Shirt</td>
+<td style="text-align: left;">29.99</td>
 </tr>
 <tr class="odd">
-<td>5</td>
-<td>Wool Coat</td>
-<td>199.99</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Wool Coat</td>
+<td style="text-align: left;">199.99</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <p><strong>orders</strong></p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>order_id</th>
-<th>customer_id</th>
-<th>product_id</th>
-<th>order_date</th>
+<th style="text-align: left;">order_id</th>
+<th style="text-align: left;">customer_id</th>
+<th style="text-align: left;">product_id</th>
+<th style="text-align: left;">order_date</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>1</td>
-<td>3</td>
-<td>2025-03-10</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2025-03-10</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>2</td>
-<td>1</td>
-<td>2025-03-12</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2025-03-12</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>3</td>
-<td>4</td>
-<td>2025-03-15</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">2025-03-15</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td>2</td>
-<td>4</td>
-<td>2025-03-18</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">2025-03-18</td>
 </tr>
 <tr class="odd">
-<td>5</td>
-<td>1</td>
-<td>2</td>
-<td>2025-03-20</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">2025-03-20</td>
 </tr>
 <tr class="even">
-<td>6</td>
-<td>2</td>
-<td>3</td>
-<td>2025-03-25</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">2025-03-25</td>
 </tr>
 </tbody>
 </table>
-<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<section id="level-1-one-table" class="level3">
+<h3 class="anchored" data-anchor-id="level-1-one-table">Level 1: one table</h3>
+<ol type="1">
+<li>Which products cost less than $100? Give the name and price of each.</li>
+<li>List all the products from most expensive to least expensive.</li>
+<li>List the order number and date of every order Jane Smith placed.</li>
+<li>How many orders were placed on or after March 15, 2025?</li>
+<li>What are the average, highest, and lowest product prices?</li>
+</ol>
 </section>
-<section id="level-1-one-table" class="level2">
-<h2 class="anchored" data-anchor-id="level-1-one-table">Level 1: one table</h2>
-<p><strong>1.</strong> Which products cost less than $100? Give the name and price of each.</p>
-<div class="answer">
-
-</div>
-<p><strong>2.</strong> List all the products from most expensive to least expensive.</p>
-<div class="answer">
-
-</div>
-<p><strong>3.</strong> List the order number and date of every order Jane Smith placed.</p>
-<div class="answer">
-
-</div>
-<p><strong>4.</strong> How many orders were placed on or after March 15, 2025?</p>
-<div class="answer">
-
-</div>
-<p><strong>5.</strong> What are the average, highest, and lowest product prices?</p>
-<div class="answer">
-
-</div>
-<div style="page-break-after: always;"></div>
+<section id="level-2-more-than-one-table" class="level3">
+<h3 class="anchored" data-anchor-id="level-2-more-than-one-table">Level 2: more than one table</h3>
+<ol start="6" type="1">
+<li>For every order, give the order number, the first name of the customer, and the name of the product.</li>
+<li>Who bought the Cashmere Sweater? Give their first and last names.</li>
+<li>What is the total amount of money from all the orders?</li>
+</ol>
 </section>
-<section id="level-2-more-than-one-table" class="level2">
-<h2 class="anchored" data-anchor-id="level-2-more-than-one-table">Level 2: more than one table</h2>
-<p><strong>6.</strong> For every order, give the order number, the first name of the customer, and the name of the product.</p>
-<div class="answer tall">
-
-</div>
-<p><strong>7.</strong> Who bought the Cashmere Sweater? Give their first and last names.</p>
-<div class="answer">
-
-</div>
-<p><strong>8.</strong> What is the total amount of money from all the orders?</p>
-<div class="answer">
-
-</div>
-<div style="page-break-after: always;"></div>
+<section id="level-3-totals-for-each-group" class="level3">
+<h3 class="anchored" data-anchor-id="level-3-totals-for-each-group">Level 3: totals for each group</h3>
+<ol start="9" type="1">
+<li>How much did each customer spend in total? List only customers who placed at least one order.</li>
+<li>How many orders did each customer place? Include every customer, even one with no orders.</li>
+<li>How many times was each product ordered? Include every product, even one that was never ordered.</li>
+</ol>
 </section>
-<section id="level-3-totals-for-each-group" class="level2">
-<h2 class="anchored" data-anchor-id="level-3-totals-for-each-group">Level 3: totals for each group</h2>
-<p><strong>9.</strong> How much did each customer spend in total? List only customers who placed at least one order.</p>
-<div class="answer">
-
-</div>
-<p><strong>10.</strong> How many orders did each customer place? Include every customer, even one with no orders.</p>
-<div class="answer">
-
-</div>
-<p><strong>11.</strong> How many times was each product ordered? Include every product, even one that was never ordered.</p>
-<div class="answer">
-
-</div>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="think-about-it" class="level2">
-<h2 class="anchored" data-anchor-id="think-about-it">Think about it</h2>
-<p><strong>12.</strong> Which customer has never placed an order? How did you find out?</p>
-<div class="answer">
-
-</div>
-<p><strong>13.</strong> Which product has never been ordered? How did you find out?</p>
-<div class="answer">
-
-</div>
-<p><strong>14.</strong> If you paired every customer with every product, how many pairs would there be? Explain how you got your answer.</p>
-<div class="answer">
-
-</div>
+<section id="think-about-it" class="level3">
+<h3 class="anchored" data-anchor-id="think-about-it">Think about it</h3>
+<ol start="12" type="1">
+<li>Which customer has never placed an order? How did you find out?</li>
+<li>Which product has never been ordered? How did you find out?</li>
+<li>If you paired every customer with every product, how many pairs would there be? Explain how you got your answer.</li>
+</ol>
 </section>
 
 </main>
