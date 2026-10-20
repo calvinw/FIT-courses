@@ -179,14 +179,51 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<p><strong>Questions</strong></p>
 <ol type="1">
-<li>Show the <code>name</code> and <code>price</code> of every product that costs less than $100.</li>
-<li>Show the <code>order_id</code> and <code>order_date</code> of every order Jane Smith placed.</li>
-<li>For every order, show the <code>order_id</code>, the customer’s <code>first_name</code>, and the product’s <code>name</code>, sorted by <code>order_id</code>.</li>
-<li>Show the <code>first_name</code> and <code>last_name</code> of every customer who bought the Cashmere Sweater.</li>
-<li>For each customer who placed at least one order, show their <code>first_name</code> and <code>total</code>, the sum of the prices of the products they ordered.</li>
-<li>For every customer, including any with no orders, show their <code>first_name</code> and <code>num_orders</code>, the number of orders they placed.</li>
+<li>Show the <code>first_name</code> and <code>last_name</code> of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.</li>
+<li>For every order of a product that costs more than $80, show the customer’s <code>first_name</code>, the product’s <code>name</code>, and the <code>order_date</code>.</li>
+<li>For each product that was ordered at least once, show its <code>name</code> and <code>total_revenue</code>, its price times the number of times it was ordered, sorted from highest <code>total_revenue</code> to lowest.</li>
+<li>Show the <code>first_name</code> and <code>num_orders</code> of every customer who placed more than one order.</li>
+<li>Show the <code>first_name</code> and <code>last_name</code> of every customer who has never ordered the Cotton T-Shirt.</li>
 </ol>
+<p><strong>Worked example.</strong> Show the <code>name</code> and <code>price</code> of every product Jane Smith ordered, sorted from lowest price to highest.</p>
+<div class="quarto-layout-panel" data-layout="[[3,2]]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<ol type="1">
+<li>In <code>customers</code>, Jane Smith has <code>customer_id</code> 2.</li>
+<li>In <code>orders</code>, <code>customer_id</code> 2 appears in orders 2, 4, and 6. Their <code>product_id</code>s are 1, 4, and 3.</li>
+<li>In <code>products</code>, look up 1, 4, and 3: Silk Blouse (89.99), Cotton T-Shirt (29.99), and Cashmere Sweater (149.99).</li>
+<li>Write the <code>name</code> and <code>price</code> of each and sort from the lowest <code>price</code> to the highest.</li>
+</ol>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">name</th>
+<th style="text-align: left;">price</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cotton T-Shirt</td>
+<td style="text-align: left;">29.99</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Silk Blouse</td>
+<td style="text-align: left;">89.99</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cashmere Sweater</td>
+<td style="text-align: left;">149.99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 
 </main>
 <!-- /main column -->

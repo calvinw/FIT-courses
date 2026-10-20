@@ -1,0 +1,135 @@
+---
+title: "Retail Orders: Queries by Hand (Answers)"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    toc: false
+    css: |
+      .answer { border: 1px solid #bbb; border-radius: 4px; height: 7em; margin: 0.5em 0 1.5em 0; }
+      .answer.tall { height: 12em; }
+  pdf:
+    geometry: margin=0.9in
+    fontsize: 11pt
+    colorlinks: true
+---
+
+Answers for the queries by hand handout. Each answer is followed by one SQL
+query that produces it. Other queries can give the same result.
+
+## The tables
+
+**customers**
+
+| customer_id | first_name | last_name |
+|---|---|---|
+| 1 | John | Doe |
+| 2 | Jane | Smith |
+| 3 | Robert | Johnson |
+| 4 | Sarah | Williams |
+
+**products**
+
+| product_id | name | price |
+|---|---|---|
+| 1 | Silk Blouse | 89.99 |
+| 2 | Denim Jeans | 79.99 |
+| 3 | Cashmere Sweater | 149.99 |
+| 4 | Cotton T-Shirt | 29.99 |
+| 5 | Wool Coat | 199.99 |
+
+**orders**
+
+| order_id | customer_id | product_id | order_date |
+|---|---|---|---|
+| 1 | 1 | 3 | 2025-03-10 |
+| 2 | 2 | 1 | 2025-03-12 |
+| 3 | 3 | 4 | 2025-03-15 |
+| 4 | 2 | 4 | 2025-03-18 |
+| 5 | 1 | 2 | 2025-03-20 |
+| 6 | 2 | 3 | 2025-03-25 |
+
+{{< pagebreak >}}
+
+**1.** Show the `first_name` and `last_name` of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.
+
+| first_name | last_name |
+|---|---|
+| John | Doe |
+| Robert | Johnson |
+| Jane | Smith |
+
+```sql
+SELECT DISTINCT c.first_name, c.last_name
+FROM orders o
+JOIN customers c ON c.customer_id = o.customer_id
+WHERE o.order_date BETWEEN '2025-03-15' AND '2025-03-21';
+```
+
+**2.** For every order of a product that costs more than \$80, show the customer's `first_name`, the product's `name`, and the `order_date`.
+
+| first_name | name | order_date |
+|---|---|---|
+| John | Cashmere Sweater | 2025-03-10 |
+| Jane | Silk Blouse | 2025-03-12 |
+| Jane | Cashmere Sweater | 2025-03-25 |
+
+```sql
+SELECT c.first_name, p.name, o.order_date
+FROM orders o
+JOIN customers c ON c.customer_id = o.customer_id
+JOIN products p  ON p.product_id  = o.product_id
+WHERE p.price > 80;
+```
+
+**3.** For each product that was ordered at least once, show its `name` and `total_revenue`, its price times the number of times it was ordered, sorted from highest `total_revenue` to lowest.
+
+| name | total_revenue |
+|---|---|
+| Cashmere Sweater | 299.98 |
+| Silk Blouse | 89.99 |
+| Denim Jeans | 79.99 |
+| Cotton T-Shirt | 59.98 |
+
+```sql
+SELECT p.name, SUM(p.price) AS total_revenue
+FROM orders o
+JOIN products p ON p.product_id = o.product_id
+GROUP BY p.name
+ORDER BY total_revenue DESC;
+```
+
+**4.** Show the `first_name` and `num_orders` of every customer who placed more than one order.
+
+| first_name | num_orders |
+|---|---|
+| Jane | 3 |
+| John | 2 |
+
+```sql
+SELECT c.first_name, COUNT(*) AS num_orders
+FROM orders o
+JOIN customers c ON c.customer_id = o.customer_id
+GROUP BY c.first_name
+HAVING COUNT(*) > 1;
+```
+
+**5.** Show the `first_name` and `last_name` of every customer who has never ordered the Cotton T-Shirt.
+
+| first_name | last_name |
+|---|---|
+| John | Doe |
+| Sarah | Williams |
+
+Sarah counts: she has no orders at all, so she never ordered the T-Shirt.
+
+```sql
+SELECT first_name, last_name
+FROM customers
+WHERE customer_id NOT IN (
+  SELECT o.customer_id
+  FROM orders o
+  JOIN products p ON p.product_id = o.product_id
+  WHERE p.name = 'Cotton T-Shirt'
+);
+```

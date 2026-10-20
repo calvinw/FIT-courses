@@ -1,0 +1,190 @@
+---
+title: "Retail Orders: Queries by Hand (Worked Answers)"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    toc: false
+  pdf:
+    geometry: margin=0.8in
+    fontsize: 11pt
+---
+
+How to work out each answer by hand from the three tables.
+
+:::: {layout="[[1,1],[1]]"}
+
+::: {}
+**customers**
+
+| customer_id | first_name | last_name |
+|---|---|---|
+| 1 | John | Doe |
+| 2 | Jane | Smith |
+| 3 | Robert | Johnson |
+| 4 | Sarah | Williams |
+:::
+
+::: {}
+**products**
+
+| product_id | name | price |
+|---|---|---|
+| 1 | Silk Blouse | 89.99 |
+| 2 | Denim Jeans | 79.99 |
+| 3 | Cashmere Sweater | 149.99 |
+| 4 | Cotton T-Shirt | 29.99 |
+| 5 | Wool Coat | 199.99 |
+:::
+
+::: {}
+**orders**
+
+| order_id | customer_id | product_id | order_date |
+|---|---|---|---|
+| 1 | 1 | 3 | 2025-03-10 |
+| 2 | 2 | 1 | 2025-03-12 |
+| 3 | 3 | 4 | 2025-03-15 |
+| 4 | 2 | 4 | 2025-03-18 |
+| 5 | 1 | 2 | 2025-03-20 |
+| 6 | 2 | 3 | 2025-03-25 |
+:::
+
+::::
+
+
+{{< pagebreak >}}
+
+## Question 1
+
+Show the `first_name` and `last_name` of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.
+
+1. Go through the `orders` table and find the orders with an `order_date` from 2025-03-15 to 2025-03-21. Both end dates count.
+
+   | order_id | customer_id | order_date |
+   |---|---|---|
+   | 3 | 3 | 2025-03-15 |
+   | 4 | 2 | 2025-03-18 |
+   | 5 | 1 | 2025-03-20 |
+
+2. Write down the `customer_id` of each of those orders: 3, 2, and 1. If a `customer_id` appeared twice, you would write it only once.
+3. Look up each `customer_id` in the `customers` table to get the `first_name` and `last_name`.
+
+**Answer**
+
+| first_name | last_name |
+|---|---|
+| Robert | Johnson |
+| Jane | Smith |
+| John | Doe |
+
+{{< pagebreak >}}
+
+## Question 2
+
+For every order of a product that costs more than \$80, show the customer's `first_name`, the product's `name`, and the `order_date`.
+
+1. In the `products` table, find the products that cost more than \$80: Silk Blouse (`product_id` 1), Cashmere Sweater (`product_id` 3), and Wool Coat (`product_id` 5).
+2. In the `orders` table, find every order whose `product_id` is 1, 3, or 5.
+
+   | order_id | customer_id | product_id | order_date |
+   |---|---|---|---|
+   | 1 | 1 | 3 | 2025-03-10 |
+   | 2 | 2 | 1 | 2025-03-12 |
+   | 6 | 2 | 3 | 2025-03-25 |
+
+   No one ordered the Wool Coat, so it does not appear.
+
+3. For each of those orders, look up the `customer_id` in `customers` to get the `first_name`, and the `product_id` in `products` to get the `name`. Keep the `order_date` from the order.
+
+**Answer**
+
+| first_name | name | order_date |
+|---|---|---|
+| John | Cashmere Sweater | 2025-03-10 |
+| Jane | Silk Blouse | 2025-03-12 |
+| Jane | Cashmere Sweater | 2025-03-25 |
+
+
+{{< pagebreak >}}
+
+## Question 3
+
+For each product that was ordered at least once, show its `name` and `total_revenue`, its price times the number of times it was ordered, sorted from highest `total_revenue` to lowest.
+
+1. Count how many times each `product_id` appears in the `orders` table.
+
+   | product_id | name | price | times ordered |
+   |---|---|---|---|
+   | 1 | Silk Blouse | 89.99 | 1 (order 2) |
+   | 2 | Denim Jeans | 79.99 | 1 (order 5) |
+   | 3 | Cashmere Sweater | 149.99 | 2 (orders 1 and 6) |
+   | 4 | Cotton T-Shirt | 29.99 | 2 (orders 3 and 4) |
+   | 5 | Wool Coat | 199.99 | 0 |
+
+2. Leave out the Wool Coat, because it was never ordered.
+3. For each remaining product, multiply the `price` by the number of times it was ordered to get its `total_revenue`.
+   - Silk Blouse: 89.99 × 1 = 89.99
+   - Denim Jeans: 79.99 × 1 = 79.99
+   - Cashmere Sweater: 149.99 × 2 = 299.98
+   - Cotton T-Shirt: 29.99 × 2 = 59.98
+4. Put the rows in order from the highest `total_revenue` to the lowest.
+
+**Answer**
+
+| name | total_revenue |
+|---|---|
+| Cashmere Sweater | 299.98 |
+| Silk Blouse | 89.99 |
+| Denim Jeans | 79.99 |
+| Cotton T-Shirt | 59.98 |
+
+{{< pagebreak >}}
+
+## Question 4
+
+Show the `first_name` and `num_orders` of every customer who placed more than one order.
+
+1. Count how many times each `customer_id` appears in the `orders` table.
+
+   | customer_id | first_name | orders |
+   |---|---|---|
+   | 1 | John | 2 (orders 1 and 5) |
+   | 2 | Jane | 3 (orders 2, 4, and 6) |
+   | 3 | Robert | 1 (order 3) |
+   | 4 | Sarah | 0 |
+
+2. Keep only the customers with more than one order: John and Jane. Robert has exactly one order, so he is left out.
+
+**Answer**
+
+| first_name | num_orders |
+|---|---|
+| John | 2 |
+| Jane | 3 |
+
+{{< pagebreak >}}
+
+## Question 5
+
+Show the `first_name` and `last_name` of every customer who has never ordered the Cotton T-Shirt.
+
+1. In the `products` table, find the `product_id` of the Cotton T-Shirt: 4.
+2. In the `orders` table, find every order with `product_id` 4: order 3 (`customer_id` 3) and order 4 (`customer_id` 2). So Robert and Jane bought the T-Shirt.
+3. Go through the `customers` table and cross out Robert and Jane. The customers who are left never ordered the T-Shirt.
+
+   | customer_id | first_name | last_name | Ordered the T-Shirt? |
+   |---|---|---|---|
+   | 1 | John | Doe | no |
+   | 2 | Jane | Smith | yes |
+   | 3 | Robert | Johnson | yes |
+   | 4 | Sarah | Williams | no |
+
+4. Sarah has no orders at all, so she never ordered the T-Shirt either. She belongs in the answer.
+
+**Answer**
+
+| first_name | last_name |
+|---|---|
+| John | Doe |
+| Sarah | Williams |

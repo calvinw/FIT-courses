@@ -53,9 +53,44 @@ format:
 
 ::::
 
-1. Show the `name` and `price` of every product that costs less than \$100.
-2. Show the `order_id` and `order_date` of every order Jane Smith placed.
-3. For every order, show the `order_id`, the customer's `first_name`, and the product's `name`, sorted by `order_id`.
-4. Show the `first_name` and `last_name` of every customer who bought the Cashmere Sweater.
-5. For each customer who placed at least one order, show their `first_name` and `total`, the sum of the prices of the products they ordered.
-6. For every customer, including any with no orders, show their `first_name` and `num_orders`, the number of orders they placed.
+```{=latex}
+\begingroup\Large\renewcommand{\tightlist}{\setlength{\itemsep}{12pt}\setlength{\parskip}{0pt}}
+```
+
+**Questions**
+
+1. Show the `first_name` and `last_name` of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.
+2. For every order of a product that costs more than \$80, show the customer's `first_name`, the product's `name`, and the `order_date`.
+3. For each product that was ordered at least once, show its `name` and `total_revenue`, its price times the number of times it was ordered, sorted from highest `total_revenue` to lowest.
+4. Show the `first_name` and `num_orders` of every customer who placed more than one order.
+5. Show the `first_name` and `last_name` of every customer who has never ordered the Cotton T-Shirt.
+
+```{=latex}
+\endgroup
+\vfill
+```
+
+**Worked example.** Show the `name` and `price` of every product Jane Smith
+ordered, sorted from lowest price to highest.
+
+:::: {layout="[[3,2]]"}
+
+::: {}
+1. In `customers`, Jane Smith has `customer_id` 2.
+2. In `orders`, `customer_id` 2 appears in orders 2, 4, and 6. Their
+   `product_id`s are 1, 4, and 3.
+3. In `products`, look up 1, 4, and 3: Silk Blouse (89.99), Cotton T-Shirt
+   (29.99), and Cashmere Sweater (149.99).
+4. Write the `name` and `price` of each and sort from the lowest `price` to
+   the highest.
+:::
+
+::: {}
+| name | price |
+|---|---|
+| Cotton T-Shirt | 29.99 |
+| Silk Blouse | 89.99 |
+| Cashmere Sweater | 149.99 |
+:::
+
+::::
