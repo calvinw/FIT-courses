@@ -1,0 +1,99 @@
+---
+title: "Engagement: Queries with AI"
+format:
+  html:
+    code-copy: true
+    toc: true
+    include-in-header:
+      text: |
+        <style>
+        pre > code.sourceCode { white-space: pre-wrap !important; }
+        pre > code.sourceCode > span { display: inline !important; }
+        div.sourceCode, pre.sourceCode { overflow: visible !important; }
+        pre.sourceCode { padding-right: 2.5em !important; }
+        </style>
+---
+
+This time [Gemini](https://gemini.google.com) writes the SQL. Copy each block
+(use the copy button in its top right corner) and paste it into Gemini. Run
+the blocks in order in the same chat: the table schemas tell Gemini what your
+tables look like, so they have to go first.
+
+Then copy the query Gemini writes into the DoltHub SQL editor for your
+engagement database and run it. Look at the result and check that it really
+answers the question.
+
+## Table schemas
+
+Paste this first. It shows the three tables, their columns, and how they
+connect.
+
+```sql
+CREATE TABLE channels (
+  channel_id int NOT NULL,
+  channel_name varchar(50) NOT NULL,
+  PRIMARY KEY (channel_id)
+);
+
+CREATE TABLE users (
+  user_id int NOT NULL,
+  signup_date date,
+  name varchar(100),
+  email varchar(100),
+  address varchar(255),
+  PRIMARY KEY (user_id)
+);
+
+-- opened_email, clicked_link, and converted are 1 for yes and 0 for no.
+-- session_duration is in seconds. NULL means no value was recorded.
+CREATE TABLE interactions (
+  interaction_id int NOT NULL,
+  user_id int,
+  channel_id int,
+  campaign varchar(100),
+  opened_email tinyint,
+  clicked_link tinyint,
+  session_duration int,
+  pages_visited int,
+  converted tinyint,
+  PRIMARY KEY (interaction_id),
+  FOREIGN KEY (user_id) REFERENCES users (user_id),
+  FOREIGN KEY (channel_id) REFERENCES channels (channel_id)
+);
+```
+
+## Question 1
+
+```default
+Show the name and signup_date of every user who signed up in 2024, sorted by signup_date.
+```
+
+## Question 2
+
+```default
+Show the interaction_id, campaign, and session_duration of the 5 interactions with the longest sessions.
+```
+
+## Question 3
+
+```default
+For every interaction through the email channel that converted, show the user's name and the campaign.
+```
+
+## Question 4
+
+```default
+For each channel, show the channel_name and num_conversions, the number of interactions that converted, sorted from most conversions to fewest.
+```
+
+## Question 5
+
+```default
+Show the name and num_interactions of every user who had more than 5 interactions.
+```
+
+## Question 6
+
+```default
+Can you give me 5 more examples of natural language prompts and the corresponding SQL queries you would write for this database?
+```

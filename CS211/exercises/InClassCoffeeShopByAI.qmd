@@ -1,0 +1,89 @@
+---
+title: "Coffee Shop: Queries with AI"
+format:
+  html:
+    code-copy: true
+    toc: true
+    include-in-header:
+      text: |
+        <style>
+        pre > code.sourceCode { white-space: pre-wrap !important; }
+        pre > code.sourceCode > span { display: inline !important; }
+        div.sourceCode, pre.sourceCode { overflow: visible !important; }
+        pre.sourceCode { padding-right: 2.5em !important; }
+        </style>
+---
+
+This time [Gemini](https://gemini.google.com) writes the SQL. Copy each block
+(use the copy button in its top right corner) and paste it into Gemini. Run
+the blocks in order in the same chat: the table schemas tell Gemini what your
+tables look like, so they have to go first.
+
+Then copy the query Gemini writes into the DoltHub SQL editor for your
+coffee shop database and run it. If you don't have the database yet, import
+[create-coffee-shop-db.sql](../lectures/sql/create-coffee-shop-db.sql) first. Look at the result and check that it really answers the question.
+
+## Table schemas
+
+Paste this first. It shows the two tables, their columns, and how they
+connect.
+
+```sql
+-- in_stock is 1 if the item is available and 0 if it isn't.
+CREATE TABLE products (
+  product_id int NOT NULL,
+  name varchar(255),
+  category varchar(255),
+  price decimal(10,2),
+  in_stock tinyint,
+  PRIMARY KEY (product_id)
+);
+
+-- completed is 1 if the order has been completed and 0 if it is still waiting.
+CREATE TABLE orders (
+  order_id int NOT NULL,
+  product_id int NOT NULL,
+  customer_name varchar(255),
+  quantity int,
+  order_date date,
+  completed tinyint,
+  PRIMARY KEY (order_id),
+  FOREIGN KEY (product_id) REFERENCES products (product_id)
+);
+```
+
+## Question 1
+
+```default
+Show the name and price of every Tea product, sorted from most expensive to least expensive.
+```
+
+## Question 2
+
+```default
+For every order that is still waiting, show the customer_name, the product's name, and the quantity.
+```
+
+## Question 3
+
+```default
+Show the order_id, customer_name, and order_total, the quantity times the product's price, of the 3 orders with the highest order_total.
+```
+
+## Question 4
+
+```default
+For each category, show the category and units_sold, the total quantity ordered of products in that category, sorted from most units sold to fewest.
+```
+
+## Question 5
+
+```default
+Show the name of every product that has never been ordered.
+```
+
+## Question 6
+
+```default
+Can you give me 5 more examples of natural language prompts and the corresponding SQL queries you would write for this database?
+```

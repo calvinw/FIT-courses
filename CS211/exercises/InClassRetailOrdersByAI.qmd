@@ -1,0 +1,101 @@
+---
+title: "Retail Orders: Queries with AI"
+format:
+  html:
+    code-copy: true
+    toc: true
+    include-in-header:
+      text: |
+        <style>
+        pre > code.sourceCode { white-space: pre-wrap !important; }
+        pre > code.sourceCode > span { display: inline !important; }
+        div.sourceCode, pre.sourceCode { overflow: visible !important; }
+        pre.sourceCode { padding-right: 2.5em !important; }
+        </style>
+---
+
+These are the questions you worked out by hand. This time
+[Gemini](https://gemini.google.com) writes the SQL. Copy each block (use the
+copy button in its top right corner) and paste it into Gemini. Run the blocks
+in order in the same chat: the table schemas tell Gemini what your tables look
+like, so they have to go first.
+
+Then copy the query Gemini writes into the DoltHub SQL editor for your retail
+orders brief database and run it. Check the result against your answer by
+hand. If they don't match, work out which one is wrong.
+
+## Table schemas
+
+Paste this first. It shows the three tables, their columns, and how they
+connect.
+
+```sql
+CREATE TABLE customers (
+  customer_id int NOT NULL,
+  first_name varchar(255),
+  last_name varchar(255),
+  PRIMARY KEY (customer_id)
+);
+
+CREATE TABLE products (
+  product_id int NOT NULL,
+  name varchar(255),
+  price decimal(10,2),
+  PRIMARY KEY (product_id)
+);
+
+CREATE TABLE orders (
+  order_id int NOT NULL,
+  customer_id int NOT NULL,
+  product_id int NOT NULL,
+  order_date date,
+  PRIMARY KEY (order_id),
+  FOREIGN KEY (customer_id) REFERENCES customers (customer_id),
+  FOREIGN KEY (product_id) REFERENCES products (product_id)
+);
+```
+
+## Worked example
+
+The answer should be the Cotton T-Shirt, the Silk Blouse, and the Cashmere
+Sweater, in that order.
+
+```default
+Show the name and price of every product Jane Smith ordered, sorted from lowest price to highest.
+```
+
+## Question 1
+
+```default
+Show the first_name and last_name of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.
+```
+
+## Question 2
+
+```default
+For every order of a product that costs more than $80, show the customer's first_name, the product's name, and the order_date.
+```
+
+## Question 3
+
+```default
+For each product that was ordered at least once, show its name and total_revenue, its price times the number of times it was ordered, sorted from highest total_revenue to lowest.
+```
+
+## Question 4
+
+```default
+Show the first_name and num_orders of every customer who placed more than one order.
+```
+
+## Question 5
+
+```default
+Show the first_name and last_name of every customer who has never ordered the Cotton T-Shirt.
+```
+
+## Question 6
+
+```default
+Can you give me 5 more examples of natural language prompts and the corresponding SQL queries you would write for this database?
+```

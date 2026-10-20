@@ -1,0 +1,75 @@
+---
+title: "Books: Queries with AI"
+format:
+  html:
+    code-copy: true
+    toc: true
+    include-in-header:
+      text: |
+        <style>
+        pre > code.sourceCode { white-space: pre-wrap !important; }
+        pre > code.sourceCode > span { display: inline !important; }
+        div.sourceCode, pre.sourceCode { overflow: visible !important; }
+        pre.sourceCode { padding-right: 2.5em !important; }
+        </style>
+---
+
+This time [Gemini](https://gemini.google.com) writes the SQL. Copy each block
+(use the copy button in its top right corner) and paste it into Gemini. Run
+the blocks in order in the same chat: the table schema tells Gemini what your
+table looks like, so it has to go first.
+
+Then copy the query Gemini writes into the DoltHub SQL editor for your books
+database and run it. Look at the result and check that it really answers the
+question.
+
+## Table schema
+
+Paste this first. It shows the `books` table and its columns.
+
+```sql
+CREATE TABLE books (
+  id int NOT NULL,
+  title varchar(1023),
+  author varchar(1023),
+  year int,
+  genre varchar(1023),
+  PRIMARY KEY (id)
+);
+```
+
+## Question 1
+
+```default
+Show the title and author of every Science Fiction book, sorted from oldest to newest.
+```
+
+## Question 2
+
+```default
+Show the title and year of every book published before 1900.
+```
+
+## Question 3
+
+```default
+Show the title and author of every book with the word "Habits" in its title.
+```
+
+## Question 4
+
+```default
+For each genre, show the genre and num_books, the number of books in that genre, sorted from most books to fewest.
+```
+
+## Question 5
+
+```default
+For each genre that has more than one book, show the genre and earliest_year, the year of the oldest book in that genre.
+```
+
+## Question 6
+
+```default
+Can you give me 5 more examples of natural language prompts and the corresponding SQL queries you would write for this database?
+```
