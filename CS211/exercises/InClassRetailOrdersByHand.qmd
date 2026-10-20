@@ -53,28 +53,9 @@ format:
 
 ::::
 
-### Level 1: one table
-
 1. Show the `name` and `price` of every product that costs less than \$100.
-2. Show the `name` and `price` of every product, sorted from most expensive to least expensive.
-3. Show the `order_id` and `order_date` of every order Jane Smith placed.
-4. Show one number: how many orders have an `order_date` on or after 2025-03-15.
-5. Show three numbers: the average `price`, the highest `price`, and the lowest `price` of the products.
-
-### Level 2: more than one table
-
-6. For every order, show the `order_id`, the customer's `first_name`, and the product's `name`, sorted by `order_id`.
-7. Show the `first_name` and `last_name` of every customer who bought the Cashmere Sweater.
-8. Show one number: the total of the `price` of the product in every order.
-
-### Level 3: totals for each group
-
-9. For each customer who placed at least one order, show their `first_name` and `total`, the sum of the prices of the products they ordered.
-10. For every customer, including any with no orders, show their `first_name` and `num_orders`, the number of orders they placed.
-11. For every product, including any never ordered, show its `name` and `times_ordered`, the number of orders it appears in.
-
-### Think about it
-
-12. Show the `first_name` and `last_name` of every customer who has never placed an order.
-13. Show the `name` of every product that has never been ordered.
-14. Show one number: how many rows there would be if every customer were paired with every product. Explain how you got it.
+2. Show the `order_id` and `order_date` of every order Jane Smith placed.
+3. For every order, show the `order_id`, the customer's `first_name`, and the product's `name`, sorted by `order_id`.
+4. Show the `first_name` and `last_name` of every customer who bought the Cashmere Sweater.
+5. For each customer who placed at least one order, show their `first_name` and `total`, the sum of the prices of the products they ordered.
+6. For every customer, including any with no orders, show their `first_name` and `num_orders`, the number of orders they placed.
