@@ -1,0 +1,152 @@
+---
+title: "Retail Orders Database: Adding Sales Channels"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    code-copy: true
+    toc: true
+---
+
+A store today sells in many places: in its shops, on its website, in its app,
+on social media, and at pop-up events. Selling through all of them as one
+business is called **omnichannel** retail. These scripts add a `channels`
+table to the [retail orders database](retail-orders-database.html) so each
+order records where the customer bought it.
+
+Start with the database from the
+[starter scripts](retail-orders-database-scripts.html). Copy each block (use
+the copy button in its top right corner) and paste it into the Dolt online
+SQL editor, then run it. Run the blocks in order.
+
+## 1. Create the channels table
+
+Each channel gets a unique `channel_id`, which is the primary key.
+
+```sql
+CREATE TABLE channels (
+  channel_id int NOT NULL,
+  channel_name varchar(50),
+  description varchar(255),
+  PRIMARY KEY (channel_id)
+);
+```
+
+## 2. Add the channels
+
+The short names are the ones retailers use: **ecom** for e-commerce on the
+website, **mcom** for mobile commerce, and **scom** for social commerce.
+
+```sql
+INSERT INTO channels (channel_id, channel_name, description) VALUES
+(1, 'physical', 'In a store'),
+(2, 'ecom', 'On the website'),
+(3, 'mcom', 'On a phone, in the app or the mobile site'),
+(4, 'scom', 'On social media, like Instagram or TikTok'),
+(5, 'pop-up', 'At a temporary pop-up shop');
+```
+
+## 3. Add a channel column to orders
+
+`ALTER TABLE` changes a table that already exists. The first statement adds an
+empty `channel_id` column to `orders`. The second makes it a foreign key that
+points back to the `channels` table.
+
+```sql
+ALTER TABLE orders ADD COLUMN channel_id int;
+ALTER TABLE orders ADD CONSTRAINT fk_orders_channel
+  FOREIGN KEY (channel_id) REFERENCES channels (channel_id);
+```
+
+Right now every order's `channel_id` is `NULL`:
+
+```sql
+SELECT * FROM orders;
+```
+
+## 4. Fill in the channel for every order
+
+This single `UPDATE` sets the channel for all ten orders at once. `CASE` looks
+at each order's `order_id` and picks the `channel_id` that goes with it.
+
+```sql
+UPDATE orders SET channel_id = CASE order_id
+  WHEN 1 THEN 1
+  WHEN 2 THEN 2
+  WHEN 3 THEN 3
+  WHEN 4 THEN 4
+  WHEN 5 THEN 2
+  WHEN 6 THEN 3
+  WHEN 7 THEN 1
+  WHEN 8 THEN 5
+  WHEN 9 THEN 2
+  WHEN 10 THEN 2
+END;
+```
+
+Check that every order now has a channel:
+
+```sql
+SELECT * FROM orders;
+```
+
+## 5. Try some queries
+
+Each order with the customer, the product, and the channel:
+
+```sql
+SELECT o.order_id, c.first_name, p.name, ch.channel_name
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN products p ON o.product_id = p.product_id
+JOIN channels ch ON o.channel_id = ch.channel_id
+ORDER BY o.order_id;
+```
+
+How many orders each channel had and how much revenue it brought in:
+
+```sql
+SELECT ch.channel_name, COUNT(o.order_id) AS num_orders, SUM(p.price) AS revenue
+FROM channels ch
+LEFT JOIN orders o ON o.channel_id = ch.channel_id
+LEFT JOIN products p ON o.product_id = p.product_id
+GROUP BY ch.channel_id, ch.channel_name
+ORDER BY revenue DESC;
+```
+
+Omnichannel customers, the ones who bought through more than one channel.
+`COUNT(DISTINCT ...)` counts each channel only once per customer:
+
+```sql
+SELECT c.first_name, c.last_name, COUNT(DISTINCT o.channel_id) AS num_channels
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+HAVING COUNT(DISTINCT o.channel_id) > 1;
+```
+
+Online orders compared with in-person orders. `CASE` sorts each channel into
+one of the two groups:
+
+```sql
+SELECT
+  CASE WHEN ch.channel_name IN ('physical', 'pop-up') THEN 'in person'
+       ELSE 'online' END AS where_bought,
+  COUNT(*) AS num_orders,
+  SUM(p.price) AS revenue
+FROM orders o
+JOIN channels ch ON o.channel_id = ch.channel_id
+JOIN products p ON o.product_id = p.product_id
+GROUP BY where_bought;
+```
+
+## Start over
+
+To remove the channels and go back to the database from the starter scripts.
+The foreign key is dropped first, then the column, then the table.
+
+```sql
+ALTER TABLE orders DROP FOREIGN KEY fk_orders_channel;
+ALTER TABLE orders DROP COLUMN channel_id;
+DROP TABLE channels;
+```
