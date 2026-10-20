@@ -55,26 +55,26 @@ format:
 
 ### Level 1: one table
 
-1. Which products cost less than \$100? Give the name and price of each.
-2. List all the products from most expensive to least expensive.
-3. List the order number and date of every order Jane Smith placed.
-4. How many orders were placed on or after March 15, 2025?
-5. What are the average, highest, and lowest product prices?
+1. Show the `name` and `price` of every product that costs less than \$100.
+2. Show the `name` and `price` of every product, sorted from most expensive to least expensive.
+3. Show the `order_id` and `order_date` of every order Jane Smith placed.
+4. Show one number: how many orders have an `order_date` on or after 2025-03-15.
+5. Show three numbers: the average `price`, the highest `price`, and the lowest `price` of the products.
 
 ### Level 2: more than one table
 
-6. For every order, give the order number, the first name of the customer, and the name of the product.
-7. Who bought the Cashmere Sweater? Give their first and last names.
-8. What is the total amount of money from all the orders?
+6. For every order, show the `order_id`, the customer's `first_name`, and the product's `name`, sorted by `order_id`.
+7. Show the `first_name` and `last_name` of every customer who bought the Cashmere Sweater.
+8. Show one number: the total of the `price` of the product in every order.
 
 ### Level 3: totals for each group
 
-9. How much did each customer spend in total? List only customers who placed at least one order.
-10. How many orders did each customer place? Include every customer, even one with no orders.
-11. How many times was each product ordered? Include every product, even one that was never ordered.
+9. For each customer who placed at least one order, show their `first_name` and `total`, the sum of the prices of the products they ordered.
+10. For every customer, including any with no orders, show their `first_name` and `num_orders`, the number of orders they placed.
+11. For every product, including any never ordered, show its `name` and `times_ordered`, the number of orders it appears in.
 
 ### Think about it
 
-12. Which customer has never placed an order? How did you find out?
-13. Which product has never been ordered? How did you find out?
-14. If you paired every customer with every product, how many pairs would there be? Explain how you got your answer.
+12. Show the `first_name` and `last_name` of every customer who has never placed an order.
+13. Show the `name` of every product that has never been ordered.
+14. Show one number: how many rows there would be if every customer were paired with every product. Explain how you got it.
