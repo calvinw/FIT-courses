@@ -1,0 +1,145 @@
+---
+title: "Fashion Boutique Database: Starter SQL Scripts"
+author: "Calvin Williamson, Science and Math"
+subtitle: "Fall 26"
+format:
+  html:
+    code-copy: true
+    toc: true
+---
+
+These scripts build a small database for a fashion boutique with three
+locations. It has three tables: `stores`, `products`, and `inventory`.
+`inventory` records how many of each product each store has on hand, so it
+connects the other two tables. Copy each block (use the copy button in its top
+right corner) and paste it into the Dolt online SQL editor, then run it. Run
+the blocks in order: `inventory` refers to the other two tables, so they have
+to exist first.
+
+## 1. Create the stores table
+
+Each store gets a unique `store_id`, which is the primary key.
+
+```sql
+CREATE TABLE stores (
+  store_id int NOT NULL,
+  store_name varchar(255),
+  city varchar(255),
+  opened_date date,
+  PRIMARY KEY (store_id)
+);
+```
+
+## 2. Add the stores
+
+```sql
+INSERT INTO stores (store_id, store_name, city, opened_date) VALUES
+(1, 'SoHo Flagship', 'New York', '2018-03-15'),
+(2, 'Williamsburg', 'Brooklyn', '2021-09-01'),
+(3, 'Hoboken', 'Hoboken', '2023-05-20');
+```
+
+## 3. Create the products table
+
+Each item the boutique sells gets a unique `product_id`, which is the primary
+key. A style that comes in two colors is two separate products. `cost` is what
+the boutique pays the supplier and `price` is what the customer pays.
+
+```sql
+CREATE TABLE products (
+  product_id int NOT NULL,
+  name varchar(255),
+  category varchar(255),
+  color varchar(255),
+  cost decimal(10,2),
+  price decimal(10,2),
+  PRIMARY KEY (product_id)
+);
+```
+
+## 4. Add the products
+
+```sql
+INSERT INTO products (product_id, name, category, color, cost, price) VALUES
+(1, 'Linen Wrap Dress', 'Dresses', 'Ivory', 42.00, 128.00),
+(2, 'Linen Wrap Dress', 'Dresses', 'Sage', 42.00, 128.00),
+(3, 'Silk Slip Dress', 'Dresses', 'Black', 65.00, 185.00),
+(4, 'Cropped Denim Jacket', 'Outerwear', 'Light Wash', 38.00, 110.00),
+(5, 'Wool Blend Coat', 'Outerwear', 'Camel', 95.00, 295.00),
+(6, 'Ribbed Knit Top', 'Tops', 'White', 12.00, 38.00),
+(7, 'Ribbed Knit Top', 'Tops', 'Black', 12.00, 38.00),
+(8, 'Oversized Poplin Shirt', 'Tops', 'Blue Stripe', 22.00, 68.00),
+(9, 'High Rise Wide Leg Jeans', 'Bottoms', 'Indigo', 34.00, 98.00),
+(10, 'Pleated Midi Skirt', 'Bottoms', 'Navy', 28.00, 84.00),
+(11, 'Leather Crossbody Bag', 'Accessories', 'Cognac', 48.00, 145.00),
+(12, 'Silk Scarf', 'Accessories', 'Floral', 15.00, 48.00);
+```
+
+## 5. Create the inventory table
+
+Each row says how many of one product one store has on hand. The primary key
+is the pair (`store_id`, `product_id`): a store can carry many products and a
+product can be stocked in many stores, but each store and product pair appears
+only once. Both columns are foreign keys. `store_id` points back to the
+`stores` table and `product_id` points back to the `products` table.
+`reorder_level` is the quantity at which the store should order more.
+
+```sql
+CREATE TABLE inventory (
+  store_id int NOT NULL,
+  product_id int NOT NULL,
+  quantity int,
+  reorder_level int,
+  PRIMARY KEY (store_id, product_id),
+  FOREIGN KEY (store_id) REFERENCES stores (store_id),
+  FOREIGN KEY (product_id) REFERENCES products (product_id)
+);
+```
+
+## 6. Add the inventory
+
+Not every store carries every product. Hoboken is the smallest store and
+doesn't stock the coat or the silk slip dress.
+
+```sql
+INSERT INTO inventory (store_id, product_id, quantity, reorder_level) VALUES
+(1, 1, 14, 5),
+(1, 2, 3, 5),
+(1, 3, 8, 3),
+(1, 4, 11, 4),
+(1, 5, 6, 2),
+(1, 6, 25, 10),
+(1, 7, 30, 10),
+(1, 8, 9, 4),
+(1, 9, 18, 6),
+(1, 10, 7, 4),
+(1, 11, 5, 3),
+(1, 12, 20, 6),
+(2, 1, 6, 4),
+(2, 2, 9, 4),
+(2, 4, 2, 4),
+(2, 5, 1, 2),
+(2, 6, 12, 8),
+(2, 7, 4, 8),
+(2, 9, 10, 5),
+(2, 10, 5, 3),
+(2, 11, 3, 2),
+(3, 1, 4, 3),
+(3, 4, 5, 3),
+(3, 6, 10, 6),
+(3, 7, 8, 6),
+(3, 8, 2, 3),
+(3, 9, 6, 4),
+(3, 12, 9, 4);
+```
+
+## Start over
+
+To delete all three tables and begin again from step 1. `inventory` is dropped
+first because it refers to the other two.
+
+```sql
+DROP TABLE inventory;
+DROP TABLE products;
+DROP TABLE stores;
+```
