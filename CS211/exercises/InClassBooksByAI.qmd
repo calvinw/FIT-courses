@@ -23,9 +23,14 @@ Then copy the query Gemini writes into the DoltHub SQL editor for your books
 database and run it. Look at the result and check that it really answers the
 question.
 
-## Table schema
+## Set Up Database First (without AI)
 
-Paste this first. It shows the `books` table and its columns.
+Use this SQL script to set up a new database:
+[create-books-db.sql](../lectures/sql/create-books-db.sql)
+
+## Table Schema to Give to AI
+
+Paste this first to Gemini as you ask it to write queries for you. It shows the `books` table and its columns.
 
 ```sql
 CREATE TABLE books (

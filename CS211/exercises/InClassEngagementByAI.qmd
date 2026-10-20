@@ -23,9 +23,14 @@ Then copy the query Gemini writes into the DoltHub SQL editor for your
 engagement database and run it. Look at the result and check that it really
 answers the question.
 
-## Table schemas
+## Set Up Database First (without AI)
 
-Paste this first. It shows the three tables, their columns, and how they
+Use this SQL script to set up a new database:
+[create-engagement-db.sql](../lectures/sql/create-engagement-db.sql)
+
+## Table Schemas to Give to AI
+
+Paste this first to Gemini as you ask it to write queries for you. It shows the three tables, their columns, and how they
 connect.
 
 ```sql

@@ -20,12 +20,16 @@ the blocks in order in the same chat: the table schemas tell Gemini what your
 tables look like, so they have to go first.
 
 Then copy the query Gemini writes into the DoltHub SQL editor for your
-coffee shop database and run it. If you don't have the database yet, import
-[create-coffee-shop-db.sql](../lectures/sql/create-coffee-shop-db.sql) first. Look at the result and check that it really answers the question.
+coffee shop database and run it. Look at the result and check that it really answers the question.
 
-## Table schemas
+## Set Up Database First (without AI)
 
-Paste this first. It shows the two tables, their columns, and how they
+Use this SQL script to set up a new database:
+[create-coffee-shop-db.sql](../lectures/sql/create-coffee-shop-db.sql)
+
+## Table Schemas to Give to AI
+
+Paste this first to Gemini as you ask it to write queries for you. It shows the two tables, their columns, and how they
 connect.
 
 ```sql

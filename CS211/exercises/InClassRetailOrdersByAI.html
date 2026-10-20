@@ -88,7 +88,8 @@ pre.sourceCode { padding-right: 2.5em !important; }
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#table-schemas" id="toc-table-schemas" class="nav-link active" data-scroll-target="#table-schemas">Table schemas</a></li>
+  <li><a href="#set-up-database-first-without-ai" id="toc-set-up-database-first-without-ai" class="nav-link active" data-scroll-target="#set-up-database-first-without-ai">Set Up Database First (without AI)</a></li>
+  <li><a href="#table-schemas-to-give-to-ai" id="toc-table-schemas-to-give-to-ai" class="nav-link" data-scroll-target="#table-schemas-to-give-to-ai">Table Schemas to Give to AI</a></li>
   <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example">Worked example</a></li>
   <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
   <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
@@ -122,9 +123,13 @@ pre.sourceCode { padding-right: 2.5em !important; }
 
 <p>These are the questions you worked out by hand. This time <a href="https://gemini.google.com">Gemini</a> writes the SQL. Copy each block (use the copy button in its top right corner) and paste it into Gemini. Run the blocks in order in the same chat: the table schemas tell Gemini what your tables look like, so they have to go first.</p>
 <p>Then copy the query Gemini writes into the DoltHub SQL editor for your retail orders brief database and run it. Check the result against your answer by hand. If they don’t match, work out which one is wrong.</p>
-<section id="table-schemas" class="level2">
-<h2 class="anchored" data-anchor-id="table-schemas">Table schemas</h2>
-<p>Paste this first. It shows the three tables, their columns, and how they connect.</p>
+<section id="set-up-database-first-without-ai" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-database-first-without-ai">Set Up Database First (without AI)</h2>
+<p>Use this SQL script to set up a new database: <a href="../lectures/sql/create-retail-orders-brief-db.sql">create-retail-orders-brief-db.sql</a></p>
+</section>
+<section id="table-schemas-to-give-to-ai" class="level2">
+<h2 class="anchored" data-anchor-id="table-schemas-to-give-to-ai">Table Schemas to Give to AI</h2>
+<p>Paste this first to Gemini as you ask it to write queries for you. It shows the three tables, their columns, and how they connect.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> customers (</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  customer_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  first_name <span class="dt">varchar</span>(<span class="dv">255</span>),</span>

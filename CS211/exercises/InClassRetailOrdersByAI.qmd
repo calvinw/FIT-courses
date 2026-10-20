@@ -24,9 +24,14 @@ Then copy the query Gemini writes into the DoltHub SQL editor for your retail
 orders brief database and run it. Check the result against your answer by
 hand. If they don't match, work out which one is wrong.
 
-## Table schemas
+## Set Up Database First (without AI)
 
-Paste this first. It shows the three tables, their columns, and how they
+Use this SQL script to set up a new database:
+[create-retail-orders-brief-db.sql](../lectures/sql/create-retail-orders-brief-db.sql)
+
+## Table Schemas to Give to AI
+
+Paste this first to Gemini as you ask it to write queries for you. It shows the three tables, their columns, and how they
 connect.
 
 ```sql
