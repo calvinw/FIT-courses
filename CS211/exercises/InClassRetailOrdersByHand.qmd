@@ -18,9 +18,9 @@ The retail orders database has three tables. Each order is one customer
 buying one product. `customer_id` and `product_id` in `orders` point back to
 the `customers` and `products` tables.
 
-Work out what each query returns **by hand**, using only the tables below.
-Write the result as a small table. Then check your answers by running the
-queries on the
+Answer each question **by hand**, using only the tables below. Write your
+answer as a small table or a number. Later you will write a SQL query for
+each question and check your answers on the
 [database](https://calvinw.github.io/FIT-courses/CS211/lectures/sql/create-retail-orders-brief-db.sql).
 
 ## The tables
@@ -59,11 +59,7 @@ queries on the
 
 ## Level 1: one table
 
-**1.** Products under \$100.
-
-```sql
-SELECT name, price FROM products WHERE price < 100;
-```
+**1.** Which products cost less than \$100? Give the name and price of each.
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -73,11 +69,7 @@ SELECT name, price FROM products WHERE price < 100;
 \vspace{3cm}
 :::
 
-**2.** Products from most to least expensive.
-
-```sql
-SELECT name, price FROM products ORDER BY price DESC;
-```
+**2.** List all the products from most expensive to least expensive.
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -87,11 +79,7 @@ SELECT name, price FROM products ORDER BY price DESC;
 \vspace{3.5cm}
 :::
 
-**3.** Jane's orders. (Find her `customer_id` first.)
-
-```sql
-SELECT order_id, order_date FROM orders WHERE customer_id = 2;
-```
+**3.** List the order number and date of every order Jane Smith placed.
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -101,11 +89,7 @@ SELECT order_id, order_date FROM orders WHERE customer_id = 2;
 \vspace{3cm}
 :::
 
-**4.** Orders on or after March 15.
-
-```sql
-SELECT COUNT(*) FROM orders WHERE order_date >= '2025-03-15';
-```
+**4.** How many orders were placed on or after March 15, 2025?
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -115,11 +99,7 @@ SELECT COUNT(*) FROM orders WHERE order_date >= '2025-03-15';
 \vspace{2cm}
 :::
 
-**5.** The average, highest, and lowest price.
-
-```sql
-SELECT AVG(price), MAX(price), MIN(price) FROM products;
-```
+**5.** What are the average, highest, and lowest product prices?
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -131,17 +111,9 @@ SELECT AVG(price), MAX(price), MIN(price) FROM products;
 
 {{< pagebreak >}}
 
-## Level 2: joins
+## Level 2: more than one table
 
-**6.** Each order with the customer's name and the product name.
-
-```sql
-SELECT o.order_id, c.first_name, p.name
-FROM orders o
-JOIN customers c ON c.customer_id = o.customer_id
-JOIN products p  ON p.product_id  = o.product_id
-ORDER BY o.order_id;
-```
+**6.** For every order, give the order number, the first name of the customer, and the name of the product.
 
 ::: {.content-visible when-format="html"}
 ::: {.answer .tall}
@@ -151,15 +123,7 @@ ORDER BY o.order_id;
 \vspace{4.5cm}
 :::
 
-**7.** Who bought the Cashmere Sweater?
-
-```sql
-SELECT c.first_name, c.last_name
-FROM orders o
-JOIN customers c ON c.customer_id = o.customer_id
-JOIN products p  ON p.product_id  = o.product_id
-WHERE p.name = 'Cashmere Sweater';
-```
+**7.** Who bought the Cashmere Sweater? Give their first and last names.
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -169,12 +133,7 @@ WHERE p.name = 'Cashmere Sweater';
 \vspace{3cm}
 :::
 
-**8.** Total sales across all orders.
-
-```sql
-SELECT SUM(p.price)
-FROM orders o JOIN products p ON p.product_id = o.product_id;
-```
+**8.** What is the total amount of money from all the orders?
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -186,17 +145,9 @@ FROM orders o JOIN products p ON p.product_id = o.product_id;
 
 {{< pagebreak >}}
 
-## Level 3: GROUP BY
+## Level 3: totals for each group
 
-**9.** How much each customer spent.
-
-```sql
-SELECT c.first_name, SUM(p.price) AS total
-FROM orders o
-JOIN customers c ON c.customer_id = o.customer_id
-JOIN products p  ON p.product_id  = o.product_id
-GROUP BY c.first_name;
-```
+**9.** How much did each customer spend in total? List only customers who placed at least one order.
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -206,14 +157,7 @@ GROUP BY c.first_name;
 \vspace{3.5cm}
 :::
 
-**10.** Number of orders per customer, including customers with none.
-
-```sql
-SELECT c.first_name, COUNT(o.order_id) AS num_orders
-FROM customers c
-LEFT JOIN orders o ON o.customer_id = c.customer_id
-GROUP BY c.first_name;
-```
+**10.** How many orders did each customer place? Include every customer, even one with no orders.
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -223,14 +167,7 @@ GROUP BY c.first_name;
 \vspace{3.5cm}
 :::
 
-**11.** How many times each product was ordered.
-
-```sql
-SELECT p.name, COUNT(o.order_id) AS times_ordered
-FROM products p
-LEFT JOIN orders o ON o.product_id = p.product_id
-GROUP BY p.name;
-```
+**11.** How many times was each product ordered? Include every product, even one that was never ordered.
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -244,8 +181,7 @@ GROUP BY p.name;
 
 ## Think about it
 
-**12.** Run query 10 again with `JOIN` instead of `LEFT JOIN`. What changes,
-and why?
+**12.** Which customer has never placed an order? How did you find out?
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -255,12 +191,7 @@ and why?
 \vspace{3cm}
 :::
 
-**13.** How many rows would this query return? Explain how you got your
-answer.
-
-```sql
-SELECT * FROM customers CROSS JOIN products;
-```
+**13.** Which product has never been ordered? How did you find out?
 
 ::: {.content-visible when-format="html"}
 ::: answer
@@ -270,8 +201,7 @@ SELECT * FROM customers CROSS JOIN products;
 \vspace{3cm}
 :::
 
-**14.** Query 10 uses `COUNT(o.order_id)`. What would Sarah's count be if it
-used `COUNT(*)` instead, and why?
+**14.** If you paired every customer with every product, how many pairs would there be? Explain how you got your answer.
 
 ::: {.content-visible when-format="html"}
 ::: answer
