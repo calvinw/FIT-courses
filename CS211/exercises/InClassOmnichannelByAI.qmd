@@ -1,0 +1,125 @@
+---
+title: "Omnichannel: Queries with AI"
+format:
+  html:
+    code-copy: true
+    toc: true
+    include-in-header:
+      text: |
+        <style>
+        pre > code.sourceCode { white-space: pre-wrap !important; }
+        pre > code.sourceCode > span { display: inline !important; }
+        div.sourceCode, pre.sourceCode { overflow: visible !important; }
+        pre.sourceCode { padding-right: 2.5em !important; }
+        </style>
+---
+
+This uses your retail orders database after you added the `channels` table
+with the [sales channels scripts](../lectures/retail-orders-channels-scripts.html).
+
+This time [Gemini](https://gemini.google.com) writes the SQL. Copy each block
+(use the copy button in its top right corner) and paste it into Gemini. Run
+the blocks in order in the same chat: the table schemas tell Gemini what your
+tables look like, so they have to go first.
+
+Then copy the query Gemini writes into the DoltHub SQL editor for your retail
+orders database and run it. Look at the result and check that it really
+answers the question.
+
+## Table Schemas to Give to AI
+
+Paste this first to Gemini as you ask it to write queries for you. It shows
+the four tables, their columns, and how they connect.
+
+```sql
+CREATE TABLE customers (
+  customer_id int NOT NULL,
+  first_name varchar(255),
+  last_name varchar(255),
+  email varchar(255),
+  PRIMARY KEY (customer_id)
+);
+
+CREATE TABLE products (
+  product_id int NOT NULL,
+  name varchar(255),
+  price decimal(10,2),
+  description varchar(1023),
+  PRIMARY KEY (product_id)
+);
+
+-- channel_name is one of: physical (in a store), ecom (the website),
+-- mcom (a phone), scom (social media), pop-up (a temporary pop-up shop).
+CREATE TABLE channels (
+  channel_id int NOT NULL,
+  channel_name varchar(50),
+  description varchar(255),
+  PRIMARY KEY (channel_id)
+);
+
+CREATE TABLE orders (
+  order_id int NOT NULL,
+  customer_id int NOT NULL,
+  product_id int NOT NULL,
+  order_date datetime,
+  channel_id int,
+  PRIMARY KEY (order_id),
+  FOREIGN KEY (customer_id) REFERENCES customers (customer_id),
+  FOREIGN KEY (product_id) REFERENCES products (product_id),
+  FOREIGN KEY (channel_id) REFERENCES channels (channel_id)
+);
+```
+
+## 1. Where Each Order Came From
+
+```default
+For every order, show the order_id, the customer's first_name, the product's name, and the channel_name, sorted by order_id.
+```
+
+## 2. Orders and Revenue by Channel
+
+```default
+For each channel, show the channel_name, num_orders, the number of orders through that channel, and revenue, the total price of those orders, sorted from highest revenue to lowest.
+```
+
+## 3. Our Omnichannel Customers
+
+```default
+Show the first_name, last_name, and num_channels of every customer who bought through more than one channel.
+```
+
+## 4. Online vs. In Person
+
+```default
+Group the orders into online (ecom, mcom, scom) and in person (physical, pop-up), and show where_bought, num_orders, and revenue for each group.
+```
+
+## 5. Average Order Value by Channel
+
+```default
+For each channel, show the channel_name and avg_order_value, the average price of the orders through that channel, sorted from highest avg_order_value to lowest.
+```
+
+## 6. Channel Share of Revenue
+
+```default
+For each channel, show the channel_name and pct_of_revenue, that channel's share of the total revenue from all orders as a percent, sorted from highest to lowest.
+```
+
+## 7. Customer Reach by Channel
+
+```default
+For each channel, show the channel_name and num_customers, the number of different customers who ordered through it.
+```
+
+## 8. Products That Sell Everywhere
+
+```default
+Show the name and num_channels of every product that was sold through more than one channel.
+```
+
+## 9. Digital-Only Shoppers
+
+```default
+Show the first_name and last_name of every customer who has ordered online but never in person.
+```

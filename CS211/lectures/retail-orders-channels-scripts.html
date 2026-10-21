@@ -88,7 +88,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#add-a-channel-column-to-orders" id="toc-add-a-channel-column-to-orders" class="nav-link" data-scroll-target="#add-a-channel-column-to-orders">3. Add a channel column to orders</a></li>
   <li><a href="#fill-in-the-channel-for-every-order" id="toc-fill-in-the-channel-for-every-order" class="nav-link" data-scroll-target="#fill-in-the-channel-for-every-order">4. Fill in the channel for every order</a></li>
   <li><a href="#try-some-queries" id="toc-try-some-queries" class="nav-link" data-scroll-target="#try-some-queries">5. Try some queries</a></li>
-  <li><a href="#start-over" id="toc-start-over" class="nav-link" data-scroll-target="#start-over">Start over</a></li>
+  <li><a href="#query-it-with-ai" id="toc-query-it-with-ai" class="nav-link" data-scroll-target="#query-it-with-ai">6. Query it with AI</a></li>
   </ul>
 </nav>
 </div>
@@ -144,70 +144,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="add-a-channel-column-to-orders" class="level2">
 <h2 class="anchored" data-anchor-id="add-a-channel-column-to-orders">3. Add a channel column to orders</h2>
-<p><code>ALTER TABLE</code> changes a table that already exists. The first statement adds an empty <code>channel_id</code> column to <code>orders</code>. The second makes it a foreign key that points back to the <code>channels</code> table.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> orders <span class="kw">ADD</span> <span class="kw">COLUMN</span> channel_id <span class="dt">int</span>;</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> orders <span class="kw">ADD</span> <span class="kw">CONSTRAINT</span> fk_orders_channel</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (channel_id) <span class="kw">REFERENCES</span> channels (channel_id);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>ALTER TABLE</code> changes a table that already exists. Run these two one at a time.</p>
+<p>First, add an empty <code>channel_id</code> column to <code>orders</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> orders <span class="kw">ADD</span> <span class="kw">COLUMN</span> channel_id <span class="dt">int</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then make it a foreign key that points back to the <code>channels</code> table:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> orders <span class="kw">ADD</span> <span class="kw">CONSTRAINT</span> fk_orders_channel</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (channel_id) <span class="kw">REFERENCES</span> channels (channel_id);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Right now every order’s <code>channel_id</code> is <code>NULL</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> orders;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> orders;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="fill-in-the-channel-for-every-order" class="level2">
 <h2 class="anchored" data-anchor-id="fill-in-the-channel-for-every-order">4. Fill in the channel for every order</h2>
 <p>This single <code>UPDATE</code> sets the channel for all ten orders at once. <code>CASE</code> looks at each order’s <code>order_id</code> and picks the <code>channel_id</code> that goes with it.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> orders <span class="kw">SET</span> channel_id <span class="op">=</span> <span class="cf">CASE</span> order_id</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">1</span> <span class="cf">THEN</span> <span class="dv">1</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">2</span> <span class="cf">THEN</span> <span class="dv">2</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">3</span> <span class="cf">THEN</span> <span class="dv">3</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">4</span> <span class="cf">THEN</span> <span class="dv">4</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">5</span> <span class="cf">THEN</span> <span class="dv">2</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">6</span> <span class="cf">THEN</span> <span class="dv">3</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">7</span> <span class="cf">THEN</span> <span class="dv">1</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">8</span> <span class="cf">THEN</span> <span class="dv">5</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">9</span> <span class="cf">THEN</span> <span class="dv">2</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">10</span> <span class="cf">THEN</span> <span class="dv">2</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> orders <span class="kw">SET</span> channel_id <span class="op">=</span> <span class="cf">CASE</span> order_id</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">1</span> <span class="cf">THEN</span> <span class="dv">1</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">2</span> <span class="cf">THEN</span> <span class="dv">2</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">3</span> <span class="cf">THEN</span> <span class="dv">3</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">4</span> <span class="cf">THEN</span> <span class="dv">4</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">5</span> <span class="cf">THEN</span> <span class="dv">2</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">6</span> <span class="cf">THEN</span> <span class="dv">3</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">7</span> <span class="cf">THEN</span> <span class="dv">1</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">8</span> <span class="cf">THEN</span> <span class="dv">5</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">9</span> <span class="cf">THEN</span> <span class="dv">2</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">WHEN</span> <span class="dv">10</span> <span class="cf">THEN</span> <span class="dv">2</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Check that every order now has a channel:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> orders;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> orders;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="try-some-queries" class="level2">
 <h2 class="anchored" data-anchor-id="try-some-queries">5. Try some queries</h2>
-<p>Each order with the customer, the product, and the channel:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> o.order_id, c.first_name, p.name, ch.channel_name</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> orders o</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> customers c <span class="kw">ON</span> o.customer_id <span class="op">=</span> c.customer_id</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> products p <span class="kw">ON</span> o.product_id <span class="op">=</span> p.product_id</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> channels ch <span class="kw">ON</span> o.channel_id <span class="op">=</span> ch.channel_id</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> o.order_id;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>How many orders each channel had and how much revenue it brought in:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> ch.channel_name, <span class="fu">COUNT</span>(o.order_id) <span class="kw">AS</span> num_orders, <span class="fu">SUM</span>(p.price) <span class="kw">AS</span> revenue</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> channels ch</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> orders o <span class="kw">ON</span> o.channel_id <span class="op">=</span> ch.channel_id</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> products p <span class="kw">ON</span> o.product_id <span class="op">=</span> p.product_id</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> ch.channel_id, ch.channel_name</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> revenue <span class="kw">DESC</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Omnichannel customers, the ones who bought through more than one channel. <code>COUNT(DISTINCT ...)</code> counts each channel only once per customer:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> c.first_name, c.last_name, <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> o.channel_id) <span class="kw">AS</span> num_channels</span>
+<p>Every order with the customer’s name, the product, its price, and the channel name in place of the <code>channel_id</code> number. The last <code>JOIN</code> looks up each order’s <code>channel_id</code> in the <code>channels</code> table:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> o.order_id, c.first_name, c.last_name, p.name, p.price, ch.channel_name</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> orders o</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> customers c <span class="kw">ON</span> o.customer_id <span class="op">=</span> c.customer_id</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> products p <span class="kw">ON</span> o.product_id <span class="op">=</span> p.product_id</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> channels ch <span class="kw">ON</span> o.channel_id <span class="op">=</span> ch.channel_id</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> o.order_id;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Only the orders placed on the website (ecom):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> o.order_id, c.first_name, c.last_name, p.name, p.price</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> orders o</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> customers c <span class="kw">ON</span> o.customer_id <span class="op">=</span> c.customer_id</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> c.customer_id, c.first_name, c.last_name</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">HAVING</span> <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> o.channel_id) <span class="op">&gt;</span> <span class="dv">1</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Online orders compared with in-person orders. <code>CASE</code> sorts each channel into one of the two groups:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">CASE</span> <span class="cf">WHEN</span> ch.channel_name <span class="kw">IN</span> (<span class="st">'physical'</span>, <span class="st">'pop-up'</span>) <span class="cf">THEN</span> <span class="st">'in person'</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>       <span class="cf">ELSE</span> <span class="st">'online'</span> <span class="cf">END</span> <span class="kw">AS</span> where_bought,</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> num_orders,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">SUM</span>(p.price) <span class="kw">AS</span> revenue</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> orders o</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> channels ch <span class="kw">ON</span> o.channel_id <span class="op">=</span> ch.channel_id</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> products p <span class="kw">ON</span> o.product_id <span class="op">=</span> p.product_id</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> where_bought;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> products p <span class="kw">ON</span> o.product_id <span class="op">=</span> p.product_id</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> channels ch <span class="kw">ON</span> o.channel_id <span class="op">=</span> ch.channel_id</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> ch.channel_name <span class="op">=</span> <span class="st">'ecom'</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> o.order_id;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>How many orders came through each channel:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> ch.channel_name, <span class="fu">COUNT</span>(o.order_id) <span class="kw">AS</span> num_orders</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> channels ch</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> orders o <span class="kw">ON</span> o.channel_id <span class="op">=</span> ch.channel_id</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> ch.channel_id, ch.channel_name</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> ch.channel_id;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="start-over" class="level2">
-<h2 class="anchored" data-anchor-id="start-over">Start over</h2>
-<p>To remove the channels and go back to the database from the starter scripts. The foreign key is dropped first, then the column, then the table.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> orders <span class="kw">DROP</span> <span class="kw">FOREIGN</span> <span class="kw">KEY</span> fk_orders_channel;</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ALTER</span> <span class="kw">TABLE</span> orders <span class="kw">DROP</span> <span class="kw">COLUMN</span> channel_id;</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> channels;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="query-it-with-ai" class="level2">
+<h2 class="anchored" data-anchor-id="query-it-with-ai">6. Query it with AI</h2>
+<p>Now ask Gemini to write omnichannel queries for you on the <a href="../exercises/InClassOmnichannelByAI.html">Omnichannel: Queries with AI</a> page.</p>
 </section>
 
 </main>

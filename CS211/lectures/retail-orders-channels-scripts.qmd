@@ -48,12 +48,17 @@ INSERT INTO channels (channel_id, channel_name, description) VALUES
 
 ## 3. Add a channel column to orders
 
-`ALTER TABLE` changes a table that already exists. The first statement adds an
-empty `channel_id` column to `orders`. The second makes it a foreign key that
-points back to the `channels` table.
+`ALTER TABLE` changes a table that already exists. Run these two one at a time.
+
+First, add an empty `channel_id` column to `orders`:
 
 ```sql
 ALTER TABLE orders ADD COLUMN channel_id int;
+```
+
+Then make it a foreign key that points back to the `channels` table:
+
+```sql
 ALTER TABLE orders ADD CONSTRAINT fk_orders_channel
   FOREIGN KEY (channel_id) REFERENCES channels (channel_id);
 ```
@@ -92,10 +97,12 @@ SELECT * FROM orders;
 
 ## 5. Try some queries
 
-Each order with the customer, the product, and the channel:
+Every order with the customer's name, the product, its price, and the channel
+name in place of the `channel_id` number. The last `JOIN` looks up each
+order's `channel_id` in the `channels` table:
 
 ```sql
-SELECT o.order_id, c.first_name, p.name, ch.channel_name
+SELECT o.order_id, c.first_name, c.last_name, p.name, p.price, ch.channel_name
 FROM orders o
 JOIN customers c ON o.customer_id = c.customer_id
 JOIN products p ON o.product_id = p.product_id
@@ -103,50 +110,29 @@ JOIN channels ch ON o.channel_id = ch.channel_id
 ORDER BY o.order_id;
 ```
 
-How many orders each channel had and how much revenue it brought in:
+Only the orders placed on the website (ecom):
 
 ```sql
-SELECT ch.channel_name, COUNT(o.order_id) AS num_orders, SUM(p.price) AS revenue
-FROM channels ch
-LEFT JOIN orders o ON o.channel_id = ch.channel_id
-LEFT JOIN products p ON o.product_id = p.product_id
-GROUP BY ch.channel_id, ch.channel_name
-ORDER BY revenue DESC;
-```
-
-Omnichannel customers, the ones who bought through more than one channel.
-`COUNT(DISTINCT ...)` counts each channel only once per customer:
-
-```sql
-SELECT c.first_name, c.last_name, COUNT(DISTINCT o.channel_id) AS num_channels
+SELECT o.order_id, c.first_name, c.last_name, p.name, p.price
 FROM orders o
 JOIN customers c ON o.customer_id = c.customer_id
-GROUP BY c.customer_id, c.first_name, c.last_name
-HAVING COUNT(DISTINCT o.channel_id) > 1;
-```
-
-Online orders compared with in-person orders. `CASE` sorts each channel into
-one of the two groups:
-
-```sql
-SELECT
-  CASE WHEN ch.channel_name IN ('physical', 'pop-up') THEN 'in person'
-       ELSE 'online' END AS where_bought,
-  COUNT(*) AS num_orders,
-  SUM(p.price) AS revenue
-FROM orders o
-JOIN channels ch ON o.channel_id = ch.channel_id
 JOIN products p ON o.product_id = p.product_id
-GROUP BY where_bought;
+JOIN channels ch ON o.channel_id = ch.channel_id
+WHERE ch.channel_name = 'ecom'
+ORDER BY o.order_id;
 ```
 
-## Start over
-
-To remove the channels and go back to the database from the starter scripts.
-The foreign key is dropped first, then the column, then the table.
+How many orders came through each channel:
 
 ```sql
-ALTER TABLE orders DROP FOREIGN KEY fk_orders_channel;
-ALTER TABLE orders DROP COLUMN channel_id;
-DROP TABLE channels;
+SELECT ch.channel_name, COUNT(o.order_id) AS num_orders
+FROM channels ch
+LEFT JOIN orders o ON o.channel_id = ch.channel_id
+GROUP BY ch.channel_id, ch.channel_name
+ORDER BY ch.channel_id;
 ```
+
+## 6. Query it with AI
+
+Now ask Gemini to write omnichannel queries for you on the
+[Omnichannel: Queries with AI](../exercises/InClassOmnichannelByAI.html) page.
