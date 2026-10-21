@@ -7,6 +7,7 @@ The problems are mixed up with a fixed seed so the order never changes.
 """
 import os
 import random
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "lectures", "images"))
@@ -47,4 +48,6 @@ def name(i):
 if __name__ == "__main__":
     for i, (kind, z1, z2) in enumerate(PROBLEMS, 1):
         write(name(i), graph(kind, z1, z2))
+        # PNG copies for the Google Sheet, whose IMAGE() can't show SVGs
+        subprocess.run(["rsvg-convert", "-w", "480", "-o", name(i).replace(".svg", ".png"), name(i)], check=True)
         print(f"{i:2d}. {kind:7s} {z1:g} {'' if z2 is None else f'{z2:g}'}: {area(kind, z1, z2):.4f}")
