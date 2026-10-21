@@ -80,7 +80,7 @@ window.Quarto = {
 
 <section id="answers-standard-normal-areas-practice" class="level1">
 <h1>Answers: Standard Normal Areas Practice</h1>
-<p>Find each area under the standard normal curve. Use the standard normal table, or a spreadsheet with <code>NORMSDIST</code>. The same problems are in this spreadsheet: <a href="data/NormalAreasPractice-Answers.xlsx">NormalAreasPractice-Answers.xlsx</a>.</p>
+<p>Each answer comes from the spreadsheet formula shown under it. The same answers are in <a href="data/NormalAreasPractice-Answers.xlsx">NormalAreasPractice-Answers.xlsx</a>. With the printed table you may get a last digit that is off by 1.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -103,243 +103,216 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<section id="left-tail-areas" class="level2">
-<h2 class="anchored" data-anchor-id="left-tail-areas">Left Tail Areas</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">#</th>
-<th style="text-align: right;"><span class="math inline">\(z\)</span></th>
-<th style="text-align: center;">Left Tail Area</th>
-<th style="text-align: left;">Formula</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">-1.33</td>
-<td style="text-align: center;">0.0918</td>
-<td style="text-align: left;"><code>=NORMSDIST(-1.33)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: right;">0.52</td>
-<td style="text-align: center;">0.6985</td>
-<td style="text-align: left;"><code>=NORMSDIST(0.52)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: right;">-0.33</td>
-<td style="text-align: center;">0.3707</td>
-<td style="text-align: left;"><code>=NORMSDIST(-0.33)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: right;">1.86</td>
-<td style="text-align: center;">0.9686</td>
-<td style="text-align: left;"><code>=NORMSDIST(1.86)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: right;">-2.15</td>
-<td style="text-align: center;">0.0158</td>
-<td style="text-align: left;"><code>=NORMSDIST(-2.15)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6</td>
-<td style="text-align: right;">0.08</td>
-<td style="text-align: center;">0.5319</td>
-<td style="text-align: left;"><code>=NORMSDIST(0.08)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: right;">-0.91</td>
-<td style="text-align: center;">0.1814</td>
-<td style="text-align: left;"><code>=NORMSDIST(-0.91)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8</td>
-<td style="text-align: right;">2.34</td>
-<td style="text-align: center;">0.9904</td>
-<td style="text-align: left;"><code>=NORMSDIST(2.34)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">9</td>
-<td style="text-align: right;">-1.62</td>
-<td style="text-align: center;">0.0526</td>
-<td style="text-align: left;"><code>=NORMSDIST(-1.62)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: right;">1.25</td>
-<td style="text-align: center;">0.8944</td>
-<td style="text-align: left;"><code>=NORMSDIST(1.25)</code></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="right-tail-areas" class="level2">
-<h2 class="anchored" data-anchor-id="right-tail-areas">Right Tail Areas</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">#</th>
-<th style="text-align: right;"><span class="math inline">\(z\)</span></th>
-<th style="text-align: center;">Right Tail Area</th>
-<th style="text-align: left;">Formula</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">1.42</td>
-<td style="text-align: center;">0.0778</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(1.42)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: right;">-0.64</td>
-<td style="text-align: center;">0.7389</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(-0.64)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: right;">2.05</td>
-<td style="text-align: center;">0.0202</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(2.05)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: right;">-1.38</td>
-<td style="text-align: center;">0.9162</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(-1.38)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: right;">0.47</td>
-<td style="text-align: center;">0.3192</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(0.47)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6</td>
-<td style="text-align: right;">-2.21</td>
-<td style="text-align: center;">0.9864</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(-2.21)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: right;">1.73</td>
-<td style="text-align: center;">0.0418</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(1.73)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8</td>
-<td style="text-align: right;">-0.15</td>
-<td style="text-align: center;">0.5596</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(-0.15)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">9</td>
-<td style="text-align: right;">0.96</td>
-<td style="text-align: center;">0.1685</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(0.96)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: right;">-1.09</td>
-<td style="text-align: center;">0.8621</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(-1.09)</code></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="areas-between" class="level2">
-<h2 class="anchored" data-anchor-id="areas-between">Areas Between</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">#</th>
-<th style="text-align: right;"><span class="math inline">\(z_1\)</span></th>
-<th style="text-align: right;"><span class="math inline">\(z_2\)</span></th>
-<th style="text-align: center;">Area Between</th>
-<th style="text-align: left;">Formula</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">-0.94</td>
-<td style="text-align: right;">1.27</td>
-<td style="text-align: center;">0.7243</td>
-<td style="text-align: left;"><code>=NORMSDIST(1.27)-NORMSDIST(-0.94)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: right;">-1.96</td>
-<td style="text-align: right;">1.96</td>
-<td style="text-align: center;">0.9500</td>
-<td style="text-align: left;"><code>=NORMSDIST(1.96)-NORMSDIST(-1.96)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: right;">0.25</td>
-<td style="text-align: right;">1.75</td>
-<td style="text-align: center;">0.3612</td>
-<td style="text-align: left;"><code>=NORMSDIST(1.75)-NORMSDIST(0.25)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: right;">-2.30</td>
-<td style="text-align: right;">-0.40</td>
-<td style="text-align: center;">0.3339</td>
-<td style="text-align: left;"><code>=NORMSDIST(-0.40)-NORMSDIST(-2.30)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: right;">-1.15</td>
-<td style="text-align: right;">0.65</td>
-<td style="text-align: center;">0.6171</td>
-<td style="text-align: left;"><code>=NORMSDIST(0.65)-NORMSDIST(-1.15)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6</td>
-<td style="text-align: right;">0.60</td>
-<td style="text-align: right;">2.45</td>
-<td style="text-align: center;">0.2671</td>
-<td style="text-align: left;"><code>=NORMSDIST(2.45)-NORMSDIST(0.60)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: right;">-0.72</td>
-<td style="text-align: right;">0.38</td>
-<td style="text-align: center;">0.4123</td>
-<td style="text-align: left;"><code>=NORMSDIST(0.38)-NORMSDIST(-0.72)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8</td>
-<td style="text-align: right;">-1.80</td>
-<td style="text-align: right;">-1.05</td>
-<td style="text-align: center;">0.1109</td>
-<td style="text-align: left;"><code>=NORMSDIST(-1.05)-NORMSDIST(-1.80)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">9</td>
-<td style="text-align: right;">1.12</td>
-<td style="text-align: right;">2.60</td>
-<td style="text-align: center;">0.1267</td>
-<td style="text-align: left;"><code>=NORMSDIST(2.60)-NORMSDIST(1.12)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: right;">-2.58</td>
-<td style="text-align: right;">1.44</td>
-<td style="text-align: center;">0.9201</td>
-<td style="text-align: left;"><code>=NORMSDIST(1.44)-NORMSDIST(-2.58)</code></td>
-</tr>
-</tbody>
-</table>
-<p>Answers come from the spreadsheet. With the printed table you may get a last digit that differs by 1 (for example <span class="math inline">\(0.7244\)</span> for #1 of the areas between).</p>
-</section>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>1.</strong> Right tail area for <span class="math inline">\(z = 1.73\)</span></p>
+<p><img src="images/NormalAreasPractice-01.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.0418\)</span><br>
+<code>=1.0-NORMSDIST(1.73)</code></p>
+</div>
+<div>
+<p><strong>2.</strong> Area between <span class="math inline">\(z = 0.6\)</span> and <span class="math inline">\(z = 2.45\)</span></p>
+<p><img src="images/NormalAreasPractice-02.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.2671\)</span><br>
+<code>=NORMSDIST(2.45)-NORMSDIST(0.6)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>3.</strong> Right tail area for <span class="math inline">\(z = -1.38\)</span></p>
+<p><img src="images/NormalAreasPractice-03.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.9162\)</span><br>
+<code>=1.0-NORMSDIST(-1.38)</code></p>
+</div>
+<div>
+<p><strong>4.</strong> Right tail area for <span class="math inline">\(z = -0.15\)</span></p>
+<p><img src="images/NormalAreasPractice-04.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.5596\)</span><br>
+<code>=1.0-NORMSDIST(-0.15)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>5.</strong> Left tail area for <span class="math inline">\(z = -2.15\)</span></p>
+<p><img src="images/NormalAreasPractice-05.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.0158\)</span><br>
+<code>=NORMSDIST(-2.15)</code></p>
+</div>
+<div>
+<p><strong>6.</strong> Right tail area for <span class="math inline">\(z = 2.05\)</span></p>
+<p><img src="images/NormalAreasPractice-06.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.0202\)</span><br>
+<code>=1.0-NORMSDIST(2.05)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>7.</strong> Right tail area for <span class="math inline">\(z = -0.64\)</span></p>
+<p><img src="images/NormalAreasPractice-07.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.7389\)</span><br>
+<code>=1.0-NORMSDIST(-0.64)</code></p>
+</div>
+<div>
+<p><strong>8.</strong> Left tail area for <span class="math inline">\(z = 0.08\)</span></p>
+<p><img src="images/NormalAreasPractice-08.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.5319\)</span><br>
+<code>=NORMSDIST(0.08)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>9.</strong> Area between <span class="math inline">\(z = 0.25\)</span> and <span class="math inline">\(z = 1.75\)</span></p>
+<p><img src="images/NormalAreasPractice-09.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.3612\)</span><br>
+<code>=NORMSDIST(1.75)-NORMSDIST(0.25)</code></p>
+</div>
+<div>
+<p><strong>10.</strong> Left tail area for <span class="math inline">\(z = -1.62\)</span></p>
+<p><img src="images/NormalAreasPractice-10.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.0526\)</span><br>
+<code>=NORMSDIST(-1.62)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>11.</strong> Right tail area for <span class="math inline">\(z = 1.42\)</span></p>
+<p><img src="images/NormalAreasPractice-11.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.0778\)</span><br>
+<code>=1.0-NORMSDIST(1.42)</code></p>
+</div>
+<div>
+<p><strong>12.</strong> Area between <span class="math inline">\(z = -1.96\)</span> and <span class="math inline">\(z = 1.96\)</span></p>
+<p><img src="images/NormalAreasPractice-12.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.9500\)</span><br>
+<code>=NORMSDIST(1.96)-NORMSDIST(-1.96)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>13.</strong> Area between <span class="math inline">\(z = -2.58\)</span> and <span class="math inline">\(z = 1.44\)</span></p>
+<p><img src="images/NormalAreasPractice-13.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.9201\)</span><br>
+<code>=NORMSDIST(1.44)-NORMSDIST(-2.58)</code></p>
+</div>
+<div>
+<p><strong>14.</strong> Left tail area for <span class="math inline">\(z = -0.91\)</span></p>
+<p><img src="images/NormalAreasPractice-14.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.1814\)</span><br>
+<code>=NORMSDIST(-0.91)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>15.</strong> Right tail area for <span class="math inline">\(z = 0.96\)</span></p>
+<p><img src="images/NormalAreasPractice-15.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.1685\)</span><br>
+<code>=1.0-NORMSDIST(0.96)</code></p>
+</div>
+<div>
+<p><strong>16.</strong> Area between <span class="math inline">\(z = 1.12\)</span> and <span class="math inline">\(z = 2.6\)</span></p>
+<p><img src="images/NormalAreasPractice-16.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.1267\)</span><br>
+<code>=NORMSDIST(2.6)-NORMSDIST(1.12)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>17.</strong> Area between <span class="math inline">\(z = -2.3\)</span> and <span class="math inline">\(z = -0.4\)</span></p>
+<p><img src="images/NormalAreasPractice-17.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.3339\)</span><br>
+<code>=NORMSDIST(-0.4)-NORMSDIST(-2.3)</code></p>
+</div>
+<div>
+<p><strong>18.</strong> Left tail area for <span class="math inline">\(z = -0.33\)</span></p>
+<p><img src="images/NormalAreasPractice-18.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.3707\)</span><br>
+<code>=NORMSDIST(-0.33)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>19.</strong> Right tail area for <span class="math inline">\(z = -1.09\)</span></p>
+<p><img src="images/NormalAreasPractice-19.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.8621\)</span><br>
+<code>=1.0-NORMSDIST(-1.09)</code></p>
+</div>
+<div>
+<p><strong>20.</strong> Area between <span class="math inline">\(z = -0.94\)</span> and <span class="math inline">\(z = 1.27\)</span></p>
+<p><img src="images/NormalAreasPractice-20.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.7243\)</span><br>
+<code>=NORMSDIST(1.27)-NORMSDIST(-0.94)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>21.</strong> Right tail area for <span class="math inline">\(z = 0.47\)</span></p>
+<p><img src="images/NormalAreasPractice-21.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.3192\)</span><br>
+<code>=1.0-NORMSDIST(0.47)</code></p>
+</div>
+<div>
+<p><strong>22.</strong> Area between <span class="math inline">\(z = -1.8\)</span> and <span class="math inline">\(z = -1.05\)</span></p>
+<p><img src="images/NormalAreasPractice-22.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.1109\)</span><br>
+<code>=NORMSDIST(-1.05)-NORMSDIST(-1.8)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>23.</strong> Right tail area for <span class="math inline">\(z = -2.21\)</span></p>
+<p><img src="images/NormalAreasPractice-23.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.9864\)</span><br>
+<code>=1.0-NORMSDIST(-2.21)</code></p>
+</div>
+<div>
+<p><strong>24.</strong> Left tail area for <span class="math inline">\(z = -1.33\)</span></p>
+<p><img src="images/NormalAreasPractice-24.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.0918\)</span><br>
+<code>=NORMSDIST(-1.33)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>25.</strong> Left tail area for <span class="math inline">\(z = 0.52\)</span></p>
+<p><img src="images/NormalAreasPractice-25.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.6985\)</span><br>
+<code>=NORMSDIST(0.52)</code></p>
+</div>
+<div>
+<p><strong>26.</strong> Area between <span class="math inline">\(z = -0.72\)</span> and <span class="math inline">\(z = 0.38\)</span></p>
+<p><img src="images/NormalAreasPractice-26.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.4123\)</span><br>
+<code>=NORMSDIST(0.38)-NORMSDIST(-0.72)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>27.</strong> Left tail area for <span class="math inline">\(z = 1.25\)</span></p>
+<p><img src="images/NormalAreasPractice-27.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.8944\)</span><br>
+<code>=NORMSDIST(1.25)</code></p>
+</div>
+<div>
+<p><strong>28.</strong> Left tail area for <span class="math inline">\(z = 2.34\)</span></p>
+<p><img src="images/NormalAreasPractice-28.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.9904\)</span><br>
+<code>=NORMSDIST(2.34)</code></p>
+</div>
+</div>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
+<div>
+<p><strong>29.</strong> Left tail area for <span class="math inline">\(z = 1.86\)</span></p>
+<p><img src="images/NormalAreasPractice-29.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.9686\)</span><br>
+<code>=NORMSDIST(1.86)</code></p>
+</div>
+<div>
+<p><strong>30.</strong> Area between <span class="math inline">\(z = -1.15\)</span> and <span class="math inline">\(z = 0.65\)</span></p>
+<p><img src="images/NormalAreasPractice-30.svg" class="img-fluid" style="width:100.0%"></p>
+<p>Area <span class="math inline">\(= 0.6171\)</span><br>
+<code>=NORMSDIST(0.65)-NORMSDIST(-1.15)</code></p>
+</div>
+</div>
 </section>
 
 </main>
