@@ -23,6 +23,8 @@ PROBLEMS = ([("left", z, None) for z in LEFT]
             + [("right", z, None) for z in RIGHT]
             + [("between", a, b) for a, b in BETWEEN])
 random.Random(222).shuffle(PROBLEMS)
+# The handout uses the first 15 of the mixed-up problems
+PROBLEMS = PROBLEMS[:15]
 
 
 def area(kind, z1, z2):
