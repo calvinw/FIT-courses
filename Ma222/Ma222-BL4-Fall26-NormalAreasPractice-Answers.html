@@ -80,135 +80,137 @@ window.Quarto = {
 
 <section id="answers-standard-normal-areas-practice" class="level1">
 <h1>Answers: Standard Normal Areas Practice</h1>
-<p>Each answer comes from the spreadsheet formula shown under it. The same answers are in <a href="data/NormalAreasPractice-Answers.xlsx">NormalAreasPractice-Answers.xlsx</a>. With the printed table you may get a last digit that is off by 1.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Area</th>
-<th style="text-align: left;">Spreadsheet formula</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Left tail area</td>
-<td style="text-align: left;"><code>=NORMSDIST(z)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Right tail area</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(z)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Area between <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span></td>
-<td style="text-align: left;"><code>=NORMSDIST(z2)-NORMSDIST(z1)</code></td>
-</tr>
-</tbody>
-</table>
+<p>Each answer shows the table lookups. A spreadsheet gives the same answers, sometimes with the last digit off by 1: <a href="data/NormalAreasPractice-Answers.xlsx">NormalAreasPractice-Answers.xlsx</a>.</p>
+<section id="example-using-the-table" class="level2">
+<h2 class="anchored" data-anchor-id="example-using-the-table">Example: Using the Table</h2>
+<p><strong>Find the left tail area for <span class="math inline">\(z = -1.25\)</span>.</strong></p>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; align-items:center">
+<div>
+<p><img src="lectures/images/normal-left--1.25.svg" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div>
+<p><img src="lectures/images/ztable--1.25-answer.svg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>Split <span class="math inline">\(z = -1.25\)</span> into the <strong>row</strong> <span class="math inline">\(-1.2\)</span> (the ones digit and first decimal place) and the <strong>column</strong> <span class="math inline">\(.05\)</span> (the second decimal place). Where they meet:</p>
+<p><span class="math display">\[
+\text{left tail area} = 0.1056 \approx 11\%
+\]</span></p>
+<p>Our table has only <strong>left tail areas</strong>. For the other areas, look up left tail areas first:</p>
+<ul>
+<li><strong>Right tail area</strong> <span class="math inline">\(= 1.0 - \text{left tail area}\)</span></li>
+<li><strong>Area between</strong> <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> <span class="math inline">\(=\)</span> (left tail area for <span class="math inline">\(z_2\)</span>) <span class="math inline">\(-\)</span> (left tail area for <span class="math inline">\(z_1\)</span>)</li>
+</ul>
+</section>
+<section id="problems" class="level2">
+<h2 class="anchored" data-anchor-id="problems">Problems</h2>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
 <div>
 <p><strong>1.</strong> Find the right tail area for <span class="math inline">\(z = 1.73\)</span></p>
 <p><img src="images/NormalAreasPractice-01.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.0418\)</span><br>
-<code>=1.0-NORMSDIST(1.73)</code></p>
+<p>Row <span class="math inline">\(1.7\)</span>, column <span class="math inline">\(.03\)</span>: left tail area <span class="math inline">\(= 0.9582\)</span><br>
+Right tail area <span class="math inline">\(= 1.0 - 0.9582 = 0.0418\)</span></p>
 </div>
 <div>
 <p><strong>2.</strong> Find the area between <span class="math inline">\(z = 0.6\)</span> and <span class="math inline">\(z = 2.45\)</span></p>
 <p><img src="images/NormalAreasPractice-02.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.2671\)</span><br>
-<code>=NORMSDIST(2.45)-NORMSDIST(0.6)</code></p>
+<p><span class="math inline">\(z = 2.45\)</span>: row <span class="math inline">\(2.4\)</span>, column <span class="math inline">\(.05\)</span> gives <span class="math inline">\(0.9929\)</span><br>
+<span class="math inline">\(z = 0.6\)</span>: row <span class="math inline">\(0.6\)</span>, column <span class="math inline">\(.00\)</span> gives <span class="math inline">\(0.7257\)</span><br>
+Area between <span class="math inline">\(= 0.9929 - 0.7257 = 0.2672\)</span></p>
 </div>
 </div>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
 <div>
 <p><strong>3.</strong> Find the area to the right of <span class="math inline">\(z = -1.38\)</span></p>
 <p><img src="images/NormalAreasPractice-03.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.9162\)</span><br>
-<code>=1.0-NORMSDIST(-1.38)</code></p>
+<p>Row <span class="math inline">\(-1.3\)</span>, column <span class="math inline">\(.08\)</span>: left tail area <span class="math inline">\(= 0.0838\)</span><br>
+Right tail area <span class="math inline">\(= 1.0 - 0.0838 = 0.9162\)</span></p>
 </div>
 <div>
 <p><strong>4.</strong> Find the area where <span class="math inline">\(z &gt; -0.15\)</span></p>
 <p><img src="images/NormalAreasPractice-04.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.5596\)</span><br>
-<code>=1.0-NORMSDIST(-0.15)</code></p>
+<p>Row <span class="math inline">\(-0.1\)</span>, column <span class="math inline">\(.05\)</span>: left tail area <span class="math inline">\(= 0.4404\)</span><br>
+Right tail area <span class="math inline">\(= 1.0 - 0.4404 = 0.5596\)</span></p>
 </div>
 </div>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
 <div>
 <p><strong>5.</strong> Find the left tail area for <span class="math inline">\(z = -2.15\)</span></p>
 <p><img src="images/NormalAreasPractice-05.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.0158\)</span><br>
-<code>=NORMSDIST(-2.15)</code></p>
+<p>Row <span class="math inline">\(-2.1\)</span>, column <span class="math inline">\(.05\)</span>: left tail area <span class="math inline">\(= 0.0158\)</span></p>
 </div>
 <div>
 <p><strong>6.</strong> Find the area for <span class="math inline">\(z\)</span> greater than <span class="math inline">\(2.05\)</span></p>
 <p><img src="images/NormalAreasPractice-06.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.0202\)</span><br>
-<code>=1.0-NORMSDIST(2.05)</code></p>
+<p>Row <span class="math inline">\(2.0\)</span>, column <span class="math inline">\(.05\)</span>: left tail area <span class="math inline">\(= 0.9798\)</span><br>
+Right tail area <span class="math inline">\(= 1.0 - 0.9798 = 0.0202\)</span></p>
 </div>
 </div>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
 <div>
 <p><strong>7.</strong> Find the right tail area for <span class="math inline">\(z = -0.64\)</span></p>
 <p><img src="images/NormalAreasPractice-07.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.7389\)</span><br>
-<code>=1.0-NORMSDIST(-0.64)</code></p>
+<p>Row <span class="math inline">\(-0.6\)</span>, column <span class="math inline">\(.04\)</span>: left tail area <span class="math inline">\(= 0.2611\)</span><br>
+Right tail area <span class="math inline">\(= 1.0 - 0.2611 = 0.7389\)</span></p>
 </div>
 <div>
 <p><strong>8.</strong> Find the area to the left of <span class="math inline">\(z = 0.08\)</span></p>
 <p><img src="images/NormalAreasPractice-08.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.5319\)</span><br>
-<code>=NORMSDIST(0.08)</code></p>
+<p>Row <span class="math inline">\(0.0\)</span>, column <span class="math inline">\(.08\)</span>: left tail area <span class="math inline">\(= 0.5319\)</span></p>
 </div>
 </div>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
 <div>
 <p><strong>9.</strong> Find the area where <span class="math inline">\(0.25 &lt; z &lt; 1.75\)</span></p>
 <p><img src="images/NormalAreasPractice-09.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.3612\)</span><br>
-<code>=NORMSDIST(1.75)-NORMSDIST(0.25)</code></p>
+<p><span class="math inline">\(z = 1.75\)</span>: row <span class="math inline">\(1.7\)</span>, column <span class="math inline">\(.05\)</span> gives <span class="math inline">\(0.9599\)</span><br>
+<span class="math inline">\(z = 0.25\)</span>: row <span class="math inline">\(0.2\)</span>, column <span class="math inline">\(.05\)</span> gives <span class="math inline">\(0.5987\)</span><br>
+Area between <span class="math inline">\(= 0.9599 - 0.5987 = 0.3612\)</span></p>
 </div>
 <div>
 <p><strong>10.</strong> Find the area where <span class="math inline">\(z &lt; -1.62\)</span></p>
 <p><img src="images/NormalAreasPractice-10.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.0526\)</span><br>
-<code>=NORMSDIST(-1.62)</code></p>
+<p>Row <span class="math inline">\(-1.6\)</span>, column <span class="math inline">\(.02\)</span>: left tail area <span class="math inline">\(= 0.0526\)</span></p>
 </div>
 </div>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
 <div>
 <p><strong>11.</strong> Find the area to the right of <span class="math inline">\(z = 1.42\)</span></p>
 <p><img src="images/NormalAreasPractice-11.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.0778\)</span><br>
-<code>=1.0-NORMSDIST(1.42)</code></p>
+<p>Row <span class="math inline">\(1.4\)</span>, column <span class="math inline">\(.02\)</span>: left tail area <span class="math inline">\(= 0.9222\)</span><br>
+Right tail area <span class="math inline">\(= 1.0 - 0.9222 = 0.0778\)</span></p>
 </div>
 <div>
 <p><strong>12.</strong> Find the area for <span class="math inline">\(z\)</span> between <span class="math inline">\(-1.96\)</span> and <span class="math inline">\(1.96\)</span></p>
 <p><img src="images/NormalAreasPractice-12.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.9500\)</span><br>
-<code>=NORMSDIST(1.96)-NORMSDIST(-1.96)</code></p>
+<p><span class="math inline">\(z = 1.96\)</span>: row <span class="math inline">\(1.9\)</span>, column <span class="math inline">\(.06\)</span> gives <span class="math inline">\(0.9750\)</span><br>
+<span class="math inline">\(z = -1.96\)</span>: row <span class="math inline">\(-1.9\)</span>, column <span class="math inline">\(.06\)</span> gives <span class="math inline">\(0.0250\)</span><br>
+Area between <span class="math inline">\(= 0.9750 - 0.0250 = 0.9500\)</span></p>
 </div>
 </div>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
 <div>
 <p><strong>13.</strong> Find the area for <span class="math inline">\(z\)</span> greater than <span class="math inline">\(-2.58\)</span> and less than <span class="math inline">\(1.44\)</span></p>
 <p><img src="images/NormalAreasPractice-13.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.9201\)</span><br>
-<code>=NORMSDIST(1.44)-NORMSDIST(-2.58)</code></p>
+<p><span class="math inline">\(z = 1.44\)</span>: row <span class="math inline">\(1.4\)</span>, column <span class="math inline">\(.04\)</span> gives <span class="math inline">\(0.9251\)</span><br>
+<span class="math inline">\(z = -2.58\)</span>: row <span class="math inline">\(-2.5\)</span>, column <span class="math inline">\(.08\)</span> gives <span class="math inline">\(0.0049\)</span><br>
+Area between <span class="math inline">\(= 0.9251 - 0.0049 = 0.9202\)</span></p>
 </div>
 <div>
 <p><strong>14.</strong> Find the area for <span class="math inline">\(z\)</span> less than <span class="math inline">\(-0.91\)</span></p>
 <p><img src="images/NormalAreasPractice-14.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.1814\)</span><br>
-<code>=NORMSDIST(-0.91)</code></p>
+<p>Row <span class="math inline">\(-0.9\)</span>, column <span class="math inline">\(.01\)</span>: left tail area <span class="math inline">\(= 0.1814\)</span></p>
 </div>
 </div>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
 <div>
 <p><strong>15.</strong> Find the area where <span class="math inline">\(z &gt; 0.96\)</span></p>
 <p><img src="images/NormalAreasPractice-15.svg" class="img-fluid" style="width:100.0%"></p>
-<p>Area <span class="math inline">\(= 0.1685\)</span><br>
-<code>=1.0-NORMSDIST(0.96)</code></p>
+<p>Row <span class="math inline">\(0.9\)</span>, column <span class="math inline">\(.06\)</span>: left tail area <span class="math inline">\(= 0.8315\)</span><br>
+Right tail area <span class="math inline">\(= 1.0 - 0.8315 = 0.1685\)</span></p>
 </div>
 </div>
+</section>
 </section>
 
 </main>

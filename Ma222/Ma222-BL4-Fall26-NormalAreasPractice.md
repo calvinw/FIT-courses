@@ -9,13 +9,55 @@ format:
 
 # Standard Normal Areas Practice
 
-Find each area under the standard normal curve. The shaded graph shows the area. Use the standard normal table, or a spreadsheet with `NORMSDIST`. The same problems are in [NormalAreasPractice.xlsx](data/NormalAreasPractice.xlsx) (open it in Google Sheets with File → Import, or in Excel).
+Find each area under the standard normal curve using your standard normal table. The shaded graph shows the area. Start with the example below.
 
-| Area | Spreadsheet formula |
-|:--|:--|
-| Left tail area | `=NORMSDIST(z)` |
-| Right tail area | `=1.0-NORMSDIST(z)` |
-| Area between $z_1$ and $z_2$ | `=NORMSDIST(z2)-NORMSDIST(z1)` |
+## Example: Using the Table
+
+**Find the left tail area for $z = -1.25$.**
+
+```{=html}
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; align-items:center">
+<div>
+```
+
+```{=latex}
+\noindent\begin{minipage}[c]{0.47\textwidth}
+```
+
+![](lectures/images/normal-left--1.25.svg){width=100%}
+
+```{=html}
+</div>
+<div>
+```
+
+```{=latex}
+\end{minipage}\hfill\begin{minipage}[c]{0.47\textwidth}
+```
+
+![](lectures/images/ztable--1.25-answer.svg){width=100%}
+
+```{=latex}
+\end{minipage}
+```
+
+```{=html}
+</div>
+</div>
+```
+
+Split $z = -1.25$ into the **row** $-1.2$ (the ones digit and first decimal place) and the **column** $.05$ (the second decimal place). Where they meet:
+
+$$
+\text{left tail area} = 0.1056 \approx 11\%
+$$
+
+Our table has only **left tail areas**. For the other areas, look up left tail areas first:
+
+- **Right tail area** $= 1.0 - \text{left tail area}$
+- **Area between** $z_1$ and $z_2$ $=$ (left tail area for $z_2$) $-$ (left tail area for $z_1$)
+
+## Problems
 
 ```{=html}
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">

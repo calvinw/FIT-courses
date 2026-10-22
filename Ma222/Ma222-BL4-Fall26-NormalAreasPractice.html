@@ -80,29 +80,30 @@ window.Quarto = {
 
 <section id="standard-normal-areas-practice" class="level1">
 <h1>Standard Normal Areas Practice</h1>
-<p>Find each area under the standard normal curve. The shaded graph shows the area. Use the standard normal table, or a spreadsheet with <code>NORMSDIST</code>. The same problems are in <a href="data/NormalAreasPractice.xlsx">NormalAreasPractice.xlsx</a> (open it in Google Sheets with File → Import, or in Excel).</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Area</th>
-<th style="text-align: left;">Spreadsheet formula</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Left tail area</td>
-<td style="text-align: left;"><code>=NORMSDIST(z)</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Right tail area</td>
-<td style="text-align: left;"><code>=1.0-NORMSDIST(z)</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Area between <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span></td>
-<td style="text-align: left;"><code>=NORMSDIST(z2)-NORMSDIST(z1)</code></td>
-</tr>
-</tbody>
-</table>
+<p>Find each area under the standard normal curve using your standard normal table. The shaded graph shows the area. Start with the example below.</p>
+<section id="example-using-the-table" class="level2">
+<h2 class="anchored" data-anchor-id="example-using-the-table">Example: Using the Table</h2>
+<p><strong>Find the left tail area for <span class="math inline">\(z = -1.25\)</span>.</strong></p>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; align-items:center">
+<div>
+<p><img src="lectures/images/normal-left--1.25.svg" class="img-fluid" style="width:100.0%"></p>
+</div>
+<div>
+<p><img src="lectures/images/ztable--1.25-answer.svg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>Split <span class="math inline">\(z = -1.25\)</span> into the <strong>row</strong> <span class="math inline">\(-1.2\)</span> (the ones digit and first decimal place) and the <strong>column</strong> <span class="math inline">\(.05\)</span> (the second decimal place). Where they meet:</p>
+<p><span class="math display">\[
+\text{left tail area} = 0.1056 \approx 11\%
+\]</span></p>
+<p>Our table has only <strong>left tail areas</strong>. For the other areas, look up left tail areas first:</p>
+<ul>
+<li><strong>Right tail area</strong> <span class="math inline">\(= 1.0 - \text{left tail area}\)</span></li>
+<li><strong>Area between</strong> <span class="math inline">\(z_1\)</span> and <span class="math inline">\(z_2\)</span> <span class="math inline">\(=\)</span> (left tail area for <span class="math inline">\(z_2\)</span>) <span class="math inline">\(-\)</span> (left tail area for <span class="math inline">\(z_1\)</span>)</li>
+</ul>
+</section>
+<section id="problems" class="level2">
+<h2 class="anchored" data-anchor-id="problems">Problems</h2>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
 <div>
 <p><strong>1.</strong> Find the right tail area for <span class="math inline">\(z = 1.73\)</span></p>
@@ -194,6 +195,7 @@ window.Quarto = {
 <p>Area <span class="math inline">\(=\)</span> ____________</p>
 </div>
 </div>
+</section>
 </section>
 
 </main>

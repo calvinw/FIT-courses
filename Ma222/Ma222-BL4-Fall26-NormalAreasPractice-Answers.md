@@ -9,13 +9,55 @@ format:
 
 # Answers: Standard Normal Areas Practice
 
-Each answer comes from the spreadsheet formula shown under it. The same answers are in [NormalAreasPractice-Answers.xlsx](data/NormalAreasPractice-Answers.xlsx). With the printed table you may get a last digit that is off by 1.
+Each answer shows the table lookups. A spreadsheet gives the same answers, sometimes with the last digit off by 1: [NormalAreasPractice-Answers.xlsx](data/NormalAreasPractice-Answers.xlsx).
 
-| Area | Spreadsheet formula |
-|:--|:--|
-| Left tail area | `=NORMSDIST(z)` |
-| Right tail area | `=1.0-NORMSDIST(z)` |
-| Area between $z_1$ and $z_2$ | `=NORMSDIST(z2)-NORMSDIST(z1)` |
+## Example: Using the Table
+
+**Find the left tail area for $z = -1.25$.**
+
+```{=html}
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; align-items:center">
+<div>
+```
+
+```{=latex}
+\noindent\begin{minipage}[c]{0.47\textwidth}
+```
+
+![](lectures/images/normal-left--1.25.svg){width=100%}
+
+```{=html}
+</div>
+<div>
+```
+
+```{=latex}
+\end{minipage}\hfill\begin{minipage}[c]{0.47\textwidth}
+```
+
+![](lectures/images/ztable--1.25-answer.svg){width=100%}
+
+```{=latex}
+\end{minipage}
+```
+
+```{=html}
+</div>
+</div>
+```
+
+Split $z = -1.25$ into the **row** $-1.2$ (the ones digit and first decimal place) and the **column** $.05$ (the second decimal place). Where they meet:
+
+$$
+\text{left tail area} = 0.1056 \approx 11\%
+$$
+
+Our table has only **left tail areas**. For the other areas, look up left tail areas first:
+
+- **Right tail area** $= 1.0 - \text{left tail area}$
+- **Area between** $z_1$ and $z_2$ $=$ (left tail area for $z_2$) $-$ (left tail area for $z_1$)
+
+## Problems
 
 ```{=html}
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 2em; margin-bottom:1.5em">
@@ -33,8 +75,8 @@ Each answer comes from the spreadsheet formula shown under it. The same answers 
 
 ![](images/NormalAreasPractice-01.svg){width=100%}
 
-Area $= 0.0418$ \
-`=1.0-NORMSDIST(1.73)`
+Row $1.7$, column $.03$: left tail area $= 0.9582$ \
+Right tail area $= 1.0 - 0.9582 = 0.0418$
 
 ```{=html}
 </div>
@@ -52,8 +94,9 @@ Area $= 0.0418$ \
 
 ![](images/NormalAreasPractice-02.svg){width=100%}
 
-Area $= 0.2671$ \
-`=NORMSDIST(2.45)-NORMSDIST(0.6)`
+$z = 2.45$: row $2.4$, column $.05$ gives $0.9929$ \
+$z = 0.6$: row $0.6$, column $.00$ gives $0.7257$ \
+Area between $= 0.9929 - 0.7257 = 0.2672$
 
 ```{=html}
 </div>
@@ -84,8 +127,8 @@ Area $= 0.2671$ \
 
 ![](images/NormalAreasPractice-03.svg){width=100%}
 
-Area $= 0.9162$ \
-`=1.0-NORMSDIST(-1.38)`
+Row $-1.3$, column $.08$: left tail area $= 0.0838$ \
+Right tail area $= 1.0 - 0.0838 = 0.9162$
 
 ```{=html}
 </div>
@@ -103,8 +146,8 @@ Area $= 0.9162$ \
 
 ![](images/NormalAreasPractice-04.svg){width=100%}
 
-Area $= 0.5596$ \
-`=1.0-NORMSDIST(-0.15)`
+Row $-0.1$, column $.05$: left tail area $= 0.4404$ \
+Right tail area $= 1.0 - 0.4404 = 0.5596$
 
 ```{=html}
 </div>
@@ -135,8 +178,7 @@ Area $= 0.5596$ \
 
 ![](images/NormalAreasPractice-05.svg){width=100%}
 
-Area $= 0.0158$ \
-`=NORMSDIST(-2.15)`
+Row $-2.1$, column $.05$: left tail area $= 0.0158$
 
 ```{=html}
 </div>
@@ -154,8 +196,8 @@ Area $= 0.0158$ \
 
 ![](images/NormalAreasPractice-06.svg){width=100%}
 
-Area $= 0.0202$ \
-`=1.0-NORMSDIST(2.05)`
+Row $2.0$, column $.05$: left tail area $= 0.9798$ \
+Right tail area $= 1.0 - 0.9798 = 0.0202$
 
 ```{=html}
 </div>
@@ -186,8 +228,8 @@ Area $= 0.0202$ \
 
 ![](images/NormalAreasPractice-07.svg){width=100%}
 
-Area $= 0.7389$ \
-`=1.0-NORMSDIST(-0.64)`
+Row $-0.6$, column $.04$: left tail area $= 0.2611$ \
+Right tail area $= 1.0 - 0.2611 = 0.7389$
 
 ```{=html}
 </div>
@@ -205,8 +247,7 @@ Area $= 0.7389$ \
 
 ![](images/NormalAreasPractice-08.svg){width=100%}
 
-Area $= 0.5319$ \
-`=NORMSDIST(0.08)`
+Row $0.0$, column $.08$: left tail area $= 0.5319$
 
 ```{=html}
 </div>
@@ -237,8 +278,9 @@ Area $= 0.5319$ \
 
 ![](images/NormalAreasPractice-09.svg){width=100%}
 
-Area $= 0.3612$ \
-`=NORMSDIST(1.75)-NORMSDIST(0.25)`
+$z = 1.75$: row $1.7$, column $.05$ gives $0.9599$ \
+$z = 0.25$: row $0.2$, column $.05$ gives $0.5987$ \
+Area between $= 0.9599 - 0.5987 = 0.3612$
 
 ```{=html}
 </div>
@@ -256,8 +298,7 @@ Area $= 0.3612$ \
 
 ![](images/NormalAreasPractice-10.svg){width=100%}
 
-Area $= 0.0526$ \
-`=NORMSDIST(-1.62)`
+Row $-1.6$, column $.02$: left tail area $= 0.0526$
 
 ```{=html}
 </div>
@@ -288,8 +329,8 @@ Area $= 0.0526$ \
 
 ![](images/NormalAreasPractice-11.svg){width=100%}
 
-Area $= 0.0778$ \
-`=1.0-NORMSDIST(1.42)`
+Row $1.4$, column $.02$: left tail area $= 0.9222$ \
+Right tail area $= 1.0 - 0.9222 = 0.0778$
 
 ```{=html}
 </div>
@@ -307,8 +348,9 @@ Area $= 0.0778$ \
 
 ![](images/NormalAreasPractice-12.svg){width=100%}
 
-Area $= 0.9500$ \
-`=NORMSDIST(1.96)-NORMSDIST(-1.96)`
+$z = 1.96$: row $1.9$, column $.06$ gives $0.9750$ \
+$z = -1.96$: row $-1.9$, column $.06$ gives $0.0250$ \
+Area between $= 0.9750 - 0.0250 = 0.9500$
 
 ```{=html}
 </div>
@@ -339,8 +381,9 @@ Area $= 0.9500$ \
 
 ![](images/NormalAreasPractice-13.svg){width=100%}
 
-Area $= 0.9201$ \
-`=NORMSDIST(1.44)-NORMSDIST(-2.58)`
+$z = 1.44$: row $1.4$, column $.04$ gives $0.9251$ \
+$z = -2.58$: row $-2.5$, column $.08$ gives $0.0049$ \
+Area between $= 0.9251 - 0.0049 = 0.9202$
 
 ```{=html}
 </div>
@@ -358,8 +401,7 @@ Area $= 0.9201$ \
 
 ![](images/NormalAreasPractice-14.svg){width=100%}
 
-Area $= 0.1814$ \
-`=NORMSDIST(-0.91)`
+Row $-0.9$, column $.01$: left tail area $= 0.1814$
 
 ```{=html}
 </div>
@@ -390,8 +432,8 @@ Area $= 0.1814$ \
 
 ![](images/NormalAreasPractice-15.svg){width=100%}
 
-Area $= 0.1685$ \
-`=1.0-NORMSDIST(0.96)`
+Row $0.9$, column $.06$: left tail area $= 0.8315$ \
+Right tail area $= 1.0 - 0.8315 = 0.1685$
 
 ```{=html}
 </div>
