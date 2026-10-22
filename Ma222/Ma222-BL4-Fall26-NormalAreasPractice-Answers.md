@@ -9,7 +9,7 @@ format:
 
 # Answers: Standard Normal Areas Practice
 
-Each answer shows the table lookups. A spreadsheet gives the same answers, sometimes with the last digit off by 1: [NormalAreasPractice-Answers.xlsx](data/NormalAreasPractice-Answers.xlsx). The students' Google Sheet is [here](https://docs.google.com/spreadsheets/d/11qsF05W6QAo2uwGFEVLUvmm2FdG3jo2u2emO1yQJRFM/edit?gid=0#gid=0).
+Each answer shows the table lookups. A spreadsheet gives the same answers, sometimes with the last digit off by 1: [NormalAreasPractice-Answers.xlsx](data/NormalAreasPractice-Answers.xlsx).
 
 ## Example: Using the Table
 

@@ -9,7 +9,7 @@ format:
 
 # Standard Normal Areas Practice
 
-Find each area under the standard normal curve using your standard normal table. The shaded graph shows the area. Start with the example below. The same problems are also in [this Google Sheet](https://docs.google.com/spreadsheets/d/11qsF05W6QAo2uwGFEVLUvmm2FdG3jo2u2emO1yQJRFM/edit?gid=0#gid=0).
+Find each area under the standard normal curve using your standard normal table. The shaded graph shows the area. Start with the example below.
 
 ## Example: Using the Table
 
