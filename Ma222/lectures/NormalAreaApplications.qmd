@@ -32,6 +32,16 @@ Find the chance that demand in a given month is $30$ or fewer units.
 
 ## 1. Monthly Demand
 
+This means the monthly demands are a list of numbers like this:
+
+$$
+49, 41, 47, 50, 51, 64, 44, 49, 71, 50
+$$
+
+Each number is the demand for one month.
+
+## 1. Monthly Demand
+
 $\mu = 48$, $\sigma = 10$. We want the left tail area for $x = 30$:
 
 ![](images/normal-x-left-30.svg)
@@ -77,6 +87,16 @@ Weekly demand for a product is normal with mean $230$ and standard deviation $25
 You have $265$ units to sell this week. **Lost sales** happen when demand is more than your inventory.
 
 What is the chance of lost sales this week?
+
+## 2. Lost Sales
+
+This means the weekly demands are a list of numbers like this:
+
+$$
+256, 243, 206, 228, 230, 253, 205, 240, 273, 198
+$$
+
+Each number is the demand for one week.
 
 ## 2. Lost Sales
 
@@ -126,6 +146,16 @@ Find the chance that demand on a given day is more than $140$ croissants.
 
 ## 3. Daily Demand
 
+This means the daily demands are a list of numbers like this:
+
+$$
+131, 125, 138, 123, 111, 105, 131, 127, 131, 142
+$$
+
+Each number is the demand for one day.
+
+## 3. Daily Demand
+
 $\mu = 120$, $\sigma = 15$. We want the right tail area for $x = 140$:
 
 ![](images/normal-x-right-140.svg)
@@ -171,6 +201,16 @@ Weekly demand for a product is normal with mean $60$ and standard deviation $5$.
 You stock $59$ units, **one less than the mean**.
 
 What is the chance of lost sales this week?
+
+## 4. Stocking Below the Mean
+
+This means the weekly demands are a list of numbers like this:
+
+$$
+63, 54, 49, 59, 58, 58, 66, 56, 64, 57
+$$
+
+Each number is the demand for one week.
 
 ## 4. Stocking Below the Mean
 
