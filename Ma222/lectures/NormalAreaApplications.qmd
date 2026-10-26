@@ -35,6 +35,17 @@ The shaded area is the:
 - **proportion of the data** where $x$ is more than $263$
 - **proportion of times** when $x$ is more than $263$
 
+## What an Area Between Represents
+
+![](images/normal-x-between-215-245.svg){.nostretch width=520}
+
+The shaded area is the:
+
+- **chance** that $x$ is between $215$ and $245$
+- **probability** that $x$ is between $215$ and $245$
+- **proportion of the data** where $x$ is between $215$ and $245$
+- **proportion of times** when $x$ is between $215$ and $245$
+
 ## What a Left Tail Area Means
 
 Weekly demand $x$ is normal with $\mu = 230$ and $\sigma = 25$.
