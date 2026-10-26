@@ -71,13 +71,9 @@ $$
 
 ## What a Right Tail Area Means
 
-The area $0.2119 \approx 21\%$ to the right of $x = 250$ is:
+The area $0.2119 \approx 21\%$ to the right of $x = 250$ is the **chance** that $x$ is more than $250$.
 
-- the **chance** that $x$ is more than $250$
-- the **probability** that $x$ is more than $250$
-- the **proportion** of weeks where $x$ is more than $250$
-
-All three say the same thing: about $21\%$ of weeks have demand more than $250$.
+About $21\%$ of weeks have demand more than $250$.
 
 In our list of $10$ weeks, $2$ are more than $250$.
 
