@@ -39,13 +39,9 @@ $$
 
 ## What a Left Tail Area Means
 
-The area $0.5636 \approx 56\%$ to the left of $x = 234$ is:
+The area $0.5636 \approx 56\%$ to the left of $x = 234$ is the **chance** that $x$ is less than $234$.
 
-- the **chance** that $x$ is less than $234$
-- the **probability** that $x$ is less than $234$
-- the **proportion** of weeks where $x$ is less than $234$
-
-All three say the same thing: about $56\%$ of weeks have demand less than $234$.
+About $56\%$ of weeks have demand less than $234$.
 
 In our list of $10$ weeks, $6$ are less than $234$.
 
