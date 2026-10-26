@@ -17,6 +17,18 @@ The area for a range of x-values is the chance a data value lands in that range.
 
 Weekly demand $x$ is normal with $\mu = 230$ and $\sigma = 25$.
 
+This means the weekly demands are a list of numbers like this:
+
+$$
+199, 239, 255, 217, 197, 228, 242, 257, 200, 198
+$$
+
+Each number is the demand for one week.
+
+## What a Left Tail Area Means
+
+Weekly demand $x$ is normal with $\mu = 230$ and $\sigma = 25$.
+
 ![](images/normal-x-left-234.svg)
 
 $$
@@ -32,6 +44,20 @@ The area $0.5636 \approx 56\%$ to the left of $x = 234$ is:
 - the **proportion** of weeks where $x$ is less than $234$
 
 All three say the same thing: about $56\%$ of weeks have demand less than $234$.
+
+In our list of $10$ weeks, $6$ are less than $234$.
+
+## What a Right Tail Area Means
+
+Weekly demand $x$ is normal with $\mu = 230$ and $\sigma = 25$.
+
+This means the weekly demands are a list of numbers like this:
+
+$$
+199, 239, 255, 217, 197, 228, 242, 257, 200, 198
+$$
+
+Each number is the demand for one week.
 
 ## What a Right Tail Area Means
 
@@ -52,6 +78,8 @@ The area $0.2119 \approx 21\%$ to the right of $x = 250$ is:
 - the **proportion** of weeks where $x$ is more than $250$
 
 All three say the same thing: about $21\%$ of weeks have demand more than $250$.
+
+In our list of $10$ weeks, $2$ are more than $250$.
 
 ## Finding Normal Areas
 
