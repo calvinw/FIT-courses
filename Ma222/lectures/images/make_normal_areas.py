@@ -1,4 +1,4 @@
-"""Draw the SVGs used in the Normal Areas lecture.
+"""Draw the SVGs used in the Normal Areas and Normal Area Applications lectures.
 
 Run from this folder: python3 make_normal_areas.py
 """
@@ -30,6 +30,8 @@ for mu, sigma, x, z, rows in (
     (42, 12, 53, 0.92, ("0.8", "0.9", "1.0")),
     (2.8, 1.5, 2.3, -0.33, ("-0.4", "-0.3", "-0.2")),
     (230, 25, 265, 1.4, ("1.3", "1.4", "1.5")),
+    (120, 15, 140, 1.33, ("1.2", "1.3", "1.4")),
+    (60, 5, 59, -0.2, ("-0.3", "-0.2", "-0.1")),
 ):
     write(f"normal-x-right-{x:g}.svg", normal_svg(lo=x, ticks=(x,), mu=mu, sigma=sigma))
     write(f"normal-right-{z:g}.svg", normal_svg(lo=z, ticks=(z,), named=True))
