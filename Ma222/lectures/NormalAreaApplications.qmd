@@ -13,6 +13,17 @@ Areas under a normal curve are **chances**.
 
 The area for a range of x-values is the chance a data value lands in that range.
 
+## Ways to Say a Left Tail Area
+
+![](images/normal-x-left-234.svg){.nostretch width=520}
+
+The shaded area is the:
+
+- **chance** that $x$ is less than $234$
+- **probability** that $x$ is less than $234$
+- **proportion of the data** where $x$ is less than $234$
+- **proportion of times** when $x$ is less than $234$
+
 ## What a Left Tail Area Means
 
 Weekly demand $x$ is normal with $\mu = 230$ and $\sigma = 25$.
@@ -31,7 +42,7 @@ We want to determine the chance that the demand in this list is less than $234$.
 
 Weekly demand $x$ is normal with $\mu = 230$ and $\sigma = 25$.
 
-![](images/normal-x-left-234.svg)
+![](images/normal-x-left-234.svg){.nostretch width=520}
 
 $$
 \text{left tail area for } x = 234 \text{ is } 0.5636
