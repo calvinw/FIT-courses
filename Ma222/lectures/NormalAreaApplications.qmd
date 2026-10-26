@@ -13,16 +13,27 @@ Areas under a normal curve are **chances**.
 
 The area for a range of x-values is the chance a data value lands in that range.
 
-## Ways to Say a Left Tail Area
+## What a Left Tail Area Represents
 
-![](images/normal-x-left-234.svg){.nostretch width=520}
+![](images/normal-x-left-203.svg){.nostretch width=520}
 
 The shaded area is the:
 
-- **chance** that $x$ is less than $234$
-- **probability** that $x$ is less than $234$
-- **proportion of the data** where $x$ is less than $234$
-- **proportion of times** when $x$ is less than $234$
+- **chance** that $x$ is less than $203$
+- **probability** that $x$ is less than $203$
+- **proportion of the data** where $x$ is less than $203$
+- **proportion of times** when $x$ is less than $203$
+
+## What a Right Tail Area Represents
+
+![](images/normal-x-right-203.svg){.nostretch width=520}
+
+The shaded area is the:
+
+- **chance** that $x$ is more than $203$
+- **probability** that $x$ is more than $203$
+- **proportion of the data** where $x$ is more than $203$
+- **proportion of times** when $x$ is more than $203$
 
 ## What a Left Tail Area Means
 

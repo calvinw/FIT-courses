@@ -54,3 +54,5 @@ write("normal-x-left-234.svg", normal_svg(hi=234, ticks=(234,), mu=230, sigma=25
 write("normal-x-right-250.svg", normal_svg(lo=250, ticks=(250,), mu=230, sigma=25))
 print(f"left of x = 234: area {area_left((234 - 230) / 25):.4f}")
 print(f"right of x = 250: area {1 - area_left((250 - 230) / 25):.4f}")
+write("normal-x-left-203.svg", normal_svg(hi=203, ticks=(203,), mu=230, sigma=25))
+write("normal-x-right-203.svg", normal_svg(lo=203, ticks=(203,), mu=230, sigma=25))
