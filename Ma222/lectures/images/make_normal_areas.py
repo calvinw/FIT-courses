@@ -48,3 +48,9 @@ for mu, sigma, (x1, x2), (z1, z2), (rows1, rows2) in (
     print(f"between x = {x1:g} and {x2:g}: z1 = {(x1 - mu) / sigma:.4f}, z2 = {(x2 - mu) / sigma:.4f}")
     table(z1, rows1)
     table(z2, rows2)
+
+# What an area means: x-curves only
+write("normal-x-left-234.svg", normal_svg(hi=234, ticks=(234,), mu=230, sigma=25))
+write("normal-x-right-250.svg", normal_svg(lo=250, ticks=(250,), mu=230, sigma=25))
+print(f"left of x = 234: area {area_left((234 - 230) / 25):.4f}")
+print(f"right of x = 250: area {1 - area_left((250 - 230) / 25):.4f}")

@@ -13,6 +13,46 @@ Areas under a normal curve are **chances**.
 
 The area for a range of x-values is the chance a data value lands in that range.
 
+## What a Left Tail Area Means
+
+Weekly demand $x$ is normal with $\mu = 230$ and $\sigma = 25$.
+
+![](images/normal-x-left-234.svg)
+
+$$
+\text{left tail area for } x = 234 \text{ is } 0.5636
+$$
+
+## What a Left Tail Area Means
+
+The area $0.5636 \approx 56\%$ to the left of $x = 234$ is:
+
+- the **chance** that $x$ is less than $234$
+- the **probability** that $x$ is less than $234$
+- the **proportion** of weeks where $x$ is less than $234$
+
+All three say the same thing: about $56\%$ of weeks have demand less than $234$.
+
+## What a Right Tail Area Means
+
+Weekly demand $x$ is normal with $\mu = 230$ and $\sigma = 25$.
+
+![](images/normal-x-right-250.svg)
+
+$$
+\text{right tail area for } x = 250 \text{ is } 0.2119
+$$
+
+## What a Right Tail Area Means
+
+The area $0.2119 \approx 21\%$ to the right of $x = 250$ is:
+
+- the **chance** that $x$ is more than $250$
+- the **probability** that $x$ is more than $250$
+- the **proportion** of weeks where $x$ is more than $250$
+
+All three say the same thing: about $21\%$ of weeks have demand more than $250$.
+
 ## Finding Normal Areas
 
 Given $\mu$ and $\sigma$:
