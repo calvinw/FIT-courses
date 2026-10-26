@@ -26,14 +26,14 @@ The shaded area is the:
 
 ## What a Right Tail Area Represents
 
-![](images/normal-x-right-203.svg){.nostretch width=520}
+![](images/normal-x-right-263.svg){.nostretch width=520}
 
 The shaded area is the:
 
-- **chance** that $x$ is more than $203$
-- **probability** that $x$ is more than $203$
-- **proportion of the data** where $x$ is more than $203$
-- **proportion of times** when $x$ is more than $203$
+- **chance** that $x$ is more than $263$
+- **probability** that $x$ is more than $263$
+- **proportion of the data** where $x$ is more than $263$
+- **proportion of times** when $x$ is more than $263$
 
 ## What a Left Tail Area Means
 
