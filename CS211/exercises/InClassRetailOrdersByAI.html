@@ -90,7 +90,7 @@ pre.sourceCode { padding-right: 2.5em !important; }
   <ul>
   <li><a href="#step-1-fork-the-database" id="toc-step-1-fork-the-database" class="nav-link active" data-scroll-target="#step-1-fork-the-database">Step 1: Fork the Database</a></li>
   <li><a href="#step-2-give-gemini-the-table-schemas" id="toc-step-2-give-gemini-the-table-schemas" class="nav-link" data-scroll-target="#step-2-give-gemini-the-table-schemas">Step 2: Give Gemini the Table Schemas</a></li>
-  <li><a href="#step-3-turn-a-query-into-a-view" id="toc-step-3-turn-a-query-into-a-view" class="nav-link" data-scroll-target="#step-3-turn-a-query-into-a-view">Step 3: Turn a Query into a View</a></li>
+  <li><a href="#step-3-save-4-views" id="toc-step-3-save-4-views" class="nav-link" data-scroll-target="#step-3-save-4-views">Step 3: Save 4 Views</a></li>
   <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example">Worked Example</a></li>
   <li><a href="#choose-4-questions" id="toc-choose-4-questions" class="nav-link" data-scroll-target="#choose-4-questions">Choose 4 Questions</a>
   <ul class="collapse">
@@ -164,23 +164,14 @@ pre.sourceCode { padding-right: 2.5em !important; }
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (product_id) <span class="kw">REFERENCES</span> products (product_id)</span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="step-3-turn-a-query-into-a-view" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-turn-a-query-into-a-view">Step 3: Turn a Query into a View</h2>
-<p>Do this for each question you choose.</p>
-<ol type="1">
-<li><p>Paste the question into Gemini.</p></li>
-<li><p>Copy the query Gemini writes into the SQL editor of <strong>your fork</strong> and run it. Look at the result and check that it really answers the question. If it doesn’t, tell Gemini what is wrong and try again.</p></li>
-<li><p>When the query works, click <strong>Create view</strong> under the result. Give the view a short name using lowercase letters and underscores, like <code>customer_spending</code>.</p></li>
-<li><p>Commit the new view directly to <code>main</code>.</p></li>
-<li><p>Check that the view works:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> view_name;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Your saved views are also listed in the left sidebar under <strong>Views</strong>.</p></li>
-</ol>
+<section id="step-3-save-4-views" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-save-4-views">Step 3: Save 4 Views</h2>
+<p>Pick 4 of the questions below. For each one, have Gemini write the query, run it in your fork, and check that the result really answers the question. Then save it as a view, named for what it shows, like <code>customer_spending</code>.</p>
 </section>
 <section id="worked-example" class="level2">
 <h2 class="anchored" data-anchor-id="worked-example">Worked Example</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Show the name and price of every product Jane Smith ordered, sorted from lowest price to highest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The answer should be the Cotton T-Shirt, the Silk Blouse, and the Cashmere Sweater, in that order. Once you get that result, click <strong>Create view</strong> and name it <code>jane_smith_products</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Show the name and price of every product Jane Smith ordered, sorted from lowest price to highest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The answer should be the Cotton T-Shirt, the Silk Blouse, and the Cashmere Sweater, in that order. Saved as a view, it could be named <code>jane_smith_products</code>.</p>
 </section>
 <section id="choose-4-questions" class="level2">
 <h2 class="anchored" data-anchor-id="choose-4-questions">Choose 4 Questions</h2>
@@ -189,54 +180,54 @@ pre.sourceCode { padding-right: 2.5em !important; }
 <h3 class="anchored" data-anchor-id="questions">Questions</h3>
 <section id="mid-march-shoppers" class="level4">
 <h4 class="anchored" data-anchor-id="mid-march-shoppers">1. Mid-March Shoppers</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and last_name of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and last_name of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="big-ticket-orders" class="level4">
 <h4 class="anchored" data-anchor-id="big-ticket-orders">2. Big-Ticket Orders</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>For every order of a product that costs more than $80, show the customer's first_name, the product's name, and the order_date.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>For every order of a product that costs more than $80, show the customer's first_name, the product's name, and the order_date.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="revenue-by-product" class="level4">
 <h4 class="anchored" data-anchor-id="revenue-by-product">3. Revenue by Product</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>For each product that was ordered at least once, show its name and total_revenue, its price times the number of times it was ordered, sorted from highest total_revenue to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>For each product that was ordered at least once, show its name and total_revenue, its price times the number of times it was ordered, sorted from highest total_revenue to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="repeat-customers" class="level4">
 <h4 class="anchored" data-anchor-id="repeat-customers">4. Repeat Customers</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and num_orders of every customer who placed more than one order.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and num_orders of every customer who placed more than one order.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="no-t-shirt" class="level4">
 <h4 class="anchored" data-anchor-id="no-t-shirt">5. No T-Shirt</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and last_name of every customer who has never ordered the Cotton T-Shirt.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and last_name of every customer who has never ordered the Cotton T-Shirt.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="harder-questions" class="level3">
 <h3 class="anchored" data-anchor-id="harder-questions">Harder Questions</h3>
 <section id="customer-spending-summary" class="level4">
 <h4 class="anchored" data-anchor-id="customer-spending-summary">6. Customer Spending Summary</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>For every customer, including customers who have never ordered, show the first_name, last_name, num_orders, and total_spent. Show 0 for customers with no orders. Sort from highest total_spent to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>For every customer, including customers who have never ordered, show the first_name, last_name, num_orders, and total_spent. Show 0 for customers with no orders. Sort from highest total_spent to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="products-nobody-bought" class="level4">
 <h4 class="anchored" data-anchor-id="products-nobody-bought">7. Products Nobody Bought</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Show the name and price of every product that has never been ordered, sorted from highest price to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Show the name and price of every product that has never been ordered, sorted from highest price to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="monthly-sales" class="level4">
 <h4 class="anchored" data-anchor-id="monthly-sales">8. Monthly Sales</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>For each month, show the month as YYYY-MM, num_orders, the number of orders that month, and revenue, the total price of those orders, sorted by month.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>For each month, show the month as YYYY-MM, num_orders, the number of orders that month, and revenue, the total price of those orders, sorted by month.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="above-average-spenders" class="level4">
 <h4 class="anchored" data-anchor-id="above-average-spenders">9. Above-Average Spenders</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Show the first_name, last_name, and total_spent of every customer whose total spending is more than the average total spending of the customers who placed orders.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Show the first_name, last_name, and total_spent of every customer whose total spending is more than the average total spending of the customers who placed orders.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="product-popularity-ranking" class="level4">
 <h4 class="anchored" data-anchor-id="product-popularity-ranking">10. Product Popularity Ranking</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>For every product, including products that were never ordered, show the name, times_ordered, and popularity_rank, where the most ordered product is rank 1 and products tied on times_ordered get the same rank.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>For every product, including products that were never ordered, show the name, times_ordered, and popularity_rank, where the most ordered product is rank 1 and products tied on times_ordered get the same rank.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="bought-it-again" class="level4">
 <h4 class="anchored" data-anchor-id="bought-it-again">11. Bought It Again</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Show the first_name, last_name, product name, and times_ordered for every customer who ordered the same product more than once.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Show the first_name, last_name, product name, and times_ordered for every customer who ordered the same product more than once.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="each-customers-first-order" class="level4">
 <h4 class="anchored" data-anchor-id="each-customers-first-order">12. Each Customer’s First Order</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>For each customer who has placed an order, show the first_name, last_name, the name of the product in their first order, and the order_date of that first order, sorted by order_date.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>For each customer who has placed an order, show the first_name, last_name, the name of the product in their first order, and the order_date of that first order, sorted by order_date.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 </section>

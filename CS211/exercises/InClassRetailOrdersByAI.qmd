@@ -69,25 +69,11 @@ CREATE TABLE orders (
 );
 ```
 
-## Step 3: Turn a Query into a View
+## Step 3: Save 4 Views
 
-Do this for each question you choose.
-
-1. Paste the question into Gemini.
-2. Copy the query Gemini writes into the SQL editor of **your fork** and run
-   it. Look at the result and check that it really answers the question. If
-   it doesn't, tell Gemini what is wrong and try again.
-3. When the query works, click **Create view** under the result. Give the
-   view a short name using lowercase letters and underscores, like
-   `customer_spending`.
-4. Commit the new view directly to `main`.
-5. Check that the view works:
-
-   ```sql
-   SELECT * FROM view_name;
-   ```
-
-   Your saved views are also listed in the left sidebar under **Views**.
+Pick 4 of the questions below. For each one, have Gemini write the query, run
+it in your fork, and check that the result really answers the question. Then
+save it as a view, named for what it shows, like `customer_spending`.
 
 ## Worked Example
 
@@ -96,8 +82,8 @@ Show the name and price of every product Jane Smith ordered, sorted from lowest 
 ```
 
 The answer should be the Cotton T-Shirt, the Silk Blouse, and the Cashmere
-Sweater, in that order. Once you get that result, click **Create view** and
-name it `jane_smith_products`.
+Sweater, in that order. Saved as a view, it could be named
+`jane_smith_products`.
 
 ## Choose 4 Questions
 
