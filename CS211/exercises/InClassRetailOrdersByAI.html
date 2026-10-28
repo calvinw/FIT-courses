@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Retail Orders: Queries with AI</title>
+<title>Retail Orders: Views with AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,15 +88,16 @@ pre.sourceCode { padding-right: 2.5em !important; }
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#set-up-database-first-without-ai" id="toc-set-up-database-first-without-ai" class="nav-link active" data-scroll-target="#set-up-database-first-without-ai">Set Up Database First (without AI)</a></li>
-  <li><a href="#table-schemas-to-give-to-ai" id="toc-table-schemas-to-give-to-ai" class="nav-link" data-scroll-target="#table-schemas-to-give-to-ai">Table Schemas to Give to AI</a></li>
-  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example">Worked example</a></li>
-  <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
-  <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
-  <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
-  <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
+  <li><a href="#step-1-fork-the-database" id="toc-step-1-fork-the-database" class="nav-link active" data-scroll-target="#step-1-fork-the-database">Step 1: Fork the Database</a></li>
+  <li><a href="#step-2-give-gemini-the-table-schemas" id="toc-step-2-give-gemini-the-table-schemas" class="nav-link" data-scroll-target="#step-2-give-gemini-the-table-schemas">Step 2: Give Gemini the Table Schemas</a></li>
+  <li><a href="#step-3-turn-a-query-into-a-view" id="toc-step-3-turn-a-query-into-a-view" class="nav-link" data-scroll-target="#step-3-turn-a-query-into-a-view">Step 3: Turn a Query into a View</a></li>
+  <li><a href="#worked-example" id="toc-worked-example" class="nav-link" data-scroll-target="#worked-example">Worked Example</a></li>
+  <li><a href="#choose-4-questions" id="toc-choose-4-questions" class="nav-link" data-scroll-target="#choose-4-questions">Choose 4 Questions</a>
+  <ul class="collapse">
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
+  <li><a href="#harder-questions" id="toc-harder-questions" class="nav-link" data-scroll-target="#harder-questions">Harder Questions</a></li>
+  </ul></li>
+  <li><a href="#what-to-hand-in" id="toc-what-to-hand-in" class="nav-link" data-scroll-target="#what-to-hand-in">What to Hand In</a></li>
   </ul>
 </nav>
 </div>
@@ -104,7 +105,7 @@ pre.sourceCode { padding-right: 2.5em !important; }
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Retail Orders: Queries with AI</h1>
+<h1 class="title">Retail Orders: Views with AI</h1>
 </div>
 
 
@@ -121,67 +122,135 @@ pre.sourceCode { padding-right: 2.5em !important; }
 </header>
 
 
-<p>These are the questions you worked out by hand. This time <a href="https://gemini.google.com">Gemini</a> writes the SQL. Copy each block (use the copy button in its top right corner) and paste it into Gemini. Run the blocks in order in the same chat: the table schemas tell Gemini what your tables look like, so they have to go first.</p>
-<p>Then copy the query Gemini writes into the DoltHub SQL editor for your retail orders brief database and run it. Check the result against your answer by hand. If they don’t match, work out which one is wrong.</p>
-<section id="set-up-database-first-without-ai" class="level2">
-<h2 class="anchored" data-anchor-id="set-up-database-first-without-ai">Set Up Database First (without AI)</h2>
-<p>Use this SQL script to set up a new database: <a href="../lectures/sql/create-retail-orders-brief-db.sql">create-retail-orders-brief-db.sql</a></p>
+<p>This time <a href="https://gemini.google.com">Gemini</a> writes the SQL, and you save the queries you like as <strong>views</strong> in your own copy of the retail orders database. A view is a saved query with a name. Once it is saved, anyone can run it with <code>SELECT * FROM view_name;</code> without knowing the SQL behind it.</p>
+<p>Copy each block (use the copy button in its top right corner) and paste it into Gemini. Run the blocks in the same chat: the table schemas tell Gemini what your tables look like, so they have to go first.</p>
+<section id="step-1-fork-the-database" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-fork-the-database">Step 1: Fork the Database</h2>
+<ol type="1">
+<li>Sign in to <a href="https://www.dolthub.com">DoltHub</a>.</li>
+<li>Open the retail orders database: <a href="https://www.dolthub.com/repositories/calvinw/retail-orders" class="uri">https://www.dolthub.com/repositories/calvinw/retail-orders</a></li>
+<li>Click <strong>Fork</strong> in the top right corner. This makes your own copy of the database under your DoltHub account.</li>
+<li>Open your fork. Its address looks like <code>https://www.dolthub.com/repositories/YOUR-USERNAME/retail-orders</code>. Do all of your work in your fork, not in the original.</li>
+</ol>
 </section>
-<section id="table-schemas-to-give-to-ai" class="level2">
-<h2 class="anchored" data-anchor-id="table-schemas-to-give-to-ai">Table Schemas to Give to AI</h2>
-<p>Paste this first to Gemini as you ask it to write queries for you. It shows the three tables, their columns, and how they connect.</p>
+<section id="step-2-give-gemini-the-table-schemas" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-give-gemini-the-table-schemas">Step 2: Give Gemini the Table Schemas</h2>
+<p>Paste this into Gemini first. It shows the three tables, their columns, and how they connect.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> customers (</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  customer_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  first_name <span class="dt">varchar</span>(<span class="dv">255</span>),</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  last_name <span class="dt">varchar</span>(<span class="dv">255</span>),</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (customer_id)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>);</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> products (</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  product_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  name <span class="dt">varchar</span>(<span class="dv">255</span>),</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  price <span class="dt">decimal</span>(<span class="dv">10</span>,<span class="dv">2</span>),</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (product_id)</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>);</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> orders (</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  order_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  customer_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  product_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  order_date <span class="dt">date</span>,</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (order_id),</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (customer_id) <span class="kw">REFERENCES</span> customers (customer_id),</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (product_id) <span class="kw">REFERENCES</span> products (product_id)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  first_name <span class="dt">varchar</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  last_name <span class="dt">varchar</span>(<span class="dv">50</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  email <span class="dt">varchar</span>(<span class="dv">100</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (customer_id)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> products (</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  product_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  name <span class="dt">varchar</span>(<span class="dv">100</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  price <span class="dt">decimal</span>(<span class="dv">10</span>,<span class="dv">2</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  description <span class="dt">varchar</span>(<span class="dv">100</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (product_id)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">-- order_date holds a date and a time, like 2025-03-10 14:30:00.</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">-- Each order is for one product.</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> orders (</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  order_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  customer_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  product_id <span class="dt">int</span> <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  order_date <span class="dt">timestamp</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (order_id),</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (customer_id) <span class="kw">REFERENCES</span> customers (customer_id),</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (product_id) <span class="kw">REFERENCES</span> products (product_id)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-3-turn-a-query-into-a-view" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-turn-a-query-into-a-view">Step 3: Turn a Query into a View</h2>
+<p>Do this for each question you choose.</p>
+<ol type="1">
+<li><p>Paste the question into Gemini.</p></li>
+<li><p>Copy the query Gemini writes into the SQL editor of <strong>your fork</strong> and run it. Look at the result and check that it really answers the question. If it doesn’t, tell Gemini what is wrong and try again.</p></li>
+<li><p>When the query works, ask Gemini to turn it into a view. Fill in a short name for the view, using lowercase letters and underscores, like <code>customer_spending</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Turn that query into a CREATE VIEW statement. Name the view ____.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Run the <code>CREATE VIEW</code> statement in your fork. DoltHub opens a <strong>workspace</strong> for the change. Click <strong>Create commit</strong> and commit it to <code>main</code>.</p></li>
+<li><p>Check that the view works:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> view_name;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Your saved views are also listed in the left sidebar under <strong>Views</strong>.</p></li>
+</ol>
 </section>
 <section id="worked-example" class="level2">
-<h2 class="anchored" data-anchor-id="worked-example">Worked example</h2>
-<p>The answer should be the Cotton T-Shirt, the Silk Blouse, and the Cashmere Sweater, in that order.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Show the name and price of every product Jane Smith ordered, sorted from lowest price to highest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h2 class="anchored" data-anchor-id="worked-example">Worked Example</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Show the name and price of every product Jane Smith ordered, sorted from lowest price to highest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The answer should be the Cotton T-Shirt, the Silk Blouse, and the Cashmere Sweater, in that order. Saved as a view, it looks something like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> jane_smith_products <span class="kw">AS</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> p.name, p.price</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> customers c</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> orders o <span class="kw">ON</span> o.customer_id <span class="op">=</span> c.customer_id</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> products p <span class="kw">ON</span> p.product_id <span class="op">=</span> o.product_id</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> c.first_name <span class="op">=</span> <span class="st">'Jane'</span> <span class="kw">AND</span> c.last_name <span class="op">=</span> <span class="st">'Smith'</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> p.price;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="question-1" class="level2">
-<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and last_name of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="choose-4-questions" class="level2">
+<h2 class="anchored" data-anchor-id="choose-4-questions">Choose 4 Questions</h2>
+<p>Pick <strong>4</strong> of the questions below and save each one as a view in your fork. At least <strong>2</strong> of your 4 must come from the Harder Questions.</p>
+<section id="questions" class="level3">
+<h3 class="anchored" data-anchor-id="questions">Questions</h3>
+<section id="mid-march-shoppers" class="level4">
+<h4 class="anchored" data-anchor-id="mid-march-shoppers">1. Mid-March Shoppers</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and last_name of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="question-2" class="level2">
-<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>For every order of a product that costs more than $80, show the customer's first_name, the product's name, and the order_date.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="big-ticket-orders" class="level4">
+<h4 class="anchored" data-anchor-id="big-ticket-orders">2. Big-Ticket Orders</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>For every order of a product that costs more than $80, show the customer's first_name, the product's name, and the order_date.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>For each product that was ordered at least once, show its name and total_revenue, its price times the number of times it was ordered, sorted from highest total_revenue to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="revenue-by-product" class="level4">
+<h4 class="anchored" data-anchor-id="revenue-by-product">3. Revenue by Product</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>For each product that was ordered at least once, show its name and total_revenue, its price times the number of times it was ordered, sorted from highest total_revenue to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="question-4" class="level2">
-<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and num_orders of every customer who placed more than one order.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="repeat-customers" class="level4">
+<h4 class="anchored" data-anchor-id="repeat-customers">4. Repeat Customers</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and num_orders of every customer who placed more than one order.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="question-5" class="level2">
-<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and last_name of every customer who has never ordered the Cotton T-Shirt.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="no-t-shirt" class="level4">
+<h4 class="anchored" data-anchor-id="no-t-shirt">5. No T-Shirt</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Show the first_name and last_name of every customer who has never ordered the Cotton T-Shirt.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="question-6" class="level2">
-<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Can you give me 5 more examples of natural language prompts and the corresponding SQL queries you would write for this database?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="harder-questions" class="level3">
+<h3 class="anchored" data-anchor-id="harder-questions">Harder Questions</h3>
+<section id="customer-spending-summary" class="level4">
+<h4 class="anchored" data-anchor-id="customer-spending-summary">6. Customer Spending Summary</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>For every customer, including customers who have never ordered, show the first_name, last_name, num_orders, and total_spent. Show 0 for customers with no orders. Sort from highest total_spent to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="products-nobody-bought" class="level4">
+<h4 class="anchored" data-anchor-id="products-nobody-bought">7. Products Nobody Bought</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Show the name and price of every product that has never been ordered, sorted from highest price to lowest.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="monthly-sales" class="level4">
+<h4 class="anchored" data-anchor-id="monthly-sales">8. Monthly Sales</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>For each month, show the month as YYYY-MM, num_orders, the number of orders that month, and revenue, the total price of those orders, sorted by month.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="above-average-spenders" class="level4">
+<h4 class="anchored" data-anchor-id="above-average-spenders">9. Above-Average Spenders</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Show the first_name, last_name, and total_spent of every customer whose total spending is more than the average total spending of the customers who placed orders.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="product-popularity-ranking" class="level4">
+<h4 class="anchored" data-anchor-id="product-popularity-ranking">10. Product Popularity Ranking</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>For every product, including products that were never ordered, show the name, times_ordered, and popularity_rank, where the most ordered product is rank 1 and products tied on times_ordered get the same rank.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="bought-it-again" class="level4">
+<h4 class="anchored" data-anchor-id="bought-it-again">11. Bought It Again</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Show the first_name, last_name, product name, and times_ordered for every customer who ordered the same product more than once.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="each-customers-first-order" class="level4">
+<h4 class="anchored" data-anchor-id="each-customers-first-order">12. Each Customer’s First Order</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>For each customer who has placed an order, show the first_name, last_name, the name of the product in their first order, and the order_date of that first order, sorted by order_date.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+</section>
+<section id="what-to-hand-in" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-hand-in">What to Hand In</h2>
+<p>The link to your fork, with your 4 views committed to <code>main</code>.</p>
 </section>
 
 </main>

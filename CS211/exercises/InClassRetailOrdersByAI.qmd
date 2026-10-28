@@ -1,5 +1,5 @@
 ---
-title: "Retail Orders: Queries with AI"
+title: "Retail Orders: Views with AI"
 format:
   html:
     code-copy: true
@@ -14,93 +14,188 @@ format:
         </style>
 ---
 
-These are the questions you worked out by hand. This time
-[Gemini](https://gemini.google.com) writes the SQL. Copy each block (use the
-copy button in its top right corner) and paste it into Gemini. Run the blocks
-in order in the same chat: the table schemas tell Gemini what your tables look
-like, so they have to go first.
+This time [Gemini](https://gemini.google.com) writes the SQL, and you save the
+queries you like as **views** in your own copy of the retail orders database.
+A view is a saved query with a name. Once it is saved, anyone can run it with
+`SELECT * FROM view_name;` without knowing the SQL behind it.
 
-Then copy the query Gemini writes into the DoltHub SQL editor for your retail
-orders brief database and run it. Check the result against your answer by
-hand. If they don't match, work out which one is wrong.
+Copy each block (use the copy button in its top right corner) and paste it
+into Gemini. Run the blocks in the same chat: the table schemas tell Gemini
+what your tables look like, so they have to go first.
 
-## Set Up Database First (without AI)
+## Step 1: Fork the Database
 
-Use this SQL script to set up a new database:
-[create-retail-orders-brief-db.sql](../lectures/sql/create-retail-orders-brief-db.sql)
+1. Sign in to [DoltHub](https://www.dolthub.com).
+2. Open the retail orders database:
+   <https://www.dolthub.com/repositories/calvinw/retail-orders>
+3. Click **Fork** in the top right corner. This makes your own copy of the
+   database under your DoltHub account.
+4. Open your fork. Its address looks like
+   `https://www.dolthub.com/repositories/YOUR-USERNAME/retail-orders`.
+   Do all of your work in your fork, not in the original.
 
-## Table Schemas to Give to AI
+## Step 2: Give Gemini the Table Schemas
 
-Paste this first to Gemini as you ask it to write queries for you. It shows the three tables, their columns, and how they
-connect.
+Paste this into Gemini first. It shows the three tables, their columns, and
+how they connect.
 
 ```sql
 CREATE TABLE customers (
   customer_id int NOT NULL,
-  first_name varchar(255),
-  last_name varchar(255),
+  first_name varchar(50) NOT NULL,
+  last_name varchar(50) NOT NULL,
+  email varchar(100) NOT NULL,
   PRIMARY KEY (customer_id)
 );
 
 CREATE TABLE products (
   product_id int NOT NULL,
-  name varchar(255),
-  price decimal(10,2),
+  name varchar(100) NOT NULL,
+  price decimal(10,2) NOT NULL,
+  description varchar(100) NOT NULL,
   PRIMARY KEY (product_id)
 );
 
+-- order_date holds a date and a time, like 2025-03-10 14:30:00.
+-- Each order is for one product.
 CREATE TABLE orders (
   order_id int NOT NULL,
   customer_id int NOT NULL,
   product_id int NOT NULL,
-  order_date date,
+  order_date timestamp,
   PRIMARY KEY (order_id),
   FOREIGN KEY (customer_id) REFERENCES customers (customer_id),
   FOREIGN KEY (product_id) REFERENCES products (product_id)
 );
 ```
 
-## Worked example
+## Step 3: Turn a Query into a View
 
-The answer should be the Cotton T-Shirt, the Silk Blouse, and the Cashmere
-Sweater, in that order.
+Do this for each question you choose.
+
+1. Paste the question into Gemini.
+2. Copy the query Gemini writes into the SQL editor of **your fork** and run
+   it. Look at the result and check that it really answers the question. If
+   it doesn't, tell Gemini what is wrong and try again.
+3. When the query works, ask Gemini to turn it into a view. Fill in a short
+   name for the view, using lowercase letters and underscores, like
+   `customer_spending`:
+
+   ```default
+   Turn that query into a CREATE VIEW statement. Name the view ____.
+   ```
+
+4. Run the `CREATE VIEW` statement in your fork. DoltHub opens a
+   **workspace** for the change. Click **Create commit** and commit it to
+   `main`.
+5. Check that the view works:
+
+   ```sql
+   SELECT * FROM view_name;
+   ```
+
+   Your saved views are also listed in the left sidebar under **Views**.
+
+## Worked Example
 
 ```default
 Show the name and price of every product Jane Smith ordered, sorted from lowest price to highest.
 ```
 
-## Question 1
+The answer should be the Cotton T-Shirt, the Silk Blouse, and the Cashmere
+Sweater, in that order. Saved as a view, it looks something like this:
+
+```sql
+CREATE VIEW jane_smith_products AS
+SELECT p.name, p.price
+FROM customers c
+JOIN orders o ON o.customer_id = c.customer_id
+JOIN products p ON p.product_id = o.product_id
+WHERE c.first_name = 'Jane' AND c.last_name = 'Smith'
+ORDER BY p.price;
+```
+
+## Choose 4 Questions
+
+Pick **4** of the questions below and save each one as a view in your fork.
+At least **2** of your 4 must come from the Harder Questions.
+
+### Questions
+
+#### 1. Mid-March Shoppers
 
 ```default
 Show the first_name and last_name of every customer who placed an order between 2025-03-15 and 2025-03-21. List each customer only once.
 ```
 
-## Question 2
+#### 2. Big-Ticket Orders
 
 ```default
 For every order of a product that costs more than $80, show the customer's first_name, the product's name, and the order_date.
 ```
 
-## Question 3
+#### 3. Revenue by Product
 
 ```default
 For each product that was ordered at least once, show its name and total_revenue, its price times the number of times it was ordered, sorted from highest total_revenue to lowest.
 ```
 
-## Question 4
+#### 4. Repeat Customers
 
 ```default
 Show the first_name and num_orders of every customer who placed more than one order.
 ```
 
-## Question 5
+#### 5. No T-Shirt
 
 ```default
 Show the first_name and last_name of every customer who has never ordered the Cotton T-Shirt.
 ```
 
-## Question 6
+### Harder Questions
+
+#### 6. Customer Spending Summary
 
 ```default
-Can you give me 5 more examples of natural language prompts and the corresponding SQL queries you would write for this database?
+For every customer, including customers who have never ordered, show the first_name, last_name, num_orders, and total_spent. Show 0 for customers with no orders. Sort from highest total_spent to lowest.
 ```
+
+#### 7. Products Nobody Bought
+
+```default
+Show the name and price of every product that has never been ordered, sorted from highest price to lowest.
+```
+
+#### 8. Monthly Sales
+
+```default
+For each month, show the month as YYYY-MM, num_orders, the number of orders that month, and revenue, the total price of those orders, sorted by month.
+```
+
+#### 9. Above-Average Spenders
+
+```default
+Show the first_name, last_name, and total_spent of every customer whose total spending is more than the average total spending of the customers who placed orders.
+```
+
+#### 10. Product Popularity Ranking
+
+```default
+For every product, including products that were never ordered, show the name, times_ordered, and popularity_rank, where the most ordered product is rank 1 and products tied on times_ordered get the same rank.
+```
+
+#### 11. Bought It Again
+
+```default
+Show the first_name, last_name, product name, and times_ordered for every customer who ordered the same product more than once.
+```
+
+#### 12. Each Customer's First Order
+
+```default
+For each customer who has placed an order, show the first_name, last_name, the name of the product in their first order, and the order_date of that first order, sorted by order_date.
+```
+
+## What to Hand In
+
+The link to your fork, with your 4 views committed to `main`.
