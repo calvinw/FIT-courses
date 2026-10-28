@@ -77,17 +77,10 @@ Do this for each question you choose.
 2. Copy the query Gemini writes into the SQL editor of **your fork** and run
    it. Look at the result and check that it really answers the question. If
    it doesn't, tell Gemini what is wrong and try again.
-3. When the query works, ask Gemini to turn it into a view. Fill in a short
-   name for the view, using lowercase letters and underscores, like
-   `customer_spending`:
-
-   ```default
-   Turn that query into a CREATE VIEW statement. Name the view ____.
-   ```
-
-4. Run the `CREATE VIEW` statement in your fork. DoltHub opens a
-   **workspace** for the change. Click **Create commit** and commit it to
-   `main`.
+3. When the query works, click **Create view** under the result. Give the
+   view a short name using lowercase letters and underscores, like
+   `customer_spending`.
+4. Commit the new view directly to `main`.
 5. Check that the view works:
 
    ```sql
@@ -103,17 +96,8 @@ Show the name and price of every product Jane Smith ordered, sorted from lowest 
 ```
 
 The answer should be the Cotton T-Shirt, the Silk Blouse, and the Cashmere
-Sweater, in that order. Saved as a view, it looks something like this:
-
-```sql
-CREATE VIEW jane_smith_products AS
-SELECT p.name, p.price
-FROM customers c
-JOIN orders o ON o.customer_id = c.customer_id
-JOIN products p ON p.product_id = o.product_id
-WHERE c.first_name = 'Jane' AND c.last_name = 'Smith'
-ORDER BY p.price;
-```
+Sweater, in that order. Once you get that result, click **Create view** and
+name it `jane_smith_products`.
 
 ## Choose 4 Questions
 
