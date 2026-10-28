@@ -113,54 +113,18 @@ For each product that was ordered at least once, show its name and total_revenue
 Show the first_name and num_orders of every customer who placed more than one order.
 ```
 
-#### 5. No T-Shirt
-
-```default
-Show the first_name and last_name of every customer who has never ordered the Cotton T-Shirt.
-```
-
 ### Harder Questions
 
-#### 6. Customer Spending Summary
+#### 5. Customer Spending Summary
 
 ```default
 For every customer, including customers who have never ordered, show the first_name, last_name, num_orders, and total_spent. Show 0 for customers with no orders. Sort from highest total_spent to lowest.
 ```
 
-#### 7. Products Nobody Bought
-
-```default
-Show the name and price of every product that has never been ordered, sorted from highest price to lowest.
-```
-
-#### 8. Monthly Sales
-
-```default
-For each month, show the month as YYYY-MM, num_orders, the number of orders that month, and revenue, the total price of those orders, sorted by month.
-```
-
-#### 9. Above-Average Spenders
-
-```default
-Show the first_name, last_name, and total_spent of every customer whose total spending is more than the average total spending of the customers who placed orders.
-```
-
-#### 10. Product Popularity Ranking
+#### 6. Product Popularity Ranking
 
 ```default
 For every product, including products that were never ordered, show the name, times_ordered, and popularity_rank, where the most ordered product is rank 1 and products tied on times_ordered get the same rank.
-```
-
-#### 11. Bought It Again
-
-```default
-Show the first_name, last_name, product name, and times_ordered for every customer who ordered the same product more than once.
-```
-
-#### 12. Each Customer's First Order
-
-```default
-For each customer who has placed an order, show the first_name, last_name, the name of the product in their first order, and the order_date of that first order, sorted by order_date.
 ```
 
 ## Step 4: Save 3 of Your Own Questions as Views
