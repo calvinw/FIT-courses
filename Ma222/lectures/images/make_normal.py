@@ -35,7 +35,7 @@ def curve_points(lo, hi, steps=200):
     return [(px(lo + (hi - lo) * i / steps), py(lo + (hi - lo) * i / steps)) for i in range(steps + 1)]
 
 
-def normal_svg(lo=None, hi=None, ticks=(), mu=None, sigma=None, named=False):
+def normal_svg(lo=None, hi=None, ticks=(), mu=None, sigma=None, named=False, labels=None):
     """Standard normal curve, shaded from z = lo to z = hi.
 
     lo=None shades the whole left tail and hi=None the whole right tail;
@@ -51,11 +51,13 @@ def normal_svg(lo=None, hi=None, ticks=(), mu=None, sigma=None, named=False):
     centered on its boundary line.
 
     z-values are always red and x-values always blue.
+
+    labels replaces the tick labels, e.g. ("x = ?",) before x is known.
     """
     axis = "z" if mu is None else "x"
     color = COLOR if mu is None else CENTER
+    tick_labels = labels or [f"{axis} = {t:g}" if named or mu is not None else f"{t:g}" for t in ticks]
     labels = {z: f"{z}" for z in range(-3, 4)}
-    tick_labels = [f"{axis} = {t:g}" if named or mu is not None else f"{t:g}" for t in ticks]
     if mu is not None:
         def to_z(v):
             return None if v is None else (v - mu) / sigma
