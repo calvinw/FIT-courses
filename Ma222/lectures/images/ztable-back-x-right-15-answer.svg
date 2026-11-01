@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 168" width="900" height="168" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-34 -34 944 272" width="944" height="272" font-family="sans-serif">
+<rect x="-34" y="-34" width="944" height="272" fill="white"/>
 <rect width="900" height="168" fill="white"/>
 <rect x="0" y="84" width="495.0" height="42" fill="#f3d9a4"/>
 <rect x="414.0" y="0" width="81.0" height="126" fill="#f3d9a4"/>
@@ -50,4 +51,7 @@
 <text x="697.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.8790</text>
 <text x="778.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.8810</text>
 <text x="859.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.8830</text>
+
+<rect x="333.0" y="84" width="81.0" height="42" fill="none" stroke="#b5121b" stroke-width="3" stroke-dasharray="6 4"/>
+<text x="450.0" y="210" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">area .8508  →  row 1.0, column .04  →  z = 1.04</text>
 </svg>

@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 168" width="900" height="168" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-34 -34 944 272" width="944" height="272" font-family="sans-serif">
+<rect x="-34" y="-34" width="944" height="272" fill="white"/>
 <rect width="900" height="168" fill="white"/>
 <rect x="0" y="0" width="900" height="168" fill="none" stroke="#333" stroke-width="2"/>
 <line x1="0" y1="42" x2="900" y2="42" stroke="#333" stroke-width="2"/>
@@ -47,4 +48,6 @@
 <text x="697.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.2843</text>
 <text x="778.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.2810</text>
 <text x="859.5" y="154.56" font-size="20" text-anchor="middle" fill="#333">.2776</text>
+
+<text x="450.0" y="210" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">Look for the area closest to 0.25</text>
 </svg>

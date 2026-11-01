@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 170" width="900" height="170" font-family="sans-serif">
+<rect width="900" height="170" fill="white"/>
+<defs><marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#333"/></marker></defs>
+<rect x="40" y="60" width="190" height="80" rx="10" fill="white" stroke="#1f5fa8" stroke-width="3"/>
+<text x="135.0" y="109.0" font-size="26" font-weight="bold" text-anchor="middle" fill="#1f5fa8">x-value</text>
+<rect x="355.0" y="60" width="190" height="80" rx="10" fill="white" stroke="#b5121b" stroke-width="3"/>
+<text x="450.0" y="109.0" font-size="26" font-weight="bold" text-anchor="middle" fill="#b5121b">z-value</text>
+<rect x="670" y="60" width="190" height="80" rx="10" fill="white" stroke="#333" stroke-width="3"/>
+<path d="M 695.0 123.0 L 695.0 122.4 L 697.3 122.3 L 699.7 122.0 L 702.0 121.7 L 704.3 121.3 L 706.7 120.8 L 709.0 120.2 L 711.3 119.4 L 713.7 118.6 L 716.0 117.5 L 718.3 116.2 L 720.7 114.8 L 723.0 113.1 L 725.3 111.2 L 727.7 109.1 L 730.0 106.8 L 732.3 104.2 L 734.7 101.5 L 737.0 98.7 L 739.3 95.7 L 741.7 92.7 L 744.0 89.7 L 746.3 86.7 L 748.7 83.9 L 751.0 81.2 L 753.3 78.9 L 755.7 76.8 L 758.0 75.2 L 760.3 74.0 L 762.7 73.2 L 765.0 73.0 L 767.3 73.2 L 769.7 74.0 L 772.0 75.2 L 774.3 76.8 L 776.7 78.9 L 779.0 81.2 L 781.3 83.9 L 781.3 123.0 Z" fill="#9ab8de"/><polyline points="695.0,122.4 697.3,122.3 699.7,122.0 702.0,121.7 704.3,121.3 706.7,120.8 709.0,120.2 711.3,119.4 713.7,118.6 716.0,117.5 718.3,116.2 720.7,114.8 723.0,113.1 725.3,111.2 727.7,109.1 730.0,106.8 732.3,104.2 734.7,101.5 737.0,98.7 739.3,95.7 741.7,92.7 744.0,89.7 746.3,86.7 748.7,83.9 751.0,81.2 753.3,78.9 755.7,76.8 758.0,75.2 760.3,74.0 762.7,73.2 765.0,73.0 767.3,73.2 769.7,74.0 772.0,75.2 774.3,76.8 776.7,78.9 779.0,81.2 781.3,83.9 783.7,86.7 786.0,89.7 788.3,92.7 790.7,95.7 793.0,98.7 795.3,101.5 797.7,104.2 800.0,106.8 802.3,109.1 804.7,111.2 807.0,113.1 809.3,114.8 811.7,116.2 814.0,117.5 816.3,118.6 818.7,119.4 821.0,120.2 823.3,120.8 825.7,121.3 828.0,121.7 830.3,122.0 832.7,122.3 835.0,122.4" fill="none" stroke="#333" stroke-width="2"/><line x1="695.0" y1="123.0" x2="835.0" y2="123.0" stroke="#333" stroke-width="1.5"/>
+<text x="765.0" y="166" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">area</text>
+<line x1="347.0" y1="100.0" x2="238" y2="100.0" stroke="#333" stroke-width="3" marker-end="url(#head)"/>
+<text x="292.5" y="44" font-size="20" text-anchor="middle" fill="#333">x = μ + zσ</text>
+<line x1="662" y1="100.0" x2="553.0" y2="100.0" stroke="#333" stroke-width="3" marker-end="url(#head)"/>
+<text x="607.5" y="44" font-size="20" text-anchor="middle" fill="#333">z-table backwards</text>
+</svg>

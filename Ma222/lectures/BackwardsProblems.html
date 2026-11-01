@@ -157,6 +157,7 @@ Calvin Williamson, Science and Math
 <section id="backwards-problems" class="slide level2">
 <h2>Backwards Problems</h2>
 <p>So far we started with an x-value and found its area:</p>
+<p><img data-src="images/backwards-flow-forwards.svg" class="" width="700"></p>
 <ol type="1">
 <li>Start with an x-value</li>
 <li>Compute its z-value</li>
@@ -166,6 +167,7 @@ Calvin Williamson, Science and Math
 <section id="backwards-problems-1" class="slide level2">
 <h2>Backwards Problems</h2>
 <p>Now we go the <strong>other way</strong>. We start with an area and find the x-value:</p>
+<p><img data-src="images/backwards-flow-backwards.svg" class="" width="700"></p>
 <ol type="1">
 <li>Start with an area</li>
 <li>Find the z-value that gives that area</li>
@@ -173,11 +175,39 @@ Calvin Williamson, Science and Math
 </ol>
 <p>These are called <strong>backwards problems</strong>.</p>
 </section>
+<section id="using-the-table-forwards" class="slide level2">
+<h2>Using the Table Forwards</h2>
+<p>Before, we started with the z-value <strong>outside</strong> the table, in the <strong>row</strong> and <strong>column</strong>.</p>
+<p>Then we read the area <strong>inside</strong> the table.</p>
+<p><img data-src="images/backwards-table-forwards.svg" class="" width="900"></p>
+</section>
 <section id="using-the-table-backwards" class="slide level2">
 <h2>Using the Table Backwards</h2>
-<p>Before, we found the z-value <strong>outside</strong> the table and read the area <strong>inside</strong> it.</p>
-<p>Now we find the area <strong>inside</strong> the table and read the z-value from the <strong>row</strong> and <strong>column</strong>.</p>
-<p>The area we want may not be in the table exactly. We use the <strong>closest</strong> area we can find.</p>
+<p>Now we start with the area <strong>inside</strong> the table, and read the z-value from the <strong>row</strong> and <strong>column</strong>.</p>
+<p>Find the z-value with a left tail area of <span class="math inline">0.70</span>:</p>
+<p><img data-src="images/backwards-table-look.svg" class="" width="900"></p>
+</section>
+<section id="using-the-table-backwards-1" class="slide level2">
+<h2>Using the Table Backwards</h2>
+<p>The area <span class="math inline">0.70</span> is not in the table exactly. Find the two areas on either side of it:</p>
+<p><img data-src="images/backwards-table-around.svg" class="" width="900"></p>
+<p>How far is each one from <span class="math inline">0.70</span>?</p>
+<p><span class="math display">
+0.7019 - 0.70 = 0.0019 \qquad 0.70 - 0.6985 = 0.0015
+</span></p>
+</section>
+<section id="using-the-table-backwards-2" class="slide level2">
+<h2>Using the Table Backwards</h2>
+<p>Use the <strong>closest</strong> area. <span class="math inline">0.6985</span> is only <span class="math inline">0.0015</span> away, so it is closer than <span class="math inline">0.7019</span>:</p>
+<p><img data-src="images/backwards-table-closest.svg" class="" width="900"></p>
+</section>
+<section id="using-the-table-backwards-3" class="slide level2">
+<h2>Using the Table Backwards</h2>
+<p>Read the z-value from the row and column of the closest area:</p>
+<p><img data-src="images/backwards-table-backwards.svg" class="" width="900"></p>
+<p><span class="math display">
+z = 0.52
+</span></p>
 </section>
 <section id="find-z-for-a-left-tail-area" class="slide level2">
 <h2>Find Z for a Left Tail Area</h2>
@@ -191,17 +221,26 @@ Calvin Williamson, Science and Math
 <section id="z-for-a-left-tail-of-25-1" class="slide level2">
 <h2>1. Z for a Left Tail of 25%</h2>
 <p>Look for the area closest to <span class="math inline">0.25</span>:</p>
-
-<img data-src="images/ztable-back-left-25.svg" class="r-stretch"></section>
+<p><img data-src="images/ztable-back-left-25.svg" class="" width="900"></p>
+</section>
 <section id="z-for-a-left-tail-of-25-2" class="slide level2">
 <h2>1. Z for a Left Tail of 25%</h2>
-<p>The closest area is <span class="math inline">0.2514</span>, in the row <span class="math inline">-0.6</span> and the column <span class="math inline">.07</span>:</p>
-
-<img data-src="images/ztable-back-left-25-answer.svg" class="r-stretch"><p><span class="math display">
-z = -0.67
+<p>The area <span class="math inline">0.25</span> is between <span class="math inline">0.2483</span> and <span class="math inline">0.2514</span>:</p>
+<p><img data-src="images/ztable-back-left-25-around.svg" class="" width="900"></p>
+<p>How far is each one from <span class="math inline">0.25</span>?</p>
+<p><span class="math display">
+0.2514 - 0.25 = 0.0014 \qquad 0.25 - 0.2483 = 0.0017
 </span></p>
 </section>
 <section id="z-for-a-left-tail-of-25-3" class="slide level2">
+<h2>1. Z for a Left Tail of 25%</h2>
+<p>The closest area is <span class="math inline">0.2514</span>, in the row <span class="math inline">-0.6</span> and the column <span class="math inline">.07</span>:</p>
+<p><img data-src="images/ztable-back-left-25-answer.svg" class="" width="900"></p>
+<p><span class="math display">
+z = -0.67
+</span></p>
+</section>
+<section id="z-for-a-left-tail-of-25-4" class="slide level2">
 <h2>1. Z for a Left Tail of 25%</h2>
 
 <img data-src="images/normal-back-left-25-answer.svg" class="r-stretch"><p><span class="math display">
@@ -231,254 +270,166 @@ z = -0.67
 <section id="z-for-a-right-tail-of-18-2" class="slide level2">
 <h2>2. Z for a Right Tail of 18%</h2>
 <p>Look for the area closest to <span class="math inline">0.82</span>:</p>
-
-<img data-src="images/ztable-back-right-18.svg" class="r-stretch"></section>
+<p><img data-src="images/ztable-back-right-18.svg" class="" width="900"></p>
+</section>
 <section id="z-for-a-right-tail-of-18-3" class="slide level2">
 <h2>2. Z for a Right Tail of 18%</h2>
-<p>The closest area is <span class="math inline">0.8212</span>, in the row <span class="math inline">0.9</span> and the column <span class="math inline">.02</span>:</p>
-
-<img data-src="images/ztable-back-right-18-answer.svg" class="r-stretch"><p><span class="math display">
-z = 0.92
+<p>The area <span class="math inline">0.82</span> is between <span class="math inline">0.8186</span> and <span class="math inline">0.8212</span>:</p>
+<p><img data-src="images/ztable-back-right-18-around.svg" class="" width="900"></p>
+<p>How far is each one from <span class="math inline">0.82</span>?</p>
+<p><span class="math display">
+0.8212 - 0.82 = 0.0012 \qquad 0.82 - 0.8186 = 0.0014
 </span></p>
 </section>
 <section id="z-for-a-right-tail-of-18-4" class="slide level2">
+<h2>2. Z for a Right Tail of 18%</h2>
+<p>The closest area is <span class="math inline">0.8212</span>, in the row <span class="math inline">0.9</span> and the column <span class="math inline">.02</span>:</p>
+<p><img data-src="images/ztable-back-right-18-answer.svg" class="" width="900"></p>
+<p><span class="math display">
+z = 0.92
+</span></p>
+</section>
+<section id="z-for-a-right-tail-of-18-5" class="slide level2">
 <h2>2. Z for a Right Tail of 18%</h2>
 
 <img data-src="images/normal-back-right-18-answer.svg" class="r-stretch"><p><span class="math display">
 z = 0.92
 </span></p>
 </section>
-<section id="solve-backwards-for-x" class="slide level2">
-<h2>Solve Backwards for X</h2>
-<p>Once we have the z-value, we solve the z-score formula for <span class="math inline">x</span>:</p>
+<section id="two-ways-to-write-the-z-formula" class="slide level2">
+<h2>Two Ways to Write the Z Formula</h2>
+<p>We have used this formula to go from <span class="math inline">x</span> to <span class="math inline">z</span>:</p>
 <p><span class="math display">
 z = \frac{x - \mu}{\sigma}
 </span></p>
-<ol type="1">
-<li>Plug in <span class="math inline">z</span>, <span class="math inline">\mu</span> and <span class="math inline">\sigma</span></li>
-<li>Multiply both sides by <span class="math inline">\sigma</span></li>
-<li>Add <span class="math inline">\mu</span> to both sides</li>
-</ol>
-<p>This is the same as:</p>
+<p>We can write the same formula a second way, to go from <span class="math inline">z</span> to <span class="math inline">x</span>:</p>
 <p><span class="math display">
 x = \mu + z\sigma
 </span></p>
 </section>
-<section id="bottom-25" class="slide level2">
-<h2>3. Bottom 25%</h2>
+<section id="both-formulas-say-the-same-thing" class="slide level2">
+<h2>Both Formulas Say the Same Thing</h2>
+<p>Suppose <span class="math inline">\mu = 18</span> and <span class="math inline">\sigma = 3</span>.</p>
+<p>Going forwards from <span class="math inline">x = 24</span>:</p>
+<p><span class="math display">
+z = \frac{x - \mu}{\sigma} = \frac{24 - 18}{3} = \frac{6}{3} = 2
+</span></p>
+<p>Going backwards from <span class="math inline">z = 2</span>:</p>
+<p><span class="math display">
+x = \mu + z\sigma = 18 + 2(3) = 18 + 6 = 24
+</span></p>
+</section>
+<section id="which-formula-to-use" class="slide level2">
+<h2>Which Formula to Use</h2>
+<ul>
+<li><strong>Forwards</strong> (x to area): use <span class="math inline">z = \dfrac{x - \mu}{\sigma}</span></li>
+<li><strong>Backwards</strong> (area to x): use <span class="math inline">x = \mu + z\sigma</span></li>
+</ul>
+<p><span class="math inline">x = \mu + z\sigma</span> says: start at the mean and go <span class="math inline">z</span> standard deviations.</p>
+<p>A negative <span class="math inline">z</span> means go <strong>below</strong> the mean, a positive <span class="math inline">z</span> means go <strong>above</strong> it.</p>
+</section>
+<section id="find-x-that-represents-the-bottom-25-of-the-data" class="slide level2">
+<h2>3. Find x that represents the bottom 25% of the data</h2>
 <p>A normal distribution has <span class="math inline">\mu = 18</span> and <span class="math inline">\sigma = 3</span>. Find the x-value with a left tail area of <span class="math inline">25\%</span>.</p>
 </section>
-<section id="bottom-25-1" class="slide level2">
-<h2>3. Bottom 25%</h2>
+<section id="find-x-that-represents-the-bottom-25-of-the-data-1" class="slide level2">
+<h2>3. Find x that represents the bottom 25% of the data</h2>
 <p><span class="math inline">\mu = 18</span>, <span class="math inline">\sigma = 3</span>. We want the x-value whose left tail area is <span class="math inline">0.25</span>:</p>
 
 <img data-src="images/normal-back-x-left-25.svg" class="r-stretch"></section>
-<section id="bottom-25-2" class="slide level2">
-<h2>3. Bottom 25%</h2>
+<section id="find-x-that-represents-the-bottom-25-of-the-data-2" class="slide level2">
+<h2>3. Find x that represents the bottom 25% of the data</h2>
 <p>First find the z-value with the same left tail area:</p>
 
 <img data-src="images/normal-back-x-left-25-z.svg" class="r-stretch"></section>
-<section id="bottom-25-3" class="slide level2">
-<h2>3. Bottom 25%</h2>
+<section id="find-x-that-represents-the-bottom-25-of-the-data-3" class="slide level2">
+<h2>3. Find x that represents the bottom 25% of the data</h2>
 <p>Look for the area closest to <span class="math inline">0.25</span>:</p>
-
-<img data-src="images/ztable-back-x-left-25.svg" class="r-stretch"></section>
-<section id="bottom-25-4" class="slide level2">
-<h2>3. Bottom 25%</h2>
+<p><img data-src="images/ztable-back-x-left-25.svg" class="" width="900"></p>
+</section>
+<section id="find-x-that-represents-the-bottom-25-of-the-data-4" class="slide level2">
+<h2>3. Find x that represents the bottom 25% of the data</h2>
+<p>The area <span class="math inline">0.25</span> is between <span class="math inline">0.2483</span> and <span class="math inline">0.2514</span>:</p>
+<p><img data-src="images/ztable-back-x-left-25-around.svg" class="" width="900"></p>
+<p>How far is each one from <span class="math inline">0.25</span>?</p>
+<p><span class="math display">
+0.2514 - 0.25 = 0.0014 \qquad 0.25 - 0.2483 = 0.0017
+</span></p>
+</section>
+<section id="find-x-that-represents-the-bottom-25-of-the-data-5" class="slide level2">
+<h2>3. Find x that represents the bottom 25% of the data</h2>
 <p>The closest area is <span class="math inline">0.2514</span>, in the row <span class="math inline">-0.6</span> and the column <span class="math inline">.07</span>:</p>
-
-<img data-src="images/ztable-back-x-left-25-answer.svg" class="r-stretch"><p><span class="math display">
+<p><img data-src="images/ztable-back-x-left-25-answer.svg" class="" width="900"></p>
+<p><span class="math display">
 z = -0.67
 </span></p>
 </section>
-<section id="bottom-25-5" class="slide level2">
-<h2>3. Bottom 25%</h2>
-<p>Plug in <span class="math inline">z = -0.67</span>, <span class="math inline">\mu = 18</span> and <span class="math inline">\sigma = 3</span>, then solve for <span class="math inline">x</span>:</p>
+<section id="find-x-that-represents-the-bottom-25-of-the-data-6" class="slide level2">
+<h2>3. Find x that represents the bottom 25% of the data</h2>
+<p>Plug <span class="math inline">z = -0.67</span>, <span class="math inline">\mu = 18</span> and <span class="math inline">\sigma = 3</span> into <span class="math inline">x = \mu + z\sigma</span>:</p>
 <p><span class="math display">
-\begin{aligned}
--0.67 &amp;= \frac{x - 18}{3} \\
-3(-0.67) &amp;= x - 18 \\
--2.01 + 18 &amp;= x \\
-15.99 &amp;= x
-\end{aligned}
+x = 18 + (-0.67)(3) = 18 - 2.01 = 15.99
 </span></p>
 </section>
-<section id="bottom-25-6" class="slide level2">
-<h2>3. Bottom 25%</h2>
+<section id="find-x-that-represents-the-bottom-25-of-the-data-7" class="slide level2">
+<h2>3. Find x that represents the bottom 25% of the data</h2>
 
 <img data-src="images/normal-back-x-left-25-answer.svg" class="r-stretch"><p><span class="math inline">x = 15.99</span> has a left tail area of <span class="math inline">25\%</span>.</p>
 </section>
-<section id="top-15" class="slide level2">
-<h2>4. Top 15%</h2>
+<section id="find-x-that-represents-the-top-15-of-the-data" class="slide level2">
+<h2>4. Find x that represents the top 15% of the data</h2>
 <p>A normal distribution has <span class="math inline">\mu = 23</span> and <span class="math inline">\sigma = 4</span>. Find the x-value with a right tail area of <span class="math inline">15\%</span>.</p>
 </section>
-<section id="top-15-1" class="slide level2">
-<h2>4. Top 15%</h2>
+<section id="find-x-that-represents-the-top-15-of-the-data-1" class="slide level2">
+<h2>4. Find x that represents the top 15% of the data</h2>
 <p><span class="math inline">\mu = 23</span>, <span class="math inline">\sigma = 4</span>. We want the x-value whose right tail area is <span class="math inline">0.15</span>:</p>
 
 <img data-src="images/normal-back-x-right-15.svg" class="r-stretch"></section>
-<section id="top-15-2" class="slide level2">
-<h2>4. Top 15%</h2>
+<section id="find-x-that-represents-the-top-15-of-the-data-2" class="slide level2">
+<h2>4. Find x that represents the top 15% of the data</h2>
 <p>First find the z-value with the same right tail area:</p>
 
 <img data-src="images/normal-back-x-right-15-z.svg" class="r-stretch"></section>
-<section id="top-15-3" class="slide level2">
-<h2>4. Top 15%</h2>
+<section id="find-x-that-represents-the-top-15-of-the-data-3" class="slide level2">
+<h2>4. Find x that represents the top 15% of the data</h2>
 <p>The right tail is <span class="math inline">0.15</span>, so the left tail is</p>
 <p><span class="math display">
 \text{left tail area} = 1.0 - 0.15 = 0.85
 </span></p>
 </section>
-<section id="top-15-4" class="slide level2">
-<h2>4. Top 15%</h2>
+<section id="find-x-that-represents-the-top-15-of-the-data-4" class="slide level2">
+<h2>4. Find x that represents the top 15% of the data</h2>
 <p>Look for the area closest to <span class="math inline">0.85</span>:</p>
-
-<img data-src="images/ztable-back-x-right-15.svg" class="r-stretch"></section>
-<section id="top-15-5" class="slide level2">
-<h2>4. Top 15%</h2>
+<p><img data-src="images/ztable-back-x-right-15.svg" class="" width="900"></p>
+</section>
+<section id="find-x-that-represents-the-top-15-of-the-data-5" class="slide level2">
+<h2>4. Find x that represents the top 15% of the data</h2>
+<p>The area <span class="math inline">0.85</span> is between <span class="math inline">0.8485</span> and <span class="math inline">0.8508</span>:</p>
+<p><img data-src="images/ztable-back-x-right-15-around.svg" class="" width="900"></p>
+<p>How far is each one from <span class="math inline">0.85</span>?</p>
+<p><span class="math display">
+0.8508 - 0.85 = 0.0008 \qquad 0.85 - 0.8485 = 0.0015
+</span></p>
+</section>
+<section id="find-x-that-represents-the-top-15-of-the-data-6" class="slide level2">
+<h2>4. Find x that represents the top 15% of the data</h2>
 <p>The closest area is <span class="math inline">0.8508</span>, in the row <span class="math inline">1.0</span> and the column <span class="math inline">.04</span>:</p>
-
-<img data-src="images/ztable-back-x-right-15-answer.svg" class="r-stretch"><p><span class="math display">
+<p><img data-src="images/ztable-back-x-right-15-answer.svg" class="" width="900"></p>
+<p><span class="math display">
 z = 1.04
 </span></p>
 </section>
-<section id="top-15-6" class="slide level2">
-<h2>4. Top 15%</h2>
-<p>Plug in <span class="math inline">z = 1.04</span>, <span class="math inline">\mu = 23</span> and <span class="math inline">\sigma = 4</span>, then solve for <span class="math inline">x</span>:</p>
+<section id="find-x-that-represents-the-top-15-of-the-data-7" class="slide level2">
+<h2>4. Find x that represents the top 15% of the data</h2>
+<p>Plug <span class="math inline">z = 1.04</span>, <span class="math inline">\mu = 23</span> and <span class="math inline">\sigma = 4</span> into <span class="math inline">x = \mu + z\sigma</span>:</p>
 <p><span class="math display">
-\begin{aligned}
-1.04 &amp;= \frac{x - 23}{4} \\
-4(1.04) &amp;= x - 23 \\
-4.16 + 23 &amp;= x \\
-27.16 &amp;= x
-\end{aligned}
+x = 23 + 1.04(4) = 23 + 4.16 = 27.16
 </span></p>
 </section>
-<section id="top-15-7" class="slide level2">
-<h2>4. Top 15%</h2>
+<section id="find-x-that-represents-the-top-15-of-the-data-8" class="slide level2">
+<h2>4. Find x that represents the top 15% of the data</h2>
 
 <img data-src="images/normal-back-x-right-15-answer.svg" class="r-stretch"><p><span class="math inline">x = 27.16</span> has a right tail area of <span class="math inline">15\%</span>.</p>
-</section>
-<section id="applications-of-backwards-problems" class="slide level2">
-<h2>Applications of Backwards Problems</h2>
-<p>Backwards problems answer questions like:</p>
-<ul>
-<li>What demand is in the <strong>bottom 10%</strong> of all demands?</li>
-<li>How much inventory do we need so we run out only <strong>5%</strong> of the time?</li>
-</ul>
-<p>We know the area (the chance), and we want the x-value.</p>
-</section>
-<section id="bottom-10-of-demand" class="slide level2">
-<h2>5. Bottom 10% of Demand</h2>
-<p>Monthly demand for a retail SKU is normal with mean <span class="math inline">257</span> units and standard deviation <span class="math inline">45</span> units.</p>
-<p>What demand is in the bottom <span class="math inline">10\%</span> of all demand values?</p>
-</section>
-<section id="bottom-10-of-demand-1" class="slide level2">
-<h2>5. Bottom 10% of Demand</h2>
-<p><span class="math inline">\mu = 257</span>, <span class="math inline">\sigma = 45</span>. We want the x-value whose left tail area is <span class="math inline">0.10</span>:</p>
-
-<img data-src="images/normal-back-x-left-10.svg" class="r-stretch"></section>
-<section id="bottom-10-of-demand-2" class="slide level2">
-<h2>5. Bottom 10% of Demand</h2>
-<p>First find the z-value with the same left tail area:</p>
-
-<img data-src="images/normal-back-x-left-10-z.svg" class="r-stretch"></section>
-<section id="bottom-10-of-demand-3" class="slide level2">
-<h2>5. Bottom 10% of Demand</h2>
-<p>Look for the area closest to <span class="math inline">0.10</span>:</p>
-
-<img data-src="images/ztable-back-x-left-10.svg" class="r-stretch"></section>
-<section id="bottom-10-of-demand-4" class="slide level2">
-<h2>5. Bottom 10% of Demand</h2>
-<p>The closest area is <span class="math inline">0.1003</span>, in the row <span class="math inline">-1.2</span> and the column <span class="math inline">.08</span>:</p>
-
-<img data-src="images/ztable-back-x-left-10-answer.svg" class="r-stretch"><p><span class="math display">
-z = -1.28
-</span></p>
-</section>
-<section id="bottom-10-of-demand-5" class="slide level2">
-<h2>5. Bottom 10% of Demand</h2>
-<p>Plug in <span class="math inline">z = -1.28</span>, <span class="math inline">\mu = 257</span> and <span class="math inline">\sigma = 45</span>, then solve for <span class="math inline">x</span>:</p>
-<p><span class="math display">
-\begin{aligned}
--1.28 &amp;= \frac{x - 257}{45} \\
-45(-1.28) &amp;= x - 257 \\
--57.6 + 257 &amp;= x \\
-199.4 &amp;= x
-\end{aligned}
-</span></p>
-</section>
-<section id="bottom-10-of-demand-6" class="slide level2">
-<h2>5. Bottom 10% of Demand</h2>
-
-<img data-src="images/normal-back-x-left-10-answer.svg" class="r-stretch"><p><span class="math inline">x = 199.4</span> has a left tail area of <span class="math inline">10\%</span>.</p>
-<p>Any demand below about <span class="math inline">199</span> units is in the bottom <span class="math inline">10\%</span> of demand values.</p>
-</section>
-<section id="service-level" class="slide level2">
-<h2>Service Level</h2>
-<p>The <strong>service level</strong> is the chance we do <strong>not</strong> run out of stock in a period.</p>
-<ul>
-<li>A <span class="math inline">90\%</span> service level means lost sales <span class="math inline">10\%</span> of the time.</li>
-<li>A <span class="math inline">95\%</span> service level means lost sales <span class="math inline">5\%</span> of the time.</li>
-<li>A <span class="math inline">99\%</span> service level means lost sales <span class="math inline">1\%</span> of the time.</li>
-</ul>
-</section>
-<section id="service-level-1" class="slide level2">
-<h2>Service Level</h2>
-<p>To get a service level, stock enough so demand is below our inventory that often.</p>
-<p>The service level is a <strong>left tail area</strong>:</p>
-<ul>
-<li><span class="math inline">90\%</span> service level: left tail area of <span class="math inline">0.90</span></li>
-<li><span class="math inline">95\%</span> service level: left tail area of <span class="math inline">0.95</span></li>
-<li><span class="math inline">99\%</span> service level: left tail area of <span class="math inline">0.99</span></li>
-</ul>
-</section>
-<section id="inventory-for-95-service-level" class="slide level2">
-<h2>6. Inventory for 95% Service Level</h2>
-<p>Monthly demand for a retail SKU is normal with mean <span class="math inline">340</span> units and standard deviation <span class="math inline">80</span> units.</p>
-<p>How much inventory should we carry next month for a <span class="math inline">95\%</span> service level?</p>
-</section>
-<section id="inventory-for-95-service-level-1" class="slide level2">
-<h2>6. Inventory for 95% Service Level</h2>
-<p><span class="math inline">\mu = 340</span>, <span class="math inline">\sigma = 80</span>. We want the x-value whose left tail area is <span class="math inline">0.95</span>:</p>
-
-<img data-src="images/normal-back-x-left-95.svg" class="r-stretch"></section>
-<section id="inventory-for-95-service-level-2" class="slide level2">
-<h2>6. Inventory for 95% Service Level</h2>
-<p>First find the z-value with the same left tail area:</p>
-
-<img data-src="images/normal-back-x-left-95-z.svg" class="r-stretch"></section>
-<section id="inventory-for-95-service-level-3" class="slide level2">
-<h2>6. Inventory for 95% Service Level</h2>
-<p>Look for the area closest to <span class="math inline">0.95</span>:</p>
-
-<img data-src="images/ztable-back-x-left-95.svg" class="r-stretch"></section>
-<section id="inventory-for-95-service-level-4" class="slide level2">
-<h2>6. Inventory for 95% Service Level</h2>
-<p>The closest area is <span class="math inline">0.9495</span>, in the row <span class="math inline">1.6</span> and the column <span class="math inline">.04</span>:</p>
-
-<img data-src="images/ztable-back-x-left-95-answer.svg" class="r-stretch"><p><span class="math display">
-z = 1.64
-</span></p>
-<p><span class="math inline">0.9505</span> (for <span class="math inline">z = 1.65</span>) is just as close. Either one is fine.</p>
-</section>
-<section id="inventory-for-95-service-level-5" class="slide level2">
-<h2>6. Inventory for 95% Service Level</h2>
-<p>Plug in <span class="math inline">z = 1.64</span>, <span class="math inline">\mu = 340</span> and <span class="math inline">\sigma = 80</span>, then solve for <span class="math inline">x</span>:</p>
-<p><span class="math display">
-\begin{aligned}
-1.64 &amp;= \frac{x - 340}{80} \\
-80(1.64) &amp;= x - 340 \\
-131.2 + 340 &amp;= x \\
-471.2 &amp;= x
-\end{aligned}
-</span></p>
-</section>
-<section id="inventory-for-95-service-level-6" class="slide level2">
-<h2>6. Inventory for 95% Service Level</h2>
-
-<img data-src="images/normal-back-x-left-95-answer.svg" class="r-stretch"><p><span class="math inline">x = 471.2</span> has a left tail area of <span class="math inline">95\%</span>.</p>
-<p>Carry at least <span class="math inline">472</span> units for a <span class="math inline">95\%</span> service level.</p>
 
 </section>
     </div>

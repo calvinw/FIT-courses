@@ -11,6 +11,8 @@ format:
 
 So far we started with an x-value and found its area:
 
+![](images/backwards-flow-forwards.svg){.nostretch width=700}
+
 1. Start with an x-value
 2. Compute its z-value
 3. Find the area with the z-table
@@ -19,19 +21,57 @@ So far we started with an x-value and found its area:
 
 Now we go the **other way**. We start with an area and find the x-value:
 
+![](images/backwards-flow-backwards.svg){.nostretch width=700}
+
 1. Start with an area
 2. Find the z-value that gives that area
 3. Compute the x-value from the z-value
 
 These are called **backwards problems**.
 
+## Using the Table Forwards
+
+Before, we started with the z-value **outside** the table, in the **row** and **column**.
+
+Then we read the area **inside** the table.
+
+![](images/backwards-table-forwards.svg){.nostretch width=900}
+
 ## Using the Table Backwards
 
-Before, we found the z-value **outside** the table and read the area **inside** it.
+Now we start with the area **inside** the table, and read the z-value from the **row** and **column**.
 
-Now we find the area **inside** the table and read the z-value from the **row** and **column**.
+Find the z-value with a left tail area of $0.70$:
 
-The area we want may not be in the table exactly. We use the **closest** area we can find.
+![](images/backwards-table-look.svg){.nostretch width=900}
+
+## Using the Table Backwards
+
+The area $0.70$ is not in the table exactly. Find the two areas on either side of it:
+
+![](images/backwards-table-around.svg){.nostretch width=900}
+
+How far is each one from $0.70$?
+
+$$
+0.7019 - 0.70 = 0.0019 \qquad 0.70 - 0.6985 = 0.0015
+$$
+
+## Using the Table Backwards
+
+Use the **closest** area. $0.6985$ is only $0.0015$ away, so it is closer than $0.7019$:
+
+![](images/backwards-table-closest.svg){.nostretch width=900}
+
+## Using the Table Backwards
+
+Read the z-value from the row and column of the closest area:
+
+![](images/backwards-table-backwards.svg){.nostretch width=900}
+
+$$
+z = 0.52
+$$
 
 ## Find Z for a Left Tail Area
 
@@ -47,13 +87,25 @@ Find the z-value that gives a left tail area of $25\%$. Use the standard normal 
 
 Look for the area closest to $0.25$:
 
-![](images/ztable-back-left-25.svg)
+![](images/ztable-back-left-25.svg){.nostretch width=900}
+
+## 1. Z for a Left Tail of 25%
+
+The area $0.25$ is between $0.2483$ and $0.2514$:
+
+![](images/ztable-back-left-25-around.svg){.nostretch width=900}
+
+How far is each one from $0.25$?
+
+$$
+0.2514 - 0.25 = 0.0014 \qquad 0.25 - 0.2483 = 0.0017
+$$
 
 ## 1. Z for a Left Tail of 25%
 
 The closest area is $0.2514$, in the row $-0.6$ and the column $.07$:
 
-![](images/ztable-back-left-25-answer.svg)
+![](images/ztable-back-left-25-answer.svg){.nostretch width=900}
 
 $$
 z = -0.67
@@ -95,13 +147,25 @@ $$
 
 Look for the area closest to $0.82$:
 
-![](images/ztable-back-right-18.svg)
+![](images/ztable-back-right-18.svg){.nostretch width=900}
+
+## 2. Z for a Right Tail of 18%
+
+The area $0.82$ is between $0.8186$ and $0.8212$:
+
+![](images/ztable-back-right-18-around.svg){.nostretch width=900}
+
+How far is each one from $0.82$?
+
+$$
+0.8212 - 0.82 = 0.0012 \qquad 0.82 - 0.8186 = 0.0014
+$$
 
 ## 2. Z for a Right Tail of 18%
 
 The closest area is $0.8212$, in the row $0.9$ and the column $.02$:
 
-![](images/ztable-back-right-18-answer.svg)
+![](images/ztable-back-right-18-answer.svg){.nostretch width=900}
 
 $$
 z = 0.92
@@ -115,92 +179,120 @@ $$
 z = 0.92
 $$
 
-## Solve Backwards for X
+## Two Ways to Write the Z Formula
 
-Once we have the z-value, we solve the z-score formula for $x$:
+We have used this formula to go from $x$ to $z$:
 
 $$
 z = \frac{x - \mu}{\sigma}
 $$
 
-1. Plug in $z$, $\mu$ and $\sigma$
-2. Multiply both sides by $\sigma$
-3. Add $\mu$ to both sides
-
-This is the same as:
+We can write the same formula a second way, to go from $z$ to $x$:
 
 $$
 x = \mu + z\sigma
 $$
 
-## 3. Bottom 25%
+## Both Formulas Say the Same Thing
+
+Suppose $\mu = 18$ and $\sigma = 3$.
+
+Going forwards from $x = 24$:
+
+$$
+z = \frac{x - \mu}{\sigma} = \frac{24 - 18}{3} = \frac{6}{3} = 2
+$$
+
+Going backwards from $z = 2$:
+
+$$
+x = \mu + z\sigma = 18 + 2(3) = 18 + 6 = 24
+$$
+
+## Which Formula to Use
+
+- **Forwards** (x to area): use $z = \dfrac{x - \mu}{\sigma}$
+- **Backwards** (area to x): use $x = \mu + z\sigma$
+
+$x = \mu + z\sigma$ says: start at the mean and go $z$ standard deviations.
+
+A negative $z$ means go **below** the mean, a positive $z$ means go **above** it.
+
+## 3. Find x that represents the bottom 25% of the data
 
 A normal distribution has $\mu = 18$ and $\sigma = 3$. Find the x-value with a left tail area of $25\%$.
 
-## 3. Bottom 25%
+## 3. Find x that represents the bottom 25% of the data
 
 $\mu = 18$, $\sigma = 3$. We want the x-value whose left tail area is $0.25$:
 
 ![](images/normal-back-x-left-25.svg)
 
-## 3. Bottom 25%
+## 3. Find x that represents the bottom 25% of the data
 
 First find the z-value with the same left tail area:
 
 ![](images/normal-back-x-left-25-z.svg)
 
-## 3. Bottom 25%
+## 3. Find x that represents the bottom 25% of the data
 
 Look for the area closest to $0.25$:
 
-![](images/ztable-back-x-left-25.svg)
+![](images/ztable-back-x-left-25.svg){.nostretch width=900}
 
-## 3. Bottom 25%
+## 3. Find x that represents the bottom 25% of the data
+
+The area $0.25$ is between $0.2483$ and $0.2514$:
+
+![](images/ztable-back-x-left-25-around.svg){.nostretch width=900}
+
+How far is each one from $0.25$?
+
+$$
+0.2514 - 0.25 = 0.0014 \qquad 0.25 - 0.2483 = 0.0017
+$$
+
+## 3. Find x that represents the bottom 25% of the data
 
 The closest area is $0.2514$, in the row $-0.6$ and the column $.07$:
 
-![](images/ztable-back-x-left-25-answer.svg)
+![](images/ztable-back-x-left-25-answer.svg){.nostretch width=900}
 
 $$
 z = -0.67
 $$
 
-## 3. Bottom 25%
+## 3. Find x that represents the bottom 25% of the data
 
-Plug in $z = -0.67$, $\mu = 18$ and $\sigma = 3$, then solve for $x$:
+Plug $z = -0.67$, $\mu = 18$ and $\sigma = 3$ into $x = \mu + z\sigma$:
 
 $$
-\begin{aligned}
--0.67 &= \frac{x - 18}{3} \\
-3(-0.67) &= x - 18 \\
--2.01 + 18 &= x \\
-15.99 &= x
-\end{aligned}
+x = 18 + (-0.67)(3) = 18 - 2.01 = 15.99
 $$
 
-## 3. Bottom 25%
+## 3. Find x that represents the bottom 25% of the data
 
 ![](images/normal-back-x-left-25-answer.svg)
 
 $x = 15.99$ has a left tail area of $25\%$.
 
-## 4. Top 15%
+## 4. Find x that represents the top 15% of the data
 
 A normal distribution has $\mu = 23$ and $\sigma = 4$. Find the x-value with a right tail area of $15\%$.
 
-## 4. Top 15%
+## 4. Find x that represents the top 15% of the data
 
 $\mu = 23$, $\sigma = 4$. We want the x-value whose right tail area is $0.15$:
 
 ![](images/normal-back-x-right-15.svg)
 
-## 4. Top 15%
+## 4. Find x that represents the top 15% of the data
 
 First find the z-value with the same right tail area:
 
 ![](images/normal-back-x-right-15-z.svg)
 
-## 4. Top 15%
+## 4. Find x that represents the top 15% of the data
 
 The right tail is $0.15$, so the left tail is
 
@@ -208,176 +300,44 @@ $$
 \text{left tail area} = 1.0 - 0.15 = 0.85
 $$
 
-## 4. Top 15%
+## 4. Find x that represents the top 15% of the data
 
 Look for the area closest to $0.85$:
 
-![](images/ztable-back-x-right-15.svg)
+![](images/ztable-back-x-right-15.svg){.nostretch width=900}
 
-## 4. Top 15%
+## 4. Find x that represents the top 15% of the data
+
+The area $0.85$ is between $0.8485$ and $0.8508$:
+
+![](images/ztable-back-x-right-15-around.svg){.nostretch width=900}
+
+How far is each one from $0.85$?
+
+$$
+0.8508 - 0.85 = 0.0008 \qquad 0.85 - 0.8485 = 0.0015
+$$
+
+## 4. Find x that represents the top 15% of the data
 
 The closest area is $0.8508$, in the row $1.0$ and the column $.04$:
 
-![](images/ztable-back-x-right-15-answer.svg)
+![](images/ztable-back-x-right-15-answer.svg){.nostretch width=900}
 
 $$
 z = 1.04
 $$
 
-## 4. Top 15%
+## 4. Find x that represents the top 15% of the data
 
-Plug in $z = 1.04$, $\mu = 23$ and $\sigma = 4$, then solve for $x$:
+Plug $z = 1.04$, $\mu = 23$ and $\sigma = 4$ into $x = \mu + z\sigma$:
 
 $$
-\begin{aligned}
-1.04 &= \frac{x - 23}{4} \\
-4(1.04) &= x - 23 \\
-4.16 + 23 &= x \\
-27.16 &= x
-\end{aligned}
+x = 23 + 1.04(4) = 23 + 4.16 = 27.16
 $$
 
-## 4. Top 15%
+## 4. Find x that represents the top 15% of the data
 
 ![](images/normal-back-x-right-15-answer.svg)
 
 $x = 27.16$ has a right tail area of $15\%$.
-
-## Applications of Backwards Problems
-
-Backwards problems answer questions like:
-
-- What demand is in the **bottom 10%** of all demands?
-- How much inventory do we need so we run out only **5%** of the time?
-
-We know the area (the chance), and we want the x-value.
-
-## 5. Bottom 10% of Demand
-
-Monthly demand for a retail SKU is normal with mean $257$ units and standard deviation $45$ units.
-
-What demand is in the bottom $10\%$ of all demand values?
-
-## 5. Bottom 10% of Demand
-
-$\mu = 257$, $\sigma = 45$. We want the x-value whose left tail area is $0.10$:
-
-![](images/normal-back-x-left-10.svg)
-
-## 5. Bottom 10% of Demand
-
-First find the z-value with the same left tail area:
-
-![](images/normal-back-x-left-10-z.svg)
-
-## 5. Bottom 10% of Demand
-
-Look for the area closest to $0.10$:
-
-![](images/ztable-back-x-left-10.svg)
-
-## 5. Bottom 10% of Demand
-
-The closest area is $0.1003$, in the row $-1.2$ and the column $.08$:
-
-![](images/ztable-back-x-left-10-answer.svg)
-
-$$
-z = -1.28
-$$
-
-## 5. Bottom 10% of Demand
-
-Plug in $z = -1.28$, $\mu = 257$ and $\sigma = 45$, then solve for $x$:
-
-$$
-\begin{aligned}
--1.28 &= \frac{x - 257}{45} \\
-45(-1.28) &= x - 257 \\
--57.6 + 257 &= x \\
-199.4 &= x
-\end{aligned}
-$$
-
-## 5. Bottom 10% of Demand
-
-![](images/normal-back-x-left-10-answer.svg)
-
-$x = 199.4$ has a left tail area of $10\%$.
-
-Any demand below about $199$ units is in the bottom $10\%$ of demand values.
-
-## Service Level
-
-The **service level** is the chance we do **not** run out of stock in a period.
-
-- A $90\%$ service level means lost sales $10\%$ of the time.
-- A $95\%$ service level means lost sales $5\%$ of the time.
-- A $99\%$ service level means lost sales $1\%$ of the time.
-
-## Service Level
-
-To get a service level, stock enough so demand is below our inventory that often.
-
-The service level is a **left tail area**:
-
-- $90\%$ service level: left tail area of $0.90$
-- $95\%$ service level: left tail area of $0.95$
-- $99\%$ service level: left tail area of $0.99$
-
-## 6. Inventory for 95% Service Level
-
-Monthly demand for a retail SKU is normal with mean $340$ units and standard deviation $80$ units.
-
-How much inventory should we carry next month for a $95\%$ service level?
-
-## 6. Inventory for 95% Service Level
-
-$\mu = 340$, $\sigma = 80$. We want the x-value whose left tail area is $0.95$:
-
-![](images/normal-back-x-left-95.svg)
-
-## 6. Inventory for 95% Service Level
-
-First find the z-value with the same left tail area:
-
-![](images/normal-back-x-left-95-z.svg)
-
-## 6. Inventory for 95% Service Level
-
-Look for the area closest to $0.95$:
-
-![](images/ztable-back-x-left-95.svg)
-
-## 6. Inventory for 95% Service Level
-
-The closest area is $0.9495$, in the row $1.6$ and the column $.04$:
-
-![](images/ztable-back-x-left-95-answer.svg)
-
-$$
-z = 1.64
-$$
-
-$0.9505$ (for $z = 1.65$) is just as close. Either one is fine.
-
-## 6. Inventory for 95% Service Level
-
-Plug in $z = 1.64$, $\mu = 340$ and $\sigma = 80$, then solve for $x$:
-
-$$
-\begin{aligned}
-1.64 &= \frac{x - 340}{80} \\
-80(1.64) &= x - 340 \\
-131.2 + 340 &= x \\
-471.2 &= x
-\end{aligned}
-$$
-
-## 6. Inventory for 95% Service Level
-
-![](images/normal-back-x-left-95-answer.svg)
-
-$x = 471.2$ has a left tail area of $95\%$.
-
-Carry at least $472$ units for a $95\%$ service level.

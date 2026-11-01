@@ -1,0 +1,10 @@
+/* The backwards spreadsheets run to 7 rows under a long title,
+   so the grid is smaller and tighter than in StandardNormalSpreadsheet */
+.reveal table {
+  font-size: 0.65em;
+}
+
+.reveal table th,
+.reveal table td {
+  padding: 0.15em 0.6em;
+}
