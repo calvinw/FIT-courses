@@ -1,0 +1,202 @@
+---
+title: "CS211 Review 2"
+format:
+  html:
+    embed-resources: true
+---
+
+Choose the best answer for each question.
+
+**1.** On DoltHub, why would you make changes to a database on a branch instead of directly on `main`?
+
+A) So the data on `main` stays the same until you check your changes and merge them
+B) So the database gets new tables automatically
+C) So the changes can never be merged
+D) So other people can't see the database
+
+**2.** In GitHub, you create a branch called `fix-header`, change `index.html` on that branch, and commit and push the change to your repository. What happens to `index.html` on `main`?
+
+A) It has the same change
+B) It is deleted
+C) It stays the same; the change is only on `fix-header` until you merge it
+D) It is renamed to `fix-header`
+
+**3.** On DoltHub, you merge your branch into `main` and then delete the branch. What happens to the changes you made on it?
+
+A) They are removed from `main`
+B) They stay in `main`
+C) They move to a new database
+D) They go back onto a new branch
+
+**4.** You want to publish a website, and you also want to keep a products and orders database that you can query with SQL. Which should you use for each?
+
+A) DoltHub for the website, GitHub for the database
+B) GitHub for both
+C) DoltHub for both
+D) GitHub (with GitHub Pages) for the website, DoltHub for the database
+
+**5.** Which of these do both GitHub and DoltHub have?
+
+A) Branches, commits, and merging into `main`
+B) A SQL editor for running queries
+C) GitHub Pages websites
+D) Codespaces
+
+**6.** What is an AI agent, like OpenCode, Claude Code, or Codex?
+
+A) A person who is a collaborator on the repository
+B) A GitHub setting for private repositories
+C) An AI helper that can edit files and run commands for you
+D) A type of database table
+
+**7.** Which of these is true about a primary key?
+
+A) Two rows can share the same value
+B) Every row has a different value
+C) It must be a text column
+D) It is always the last column
+
+**8.** In a database, what is a foreign key?
+
+A) A column that refers to the primary key of another table
+B) A key from a database in another country
+C) A column that must be text
+D) A copy of the whole table
+
+**9.** Which of these would **not** be a good primary key for a table of people?
+
+A) Email address
+B) First and last name
+C) Phone number
+D) Customer ID number
+
+**10.** Why is a person's first name and last name not a good primary key?
+
+A) Names are too long to store
+B) Two different people can have the same name, like two John Smiths
+C) Names have to be kept in a separate table
+D) A primary key can only be one letter
+
+**11.** Why would you save a query as a view?
+
+A) So the query's tables are deleted
+B) So the database becomes private
+C) So anyone can rerun it by name
+D) So the query runs only once
+
+**12.** On DoltHub, how do you save a query as a view?
+
+A) Upload it as a file named `view.sql`
+B) Paste it into the database's README
+C) Copy and paste it into Gemini
+D) Run it in the SQL editor, then click **Create view** under the result and give the view a name
+
+**13.** Which of these is part of a database's schema, not its data?
+
+A) The column `price` is `DECIMAL(10,2)`, and `product_id` is the primary key
+B) Jane Smith ordered a Silk Blouse
+C) There were 10 orders in March
+D) The Leather Jacket costs 249.99
+
+**14.** Before you ask Gemini to write SQL queries for your database, why do you paste the table schemas into the chat first?
+
+A) So Gemini can change your database
+B) So Gemini can log in to DoltHub
+C) So Gemini knows the table names, column names, and how the tables connect, and writes queries that fit them
+D) So the database becomes public
+
+**Questions 15 to 20 refer to this small database.** Order 6 has not been filled in yet.
+
+**Customers**
+
+| customer_id | first_name | last_name |
+|---|---|---|
+| 2 | Jane | Smith |
+| 3 | Robert | Johnson |
+| 4 | Sarah | Williams |
+
+**Products**
+
+| product_id | name | price |
+|---|---|---|
+| 3 | Cashmere Sweater | 149.99 |
+| 4 | Leather Jacket | 249.99 |
+| 5 | Cotton T-Shirt | 29.99 |
+
+**Orders**
+
+| order_id | customer_id | product_id | order_date |
+|---|---|---|---|
+| 4 | 4 | 3 | 2025-03-20 |
+| 5 | 3 | 4 | 2025-03-22 |
+| 6 | ? | ? | 2025-03-25 |
+
+**15.** In the Orders table, which column links each order to a row in the Products table?
+
+A) `order_id`
+B) `customer_id`
+C) `order_date`
+D) `product_id`
+
+**16.** Which of these statements is **not** true?
+
+A) `product_id` 4 can appear on many rows of the Orders table
+B) Robert Johnson, customer 3, can place many orders
+C) Two rows of the Products table can both have `product_id` 5
+D) Every row of the Orders table has its own `order_id`
+
+**17.** Who placed order 5, and what did they buy?
+
+A) Robert Johnson bought a Leather Jacket
+B) Sarah Williams bought a Cashmere Sweater
+C) Sarah Williams bought a Leather Jacket
+D) Robert Johnson bought a Cotton T-Shirt
+
+**18.** What was the price of the product bought in order 4?
+
+A) 249.99
+B) 29.99
+C) 149.99
+D) You can't tell, because the Orders table has no price column
+
+**19.** On 2025-03-25, Jane Smith buys a Cotton T-Shirt, and it is recorded as order 6. What goes in place of the two `?` marks for `customer_id` and `product_id`?
+
+A) `customer_id` 5, `product_id` 2
+B) `customer_id` 2, `product_id` 5
+C) `customer_id` 2, `product_id` 3
+D) `customer_id` Jane Smith, `product_id` Cotton T-Shirt
+
+**20.** One possible view for these tables would show each order with the customer's last name, the product name, and the product price. Which of these could **not** be made into a view from these tables?
+
+A) Each order with the customer's first and last name
+B) Each order with the store where it was bought
+C) The number of orders placed on each date
+D) Each order's date with the product's price
+
+**21.** What does SQL stand for?
+
+A) Simple Question Language
+B) Stored Query List
+C) Structured Query Language
+D) System Quality Logic
+
+**22.** A SQL script creates a `products` table and an `orders` table that has a foreign key to `products`. Which table must be created first?
+
+A) `orders`, because it has more rows
+B) Either one, the order does not matter
+C) Neither, they are created together automatically
+D) `products`, because `orders` can only refer to a table that already exists
+
+**23.** A Products table has the columns `product_id`, `name`, `price`, and `in_stock`. Which column is the primary key?
+
+A) `name`
+B) `price`
+C) `in_stock`
+D) `product_id`
+
+**24.** In SQL, what does a `JOIN` do?
+
+A) Deletes rows that two tables share
+B) Creates a new database
+C) Merges a branch into `main`
+D) Matches a foreign key in one table to the primary key in another, so their columns appear together
