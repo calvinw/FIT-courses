@@ -121,7 +121,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>A store today sells in many places: in its shops, on its website, in its app, on social media, and at pop-up events. Selling through all of them as one business is called <strong>omnichannel</strong> retail. These scripts add a <code>channels</code> table to the <a href="retail-orders-database.html">retail orders database</a> so each order records where the customer bought it.</p>
-<p>Start with the database from the <a href="retail-orders-database-scripts.html">starter scripts</a>. Copy each block (use the copy button in its top right corner) and paste it into the Dolt online SQL editor, then run it. Run the blocks in order.</p>
+<p>Start with a retail orders database of your own. Either:</p>
+<ul>
+<li><strong>Make a fresh copy:</strong> create a new database on DoltHub and run the <a href="retail-orders-database-scripts.html">starter scripts</a>, or</li>
+<li><strong>Fork mine:</strong> sign in to DoltHub, open <a href="https://www.dolthub.com/repositories/calvinw/retail-orders" class="uri">https://www.dolthub.com/repositories/calvinw/retail-orders</a> and click <strong>Fork</strong> in the top right corner. Then open your fork and work there, not in the original.</li>
+</ul>
+<p>Copy each block below (use the copy button in its top right corner) and paste it into the Dolt online SQL editor for your database, then run it. Run the blocks in order.</p>
 <section id="create-the-channels-table" class="level2">
 <h2 class="anchored" data-anchor-id="create-the-channels-table">1. Create the channels table</h2>
 <p>Each channel gets a unique <code>channel_id</code>, which is the primary key.</p>

@@ -1,0 +1,89 @@
+---
+title: "Omnichannel Retail"
+subtitle: "Where did each order come from?"
+author: "Calvin Williamson, Science and Math"
+format: revealjs
+---
+
+## Customers Shop Everywhere
+
+Today a customer might:
+
+- see a jacket on **Instagram**
+- check the price on the **website**
+- try it on in a **store**
+- buy it later on their **phone**
+
+Retailers that sell through all of these at once are called **omnichannel** retailers.
+
+## Our Sales Channels
+
+::: {style="font-size: 0.8em;"}
+| Channel | Where the purchase happens |
+|---------|----------------------------|
+| **physical** | In a store |
+| **ecom** | On the website (e-commerce) |
+| **mcom** | On a phone, in the app or the mobile site (mobile commerce) |
+| **scom** | On social media, like Instagram or TikTok (social commerce) |
+| **pop-up** | At a temporary pop-up shop |
+:::
+
+## Our Orders Table Today
+
+::: {style="font-size: 0.6em;"}
+| order_id | customer_id | product_id | order_date |
+|----------|------------|-----------|-----|
+| 1 | 1 | 3 | 2025-03-10 |
+| 2 | 2 | 1 | 2025-03-12 |
+| 3 | 3 | 5 | 2025-03-15 |
+| 4 | 2 | 5 | 2025-03-18 |
+| 5 | 4 | 2 | 2025-03-20 |
+| ... | ... | ... | ... |
+:::
+
+We know **who** bought **what** and **when**, but not **where**.
+
+## Questions We Can't Answer Yet
+
+- How much revenue does each channel bring in?
+- Is online (ecom + mcom) bigger than in person (physical + pop-up)?
+- What is the average order value in each channel?
+- Which products sell on social media?
+- Which customers shop in more than one channel?
+- Are some customers digital-only?
+- Did the pop-up shop reach customers we didn't already have?
+
+## The Problem - How Do We Add Channel Information?
+
+We want every order to record the **channel** it was made in.
+
+Things to think about:
+
+- Where should the channel information live in the database?
+- How do we keep the channel names spelled the same every time?
+- What happens if we add a new channel next year?
+- What about the orders that are already in the table?
+
+## Add a Column to the Orders called Channel?
+
+::: {style="font-size: 0.8em;"}
+What if we just typed the channel name into each order?
+:::
+
+::: {style="font-size: 0.6em;"}
+| order_id | customer_id | product_id | order_date | channel |
+|----------|------------|-----------|-----|---------|
+| 1 | 1 | 3 | 2025-03-10 | physical |
+| 2 | 2 | 1 | 2025-03-12 | ecom |
+| 3 | 3 | 5 | 2025-03-15 | Mobile |
+| 4 | 2 | 5 | 2025-03-18 | Instagram |
+| 5 | 4 | 2 | 2025-03-20 | e-com |
+:::
+
+::: {style="font-size: 0.7em;"}
+Let's discuss:
+
+- Are orders 2 and 5 the same channel? Is "Instagram" the same as scom?
+- Where would we keep each channel's description?
+- How did we handle customers and products in the orders table?
+:::

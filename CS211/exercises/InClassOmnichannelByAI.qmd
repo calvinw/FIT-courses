@@ -14,8 +14,11 @@ format:
         </style>
 ---
 
-This uses your retail orders database after you added the `channels` table
-with the [sales channels scripts](../lectures/retail-orders-channels-scripts.html).
+This uses your own retail orders database: either a fresh copy made with the
+[starter scripts](../lectures/retail-orders-database-scripts.html) or a fork of
+[mine on DoltHub](https://www.dolthub.com/repositories/calvinw/retail-orders).
+First add the `channels` table to it with the
+[sales channels scripts](../lectures/retail-orders-channels-scripts.html).
 
 This time [Gemini](https://gemini.google.com) writes the SQL. Copy each block
 (use the copy button in its top right corner) and paste it into Gemini. Run

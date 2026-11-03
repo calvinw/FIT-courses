@@ -14,10 +14,18 @@ business is called **omnichannel** retail. These scripts add a `channels`
 table to the [retail orders database](retail-orders-database.html) so each
 order records where the customer bought it.
 
-Start with the database from the
-[starter scripts](retail-orders-database-scripts.html). Copy each block (use
-the copy button in its top right corner) and paste it into the Dolt online
-SQL editor, then run it. Run the blocks in order.
+Start with a retail orders database of your own. Either:
+
+- **Make a fresh copy:** create a new database on DoltHub and run the
+  [starter scripts](retail-orders-database-scripts.html), or
+- **Fork mine:** sign in to DoltHub, open
+  <https://www.dolthub.com/repositories/calvinw/retail-orders> and click
+  **Fork** in the top right corner. Then open your fork and work there, not
+  in the original.
+
+Copy each block below (use the copy button in its top right corner) and
+paste it into the Dolt online SQL editor for your database, then run it. Run
+the blocks in order.
 
 ## 1. Create the channels table
 
