@@ -2174,8 +2174,8 @@ vertical-align: -.125em;
 
 
 
-<section id="ma321-review-3-time-series" class="level1">
-<h1>MA321 Review 3: Time Series</h1>
+<section id="ma321-quiz-3-review-time-series" class="level1">
+<h1>MA321 Quiz 3 Review: Time Series</h1>
 <p>Name: ______________________________</p>
 <p>Calculator allowed. No notes, no phone, no internet. Show your work.</p>
 <p><strong>1.</strong> Here are the actual demand and the forecast for 3 months. Find the MAPE.</p>
@@ -2216,7 +2216,7 @@ vertical-align: -.125em;
 </tbody>
 </table>
 <p>MAPE = ______________</p>
-<p><strong>2.</strong> Describe the components in each graph.</p>
+<p><strong>2.</strong> Answer True or False for each.</p>
 <div class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
@@ -2230,10 +2230,9 @@ vertical-align: -.125em;
 </div>
 </div>
 </div>
-<p>Circle True or False.</p>
 <ol type="a">
 <li><p>True / False: Chart B is stationary.</p></li>
-<li><p>True / False: Chart A has seasonality.</p></li>
+<li><p>True / False: Chart A has seasonality based on quarters.</p></li>
 <li><p>True / False: Chart C has a trend.</p></li>
 <li><p>True / False: Chart A has more noise than Chart C.</p></li>
 <li><p>True / False: Chart C is stationary.</p></li>
@@ -2255,41 +2254,58 @@ vertical-align: -.125em;
 <ol start="3" type="a">
 <li>True or False: MAPE can be over 100%.</li>
 </ol>
-<p><strong>5.</strong> Here are the quarterly averages (composites) from the last 4 years.</p>
+<p><strong>5.</strong> Here are the actual sales and the seasonal indices for 6 months.</p>
 <table class="caption-top table">
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th" style="border: 1px solid #000; padding: 8px 14px"></th>
-<th data-quarto-table-cell-role="th" style="border: 1px solid #000; padding: 8px 14px">Composite</th>
-<th data-quarto-table-cell-role="th" style="border: 1px solid #000; padding: 8px 14px; width: 110px">Index</th>
+<th data-quarto-table-cell-role="th" style="border: 1px solid #000; padding: 8px 14px">Month</th>
+<th data-quarto-table-cell-role="th" style="border: 1px solid #000; padding: 8px 14px">Actual</th>
+<th data-quarto-table-cell-role="th" style="border: 1px solid #000; padding: 8px 14px">Index</th>
+<th data-quarto-table-cell-role="th" style="border: 1px solid #000; padding: 8px 14px; width: 130px">Deseasonalized</th>
 </tr>
 <tr class="even">
-<td style="border: 1px solid #000; padding: 8px 14px">Quarter 1</td>
-<td style="border: 1px solid #000">30</td>
+<td style="border: 1px solid #000; padding: 8px 14px">January</td>
+<td style="border: 1px solid #000">36</td>
+<td style="border: 1px solid #000">0.8</td>
 <td style="border: 1px solid #000"></td>
 </tr>
 <tr class="odd">
-<td style="border: 1px solid #000; padding: 8px 14px">Quarter 2</td>
-<td style="border: 1px solid #000">45</td>
+<td style="border: 1px solid #000; padding: 8px 14px">February</td>
+<td style="border: 1px solid #000">54</td>
+<td style="border: 1px solid #000">0.9</td>
 <td style="border: 1px solid #000"></td>
 </tr>
 <tr class="even">
-<td style="border: 1px solid #000; padding: 8px 14px">Quarter 3</td>
+<td style="border: 1px solid #000; padding: 8px 14px">March</td>
+<td style="border: 1px solid #000">50</td>
+<td style="border: 1px solid #000">1.0</td>
+<td style="border: 1px solid #000"></td>
+</tr>
+<tr class="odd">
+<td style="border: 1px solid #000; padding: 8px 14px">April</td>
 <td style="border: 1px solid #000">60</td>
+<td style="border: 1px solid #000">1.2</td>
+<td style="border: 1px solid #000"></td>
+</tr>
+<tr class="even">
+<td style="border: 1px solid #000; padding: 8px 14px">May</td>
+<td style="border: 1px solid #000">63</td>
+<td style="border: 1px solid #000">1.5</td>
 <td style="border: 1px solid #000"></td>
 </tr>
 <tr class="odd">
-<td style="border: 1px solid #000; padding: 8px 14px">Quarter 4</td>
-<td style="border: 1px solid #000">65</td>
+<td style="border: 1px solid #000; padding: 8px 14px">June</td>
+<td style="border: 1px solid #000">30</td>
+<td style="border: 1px solid #000">0.6</td>
 <td style="border: 1px solid #000"></td>
 </tr>
 </tbody>
 </table>
 <ol type="a">
-<li>Find the seasonal indices and fill them in.</li>
+<li>Find the deseasonalized demand for each month and fill it in.</li>
 </ol>
 <ol start="2" type="a">
-<li>If your average baseline (non-seasonal) prediction for next year is 40 units, what are the seasonalized forecasts for Quarters 1, 2, 3 and 4 next year?</li>
+<li>Compared to expectations, which month was the best overall and which was the worst? Explain.</li>
 </ol>
 </section>
 

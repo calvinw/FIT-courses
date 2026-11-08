@@ -13,7 +13,7 @@ format:
     embed-resources: true
 ---
 
-# MA321 Review 3: Time Series
+# MA321 Quiz 3 Review: Time Series
 
 Name: ______________________________
 
@@ -51,7 +51,7 @@ MAPE = ______________
 \vspace{0.3in}
 ```
 
-**2.** Describe the components in each graph.
+**2.** Answer True or False for each.
 
 ::: {layout-ncol=3}
 ![](review_chart_a.png)
@@ -61,11 +61,9 @@ MAPE = ______________
 ![](review_chart_c.png)
 :::
 
-Circle True or False.
-
 a) True / False: Chart B is stationary.
 
-b) True / False: Chart A has seasonality.
+b) True / False: Chart A has seasonality based on quarters.
 
 c) True / False: Chart C has a trend.
 
@@ -111,18 +109,20 @@ c) True or False: MAPE can be over 100%.
 \vspace{0.3in}
 ```
 
-**5.** Here are the quarterly averages (composites) from the last 4 years.
+**5.** Here are the actual sales and the seasonal indices for 6 months.
 
 ```{=latex}
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{|l|c|p{1.2in}|}
+\begin{tabular}{|l|c|c|p{1.4in}|}
 \hline
- & \textbf{Composite} & \textbf{Index} \\ \hline
-Quarter 1 & 30 & \\ \hline
-Quarter 2 & 45 & \\ \hline
-Quarter 3 & 60 & \\ \hline
-Quarter 4 & 65 & \\ \hline
+\textbf{Month} & \textbf{Actual} & \textbf{Index} & \textbf{Deseasonalized} \\ \hline
+January & 36 & 0.8 & \\ \hline
+February & 54 & 0.9 & \\ \hline
+March & 50 & 1.0 & \\ \hline
+April & 60 & 1.2 & \\ \hline
+May & 63 & 1.5 & \\ \hline
+June & 30 & 0.6 & \\ \hline
 \end{tabular}
 \end{center}
 ```
@@ -130,19 +130,21 @@ Quarter 4 & 65 & \\ \hline
 ::: {.content-visible when-format="html"}
 ```{=html}
 <table style="border-collapse: collapse; margin: 1em auto; text-align: center;">
-<tr><th style="border: 1px solid #000; padding: 8px 14px;"></th><th style="border: 1px solid #000; padding: 8px 14px;">Composite</th><th style="border: 1px solid #000; padding: 8px 14px; width: 110px;">Index</th></tr>
-<tr><td style="border: 1px solid #000; padding: 8px 14px;">Quarter 1</td><td style="border: 1px solid #000;">30</td><td style="border: 1px solid #000;"></td></tr>
-<tr><td style="border: 1px solid #000; padding: 8px 14px;">Quarter 2</td><td style="border: 1px solid #000;">45</td><td style="border: 1px solid #000;"></td></tr>
-<tr><td style="border: 1px solid #000; padding: 8px 14px;">Quarter 3</td><td style="border: 1px solid #000;">60</td><td style="border: 1px solid #000;"></td></tr>
-<tr><td style="border: 1px solid #000; padding: 8px 14px;">Quarter 4</td><td style="border: 1px solid #000;">65</td><td style="border: 1px solid #000;"></td></tr>
+<tr><th style="border: 1px solid #000; padding: 8px 14px;">Month</th><th style="border: 1px solid #000; padding: 8px 14px;">Actual</th><th style="border: 1px solid #000; padding: 8px 14px;">Index</th><th style="border: 1px solid #000; padding: 8px 14px; width: 130px;">Deseasonalized</th></tr>
+<tr><td style="border: 1px solid #000; padding: 8px 14px;">January</td><td style="border: 1px solid #000;">36</td><td style="border: 1px solid #000;">0.8</td><td style="border: 1px solid #000;"></td></tr>
+<tr><td style="border: 1px solid #000; padding: 8px 14px;">February</td><td style="border: 1px solid #000;">54</td><td style="border: 1px solid #000;">0.9</td><td style="border: 1px solid #000;"></td></tr>
+<tr><td style="border: 1px solid #000; padding: 8px 14px;">March</td><td style="border: 1px solid #000;">50</td><td style="border: 1px solid #000;">1.0</td><td style="border: 1px solid #000;"></td></tr>
+<tr><td style="border: 1px solid #000; padding: 8px 14px;">April</td><td style="border: 1px solid #000;">60</td><td style="border: 1px solid #000;">1.2</td><td style="border: 1px solid #000;"></td></tr>
+<tr><td style="border: 1px solid #000; padding: 8px 14px;">May</td><td style="border: 1px solid #000;">63</td><td style="border: 1px solid #000;">1.5</td><td style="border: 1px solid #000;"></td></tr>
+<tr><td style="border: 1px solid #000; padding: 8px 14px;">June</td><td style="border: 1px solid #000;">30</td><td style="border: 1px solid #000;">0.6</td><td style="border: 1px solid #000;"></td></tr>
 </table>
 ```
 :::
 
-a) Find the seasonal indices and fill them in.
+a) Find the deseasonalized demand for each month and fill it in.
 
 ```{=latex}
 \vspace{0.7in}
 ```
 
-b) If your average baseline (non-seasonal) prediction for next year is 40 units, what are the seasonalized forecasts for Quarters 1, 2, 3 and 4 next year?
+b) Compared to expectations, which month was the best overall and which was the worst? Explain.
