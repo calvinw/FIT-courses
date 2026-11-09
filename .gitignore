@@ -26,8 +26,6 @@ Ma222/quiz1/*
 Ma222/quiz2/*
 !Ma222/quiz2/review_2.*
 !Ma222/quiz2/review_2_answers.*
-CS211/review_2_answers.html
-CS211/review_2_answers.qmd
 CS211/make_quiz2.py
 Ma321/quiz3/*
 !Ma321/quiz3/review_3.*
