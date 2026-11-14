@@ -1,0 +1,193 @@
+---
+title: "Hw Fashion Sales: Data Analysis with an Agent"
+format:
+  html:
+    code-copy: true
+    toc: true
+    embed-resources: true
+    include-in-header:
+      text: |
+        <style>
+        pre > code.sourceCode { white-space: pre-wrap !important; }
+        pre > code.sourceCode > span { display: inline !important; }
+        div.sourceCode, pre.sourceCode { overflow: visible !important; }
+        pre.sourceCode { padding-right: 2.5em !important; }
+        </style>
+---
+
+Make your own copy of a template repository, open it in a codespace, and
+connect OpenCode to **OpenRouter**. Then have the agent study a fashion sales
+dataset: make charts, find the patterns in it, explain what it found, and
+turn it all into a PowerPoint slide deck.
+
+## The Dataset
+
+The file `fashion_sales.csv` holds two years of monthly sales (January 2024
+to December 2025) for a fashion retailer. It has 240 rows: one row for each
+month, for each of 5 categories (Dresses, Denim, Outerwear, Footwear,
+Accessories), sold through each of 2 channels (Online and Store).
+
+| Column | What it means |
+|---|---|
+| `month`, `year`, `month_num` | When the sales happened |
+| `category` | The product category |
+| `channel` | Online or Store |
+| `avg_temp_F` | The average temperature that month, in °F |
+| `list_price` | The full price before any discount |
+| `discount_pct` | The discount, as a percent off the list price |
+| `sale_price` | The average price customers actually paid |
+| `ad_spend` | Dollars spent on advertising |
+| `avg_rating` | The average customer rating, out of 5 |
+| `units_sold` | How many items were sold |
+| `revenue` | Dollars taken in |
+| `return_rate` | The share of items returned (0.15 means 15%) |
+
+## Step 1: Make Your Repository from the Template
+
+1. Sign in to GitHub and open the template:
+   <https://github.com/calvinw/fashion-sales-codespace>
+2. Click the green **Use this template** button, then choose
+   **Create a new repository**.
+3. Make sure the **Owner** is your own account, name the repository
+   `fashion-sales`, and choose **Public**.
+4. Click **Create repository**. You now have your own copy with the
+   `fashion_sales.csv` file in it.
+
+## Step 2: Start a Codespace
+
+1. On the main page of **your** `fashion-sales` repository (not the
+   template), click the green **Code** button.
+2. Select the **Codespaces** tab.
+3. Click **Create codespace on main**.
+4. Wait for the codespace to finish loading. The first time takes a few
+   minutes, because it installs OpenCode and the other agents while it is
+   being created. VS Code opens in your browser with your files on the left.
+
+## Step 3: Start OpenCode
+
+1. Use the terminal at the bottom of the screen, or open one from the menu
+   (☰) with **Terminal → New Terminal**.
+2. Type the following and press **Enter**:
+
+   ```default
+   opencode
+   ```
+
+## Step 4: Connect to OpenRouter
+
+**OpenRouter** is a service that gives you access to many different models
+with one API key.
+
+1. Inside OpenCode, type the following and press **Enter**:
+
+   ```default
+   /connect
+   ```
+
+2. A list of providers appears. Start typing `openrouter` to narrow the
+   list, highlight **OpenRouter**, and press **Enter**.
+3. When OpenCode asks for your API key, paste in your OpenRouter API key and
+   press **Enter**.
+
+::: {.callout-warning}
+Treat your API key like a password. Paste it only into OpenCode's prompt.
+Never put it in a file in your repository, because your repository is public
+and anyone could find it and use it.
+:::
+
+## Step 5: Choose DeepSeek V4.1 Flash
+
+1. Type the following and press **Enter**:
+
+   ```default
+   /models
+   ```
+
+2. Start typing `deepseek` to narrow the list.
+3. Find **DeepSeek V4.1 Flash** in the **OpenRouter** section of the list.
+   Highlight it and press **Enter**.
+4. Check the bottom of the OpenCode screen. It should show
+   **DeepSeek V4.1 Flash** with **OpenRouter** as the provider.
+
+## Step 6: Get to Know the Data
+
+Copy each prompt below (use the copy button in its top right corner), paste
+it into OpenCode, and press **Enter**. Wait for the agent to finish before
+you give it the next prompt. Read what it says each time.
+
+If the agent asks to install software (for example Python packages for
+charts or slides), allow it.
+
+```default
+Look at fashion_sales.csv. Tell me how many rows and columns it has, what one row represents, and what each column means. Check whether any values are missing or look wrong.
+```
+
+```default
+Give me summary statistics for the numeric columns: the minimum, maximum, average and median. Explain in plain language what the numbers tell us about this business.
+```
+
+```default
+Compare the five categories and the two channels. Which ones bring in the most revenue and sell the most units? Which have the highest return rates and the best ratings? Show the results as small tables.
+```
+
+## Step 7: Make Charts
+
+```default
+Create a folder called charts. Make clear, labeled charts of the data and save each one there as a PNG file. Include at least: revenue by month for each category, Online vs Store revenue, units sold against discount_pct, units sold against avg_temp_F for each category, revenue against ad_spend, and return rate by category and channel. Give every chart a title and labeled axes.
+```
+
+Open the `charts` folder on the left and click each picture to look at it.
+If a chart is hard to read, ask the agent to fix it, for example:
+
+```default
+The labels on the revenue by month chart overlap. Make the chart wider and rotate the month labels so they can be read.
+```
+
+## Step 8: Analyze the Data Thoroughly
+
+```default
+Analyze the dataset thoroughly. Look for seasonal patterns, differences between 2024 and 2025, how temperature affects each category, whether bigger discounts lead to more units sold, whether ad spending pays off, and what is related to returns and ratings. Back up every finding with numbers.
+```
+
+```default
+Explain the properties of this dataset to someone who has never seen it: what it covers, how it is organized, which columns depend on each other (for example how sale_price, units_sold and revenue are connected), and anything surprising. Then write your full analysis into a file called analysis.md.
+```
+
+Now ask at least **two follow-up questions of your own**. For example, ask
+which category the company should advertise more, or why one month stands
+out in a chart.
+
+## Step 9: Build the Slide Deck
+
+```default
+Create a PowerPoint file called fashion_sales_summary.pptx that summarizes this dataset and your analysis. Use 8 to 12 slides: a title slide, a slide describing the dataset, slides with the most important charts from the charts folder and what each one shows, a slide of key findings, and a final slide with recommendations for the business. Keep the text on each slide short.
+```
+
+Click `fashion_sales_summary.pptx` in the file list to open it in the
+codespace and look through every slide. If something is wrong (text runs off
+a slide, a chart is missing, a number does not match the analysis), tell the
+agent what to fix.
+
+## Step 10: Check the Agent's Work
+
+An agent can make mistakes, so check at least one of its claims yourself.
+Pick a number from its analysis, such as the total revenue for one category,
+and ask it to show you how it got it:
+
+```default
+Show me exactly how you calculated the total revenue for Outerwear, including the code you ran.
+```
+
+Does the answer match what the analysis and the slides say?
+
+## Step 11: Commit and Push
+
+1. To save your work to GitHub, paste this into OpenCode:
+
+   ```default
+   Commit the charts folder, analysis.md and fashion_sales_summary.pptx, and push them to GitHub.
+   ```
+
+2. Open your `fashion-sales` repository on GitHub and refresh the page.
+   Check that the `charts` folder, `analysis.md` and
+   `fashion_sales_summary.pptx` are all there.
