@@ -67,11 +67,43 @@ d) **True.** Chart A jumps around a lot; Chart C follows a clean repeating patte
 
 e) **False.** Chart C has an upward trend, so it is not stationary.
 
-**3.** Forecast = baseline × seasonal index.
+**3.** $\text{Forecast} = \text{Baseline} \times \text{Seasonal Index}$. For b, the baseline is 20% lower: $20 \times 0.8 = 16$.
 
-a) Baseline 20: 20 × 0.6 = **12**, 20 × 1.2 = **24**, 20 × 0.95 = **19**, 20 × 1.1 = **22**, 20 × 1.4 = **28**, 20 × 0.75 = **15**
+```{=latex}
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Month} & \textbf{Seasonal Index} & \textbf{a) Forecast (baseline 20)} & \textbf{b) Forecast (baseline 16)} \\ \hline
+1 & 0.6 & $20 \times 0.6 = \mathbf{12}$ & $16 \times 0.6 = \mathbf{9.6}$ \\ \hline
+2 & 1.2 & $20 \times 1.2 = \mathbf{24}$ & $16 \times 1.2 = \mathbf{19.2}$ \\ \hline
+3 & 0.95 & $20 \times 0.95 = \mathbf{19}$ & $16 \times 0.95 = \mathbf{15.2}$ \\ \hline
+4 & 1.1 & $20 \times 1.1 = \mathbf{22}$ & $16 \times 1.1 = \mathbf{17.6}$ \\ \hline
+5 & 1.4 & $20 \times 1.4 = \mathbf{28}$ & $16 \times 1.4 = \mathbf{22.4}$ \\ \hline
+6 & 0.75 & $20 \times 0.75 = \mathbf{15}$ & $16 \times 0.75 = \mathbf{12}$ \\ \hline
+\end{tabular}
+\end{center}
+```
 
-b) 20% lower baseline = 20 × 0.8 = 16: **9.6, 19.2, 15.2, 17.6, 22.4, 12** (each forecast in a is 20% lower too)
+::: {.content-visible when-format="html"}
+```{=html}
+<table style="border-collapse: collapse; margin: 1em auto; text-align: center;">
+<tr><th style="border: 1px solid #000; padding: 6px 12px;">Month</th><th style="border: 1px solid #000; padding: 6px 12px;">Seasonal Index</th><th style="border: 1px solid #000; padding: 6px 12px;">a) Forecast (baseline 20)</th><th style="border: 1px solid #000; padding: 6px 12px;">b) Forecast (baseline 16)</th></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">1</td><td style="border: 1px solid #000; padding: 6px 12px;">0.6</td><td style="border: 1px solid #000; padding: 6px 12px;">\(20 \times 0.6 = \mathbf{12}\)</td><td style="border: 1px solid #000; padding: 6px 12px;">\(16 \times 0.6 = \mathbf{9.6}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">2</td><td style="border: 1px solid #000; padding: 6px 12px;">1.2</td><td style="border: 1px solid #000; padding: 6px 12px;">\(20 \times 1.2 = \mathbf{24}\)</td><td style="border: 1px solid #000; padding: 6px 12px;">\(16 \times 1.2 = \mathbf{19.2}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">3</td><td style="border: 1px solid #000; padding: 6px 12px;">0.95</td><td style="border: 1px solid #000; padding: 6px 12px;">\(20 \times 0.95 = \mathbf{19}\)</td><td style="border: 1px solid #000; padding: 6px 12px;">\(16 \times 0.95 = \mathbf{15.2}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">4</td><td style="border: 1px solid #000; padding: 6px 12px;">1.1</td><td style="border: 1px solid #000; padding: 6px 12px;">\(20 \times 1.1 = \mathbf{22}\)</td><td style="border: 1px solid #000; padding: 6px 12px;">\(16 \times 1.1 = \mathbf{17.6}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">5</td><td style="border: 1px solid #000; padding: 6px 12px;">1.4</td><td style="border: 1px solid #000; padding: 6px 12px;">\(20 \times 1.4 = \mathbf{28}\)</td><td style="border: 1px solid #000; padding: 6px 12px;">\(16 \times 1.4 = \mathbf{22.4}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">6</td><td style="border: 1px solid #000; padding: 6px 12px;">0.75</td><td style="border: 1px solid #000; padding: 6px 12px;">\(20 \times 0.75 = \mathbf{15}\)</td><td style="border: 1px solid #000; padding: 6px 12px;">\(16 \times 0.75 = \mathbf{12}\)</td></tr>
+</table>
+```
+:::
+
+Each forecast in b is 20% lower than the one in a.
+
+```{=latex}
+\newpage
+```
 
 **4.**
 
@@ -81,14 +113,37 @@ b) The forecast graph stays very close to the actuals graph. On average the fore
 
 c) **True.** If the forecasts are far off (for example, forecasting 30 when the actual is 10 is a 200% error), the MAPE can be over 100%.
 
-**5.** Deseasonalized demand = actual ÷ index.
+**5.** $\text{Deseasonalized demand} = \dfrac{\text{Actual}}{\text{Index}}$
 
-January: 36 ÷ 0.8 = **45** \
-February: 54 ÷ 0.9 = **60** \
-March: 50 ÷ 1.0 = **50** \
-April: 60 ÷ 1.2 = **50** \
-May: 63 ÷ 1.5 = **42** \
-June: 30 ÷ 0.6 = **50**
+```{=latex}
+\begin{center}
+\renewcommand{\arraystretch}{2.4}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Month} & \textbf{Actual} & \textbf{Index} & \textbf{Deseasonalized} \\ \hline
+January & 36 & 0.8 & $\dfrac{36}{0.8} = \mathbf{45}$ \\ \hline
+February & 54 & 0.9 & $\dfrac{54}{0.9} = \mathbf{60}$ \\ \hline
+March & 50 & 1.0 & $\dfrac{50}{1.0} = \mathbf{50}$ \\ \hline
+April & 60 & 1.2 & $\dfrac{60}{1.2} = \mathbf{50}$ \\ \hline
+May & 63 & 1.5 & $\dfrac{63}{1.5} = \mathbf{42}$ \\ \hline
+June & 30 & 0.6 & $\dfrac{30}{0.6} = \mathbf{50}$ \\ \hline
+\end{tabular}
+\end{center}
+```
+
+::: {.content-visible when-format="html"}
+```{=html}
+<table style="border-collapse: collapse; margin: 1em auto; text-align: center;">
+<tr><th style="border: 1px solid #000; padding: 6px 12px;">Month</th><th style="border: 1px solid #000; padding: 6px 12px;">Actual</th><th style="border: 1px solid #000; padding: 6px 12px;">Index</th><th style="border: 1px solid #000; padding: 6px 12px;">Deseasonalized</th></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">January</td><td style="border: 1px solid #000; padding: 6px 12px;">36</td><td style="border: 1px solid #000; padding: 6px 12px;">0.8</td><td style="border: 1px solid #000; padding: 6px 12px;">\(\dfrac{36}{0.8} = \mathbf{45}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">February</td><td style="border: 1px solid #000; padding: 6px 12px;">54</td><td style="border: 1px solid #000; padding: 6px 12px;">0.9</td><td style="border: 1px solid #000; padding: 6px 12px;">\(\dfrac{54}{0.9} = \mathbf{60}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">March</td><td style="border: 1px solid #000; padding: 6px 12px;">50</td><td style="border: 1px solid #000; padding: 6px 12px;">1.0</td><td style="border: 1px solid #000; padding: 6px 12px;">\(\dfrac{50}{1.0} = \mathbf{50}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">April</td><td style="border: 1px solid #000; padding: 6px 12px;">60</td><td style="border: 1px solid #000; padding: 6px 12px;">1.2</td><td style="border: 1px solid #000; padding: 6px 12px;">\(\dfrac{60}{1.2} = \mathbf{50}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">May</td><td style="border: 1px solid #000; padding: 6px 12px;">63</td><td style="border: 1px solid #000; padding: 6px 12px;">1.5</td><td style="border: 1px solid #000; padding: 6px 12px;">\(\dfrac{63}{1.5} = \mathbf{42}\)</td></tr>
+<tr><td style="border: 1px solid #000; padding: 6px 12px;">June</td><td style="border: 1px solid #000; padding: 6px 12px;">30</td><td style="border: 1px solid #000; padding: 6px 12px;">0.6</td><td style="border: 1px solid #000; padding: 6px 12px;">\(\dfrac{30}{0.6} = \mathbf{50}\)</td></tr>
+</table>
+```
+:::
 
 b) **Best: February** (60), the highest deseasonalized demand. **Worst: May** (42), the lowest.
 
