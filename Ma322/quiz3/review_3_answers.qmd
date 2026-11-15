@@ -17,7 +17,7 @@ format:
 
 **1.** Suppose we have a product with price (low, high), brand (Levis, Lees), and cut (Boot, Regular). The levels are coded 0, 1 in the order listed: price low = 0, high = 1; brand Levis = 0, Lees = 1; cut Boot = 0, Regular = 1.
 
-We have 3 customers, and a regression for each customer on this product gives the coefficients below. Evaluate 2 new products for these customers, then find the overall preferences for the two products.
+We have 3 customers, and a regression for each customer on this product gives the coefficients below. Evaluate 2 new products for these customers, then find the market share for the two products.
 
 **New Product Analysis**
 
@@ -103,11 +103,10 @@ Prefers & Product 2 & Product 1 & Product 2 \\ \hline
 ```
 :::
 
-b) Find the overall preference (the average predicted rating over the 3 customers) for each product. Which product is preferred overall?
+b) Find the market share for each product: the percentage of customers who prefer it.
 
-Product 1: $(3 + 8 + 5) \div 3 = 16 \div 3 \approx$ **5.33** \
-Product 2: $(6 + 5 + 6) \div 3 = 17 \div 3 \approx$ **5.67** \
-**Product 2 is preferred overall.** It has the higher average rating, and 2 of the 3 customers prefer it.
+Product 1: 1 of the 3 customers (Customer 2) prefers it, so its market share is $1 \div 3 \approx$ **33.3%** \
+Product 2: 2 of the 3 customers (Customers 1 and 3) prefer it, so its market share is $2 \div 3 \approx$ **66.7%**
 
 Choose the best answer for each question.
 

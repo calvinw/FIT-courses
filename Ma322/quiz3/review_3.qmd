@@ -21,7 +21,7 @@ Calculator allowed. No notes, no phone, no internet. Show your work.
 
 **1.** Suppose we have a product with price (low, high), brand (Levis, Lees), and cut (Boot, Regular). The levels are coded 0, 1 in the order listed: price low = 0, high = 1; brand Levis = 0, Lees = 1; cut Boot = 0, Regular = 1.
 
-We have 3 customers, and a regression for each customer on this product gives the coefficients below. Evaluate 2 new products for these customers, then find the overall preferences for the two products.
+We have 3 customers, and a regression for each customer on this product gives the coefficients below. Evaluate 2 new products for these customers, then find the market share for the two products.
 
 **New Product Analysis**
 
@@ -101,9 +101,9 @@ Prefers & & & \\ \hline
 ```
 :::
 
-b) Find the overall preference (the average predicted rating over the 3 customers) for each product. Which product is preferred overall?
+b) Find the market share for each product: the percentage of customers who prefer it.
 
-Product 1: ______________ \qquad Product 2: ______________ \qquad Preferred: ______________
+Product 1: ______________ \qquad Product 2: ______________
 
 ```{=latex}
 \newpage
