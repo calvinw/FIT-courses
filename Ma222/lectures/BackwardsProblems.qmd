@@ -7,7 +7,7 @@ format:
     html-math-method: katex
 ---
 
-## Backwards Problems
+## Forwards Problems
 
 So far we started with an x-value and found its area:
 
